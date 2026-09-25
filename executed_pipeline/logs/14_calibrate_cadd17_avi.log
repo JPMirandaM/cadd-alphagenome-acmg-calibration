@@ -1,0 +1,230 @@
+﻿[10:08] main CADD seed 20260925: P/LP 59979, B/LB 77128, gnomAD 1955995, 10.5 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     10.18          8.341                1
+3   Moderate      27.8           28.0     19.79         19.590                0
+4 Supporting      25.5           25.6     22.70         22.700                0
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[10:17] main CADD seed 101: P/LP 59979, B/LB 77128, gnomAD 1955995, 8.8 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     10.18          8.341                1
+3   Moderate      27.8           28.0     19.79         19.590                0
+4 Supporting      25.5           25.6     22.70         22.600                0
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[10:25] main CADD seed 202: P/LP 59979, B/LB 77128, gnomAD 1955995, 8.5 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     10.18          8.341                1
+3   Moderate      27.8           28.0     19.79         19.590                0
+4 Supporting      25.5           25.6     22.70         22.600                0
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[10:37] main CADD seed 303: P/LP 59979, B/LB 77128, gnomAD 1955995, 12.0 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     10.18          8.341                1
+3   Moderate      27.8           28.0     19.79         19.590                0
+4 Supporting      25.5           25.6     22.70         22.600                0
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[10:49] main CADD seed 404: P/LP 59979, B/LB 77128, gnomAD 1955995, 11.6 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     10.18          8.341                1
+3   Moderate      27.8           28.0     19.79         19.590                0
+4 Supporting      25.5           25.6     22.70         22.700                0
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[11:01] main AVI seed 20260925: P/LP 59979, B/LB 77128, gnomAD 1955995, 11.6 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA           1.0000
+2     Strong     65.00             NA      9.87           9.15           0.4135
+3   Moderate     26.37          26.44     21.23          20.52           0.0000
+4 Supporting     25.11          25.18     23.02          22.95           0.0000
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[11:11] main AVI seed 101: P/LP 59979, B/LB 77128, gnomAD 1955995, 10.1 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA           1.0000
+2     Strong     65.00             NA      9.87           9.15           0.4076
+3   Moderate     26.37          26.44     21.23          20.53           0.0000
+4 Supporting     25.11          25.18     23.02          22.95           0.0000
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[11:21] main AVI seed 202: P/LP 59979, B/LB 77128, gnomAD 1955995, 10.4 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA           1.0000
+2     Strong     65.00             NA      9.87           9.15           0.4032
+3   Moderate     26.37          26.44     21.23          20.53           0.0000
+4 Supporting     25.11          25.18     23.02          22.95           0.0000
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[11:31] main AVI seed 303: P/LP 59979, B/LB 77128, gnomAD 1955995, 9.8 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA           1.0000
+2     Strong     65.00             NA      9.87           9.17           0.4127
+3   Moderate     26.37          26.44     21.23          20.52           0.0000
+4 Supporting     25.11          25.18     23.02          22.95           0.0000
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[11:42] main AVI seed 404: P/LP 59979, B/LB 77128, gnomAD 1955995, 11.4 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA            1.000
+2     Strong     65.00             NA      9.87           9.17            0.416
+3   Moderate     26.37          26.44     21.23          20.52            0.000
+4 Supporting     25.11          25.18     23.02          22.95            0.000
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[11:54] S1 CADD seed 20260925: P/LP 24926, B/LB 24777, gnomAD 1955995, 11.2 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     11.67           1.74                1
+3   Moderate      27.8           28.2     21.00          20.60                0
+4 Supporting      25.7           25.9     22.90          22.60                0
+  BP4_boot_NA_frac
+1           0.9994
+2           0.0000
+3           0.0000
+4           0.0000
+[12:02] S1 AVI seed 20260925: P/LP 24926, B/LB 24777, gnomAD 1955995, 8.8 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong     29.94          30.23      9.93           9.17                0
+3   Moderate     25.90          25.99     21.13          20.81                0
+4 Supporting     24.90          25.04     23.02          22.91                0
+  BP4_boot_NA_frac
+1           0.9477
+2           0.0000
+3           0.0000
+4           0.0000
+[12:12] S2 CADD seed 20260925: P/LP 59886, B/LB 64864, gnomAD 1955995, 9.6 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     10.16          8.342                1
+3   Moderate      27.8           28.0     19.72         19.560                0
+4 Supporting      25.5           25.6     22.70         22.600                0
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[12:21] S2 AVI seed 20260925: P/LP 59886, B/LB 64864, gnomAD 1955995, 8.8 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA           1.0000
+2     Strong        NA             NA      9.83           9.08           0.8006
+3   Moderate     26.46          26.57     21.21          20.45           0.0000
+4 Supporting     25.12          25.20     23.02          22.97           0.0000
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[12:26] S3 CADD seed 20260925: P/LP 59979, B/LB 77128, gnomAD 1955995, 4.8 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     10.18          7.773                1
+3   Moderate      27.8           28.2     19.79         19.490                0
+4 Supporting      25.5           25.9     22.70         22.400                0
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[12:29] S3 AVI seed 20260925: P/LP 59979, B/LB 77128, gnomAD 1955995, 3.6 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA           1.0000
+2     Strong     65.00             NA      9.87           8.98           0.4654
+3   Moderate     26.37          26.60     21.23          20.16           0.0000
+4 Supporting     25.11          25.32     23.02          22.89           0.0000
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[12:40] S4 CADD seed 20260925: P/LP 56393, B/LB 75727, gnomAD 1893977, 10.9 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA                1
+2     Strong        NA             NA     10.12          8.302                1
+3   Moderate      27.6           27.8     19.69         19.540                0
+4 Supporting      25.4           25.5     22.70         22.500                0
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+[12:50] S4 AVI seed 20260925: P/LP 56393, B/LB 75727, gnomAD 1893977, 10.3 min
+       level PP3_point PP3_discounted BP4_point BP4_discounted PP3_boot_NA_frac
+1 VeryStrong        NA             NA        NA             NA           1.0000
+2     Strong        NA             NA      9.83           9.01           0.9879
+3   Moderate     26.25          26.37     21.16          20.36           0.0000
+4 Supporting     25.08          25.13     23.00          22.91           0.0000
+  BP4_boot_NA_frac
+1                1
+2                0
+3                0
+4                0
+Rscript.exe : Hubo 50 o más avisos (use warnings() para ver los primeros 50)
+En línea: 1 Carácter: 302
++ ... tch {} } }; & 'C:\Program Files\R\R-4.4.2\bin\Rscript.exe' C:\cadd\ex ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Hubo 50 o más a...os primeros 50):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+Main analysis, discounted thresholds (median [min-max] over seeds):
+      tool       variable      level median    min    max  n_NA
+    <char>         <fctr>     <char>  <num>  <num>  <num> <int>
+ 1:    AVI PP3_discounted       <NA>     NA     NA     NA 50000
+ 2:    AVI PP3_discounted VeryStrong     NA     NA     NA     5
+ 3:    AVI PP3_discounted     Strong     NA     NA     NA     5
+ 4:    AVI PP3_discounted   Moderate 26.440 26.440 26.440     0
+ 5:    AVI PP3_discounted Supporting 25.180 25.180 25.180     0
+ 6:   CADD PP3_discounted       <NA>     NA     NA     NA 50000
+ 7:   CADD PP3_discounted VeryStrong     NA     NA     NA     5
+ 8:   CADD PP3_discounted     Strong     NA     NA     NA     5
+ 9:   CADD PP3_discounted   Moderate 28.000 28.000 28.000     0
+10:   CADD PP3_discounted Supporting 25.600 25.600 25.600     0
+11:    AVI BP4_discounted       <NA>     NA     NA     NA 50000
+12:    AVI BP4_discounted VeryStrong     NA     NA     NA     5
+13:    AVI BP4_discounted     Strong  9.150  9.150  9.170     0
+14:    AVI BP4_discounted   Moderate 20.520 20.520 20.530     0
+15:    AVI BP4_discounted Supporting 22.950 22.950 22.950     0
+16:   CADD BP4_discounted       <NA>     NA     NA     NA 50000
+17:   CADD BP4_discounted VeryStrong     NA     NA     NA     5
+18:   CADD BP4_discounted     Strong  8.341  8.341  8.341     0
+19:   CADD BP4_discounted   Moderate 19.590 19.590 19.590     0
+20:   CADD BP4_discounted Supporting 22.600 22.600 22.700     0
+      tool       variable      level median    min    max  n_NA

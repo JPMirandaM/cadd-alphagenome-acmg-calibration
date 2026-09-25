@@ -1,0 +1,73 @@
+analysis	tool	seed	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac
+main	AVI	101	VeryStrong					1	1
+main	AVI	101	Strong	65		9.87	9.15	0.4076	0
+main	AVI	101	Moderate	26.37	26.44	21.23	20.53	0	0
+main	AVI	101	Supporting	25.11	25.18	23.02	22.95	0	0
+main	AVI	202	VeryStrong					1	1
+main	AVI	202	Strong	65		9.87	9.15	0.4032	0
+main	AVI	202	Moderate	26.37	26.44	21.23	20.53	0	0
+main	AVI	202	Supporting	25.11	25.18	23.02	22.95	0	0
+main	AVI	20260925	VeryStrong					1	1
+main	AVI	20260925	Strong	65		9.87	9.15	0.4135	0
+main	AVI	20260925	Moderate	26.37	26.44	21.23	20.52	0	0
+main	AVI	20260925	Supporting	25.11	25.18	23.02	22.95	0	0
+main	AVI	303	VeryStrong					1	1
+main	AVI	303	Strong	65		9.87	9.17	0.4127	0
+main	AVI	303	Moderate	26.37	26.44	21.23	20.52	0	0
+main	AVI	303	Supporting	25.11	25.18	23.02	22.95	0	0
+main	AVI	404	VeryStrong					1	1
+main	AVI	404	Strong	65		9.87	9.17	0.416	0
+main	AVI	404	Moderate	26.37	26.44	21.23	20.52	0	0
+main	AVI	404	Supporting	25.11	25.18	23.02	22.95	0	0
+main	CADD	101	VeryStrong					1	1
+main	CADD	101	Strong			10.18	8.341	1	0
+main	CADD	101	Moderate	27.8	28	19.79	19.59	0	0
+main	CADD	101	Supporting	25.5	25.6	22.7	22.6	0	0
+main	CADD	202	VeryStrong					1	1
+main	CADD	202	Strong			10.18	8.341	1	0
+main	CADD	202	Moderate	27.8	28	19.79	19.59	0	0
+main	CADD	202	Supporting	25.5	25.6	22.7	22.6	0	0
+main	CADD	20260925	VeryStrong					1	1
+main	CADD	20260925	Strong			10.18	8.341	1	0
+main	CADD	20260925	Moderate	27.8	28	19.79	19.59	0	0
+main	CADD	20260925	Supporting	25.5	25.6	22.7	22.7	0	0
+main	CADD	303	VeryStrong					1	1
+main	CADD	303	Strong			10.18	8.341	1	0
+main	CADD	303	Moderate	27.8	28	19.79	19.59	0	0
+main	CADD	303	Supporting	25.5	25.6	22.7	22.6	0	0
+main	CADD	404	VeryStrong					1	1
+main	CADD	404	Strong			10.18	8.341	1	0
+main	CADD	404	Moderate	27.8	28	19.79	19.59	0	0
+main	CADD	404	Supporting	25.5	25.6	22.7	22.7	0	0
+S1	AVI	20260925	VeryStrong					1	0.9477
+S1	AVI	20260925	Strong	29.94	30.23	9.93	9.17	0	0
+S1	AVI	20260925	Moderate	25.9	25.99	21.13	20.81	0	0
+S1	AVI	20260925	Supporting	24.9	25.04	23.02	22.91	0	0
+S1	CADD	20260925	VeryStrong					1	0.9994
+S1	CADD	20260925	Strong			11.67	1.74	1	0
+S1	CADD	20260925	Moderate	27.8	28.2	21	20.6	0	0
+S1	CADD	20260925	Supporting	25.7	25.9	22.9	22.6	0	0
+S2	AVI	20260925	VeryStrong					1	1
+S2	AVI	20260925	Strong			9.83	9.08	0.8006	0
+S2	AVI	20260925	Moderate	26.46	26.57	21.21	20.45	0	0
+S2	AVI	20260925	Supporting	25.12	25.2	23.02	22.97	0	0
+S2	CADD	20260925	VeryStrong					1	1
+S2	CADD	20260925	Strong			10.16	8.342	1	0
+S2	CADD	20260925	Moderate	27.8	28	19.72	19.56	0	0
+S2	CADD	20260925	Supporting	25.5	25.6	22.7	22.6	0	0
+S3	AVI	20260925	VeryStrong					1	1
+S3	AVI	20260925	Strong	65		9.87	8.98	0.4654	0
+S3	AVI	20260925	Moderate	26.37	26.6	21.23	20.16	0	0
+S3	AVI	20260925	Supporting	25.11	25.32	23.02	22.89	0	0
+S3	CADD	20260925	VeryStrong					1	1
+S3	CADD	20260925	Strong			10.18	7.773	1	0
+S3	CADD	20260925	Moderate	27.8	28.2	19.79	19.49	0	0
+S3	CADD	20260925	Supporting	25.5	25.9	22.7	22.4	0	0
+S4	AVI	20260925	VeryStrong					1	1
+S4	AVI	20260925	Strong			9.83	9.01	0.9879	0
+S4	AVI	20260925	Moderate	26.25	26.37	21.16	20.36	0	0
+S4	AVI	20260925	Supporting	25.08	25.13	23	22.91	0	0
+S4	CADD	20260925	VeryStrong					1	1
+S4	CADD	20260925	Strong			10.12	8.302	1	0
+S4	CADD	20260925	Moderate	27.6	27.8	19.69	19.54	0	0
+S4	CADD	20260925	Supporting	25.4	25.5	22.7	22.5	0	0

@@ -275,7 +275,7 @@ repeating the computations.
 | Table S1 | Published vs reproduced CADD v1.6 thresholds | `figures/TableS1_port_validation.tsv` | Done 2026-09-25 (PP3 Strong/VeryStrong and BP4 VeryStrong rows to verify) |
 | S2 | Seed sensitivity of the one-sided BP4 Strong bound (5 seeds × 10,000 replicates) | `figures/FigS2_seed_sensitivity.{png,pdf}`; data `figures/data/FigS2_seed_sensitivity/`; script `scripts/06b_plot_seed_sensitivity.R` | Done 2026-09-25 |
 | Table S2 | All thresholds per seed, with fraction of failed replicates | `figures/TableS2_seed_sensitivity.tsv` | Done 2026-09-25 |
-| 1 | Local posterior probability of CADD v1.7 PHRED with current ClinVar/gnomAD data | `figures/Fig1_cadd17_calibration.*` | [PENDING] |
+| 1 | Local posterior probability of CADD v1.7 PHRED and AVI Phred (main analysis, seed 20260925) | `figures/Fig1_cadd17_avi_calibration.{png,pdf}`; data `figures/data/Fig1_cadd17_avi_calibration/`; script `scripts/16_plot_figure1.R` | Done 2026-09-25 |
 
 ## References [VERIFY all before submission]
 

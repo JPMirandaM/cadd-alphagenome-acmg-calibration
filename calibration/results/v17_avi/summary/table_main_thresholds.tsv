@@ -1,0 +1,9 @@
+tool	level	PP3	BP4	PP3_fail	BP4_fail
+AVI	Supporting	25.18	22.95	0.000	0.000
+AVI	Moderate	26.44	20.52 [20.52-20.53]	0.000	0.000
+AVI	Strong	not reached	9.15 [9.15-9.17]	0.413	0.000
+AVI	VeryStrong	not reached	not reached	1.000	1.000
+CADD	Supporting	25.6	22.6 [22.6-22.7]	0.000	0.000
+CADD	Moderate	28	19.59	0.000	0.000
+CADD	Strong	not reached	8.341	1.000	0.000
+CADD	VeryStrong	not reached	not reached	1.000	1.000

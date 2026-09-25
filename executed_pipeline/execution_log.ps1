@@ -193,8 +193,13 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 # thresholds (6.9 vs 22.7 min). The element-wise check was first run inline (appended to the A14 log)
 # and then added to the A14 script.
 & $R .\scripts\auxiliary\A14_verify_fast_port.R        # -> logs\A14_verify_fast_port.log
-# [RUNNING since 2026-09-25 ~10:00] full calibration, 18 runs, B = 10,000, 10 workers:
+# [DONE 2026-09-25 09:58-12:50] full calibration, 18 runs (3.6-12.0 min each), B = 10,000, 10 workers:
 & $R .\scripts\14_calibrate_cadd17_avi.R 10            # -> logs\14_calibrate_cadd17_avi.log
+# Note: the end-of-script summary in 14 matched "thresholds.tsv" also in bootstrap_thresholds.tsv
+# (spurious rows with level = NA); the per-run outputs are unaffected. Corrected summary:
+& $R .\scripts\15_summarize_calibration.R              # -> logs\15_summarize_calibration.log; tables in calibration\results\v17_avi\summary\
+# Figure 1 (data copied from main\<tool>\seed20260925 to figures\data\Fig1_cadd17_avi_calibration\<tool>\):
+& $R .\scripts\16_plot_figure1.R
 
 # -------------------------------------------------------------------------------------
 # Step 6 [PENDING: requires step 2] Selection and ranking of SNVs above the PHRED threshold

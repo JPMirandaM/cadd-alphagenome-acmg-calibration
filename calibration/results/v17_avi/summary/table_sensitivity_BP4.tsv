@@ -1,0 +1,9 @@
+tool	level	S1	S2	S3	S4	main
+AVI	Supporting	22.91	22.97	22.89	22.91	22.95
+AVI	Moderate	20.81	20.45	20.16	20.36	20.52
+AVI	Strong	9.17	9.08	8.98	9.01	9.15
+AVI	VeryStrong					
+CADD	Supporting	22.6	22.6	22.4	22.5	22.7
+CADD	Moderate	20.6	19.56	19.49	19.54	19.59
+CADD	Strong	1.74	8.342	7.773	8.302	8.341
+CADD	VeryStrong					
