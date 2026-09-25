@@ -85,7 +85,9 @@ Bayesian framework of Tavtigian et al. (2018). The original MATLAB implementatio
   bound across replicates. A level is not reached if more than 5% of replicates fail to reach it.
 - **Reproducibility.** The original code seeds the random number generator from the clock
   (`rng('shuffle')`). We used a fixed L'Ecuyer-CMRG seed (20260925) so that the parallel bootstrap
-  is reproducible.
+  is reproducible. Seeds are arbitrary integers fixed before running: the main-run seed is the
+  run date (2026-09-25) written as a number, and the additional seeds of the sensitivity analysis
+  (section 3.2.1) are 101, 202, 303 and 404.
 
 The only implementation difference from the original code is computational: window counts are
 obtained by binary search on sorted vectors and vectorised across all thresholds. The arithmetic
