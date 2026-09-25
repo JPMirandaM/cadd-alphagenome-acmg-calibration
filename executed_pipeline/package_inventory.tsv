@@ -1,0 +1,342 @@
+package	version	repository	built	library
+abind	1.4-8	CRAN	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+ash	1.0-15	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+askpass	1.2.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+backports	1.5.0	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+base	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+base64enc	0.1-3	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+bestNormalize	1.9.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+BH	1.90.0-1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+BiocGenerics	0.52.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+BiocManager	1.30.25	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+BiocParallel	1.40.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+BiocVersion	3.20.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+Biostrings	2.74.1	Bioconductor 3.20	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+bit	4.5.0.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+bit64	4.6.0-1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+bitops	1.0-9	CRAN	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+blob	1.2.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+boot	1.3-31	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+brew	1.0-10	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+brio	1.1.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+broom	1.0.8	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+bslib	0.9.0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+butcher	0.3.6	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+cachem	1.1.0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+callr	3.7.6	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+car	3.1-3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+carData	3.0-5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+cellranger	1.1.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+class	7.3-22	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+cli	3.6.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+clipr	0.8.0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+clock	0.7.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+cluster	2.1.8.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+cluster	2.1.6	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+ClusterR	1.3.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+codetools	0.2-20	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+colorspace	2.1-1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+commonmark	2.0.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+compiler	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+CompQuadForm	1.4.3	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+conflicted	1.2.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+corrplot	0.95	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+cowplot	1.1.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+cpp11	0.5.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+crayon	1.5.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+credentials	2.0.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+crosstalk	1.2.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+curl	7.0.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+cutoff	1.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+data.table	1.16.4	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+datasets	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+DBI	1.2.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+dbplyr	2.5.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+dbscan	1.2.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+dendextend	1.19.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+Deriv	4.2.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+desc	1.4.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+devtools	2.4.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+diagram	1.6.5	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+diffobj	0.3.6	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+digest	0.6.37	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+do	2.0.0.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+doBy	4.7.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+doParallel	1.0.17	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+doRNG	1.8.6.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+downlit	0.4.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+dplyr	1.1.4	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+DT	0.33	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+dtplyr	1.3.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+dunn.test	1.3.6	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+ellipse	0.5.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ellipsis	0.3.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+emmeans	1.11.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+estimability	1.5.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+evaluate	1.0.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+factoextra	1.0.7	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+FactoMineR	2.11	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+fansi	1.0.6	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+farver	2.1.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+fastmap	1.2.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+flashClust	1.01-2	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+fontawesome	0.5.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+forcats	1.0.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+foreach	1.5.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+forecast	8.24.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+foreign	0.8-87	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+formatR	1.14	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+Formula	1.2-5	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+fracdiff	1.5-3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+fs	1.6.5	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+futile.logger	1.4.9	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+futile.options	1.0.1	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+future	1.40.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+future.apply	1.11.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+gargle	1.5.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+generics	0.1.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+GenomeInfoDb	1.42.3	Bioconductor 3.20	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+GenomeInfoDbData	1.2.13	Bioconductor	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+GenomicRanges	1.58.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+gert	2.1.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ggplot2	3.5.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ggpubr	0.6.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ggrepel	0.9.6	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ggsci	3.2.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ggsignif	0.6.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+gh	1.5.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+gitcreds	0.1.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+glmnet	4.1-8	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+globals	0.17.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+glue	1.8.0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+gmp	0.7-5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+googledrive	2.1.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+googlesheets4	1.1.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+gower	1.0.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+GPArotation	2024.3-1	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+graphics	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+grDevices	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+grid	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+gridExtra	2.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+gtable	0.3.6	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+hardhat	1.4.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+haven	2.5.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+highr	0.11	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+hms	1.1.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+htmltools	0.5.8.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+htmlwidgets	1.6.4	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+httpuv	1.6.16	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+httr	1.4.7	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+httr2	1.2.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ids	1.0.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ieugwasr	1.0.2	https://mrcieu.r-universe.dev	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+igraph	2.1.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ini	0.3.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ipred	0.9-15	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+IRanges	2.40.1	Bioconductor 3.20	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+isoband	0.2.7	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+iterators	1.0.14	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+janitor	2.2.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+jose	1.2.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+jquerylib	0.1.4	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+jsonlite	1.8.9	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+kernlab	0.9-33	CRAN	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+KernSmooth	2.23-24	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+knitr	1.49	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+labeling	0.4.3	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+lambda.r	1.2.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+LambertW	0.6.9-2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+lamW	2.2.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+later	1.4.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+lattice	0.22-6	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+lava	1.8.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+lazyeval	0.2.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+leaps	3.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+lgr	0.5.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+lifecycle	1.0.4	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+listenv	0.9.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+lme4	1.1-36	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+lmtest	0.9-40	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+lobstr	1.1.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+lubridate	1.9.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+magrittr	2.0.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+MASS	7.3-64	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+MASS	7.3-61	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+mathjaxr	1.6-0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+Matrix	1.7-1	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+MatrixModels	0.5-4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+mclust	6.1.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+mcr	1.3.3.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+memoise	2.0.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+meta	8.0-2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+metadat	1.4-0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+metafor	4.8-0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+methods	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+mgcv	1.9-1	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+microbenchmark	1.5.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+mime	0.12	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+miniUI	0.1.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+minqa	1.2.8	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+mixtools	2.0.0.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+mnormt	2.1.1	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+modelr	0.1.11	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+mr.raps	0.2	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+MRMix	0.1.0	https://mrcieu.r-universe.dev	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+MRPRESSO	1.0	https://mrcieu.r-universe.dev	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+multcompView	0.1-10	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+munsell	0.5.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+mvtnorm	1.3-3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+nlme	3.1-166	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+nloptr	2.1.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+nnet	7.3-19	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+nortest	1.0-4	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+numDeriv	2016.8-1.1	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+openssl	2.3.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+openxlsx	4.2.8.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+packrat	0.9.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+parallel	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+parallelly	1.43.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+patchwork	1.3.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+pbapply	1.7-2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+pbkrtest	0.5.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+pillar	1.10.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+pkgbuild	1.4.8	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+pkgconfig	2.0.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+pkgdown	2.1.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+pkgload	1.4.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+PKI	0.1-15	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+plotly	4.10.4	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+plyr	1.8.9	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+png	0.1-8	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+polynom	1.4-1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+praise	1.0.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+prettyunits	1.2.0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+processx	3.8.6	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+prodlim	2025.04.28	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+profvis	0.4.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+progress	1.2.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+progressr	0.15.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+promises	1.3.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+ps	1.9.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+psych	2.4.12	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+purrr	1.0.4	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+quadprog	1.5-8	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+quantmod	0.4.28	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+quantreg	6.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+R.methodsS3	1.8.2	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+R.oo	1.27.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+R.utils	2.13.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+R6	2.5.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+RadialMR	1.1	https://mrcieu.r-universe.dev	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+ragg	1.4.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+ranger	0.17.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rappdirs	0.3.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+rbibutils	2.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+rcmdcheck	1.4.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+RColorBrewer	1.1-3	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+Rcpp	1.0.14	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+RcppArmadillo	14.2.3-1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+RcppEigen	0.3.4.0.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+RcppParallel	5.1.11-1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+RcppTOML	0.2.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+Rdpack	2.6.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+readr	2.1.5	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+readxl	1.4.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+recipes	1.3.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+refineR	1.6.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+reflimR	1.1.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+reformulas	0.4.0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+rematch	2.0.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rematch2	2.1.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+remotes	2.5.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+renv	1.1.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+reprex	2.1.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+reshape2	1.4.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+Rhtslib	3.2.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+rlang	1.1.5	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+rlist	0.4.6.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rmarkdown	2.29	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+rngtools	1.5.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+robslopes	1.1.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+ROCit	2.1.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+roxygen2	7.3.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rpart	4.1.23	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+rpart.plot	3.1.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rprojroot	2.1.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+Rsamtools	2.22.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+rsconnect	1.5.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rstatix	0.7.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rstudioapi	0.17.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rversions	2.1.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+rvest	1.0.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+S4Vectors	0.44.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+sandwich	3.1-1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+sass	0.4.9	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+scales	1.3.0	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+scatterplot3d	0.3-44	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+segmented	2.1-4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+selectr	0.4-2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+sessioninfo	1.2.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+set	1.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+shape	1.4.6.1	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+shiny	1.11.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+snakecase	0.11.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+snow	0.4-4	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+snowflakeauth	0.2.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+solitude	1.1.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+sourcetools	0.1.7-1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+SparseM	1.84-2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+sparsevctrs	0.3.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+spatial	7.3-17	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+splines	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+SQUAREM	2021.1	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+stats	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+stats4	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+stringi	1.8.4	CRAN	4.4.0	<USER_HOME>/AppData/Local/R/win-library/4.4
+stringr	1.5.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+survival	3.7-0	CRAN	4.4.2	C:/Program Files/R/R-4.4.2/library
+sys	3.4.3	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+systemfonts	1.2.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+tcltk	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+testthat	3.2.3	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+textshaping	1.0.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+tibble	3.2.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+tidyr	1.3.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+tidyselect	1.2.1	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+tidyverse	2.0.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+timechange	0.3.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+timeDate	4041.110	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+tinytex	0.54	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+tmcn	0.2-13	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+tools	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+translations	4.4.2	NA	4.4.2	C:/Program Files/R/R-4.4.2/library
+tseries	0.10-58	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+TTR	0.24.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+TwoSampleMR	0.6.9	https://mrcieu.r-universe.dev	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+tzdb	0.5.0	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+UCSC.utils	1.2.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+urca	1.3-4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+urlchecker	1.0.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+usethis	3.2.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+utf8	1.2.4	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+utils	4.4.2	R (bundled)	4.4.2	C:/Program Files/R/R-4.4.2/library
+uuid	1.2-1	CRAN	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+vctrs	0.6.5	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+viridis	0.6.5	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+viridisLite	0.4.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+vroom	1.6.5	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+waldo	0.6.2	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+whisker	0.4.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+withr	3.0.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+writexl	1.5.4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+xfun	0.50	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+XML	3.99-0.18	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+xml2	1.3.6	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+xopen	1.0.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+xtable	1.8-4	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+xts	0.14.1	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4
+XVector	0.46.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+yaml	2.3.10	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+zip	2.3.2	CRAN	4.4.2	<USER_HOME>/AppData/Local/R/win-library/4.4
+zlibbioc	1.52.0	Bioconductor 3.20	4.4.1	<USER_HOME>/AppData/Local/R/win-library/4.4
+zoo	1.8-14	CRAN	4.4.3	<USER_HOME>/AppData/Local/R/win-library/4.4

@@ -1,0 +1,3 @@
+# Store every file byte-for-byte (no line-ending conversion), so that the SHA-256
+# hashes in executed_pipeline/SHA256SUMS_*.txt can be verified on any operating system.
+* -text

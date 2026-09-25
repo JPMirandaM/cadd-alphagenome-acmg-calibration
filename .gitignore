@@ -1,0 +1,30 @@
+# ---------------------------------------------------------------------------
+# Third-party data are NOT versioned: re-download them with the URLs, versions
+# and checksums in executed_pipeline/data_manifest.tsv (and SHA256SUMS_data.txt).
+# ---------------------------------------------------------------------------
+/data/
+/vep/
+/pj/
+/annot/*
+!/annot/genes/
+/annot/genes/*
+!/annot/genes/download_provenance.tsv
+/calibration/*.zip
+/calibration/pejaver2022_repo/
+
+# ---------------------------------------------------------------------------
+# First-attempt scripts for a WSL/Linux route that was never executed
+# (WSL unavailable on the machine; see METHODS.md, process log).
+# ---------------------------------------------------------------------------
+/setup_cadd.sh
+/run_ranking.sh
+/rank_top.R
+
+# ---------------------------------------------------------------------------
+# R / OS artefacts
+# ---------------------------------------------------------------------------
+.Rhistory
+.RData
+.Rproj.user/
+Thumbs.db
+desktop.ini

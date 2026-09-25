@@ -1,0 +1,63 @@
+# 2026-09-25 00:51:36 synthetic validation of 02_rank_top_windows.R
+[1] "<SCRATCH>/test/t.tsv.bgz.tbi"
+filas: 13470003 
+Chromosomes: 1,2,X
+Windows: 375 (pending 375), workers: 4, PHRED >= 20
+[00:52:32] batch 1/24, 0.3 min elapsed
+[00:52:32] batch 2/24, 0.3 min elapsed
+[00:52:33] batch 3/24, 0.3 min elapsed
+[00:52:33] batch 4/24, 0.3 min elapsed
+[00:52:33] batch 5/24, 0.3 min elapsed
+[00:52:33] batch 6/24, 0.3 min elapsed
+[00:52:33] batch 7/24, 0.3 min elapsed
+[00:52:40] batch 8/24, 0.4 min elapsed
+[00:52:40] batch 9/24, 0.4 min elapsed
+[00:52:40] batch 10/24, 0.4 min elapsed
+[00:52:40] batch 11/24, 0.4 min elapsed
+[00:52:40] batch 12/24, 0.4 min elapsed
+[00:52:40] batch 13/24, 0.4 min elapsed
+[00:52:40] batch 14/24, 0.4 min elapsed
+[00:52:40] batch 15/24, 0.4 min elapsed
+[00:52:50] batch 16/24, 0.6 min elapsed
+[00:52:50] batch 17/24, 0.6 min elapsed
+[00:52:50] batch 18/24, 0.6 min elapsed
+[00:52:50] batch 19/24, 0.6 min elapsed
+[00:52:50] batch 20/24, 0.6 min elapsed
+[00:52:50] batch 21/24, 0.6 min elapsed
+[00:52:50] batch 22/24, 0.6 min elapsed
+[00:52:51] batch 23/24, 0.6 min elapsed
+[00:52:51] batch 24/24, 0.6 min elapsed
+Rows scanned: 13,470,003 | candidates with PHRED >= 20: 1,423,500
+Row 20000: 2:3341849 A>T PHRED = 40.67, RawScore = 2.972469
+Exact ties (PHRED and RawScore) excluded by position: 0 
+Variants written: 20,000 | PHRED range [40.67, 99]
+   PHRED_bin     N
+      <fctr> <int>
+1:   [40,45) 14249
+2:   [45,50)  4506
+3: [50, Inf)  1245
+Written: <SCRATCH>/test/top20000_CADDv1.7_GRCh38_PHRED.tsv.gz 
+Chromosomes: 1,2,X
+Windows: 375 (pending 0), workers: 4, PHRED >= 20
+Rows scanned: 13,470,003 | candidates with PHRED >= 20: 1,423,500
+Variants written: 1,423,500 | PHRED range [20, 99]
+   PHRED_bin      N
+      <fctr>  <int>
+1: [-Inf,25) 779659
+2:   [25,30) 393111
+3:   [30,35) 166782
+4:   [35,40)  59939
+5:   [40,45)  18258
+6:   [45,50)   4506
+7: [50, Inf)   1245
+Written: <SCRATCH>/test/PHRED_ge20_CADDv1.7_GRCh38.tsv.gz 
+Synthetic SNVs: 13470003 
+Top 20,000 identical to in-memory sort: TRUE 
+All PHRED >= 20: written 1423500 | expected 1423500 | equal: TRUE 
+First 20,000 of the threshold output identical to top 20,000: TRUE 
+Forced ties (PHRED 99, RawScore 9.5) resolved by position:
+    Rank  Chrom    Pos    Ref    Alt RawScore PHRED
+   <int> <char>  <int> <char> <char>    <num> <num>
+1:     1      1  10100      A      C      9.5    99
+2:     2      1  14999      A      G      9.5    99
+3:     3      1 909998      A      T      9.5    99

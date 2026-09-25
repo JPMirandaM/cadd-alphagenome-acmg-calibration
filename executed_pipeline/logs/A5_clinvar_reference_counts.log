@@ -1,0 +1,20 @@
+﻿# 2026-09-25 00:53:43 ClinVar fileDate=2026-09-23 SNV counts
+SNV en ClinVar: 4234371 
+
+P/LP y B/LB con >= 1 estrella, por consecuencia:
+Key: <consecuencia>
+      consecuencia   B/LB  P/LP
+            <char>  <int> <int>
+1:             UTR  23527   177
+2:       intronica 429733  3557
+3:        missense 147638 62231
+4:     otra/sin_MC   7885   441
+5:        sinonima 692924   728
+6: splice_canonico    522 40126
+7:     stop_gained    884 69812
+
+Missense con >= 2 estrellas:
+    clase     N
+   <char> <int>
+1:   B/LB 42439
+2:   P/LP 25808

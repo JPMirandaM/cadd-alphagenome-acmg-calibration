@@ -1,0 +1,13 @@
+List of 12
+ $ alpha           : num 0.0441
+ $ c               : num 1124
+ $ B               : int 10000
+ $ discountonesided: num 0.05
+ $ minpoints       : num 100
+ $ gft             : num 0.03
+ $ increment       : num 0.1
+ $ seed            : num 20260925
+ $ n_plp           : int 5704
+ $ n_blb           : int 6059
+ $ n_gnomad        : int 363894
+ $ w               : num 20.4

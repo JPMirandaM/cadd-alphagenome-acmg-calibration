@@ -1,0 +1,223 @@
+﻿== gnomAD v4.1 constraint ==
+rows: 211523 
+ [1] "gene"                       "gene_id"                   
+ [3] "transcript"                 "canonical"                 
+ [5] "mane_select"                "lof.pLI"                   
+ [7] "lof.oe_ci.lower"            "lof.oe_ci.upper"           
+ [9] "lof.oe_ci.upper_rank"       "lof.oe_ci.upper_bin_decile"
+[11] "mis.z_raw"                  "mis.z_score"               
+[13] "transcript_type"           
+MANE Select rows: 34962 
+
+== GenCC submissions ==
+rows: 30321 
+ [1] "uuid"                                "gene_curie"                         
+ [3] "gene_symbol"                         "disease_curie"                      
+ [5] "disease_title"                       "disease_original_curie"             
+ [7] "disease_original_title"              "classification_curie"               
+ [9] "classification_title"                "moi_curie"                          
+[11] "moi_title"                           "submitter_curie"                    
+[13] "submitter_title"                     "submitted_as_hgnc_id"               
+[15] "submitted_as_hgnc_symbol"            "submitted_as_disease_id"            
+[17] "submitted_as_disease_name"           "submitted_as_moi_id"                
+[19] "submitted_as_moi_name"               "submitted_as_submitter_id"          
+[21] "submitted_as_submitter_name"         "submitted_as_classification_id"     
+[23] "submitted_as_classification_name"    "submitted_as_date"                  
+[25] "submitted_as_public_report_url"      "submitted_as_notes"                 
+[27] "submitted_as_pmids"                  "submitted_as_assertion_criteria_url"
+[29] "submitted_as_submission_id"          "submitted_run_date"                 
+               moi_title     N
+                  <char> <int>
+ 1:  Autosomal recessive 15206
+ 2:   Autosomal dominant 12173
+ 3:             X-linked  1510
+ 4:              Unknown  1008
+ 5:         Semidominant   286
+ 6:        Mitochondrial   105
+ 7:   X-linked recessive    30
+ 8: Y-linked inheritance     2
+ 9:  Digenic inheritance     1
+10:                 <NA>    NA
+            classification_title     N
+                          <char> <int>
+1:                        Strong 11313
+2:                    Definitive  5768
+3:                    Supportive  5070
+4:                       Limited  4407
+5:                      Moderate  3145
+6:             Disputed Evidence   303
+7: No Known Disease Relationship   256
+8:              Refuted Evidence    59
+
+== ClinGen gene-disease validity ==
+rows: 3680 
+ [1] "GENE SYMBOL"         "GENE ID (HGNC)"      "DISEASE LABEL"      
+ [4] "DISEASE ID (MONDO)"  "MOI"                 "SOP"                
+ [7] "CLASSIFICATION"      "ONLINE REPORT"       "CLASSIFICATION DATE"
+[10] "GCEP"               
+         MOI     N
+      <char> <int>
+1:        AR  1850
+2:        AD  1480
+3:        XL   207
+4:        SD    59
+5:        MT    54
+6:        UD    29
+7: +++++++++     1
+
+== ClinGen dosage sensitivity ==
+rows: 1534 
+ [1] "#Gene Symbol"                   "Gene ID"                       
+ [3] "cytoBand"                       "Genomic Location"              
+ [5] "Haploinsufficiency Score"       "Haploinsufficiency Description"
+ [7] "Haploinsufficiency PMID1"       "Haploinsufficiency PMID2"      
+ [9] "Haploinsufficiency PMID3"       "Haploinsufficiency PMID4"      
+[11] "Haploinsufficiency PMID5"       "Haploinsufficiency PMID6"      
+[13] "Triplosensitivity Score"        "Triplosensitivity Description" 
+[15] "Triplosensitivity PMID1"        "Triplosensitivity PMID2"       
+[17] "Triplosensitivity PMID3"        "Triplosensitivity PMID4"       
+[19] "Triplosensitivity PMID5"        "Triplosensitivity PMID6"       
+[21] "Date Last Evaluated"            "Haploinsufficiency Disease ID" 
+[23] "Triplosensitivity Disease ID"  
+   Haploinsufficiency Score     N
+                      <int> <int>
+1:                       30   599
+2:                        3   420
+3:                        0   322
+4:                        1   143
+5:                       40    35
+6:                        2    15
+
+== Gene2Phenotype ==
+rows: 3851 
+ [1] "g2p id"                             "gene symbol"                       
+ [3] "gene mim"                           "hgnc id"                           
+ [5] "previous gene symbols"              "disease name"                      
+ [7] "disease mim"                        "disease MONDO"                     
+ [9] "allelic requirement"                "cross cutting modifier"            
+[11] "confidence"                         "variant consequence"               
+[13] "variant types"                      "molecular mechanism"               
+[15] "molecular mechanism support"        "molecular mechanism categorisation"
+[17] "molecular mechanism evidence"       "phenotypes"                        
+[19] "publications"                       "additional mined publications"     
+[21] "panel"                              "comments"                          
+[23] "date of last review"                "review"                            
+-- allelic requirement 
+           allelic requirement     N
+                        <char> <int>
+ 1:        biallelic_autosomal  2015
+ 2:      monoallelic_autosomal  1593
+ 3:   monoallelic_X_hemizygous   175
+ 4: monoallelic_X_heterozygous    58
+ 5:              mitochondrial     7
+ 6:              monoallelic_X     2
+ 7:   monoallelic_Y_hemizygous     1
+ 8:                       <NA>    NA
+ 9:                       <NA>    NA
+10:                       <NA>    NA
+11:                       <NA>    NA
+12:                       <NA>    NA
+-- confidence 
+    confidence     N
+        <char> <int>
+ 1: definitive  2044
+ 2:     strong   885
+ 3:    limited   540
+ 4:   moderate   326
+ 5:   disputed    53
+ 6:    refuted     3
+ 7:       <NA>    NA
+ 8:       <NA>    NA
+ 9:       <NA>    NA
+10:       <NA>    NA
+11:       <NA>    NA
+12:       <NA>    NA
+-- molecular mechanism 
+                  molecular mechanism     N
+                               <char> <int>
+ 1:                  loss of function  2301
+ 2:                      undetermined  1206
+ 3:                  gain of function   197
+ 4:                 dominant negative   132
+ 5: undetermined non-loss-of-function    15
+ 6:                              <NA>    NA
+ 7:                              <NA>    NA
+ 8:                              <NA>    NA
+ 9:                              <NA>    NA
+10:                              <NA>    NA
+11:                              <NA>    NA
+12:                              <NA>    NA
+-- molecular mechanism support 
+    molecular mechanism support     N
+                         <char> <int>
+ 1:                    inferred  3642
+ 2:                    evidence   209
+ 3:                        <NA>    NA
+ 4:                        <NA>    NA
+ 5:                        <NA>    NA
+ 6:                        <NA>    NA
+ 7:                        <NA>    NA
+ 8:                        <NA>    NA
+ 9:                        <NA>    NA
+10:                        <NA>    NA
+11:                        <NA>    NA
+12:                        <NA>    NA
+-- molecular mechanism categorisation 
+                                    molecular mechanism categorisation     N
+                                                                <char> <int>
+ 1:                                                                     3783
+ 2:                                      loss of activity LOF:evidence    23
+ 3:                                interaction-disrupting LOF:evidence     6
+ 4:                                         destabilising LOF:evidence     6
+ 5:                                         destabilising LOF:inferred     6
+ 6:                        LOF due to protein mislocalisation:evidence     4
+ 7:                       assembly-mediated dominant negative:evidence     3
+ 8:                                interaction-disrupting LOF:inferred     3
+ 9:                                                 other GOF:evidence     3
+10: loss of activity LOF:evidence; interaction-disrupting LOF:evidence     1
+11:    destabilising LOF:evidence; interaction-disrupting LOF:evidence     1
+12:                                      loss of activity LOF:inferred     1
+-- molecular mechanism evidence 
+                                                                                                                                                                                                                                                                                                                                                                                                  molecular mechanism evidence
+                                                                                                                                                                                                                                                                                                                                                                                                                        <char>
+ 1:                                                                                                                                                                                                                                                                                                                                                                                                                           
+ 2:                                                                                                                                                                                                                                                                                                                                             37126546 -> models: non-human model organism; rescue: non-human model organism
+ 3:                                                                                                                                                                                                                                                                                                                                                                               34965576 -> models: non-human model organism
+ 4:                                                                                                                                                                                                                                                                                                                                                 39480921 -> function: protein expression; models: non-human model organism
+ 5:                                                                                                                                                                                                                                                                                                                                                                               41033306 -> models: non-human model organism
+ 6:                                                                                                                                                                                                                                                                                                                                                                               40088891 -> models: non-human model organism
+ 7:                                                                                                                                                                                                                                                 21990100 -> function: protein expression & 24849933 -> function: protein expression, biochemical; functional_alteration: patient cells & 35986576 -> function: biochemical
+ 8:                                                                                                                                                                                                                                                                                                                                                                                   23109145 -> function: protein expression
+ 9:                                                                                                                                                                                         10932181 -> function: biochemical, protein interaction & 24532057 -> functional_alteration: patient cells; rescue: cell culture model & 8630490 -> models: non-human model organism & 39610658 -> models: non-human model organism
+10: 20802478 -> function: protein expression; functional_alteration: non patient cells, patient cells & 22228761 -> function: protein expression; functional_alteration: non patient cells; rescue: cell culture model & 33402532 -> function: protein interaction; models: non-human model organism & 40799153 -> function: protein expression, biochemical; functional_alteration: patient cells; rescue: cell culture model
+11:                                                                            23332920 -> function: protein expression; functional_alteration: patient cells & 25326555 -> function: biochemical, protein expression; functional_alteration: non patient cells & 24591628 -> functional_alteration: patient cells; models: cell culture model, non-human model organism; rescue: cell culture model, non-human model organism
+12:                                                                                                                                                                        9288098 -> function: biochemical, protein expression, protein interaction; functional_alteration: non patient cells & 12357473 -> function: protein expression & 23812741 -> function: protein expression; functional_alteration: non patient cells
+        N
+    <int>
+ 1:  3588
+ 2:     2
+ 3:     2
+ 4:     2
+ 5:     2
+ 6:     2
+ 7:     1
+ 8:     1
+ 9:     1
+10:     1
+11:     1
+12:     1
+-- panel 
+                 panel     N
+                <char> <int>
+ 1:                 DD  2006
+ 2:                Eye   388
+ 3:               Skin   269
+ 4:            DD; Eye   249
+ 5:       DD; Skeletal   224
+ 6:            Cardiac   164
+ 7:           DD; Skin   152
+ 8:             Cancer    66
+ 9: DD; Skin; Skeletal    52
+10:  DD; Eye; Skeletal    43
+11:      DD; Eye; Skin    31
+12:                Ear    30

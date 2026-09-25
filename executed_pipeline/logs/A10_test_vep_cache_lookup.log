@@ -1,0 +1,41 @@
+﻿records: 9 | fields per record: 42 | variation_cols: 42 
+            chr  variation_name           start   allele_string        clin_sig 
+           "17"      "CM062017"       "7675088" "HGMD_MUTATION"             "." 
+        gnomADe         gnomADg     gnomADe_NFE 
+            "."             "."             "." 
+            chr  variation_name           start   allele_string        clin_sig 
+           "17"      "CM951224"       "7675088" "HGMD_MUTATION"             "." 
+        gnomADe         gnomADg     gnomADe_NFE 
+            "."             "."             "." 
+              chr    variation_name             start     allele_string 
+             "17"   "COSV104588034"         "7675088" "COSMIC_MUTATION" 
+         clin_sig           gnomADe           gnomADg       gnomADe_NFE 
+              "."               "."               "."               "." 
+              chr    variation_name             start     allele_string 
+             "17"   "COSV109411727"         "7675088" "COSMIC_MUTATION" 
+         clin_sig           gnomADe           gnomADg       gnomADe_NFE 
+              "."               "."               "."               "." 
+              chr    variation_name             start     allele_string 
+             "17"    "COSV52661038"         "7675088" "COSMIC_MUTATION" 
+         clin_sig           gnomADe           gnomADg       gnomADe_NFE 
+              "."               "."               "."               "." 
+              chr    variation_name             start     allele_string 
+             "17"    "COSV52677601"         "7675088" "COSMIC_MUTATION" 
+         clin_sig           gnomADe           gnomADg       gnomADe_NFE 
+              "."               "."               "."               "." 
+              chr    variation_name             start     allele_string 
+             "17"    "COSV52731306"         "7675088" "COSMIC_MUTATION" 
+         clin_sig           gnomADe           gnomADg       gnomADe_NFE 
+              "."               "."               "."               "." 
+              chr    variation_name             start     allele_string 
+             "17"    "COSV53801286"         "7675088" "COSMIC_MUTATION" 
+         clin_sig           gnomADe           gnomADg       gnomADe_NFE 
+              "."               "."               "."               "." 
+                           chr                 variation_name 
+                          "17"                   "rs28934578" 
+                         start                  allele_string 
+                     "7675088"                      "C/A/G/T" 
+                      clin_sig                        gnomADe 
+"likely_pathogenic,pathogenic"      "G:6.841e-07,T:4.104e-06" 
+                       gnomADg                    gnomADe_NFE 
+                  "T:6.57e-06"      "G:8.993e-07,T:5.396e-06" 

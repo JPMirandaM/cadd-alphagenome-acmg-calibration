@@ -1,0 +1,11 @@
+﻿
+file                                               size_bytes sha256                                                          
+----                                               ---------- ------                                                          
+gnomad.v4.1.constraint_metrics.tsv                   95546041 68d8abdb7fc48f570869b02dfaa74b9fecaece7fcc5f301ddca40ec1ce12da00
+gencc_submissions_2026-09-25.tsv                     26461983 6dfd4f17df80363a323c4798a7263aa34689ab8565886635abff879892a08559
+clingen_gene_validity_2026-09-25.csv                  1122516 e0958b8e22f06e51904c13c449fc75530c1df66c169899730c7cebb483c5e5b3
+clingen_dosage_curation_list_GRCh38_2026-09-25.tsv     248838 2a90072100cdcdeeef30143aba1138197bcb98f4295b8c041e345e90bdd7ddc9
+gene2phenotype_all_panels_2026-09-25.csv              2452397 a41c6ae851dce7af41673176c673b7b5e981808897ad5ccc76574524d37d6f3a
+
+
+

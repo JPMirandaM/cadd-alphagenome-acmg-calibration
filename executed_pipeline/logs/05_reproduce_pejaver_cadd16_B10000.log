@@ -1,0 +1,15 @@
+P/LP = 5704, B/LB = 6059, gnomAD = 363894, B = 10000
+Elapsed: 22.7 min
+       level       LR  Post_p Post_b
+1 VeryStrong 1124.000 0.98108 1.0000
+2     Strong   33.526 0.60734 0.9986
+3   Moderate    5.790 0.21081 0.9921
+4 Supporting    2.406 0.09992 0.9812
+       level PP3_point PP3_discounted BP4_point BP4_discounted
+1 VeryStrong        NA             NA        NA             NA
+2     Strong        NA             NA     1.898           0.31
+3   Moderate      26.7           28.1    20.400          17.33
+4 Supporting      25.0           25.3    23.000          22.70
+Results in C:/cadd/calibration/results/cadd16_reproduction_B10000 
+
+[exited with code 0]

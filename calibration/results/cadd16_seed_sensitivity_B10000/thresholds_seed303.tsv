@@ -1,0 +1,5 @@
+seed	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac
+303	VeryStrong					1	0.9514
+303	Strong			1.898	0.31	1	0.0331
+303	Moderate	26.7	28.1	20.4	17.34	0	0
+303	Supporting	25	25.3	23	22.7	0	0

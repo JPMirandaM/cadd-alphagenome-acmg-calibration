@@ -1,0 +1,4 @@
+b168d7068c4de71729ee9d2838855741e0c37e8253644e94689e4dcd39d315b5  annot/clinvar.vcf.gz
+b9a10343de45a560ab1774fa821ce841925404fe9130f4a3330af67ce6a18b7d  annot/clinvar.vcf.gz.tbi
+5b9ad9aa71f6ab5d55123c51f74723644a895bc0cbaa9cee8fbc11bb9dec0bf7  annot/gencode.v50.basic.annotation.gtf.gz
+a25359e5bbb3de9ea47dd21f03950ffb  calibration/pejaver2022_data.zip (MD5, Zenodo 10.5281/zenodo.8347415; verified against Zenodo)
