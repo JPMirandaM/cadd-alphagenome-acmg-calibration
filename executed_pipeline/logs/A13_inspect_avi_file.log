@@ -1,0 +1,31 @@
+﻿== header ==
+$seqnames
+ [1] "chr1"  "chr2"  "chr3"  "chr4"  "chr5"  "chr6"  "chr7"  "chr8"  "chr9" 
+[10] "chr10" "chr11" "chr12" "chr13" "chr14" "chr15" "chr16" "chr17" "chr18"
+[19] "chr19" "chr20" "chr21" "chr22" "chrX"  "chrY" 
+
+$indexColumns
+  seq start   end 
+    1     2     0 
+
+$skip
+[1] 0
+
+$comment
+[1] "#"
+
+$header
+[1] "#CHROM\tPOS\tREF\tALT\traw_score\tPHRED"
+
+== sequences ( 24 ) ==
+ [1] "chr1"  "chr2"  "chr3"  "chr4"  "chr5"  "chr6"  "chr7"  "chr8"  "chr9" 
+[10] "chr10" "chr11" "chr12" "chr13" "chr14" "chr15" "chr16" "chr17" "chr18"
+[19] "chr19" "chr20" "chr21" "chr22" "chrX"  "chrY" 
+== AVI records at 17:7675088 ==
+chr17	7675088	C	A	1.601	30.72127
+chr17	7675088	C	G	1.847	33.53739
+chr17	7675088	C	T	1.613	30.95898
+== CADD v1.7 records at 17:7675088 ==
+17	7675088	C	A	5.013420	28.0
+17	7675088	C	G	5.236081	29.4
+17	7675088	C	T	4.598407	25.9

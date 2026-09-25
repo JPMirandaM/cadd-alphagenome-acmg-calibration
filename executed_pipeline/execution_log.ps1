@@ -145,8 +145,27 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\07_download_ai
 curl.exe -sS --ssl-no-revoke --fail -L -o C:\cadd\annot\gencode.v50.pc_translations.fa.gz https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.pc_translations.fa.gz
 # Step 5f [DONE 2026-09-25] MANE Select coding positions (19,229 transcripts; 33,463,877 coding nt)
 & $R .\scripts\08_build_mane_cds.R                     # -> logs\08_build_mane_cds.log
-# Step 5g [RUNNING since 2026-09-25] CADD v1.7 scores of all possible SNVs at those positions
+# Step 5g [DONE 2026-09-25, 6.0 min] CADD v1.7 scores of all possible SNVs at those positions
+# (100,316,172 SNVs; 3 alleles at every position; none missing or duplicated)
 & $R .\scripts\09_extract_cadd_coding.R 10             # -> logs\09_extract_cadd_coding.log
+# Step 5h [DONE 2026-09-25, ~1.5 h] Consequence per SNV x MANE transcript + translation QC
+& $R .\scripts\10_annotate_consequences.R              # -> logs\10_annotate_consequences.log
+# QC: 19,194/19,229 proteins identical to GENCODE; mismatches classified by auxiliary A12
+& $R .\scripts\auxiliary\A12_inspect_translation_mismatches.R   # -> logs\A12_inspect_translation_mismatches.log
+# Step 5i [DONE 2026-09-25] Correction of consequences at selenocysteine, start and incomplete codons (654 records)
+& $R .\scripts\10b_fix_special_codons.R                # -> logs\10b_fix_special_codons.log
+# Step 5j [DONE 2026-09-25] Consequence counts; 37 non-ATG starts; ClinVar MC concordance 99.99%
+& $R .\scripts\11_consequence_summary_and_clinvar_concordance.R   # -> logs\11_consequence_summary_and_clinvar_concordance.log
+# Step 5k [DONE 2026-09-25] AlphaGenome AVI scores. ZIP downloaded manually by the author (signed-in
+# browser session) and placed in C:\cadd\avi. SHA-256 + CRC check, then in-place extraction
+# (authorised by the author; the ZIP is consumed; no backup copy kept, by the author's decision):
+$Z = 'C:\cadd\avi\avi_scores_snvs_tabix.zip'
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_unzip_stored_inplace.ps1 -Zip $Z -Mode List      # -> logs\A11_avi_zip_list.log
+Get-FileHash $Z -Algorithm SHA256                                                                                               # -> logs\A11_avi_zip_sha256.log
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_unzip_stored_inplace.ps1 -Zip $Z -Mode Verify    # -> logs\A11_avi_zip_verify.log
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_unzip_stored_inplace.ps1 -Zip $Z -OutDir C:\cadd\avi -Mode Extract   # -> logs\A11_avi_zip_extract.log
+& $R .\scripts\auxiliary\A13_inspect_avi_file.R        # format check, TP53 R175H -> logs\A13_inspect_avi_file.log
+& $R .\scripts\12_extract_avi_coding.R 10              # 100,316,172 SNVs, 3.6 min -> logs\12_extract_avi_coding.log
 
 # -------------------------------------------------------------------------------------
 # Step 6 [PENDING: requires step 2] Selection and ranking of SNVs above the PHRED threshold

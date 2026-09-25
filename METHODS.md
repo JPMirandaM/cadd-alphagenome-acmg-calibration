@@ -134,7 +134,53 @@ over at least five seeds. Script: `scripts/05b_seed_sensitivity_cadd16.R`; log:
 Script: `scripts/05_reproduce_pejaver_cadd16.R`; log: `logs/05_reproduce_pejaver_cadd16_B10000.log`;
 full results: `calibration/results/cadd16_reproduction_B10000/`.
 
-### 3.3 Application to CADD v1.7 with current data [PENDING]
+### 3.3 Coding SNV universe and predicted consequences
+
+All possible SNVs in the coding sequence of the 19,229 GENCODE v50 MANE Select transcripts (one
+per protein-coding gene; CDS plus stop codon; chrY PAR copies excluded; 33,463,877 coding
+nucleotides at 33,438,724 genomic positions) were enumerated, and their CADD v1.7 scores were
+extracted by tabix from the verified local file: 100,316,172 SNVs, with exactly three
+alternative alleles at every coding position and no missing or duplicated records
+(`scripts/08`, `09`). Reference codons were rebuilt from the reference alleles of the CADD file
+itself, on the coding strand, and translated with the standard genetic code (Biostrings);
+consequences were assigned per transcript as missense, synonymous, stop gained, stop lost, stop
+retained or start lost (`scripts/10`).
+
+As a quality control, the full reference CDS of every transcript was translated and compared with
+the GENCODE v50 protein sequence: 19,194 of 19,229 proteins (99.82%) were identical. All 35
+differences were explained (`auxiliary/A12`): 35 selenocysteine UGA codons in 25 selenoproteins
+(e.g. SELENOP with 10), 10 transcripts with non-AUG initiation codons (ACG, GTG, ATT, ATA, CTG;
+annotated as Met by GENCODE), and one transcript with an incomplete terminal codon. The
+consequences at these codons were corrected (`scripts/10b`): selenocysteine codons were treated
+as Sec (SNVs are missense, or stop gained if they create a stop codon), every SNV in a start codon
+was classified as start lost (Sequence Ontology/Ensembl VEP definition), and SNVs in the
+incomplete terminal codon as incomplete terminal codon variants. In total 654 SNV × transcript
+records were corrected: 280 stop lost → missense and 35 stop retained → stop gained
+(selenocysteine), 333 → start lost (37 transcripts with non-ATG start codons: CTG 26, ACG 3,
+GTG 2, ATT 2, TTG 2, ATA 2; only 10 had been flagged by the protein comparison because the
+translation function reads CTG/TTG at the initiation position as Met), and 6 → incomplete
+terminal codon variant (`logs/10b_fix_special_codons.log`, `data/coding/consequence_corrections.tsv`).
+
+The resulting universe comprises 100,316,172 SNVs (100,391,631 SNV × transcript records, owing to
+overlapping genes): 72.64% missense, 22.90% synonymous, 4.11% stop gained, 0.17% start lost,
+0.15% stop lost and 0.02% stop retained. As an independent check, our consequence agreed with the
+ClinVar molecular consequence (MC) field for 99.99% of the 3,405,151 ClinVar SNVs with MC located
+in MANE Select coding sequence (missense 99.99%, synonymous 100.00%, stop gained 99.99%, start
+lost 99.92%, stop lost 99.83%); most of the ~200 discordances were annotated by ClinVar on a
+different transcript (`scripts/11`; `logs/11_consequence_summary_and_clinvar_concordance.log`).
+
+AlphaGenome Variant Impact (AVI) scores (AlphaGenome Atlas, released 2026-09-08; SNV file with
+raw and Phred-scaled AVI, GRCh38, tabix) were obtained from the permissive-use download section of
+the AlphaGenome website (a single 88,473,344,811-byte ZIP archive with two stored members,
+downloaded through a signed-in browser session; SHA-256
+`a237c198bc1c033da127fe0257129fdf246e7aa311f8fb584bb053ffa0c7966b`). Both members passed CRC-32
+verification before and after extraction, which was done in place because of disk space
+(`auxiliary/A11`). The file has the same layout as CADD (`CHROM, POS, REF, ALT, raw_score, PHRED`,
+with "chr" sequence names). AVI scores were extracted for the same 100,316,172 coding SNVs
+(`scripts/12`): every coding position had exactly three alleles, none was missing or duplicated,
+and the reference allele agreed with CADD at every position.
+
+### 3.4 Application to CADD v1.7 and AVI with current data [PENDING]
 
 The reference sets will be rebuilt with current data, following the inclusion criteria of the
 original study as closely as possible. **[PENDING: detailed definition of the ClinVar

@@ -4,7 +4,10 @@
 # ---------------------------------------------------------------------------
 /data/
 /vep/
+/avi/
 /pj/
+# Third-party publications (copyrighted PDFs) are cited, not redistributed
+/calibration/literature/
 /annot/*
 !/annot/genes/
 /annot/genes/*

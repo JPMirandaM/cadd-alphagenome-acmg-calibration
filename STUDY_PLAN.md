@@ -64,6 +64,14 @@ already recommended by ClinGen (REVEL, BayesDel, AlphaMissense) as benchmarks, a
 fraction of variants reaching each evidence level and interval-based likelihood ratios. The
 AVI decomposition into feature attributions (protein change vs splicing vs expression) will be
 used to interpret discordances with CADD.
+Circularity check (medRxiv preprint of AlphaGenome Atlas, 2026-09-16): AVI is a supervised
+combiner of AlphaGenome, AlphaMissense, VEP loss-of-function annotations and two conservation
+scores, trained with gnomAD v4.1 frequency proxy labels (AF > 0.001 = proxy benign; AF < 0.001 =
+proxy impactful), not with ClinVar; its Phred scale is the rank among all SNVs (hg38). Because
+many ClinVar B/LB variants are classified by frequency, B/LB reference variants with
+0.001 ≤ AF < 0.01 overlap AVI's proxy-benign training labels and could favour AVI on the BP4 side.
+Planned sensitivity analysis: repeat the calibration of all predictors restricting the ClinVar
+reference set to AF < 0.001.
 Data: AVI SNV scores (AlphaGenome Atlas, permissive-use download, 88.5 GB, downloaded
 2026-09-25); REVEL/BayesDel/AlphaMissense scores [PENDING: source and licence — dbNSFP requires
 academic registration; AlphaMissense predictions licence to be verified].

@@ -1,0 +1,9 @@
+﻿Rows corrected: 654 
+   consequence_before                       consequence     N
+               <char>                            <char> <int>
+1:          stop_lost                          missense   280
+2:           missense                        start_lost   200
+3:         synonymous                        start_lost   131
+4:      stop_retained                       stop_gained    35
+5:           missense incomplete_terminal_codon_variant     6
+6:        stop_gained                        start_lost     2

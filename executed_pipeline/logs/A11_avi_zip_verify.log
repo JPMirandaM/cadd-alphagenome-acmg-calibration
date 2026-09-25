@@ -1,0 +1,12 @@
+﻿
+Name                                             Method    GB Crc     
+----                                             ------    -- ---     
+alphagenome_variant_impact_score_snvs.tsv.gz          0 82,39 6c6c1d44
+alphagenome_variant_impact_score_snvs.tsv.gz.tbi      0     0 ff1e53e7
+
+
+
+Members: 2; total 82,40 GB; methods: 0
+alphagenome_variant_impact_score_snvs.tsv.gz                 CRC 6c6c1d44 expected 6c6c1d44 OK
+alphagenome_variant_impact_score_snvs.tsv.gz.tbi             CRC ff1e53e7 expected ff1e53e7 OK
+All members passed CRC.

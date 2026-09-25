@@ -1,0 +1,57 @@
+﻿SNV x transcript rows: 100391631 | unique SNVs: 100316172 
+                         consequence        N   pct
+                              <char>    <int> <num>
+1:                          missense 72921698 72.64
+2:                        synonymous 22993317 22.90
+3:                       stop_gained  4130497  4.11
+4:                        start_lost   173061  0.17
+5:                         stop_lost   148371  0.15
+6:                     stop_retained    24681  0.02
+7: incomplete_terminal_codon_variant        6  0.00
+
+Start codons: 19229 | non-ATG: 37 
+   ref_codon     N
+      <char> <int>
+1:       CTG    26
+2:       ACG     3
+3:       GTG     2
+4:       ATT     2
+5:       TTG     2
+6:       ATA     2
+
+ClinVar SNVs in MANE coding sequence: 3405428 | with MC: 3405151 
+            ours       n   agree pct_agree
+          <char>   <int>   <int>     <num>
+1:      missense 2523764 2523578     99.99
+2:    synonymous  779773  779765    100.00
+3:   stop_gained   96177   96171     99.99
+4:    start_lost    3729    3726     99.92
+5:     stop_lost    1180    1178     99.83
+6: stop_retained     528     528    100.00
+Overall concordance: 99.99 %
+
+Most frequent ClinVar MC among discordant missense calls:
+                                                                         mc
+                                                                     <char>
+ 1:                                           SO:0001819|synonymous_variant
+ 2:                                                     SO:0001587|nonsense
+ 3:                                SO:0001619|non-coding_transcript_variant
+ 4:                                          SO:0001623|5_prime_UTR_variant
+ 5:                                          SO:0001624|3_prime_UTR_variant
+ 6:                            SO:0002153|genic_upstream_transcript_variant
+ 7:                                               SO:0001627|intron_variant
+ 8: SO:0001619|non-coding_transcript_variant,SO:0001624|3_prime_UTR_variant
+ 9:            SO:0001623|5_prime_UTR_variant,SO:0001819|synonymous_variant
+10: SO:0001619|non-coding_transcript_variant,SO:0001623|5_prime_UTR_variant
+        N
+    <int>
+ 1:   145
+ 2:    17
+ 3:     4
+ 4:     4
+ 5:     3
+ 6:     3
+ 7:     3
+ 8:     3
+ 9:     2
+10:     1

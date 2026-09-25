@@ -1,0 +1,295 @@
+﻿chr7  transcripts   889 | QC identical   887 | SNV x transcript rows 4,705,992
+     consequence       N
+          <char>   <int>
+1:      missense 3417590
+2:    synonymous 1077860
+3:   stop_gained  194567
+4:    start_lost    7974
+5:     stop_lost    6867
+6: stop_retained    1134
+chr12 transcripts   997 | QC identical   996 | SNV x transcript rows 5,199,336
+     consequence       N
+          <char>   <int>
+1:      missense 3778606
+2:    synonymous 1185690
+3:   stop_gained  217094
+4:    start_lost    8964
+5:     stop_lost    7685
+6: stop_retained    1297
+chr11 transcripts  1264 | QC identical  1261 | SNV x transcript rows 5,937,156
+     consequence       N
+          <char>   <int>
+1:      missense 4303190
+2:    synonymous 1381559
+3:   stop_gained  229673
+4:    start_lost   11349
+5:     stop_lost    9787
+6: stop_retained    1598
+chr2  transcripts  1217 | QC identical  1214 | SNV x transcript rows 7,436,031
+     consequence       N
+          <char>   <int>
+1:      missense 5417884
+2:    synonymous 1676099
+3:   stop_gained  320160
+4:    start_lost   10935
+5:     stop_lost    9367
+6: stop_retained    1586
+chr6  transcripts  1005 | QC identical  1003 | SNV x transcript rows 5,069,619
+     consequence       N
+          <char>   <int>
+1:      missense 3682294
+2:    synonymous 1154765
+3:   stop_gained  214479
+4:    start_lost    9027
+5:     stop_lost    7725
+6: stop_retained    1329
+chr16 transcripts   814 | QC identical   812 | SNV x transcript rows 4,168,386
+     consequence       N
+          <char>   <int>
+1:      missense 3012948
+2:    synonymous  983804
+3:   stop_gained  156982
+4:    start_lost    7308
+5:     stop_lost    6357
+6: stop_retained     987
+chr4  transcripts   741 | QC identical   741 | SNV x transcript rows 4,057,848
+     consequence       N
+          <char>   <int>
+1:      missense 2961346
+2:    synonymous  904500
+3:   stop_gained  178673
+4:    start_lost    6660
+5:     stop_lost    5664
+6: stop_retained    1005
+chr3  transcripts  1032 | QC identical  1028 | SNV x transcript rows 5,763,042
+     consequence       N
+          <char>   <int>
+1:      missense 4195145
+2:    synonymous 1307201
+3:   stop_gained  242111
+4:    start_lost    9261
+5:     stop_lost    7961
+6: stop_retained    1363
+chr19 transcripts  1381 | QC identical  1378 | SNV x transcript rows 6,448,221
+     consequence       N
+          <char>   <int>
+1:      missense 4657667
+2:    synonymous 1516201
+3:   stop_gained  249486
+4:    start_lost   12411
+5:     stop_lost   10816
+6: stop_retained    1640
+chr17 transcripts  1134 | QC identical  1133 | SNV x transcript rows 5,754,429
+     consequence       N
+          <char>   <int>
+1:      missense 4168856
+2:    synonymous 1341122
+3:   stop_gained  224048
+4:    start_lost   10197
+5:     stop_lost    8832
+6: stop_retained    1374
+chr5  transcripts   861 | QC identical   859 | SNV x transcript rows 4,688,406
+     consequence       N
+          <char>   <int>
+1:      missense 3411290
+2:    synonymous 1064003
+3:   stop_gained  197525
+4:    start_lost    7740
+5:     stop_lost    6666
+6: stop_retained    1182
+chr8  transcripts   677 | QC identical   677 | SNV x transcript rows 3,429,801
+     consequence       N
+          <char>   <int>
+1:      missense 2492234
+2:    synonymous  781683
+3:   stop_gained  143716
+4:    start_lost    6075
+5:     stop_lost    5204
+6: stop_retained     889
+chr14 transcripts   587 | QC identical   584 | SNV x transcript rows 3,154,590
+     consequence       N
+          <char>   <int>
+1:      missense 2292263
+2:    synonymous  720510
+3:   stop_gained  131224
+4:    start_lost    5274
+5:     stop_lost    4539
+6: stop_retained     780
+chr10 transcripts   709 | QC identical   709 | SNV x transcript rows 3,886,713
+     consequence       N
+          <char>   <int>
+1:      missense 2828697
+2:    synonymous  881546
+3:   stop_gained  163708
+4:    start_lost    6381
+5:     stop_lost    5483
+6: stop_retained     898
+chr13 transcripts   314 | QC identical   314 | SNV x transcript rows 1,844,532
+     consequence       N
+          <char>   <int>
+1:      missense 1345517
+2:    synonymous  412143
+3:   stop_gained   81229
+4:    start_lost    2817
+5:     stop_lost    2408
+6: stop_retained     418
+chr1  transcripts  1996 | QC identical  1992 | SNV x transcript rows 10,259,856
+     consequence       N
+          <char>   <int>
+1:      missense 7445075
+2:    synonymous 2352181
+3:   stop_gained  426663
+4:    start_lost   17946
+5:     stop_lost   15416
+6: stop_retained    2575
+chrX  transcripts   834 | QC identical   834 | SNV x transcript rows 3,865,779
+     consequence       N
+          <char>   <int>
+1:      missense 2813795
+2:    synonymous  876212
+3:   stop_gained  160760
+4:    start_lost    7506
+5:     stop_lost    6376
+6: stop_retained    1130
+chr22 transcripts   423 | QC identical   419 | SNV x transcript rows 2,057,256
+     consequence       N
+          <char>   <int>
+1:      missense 1488989
+2:    synonymous  484278
+3:   stop_gained   76384
+4:    start_lost    3771
+5:     stop_lost    3336
+6: stop_retained     498
+chr15 transcripts   569 | QC identical   568 | SNV x transcript rows 3,499,443
+     consequence       N
+          <char>   <int>
+1:      missense 2547927
+2:    synonymous  793207
+3:   stop_gained  148067
+4:    start_lost    5112
+5:     stop_lost    4359
+6: stop_retained     771
+chr20 transcripts   521 | QC identical   521 | SNV x transcript rows 2,361,528
+     consequence       N
+          <char>   <int>
+1:      missense 1712148
+2:    synonymous  548479
+3:   stop_gained   91541
+4:    start_lost    4671
+5:     stop_lost    4046
+6: stop_retained     643
+chrY  transcripts    43 | QC identical    43 | SNV x transcript rows 199,728
+     consequence      N
+          <char>  <int>
+1:      missense 145472
+2:    synonymous  44306
+3:   stop_gained   9176
+4:    start_lost    387
+5:     stop_lost    325
+6: stop_retained     62
+chr18 transcripts   259 | QC identical   259 | SNV x transcript rows 1,572,624
+     consequence       N
+          <char>   <int>
+1:      missense 1148373
+2:    synonymous  351858
+3:   stop_gained   67731
+4:    start_lost    2331
+5:     stop_lost    1977
+6: stop_retained     354
+chr9  transcripts   748 | QC identical   748 | SNV x transcript rows 4,077,945
+     consequence       N
+          <char>   <int>
+1:      missense 2962617
+2:    synonymous  936632
+3:   stop_gained  165259
+4:    start_lost    6705
+5:     stop_lost    5796
+6: stop_retained     936
+chr21 transcripts   214 | QC identical   214 | SNV x transcript rows 953,370
+     consequence      N
+          <char>  <int>
+1:      missense 691701
+2:    synonymous 217609
+3:   stop_gained  40208
+4:    start_lost   1926
+5:     stop_lost   1659
+6: stop_retained    267
+
+QC: transcripts identical to GENCODE protein: 19194 of 19229 
+Non-identical transcripts:
+         transcript_id cds_nt translated_len gencode_len identical n_diff
+                <char>  <int>          <int>       <int>    <lgcl>  <int>
+ 1:  ENST00000359396.9   2298            765         765     FALSE      1
+ 2:  ENST00000506618.5    957            318         318     FALSE      1
+ 3:  ENST00000525566.6   1950            649         649     FALSE      1
+ 4: ENST00000339995.11   2724            907         907     FALSE      1
+ 5:  ENST00000527636.7   1281            426         426     FALSE      1
+ 6:  ENST00000534355.6    369            122         122     FALSE      1
+ 7: ENST00000260585.12   1194            397         397     FALSE      1
+ 8:  ENST00000333527.7    561            186         186     FALSE      1
+ 9:  ENST00000434431.2    659             NA         219     FALSE     NA
+10: ENST00000338863.13   1308            435         435     FALSE      1
+11:  ENST00000361902.5    666            221         221     FALSE      1
+12:  ENST00000361871.8    351            116         116     FALSE      1
+13:  ENST00000478753.5   1347            448         448     FALSE      1
+14:  ENST00000419783.3    612            203         203     FALSE      1
+15:  ENST00000471696.6    588            195         195     FALSE      1
+16:  ENST00000495461.6    285             94          94     FALSE      1
+17:  ENST00000524230.9   1932            643         643     FALSE      1
+18:  ENST00000335426.9   1041            346         346     FALSE      1
+19: ENST00000354171.13    594            197         197     FALSE      1
+20:  ENST00000601048.6    264             87          87     FALSE      1
+21:  ENST00000333751.8    816            271         271     FALSE      1
+22:  ENST00000388825.9    681            226         226     FALSE      1
+23:  ENST00000514985.6   1146            381         381     FALSE     10
+24:  ENST00000389614.6    573            190         190     FALSE      1
+25:  ENST00000438257.9    822            273         273     FALSE      2
+26:  ENST00000510508.5    915            304         304     FALSE      1
+27: ENST00000331835.10    498            165         165     FALSE      1
+28:  ENST00000361921.8    750            249         249     FALSE      1
+29:  ENST00000374315.1   1671            556         556     FALSE      1
+30:  ENST00000414423.9   2286            761         761     FALSE      1
+31: ENST00000355630.10   3096           1031        1031     FALSE      1
+32:  ENST00000380903.7   2010            669         669     FALSE      1
+33:  ENST00000400299.6    438            145         145     FALSE      1
+34:  ENST00000400521.7   1575            524         524     FALSE      1
+35:  ENST00000526049.6    570            189         189     FALSE      1
+         transcript_id cds_nt translated_len gencode_len identical n_diff
+    internal_stops  chrom
+             <int> <char>
+ 1:              0      7
+ 2:              0      7
+ 3:              1     12
+ 4:              0     11
+ 5:              0     11
+ 6:              1     11
+ 7:              1      2
+ 8:              0      2
+ 9:             NA      2
+10:              0      6
+11:              1      6
+12:              1     16
+13:              1     16
+14:              1      3
+15:              1      3
+16:              1      3
+17:              1      3
+18:              1     19
+19:              1     19
+20:              1     19
+21:              0     17
+22:              1      5
+23:             10      5
+24:              1     14
+25:              2     14
+26:              1     14
+27:              1      1
+28:              1      1
+29:              1      1
+30:              0      1
+31:              0     22
+32:              1     22
+33:              1     22
+34:              1     22
+35:              1     15
+    internal_stops  chrom

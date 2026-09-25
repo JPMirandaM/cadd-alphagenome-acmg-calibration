@@ -1,0 +1,100 @@
+﻿                                          cause     N
+                                         <char> <int>
+1: reference codon differs from GENCODE protein    10
+2:                 selenocysteine (UGA recoded)    35
+         transcript_id    gene protein_pos   ours gencode  codon   note
+                <char>  <char>       <int> <char>  <char> <char> <char>
+ 1:  ENST00000359396.9   TRPV6           1      T       M    ACG       
+ 2:  ENST00000506618.5 PRPS1L1           1      T       M    ACG       
+ 3:  ENST00000525566.6  TXNRD1         648      *       U    TGA       
+ 4: ENST00000339995.11  EIF4G2           1      V       M    GTG       
+ 5:  ENST00000527636.7   TEAD1           1      I       M    ATT       
+ 6:  ENST00000534355.6 SELENOH          44      *       U    TGA       
+ 7: ENST00000260585.12 SELENOI         387      *       U    TGA       
+ 8:  ENST00000333527.7  RESP18           1      I       M    ATA       
+ 9: ENST00000338863.13   TEAD3           1      I       M    ATA       
+10:  ENST00000361902.5    GPX6          73      *       U    TGA       
+11:  ENST00000361871.8   MSRB1          95      *       U    TGA       
+12:  ENST00000478753.5  SEPHS2          60      *       U    TGA       
+13:  ENST00000419783.3    GPX1          49      *       U    TGA       
+14:  ENST00000471696.6 SELENOT          49      *       U    TGA       
+15:  ENST00000495461.6 SELENOK          92      *       U    TGA       
+16:  ENST00000524230.9  TXNRD3           1      L       M    CTG       
+17:  ENST00000524230.9  TXNRD3         642      *       U    TGA       
+18:  ENST00000335426.9 SELENOV         273      *       U    TGA       
+19: ENST00000354171.13    GPX4          73      *       U    TGA       
+20:  ENST00000601048.6 SELENOW          13      *       U    TGA       
+21:  ENST00000333751.8  KCTD11           1      I       M    ATT       
+22:  ENST00000388825.9    GPX3          73      *       U    TGA       
+23:  ENST00000514985.6 SELENOP          59      *       U    TGA       
+24:  ENST00000514985.6 SELENOP         300      *       U    TGA       
+25:  ENST00000514985.6 SELENOP         318      *       U    TGA       
+26:  ENST00000514985.6 SELENOP         330      *       U    TGA       
+27:  ENST00000514985.6 SELENOP         345      *       U    TGA       
+28:  ENST00000514985.6 SELENOP         352      *       U    TGA       
+29:  ENST00000514985.6 SELENOP         367      *       U    TGA       
+30:  ENST00000514985.6 SELENOP         369      *       U    TGA       
+31:  ENST00000514985.6 SELENOP         376      *       U    TGA       
+32:  ENST00000514985.6 SELENOP         378      *       U    TGA       
+33:  ENST00000389614.6    GPX2          40      *       U    TGA       
+34:  ENST00000438257.9    DIO2         133      *       U    TGA       
+35:  ENST00000438257.9    DIO2         266      *       U    TGA       
+36:  ENST00000510508.5    DIO3         170      *       U    TGA       
+37: ENST00000331835.10 SELENOF          96      *       U    TGA       
+38:  ENST00000361921.8    DIO1         126      *       U    TGA       
+39:  ENST00000374315.1 SELENON         428      *       U    TGA       
+40:  ENST00000414423.9   WDR26           1      T       M    ACG       
+41: ENST00000355630.10   MRTFA           1      V       M    GTG       
+42:  ENST00000380903.7 SELENOO         667      *       U    TGA       
+43:  ENST00000400299.6 SELENOM          48      *       U    TGA       
+44:  ENST00000400521.7  TXNRD2         523      *       U    TGA       
+45:  ENST00000526049.6 SELENOS         188      *       U    TGA       
+         transcript_id    gene protein_pos   ours gencode  codon   note
+                                           cause
+                                          <char>
+ 1: reference codon differs from GENCODE protein
+ 2: reference codon differs from GENCODE protein
+ 3:                 selenocysteine (UGA recoded)
+ 4: reference codon differs from GENCODE protein
+ 5: reference codon differs from GENCODE protein
+ 6:                 selenocysteine (UGA recoded)
+ 7:                 selenocysteine (UGA recoded)
+ 8: reference codon differs from GENCODE protein
+ 9: reference codon differs from GENCODE protein
+10:                 selenocysteine (UGA recoded)
+11:                 selenocysteine (UGA recoded)
+12:                 selenocysteine (UGA recoded)
+13:                 selenocysteine (UGA recoded)
+14:                 selenocysteine (UGA recoded)
+15:                 selenocysteine (UGA recoded)
+16: reference codon differs from GENCODE protein
+17:                 selenocysteine (UGA recoded)
+18:                 selenocysteine (UGA recoded)
+19:                 selenocysteine (UGA recoded)
+20:                 selenocysteine (UGA recoded)
+21: reference codon differs from GENCODE protein
+22:                 selenocysteine (UGA recoded)
+23:                 selenocysteine (UGA recoded)
+24:                 selenocysteine (UGA recoded)
+25:                 selenocysteine (UGA recoded)
+26:                 selenocysteine (UGA recoded)
+27:                 selenocysteine (UGA recoded)
+28:                 selenocysteine (UGA recoded)
+29:                 selenocysteine (UGA recoded)
+30:                 selenocysteine (UGA recoded)
+31:                 selenocysteine (UGA recoded)
+32:                 selenocysteine (UGA recoded)
+33:                 selenocysteine (UGA recoded)
+34:                 selenocysteine (UGA recoded)
+35:                 selenocysteine (UGA recoded)
+36:                 selenocysteine (UGA recoded)
+37:                 selenocysteine (UGA recoded)
+38:                 selenocysteine (UGA recoded)
+39:                 selenocysteine (UGA recoded)
+40: reference codon differs from GENCODE protein
+41: reference codon differs from GENCODE protein
+42:                 selenocysteine (UGA recoded)
+43:                 selenocysteine (UGA recoded)
+44:                 selenocysteine (UGA recoded)
+45:                 selenocysteine (UGA recoded)
+                                           cause
