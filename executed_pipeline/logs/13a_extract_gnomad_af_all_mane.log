@@ -1,0 +1,4 @@
+﻿frequency columns: gnomADe, gnomADe_AFR, gnomADe_AMR, gnomADe_ASJ, gnomADe_EAS, gnomADe_FIN, gnomADe_NFE, gnomADe_REMAINING, gnomADe_SAS, gnomADe_MID, gnomADg, gnomADg_AFR, gnomADg_AMI, gnomADg_AMR, gnomADg_ASJ, gnomADg_EAS, gnomADg_FIN, gnomADg_MID, gnomADg_NFE, gnomADg_REMAINING, gnomADg_SAS 
+regions: 191660 | batches: 201 
+SNV alleles with gnomAD frequency fields: 13,032,719 in 13.6 min
+duplicated alleles: 0 

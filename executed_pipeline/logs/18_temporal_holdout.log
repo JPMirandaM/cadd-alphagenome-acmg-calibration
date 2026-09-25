@@ -1,0 +1,48 @@
+﻿ClinVar 2026-09-23: 4555421 records, 6955 disease genes | 2024-01-27: 2349925 records, 5907 disease genes 
+missense SNVs in disease genes of either release: 26,250,004 
+Consistency 2026: ClinVar set identical (keys, y, stars, AF_max, scores): TRUE | gnomAD set identical (keys, AF_max, scores): TRUE 
+  sizes rebuilt: 137107 / 137107 ClinVar, 1955995 / 1955995 gnomAD 
+2024-01-27 sets: 40870 P/LP, 50278 B/LB (4171 genes); gnomAD 2009577 
+Test set (in 2026 main set, absent from 2024 set): 22626 P/LP, 36294 B/LB | label changed between releases (excluded): 11 (P->B 6, B->P 5) 
+[CADD] calibrated on 2024: 6.9 min 
+[AVI] calibrated on 2024: 6.3 min 
+      tool       interval n_PLP n_BLB      LR  lower95 upper95 LR_required
+    <char>         <char> <int> <int>   <num>    <num>   <num>       <num>
+ 1:   CADD   BP4_Moderate   566 15036  0.0604  0.05530  0.0653      0.1730
+ 2:   CADD     BP4_Strong    36  5675  0.0102  0.00698  0.0136      0.0298
+ 3:   CADD BP4_Supporting  1108  5853  0.3040  0.28600  0.3230      0.4160
+ 4:   CADD  Indeterminate  5904  6602  1.4300  1.39000  1.4800          NA
+ 5:   CADD   PP3_Moderate  8588  1235 11.2000 10.50000 11.8000      5.7900
+ 6:   CADD PP3_Supporting  6424  1893  5.4400  5.19000  5.7300      2.4100
+ 7:    AVI   BP4_Moderate   646 14269  0.0726  0.06710  0.0783      0.1730
+ 8:    AVI     BP4_Strong    82  9140  0.0144  0.01150  0.0177      0.0298
+ 9:    AVI BP4_Supporting   993  6038  0.2640  0.24600  0.2810      0.4160
+10:    AVI  Indeterminate  3246  4505  1.1600  1.11000  1.2100          NA
+11:    AVI   PP3_Moderate 14755  1305 18.1000 17.30000 19.1000      5.7900
+12:    AVI PP3_Supporting  2904  1037  4.4900  4.18000  4.8100      2.4100
+    meets_point meets_bound
+         <lgcl>      <lgcl>
+ 1:        TRUE        TRUE
+ 2:        TRUE        TRUE
+ 3:        TRUE        TRUE
+ 4:          NA          NA
+ 5:        TRUE        TRUE
+ 6:        TRUE        TRUE
+ 7:        TRUE        TRUE
+ 8:        TRUE        TRUE
+ 9:        TRUE        TRUE
+10:          NA          NA
+11:        TRUE        TRUE
+12:        TRUE        TRUE
+
+Thresholds calibrated on ClinVar 2024-01-27 vs 2026-09-23 (seed 20260925):
+     tool      level PP3_2024 BP4_2024 PP3_2026 BP4_2026
+   <char>     <char>    <num>    <num>    <num>    <num>
+1:   CADD   Moderate    28.60    19.50    28.00   19.590
+2:   CADD     Strong       NA     1.05       NA    8.341
+3:   CADD Supporting    26.00    22.80    25.60   22.700
+4:   CADD VeryStrong       NA       NA       NA       NA
+5:    AVI   Moderate    26.59    20.60    26.44   20.520
+6:    AVI     Strong       NA     8.94       NA    9.150
+7:    AVI Supporting    25.32    23.00    25.18   22.950
+8:    AVI VeryStrong       NA       NA       NA       NA

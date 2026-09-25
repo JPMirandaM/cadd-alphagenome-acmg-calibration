@@ -200,6 +200,23 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 & $R .\scripts\15_summarize_calibration.R              # -> logs\15_summarize_calibration.log; tables in calibration\results\v17_avi\summary\
 # Figure 1 (data copied from main\<tool>\seed20260925 to figures\data\Fig1_cadd17_avi_calibration\<tool>\):
 & $R .\scripts\16_plot_figure1.R
+# Paired AVI - CADD discrimination (amendment A1):
+& $R .\scripts\17_paired_discrimination.R              # -> logs\17_paired_discrimination.log
+
+# -------------------------------------------------------------------------------------
+# Step 8 Aim 2c temporal hold-out (amendment A2)
+# ClinVar 2024-01-27 archive (MD5 matches official 6959856d8b7a071c0942149e0e31c46f):
+#   https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/archive_2.0/2024/clinvar_20240127.vcf.gz (+ .md5, .tbi) -> C:\cadd\annot\clinvar_archive\
+# gnomAD v4.1 AF (overall + per population) for all MANE coding SNVs (13,032,719 alleles, 13.6 min):
+& $R .\scripts\13a_extract_gnomad_af_all_mane.R 6      # -> logs\13a_extract_gnomad_af_all_mane.log
+# [INTERRUPTED 2026-09-25] first run of script 18 stopped by Claude Code (system low on memory; other
+# applications were using ~15 GB). No output written. Script revised (v2, memory-lean: disease-gene
+# flags per chromosome instead of splitting ~27 M gene strings; update joins; 8 workers). Rerun only
+# after the author's approval.
+# [DONE 2026-09-25, rerun approved after the author closed other applications; peak R 4.7 GB]
+& $R .\scripts\18_temporal_holdout.R 8                 # -> logs\18_temporal_holdout.log; results in calibration\results\v17_avi\temporal_holdout\
+# Figure S3 (data copied to figures\data\FigS3_temporal_validation\; caption wrapped once after first render):
+& $R .\scripts\19_plot_temporal_lr.R C:/cadd/figures/data/FigS3_temporal_validation C:/cadd/figures/FigS3_temporal_validation
 
 # -------------------------------------------------------------------------------------
 # Step 6 [PENDING: requires step 2] Selection and ranking of SNVs above the PHRED threshold
