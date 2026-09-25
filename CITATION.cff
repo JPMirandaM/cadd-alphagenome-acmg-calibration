@@ -6,7 +6,7 @@ authors:
   - family-names: "Miranda"
     given-names: "Jose Patricio"
 license: MIT
-repository-code: "https://github.com/JPMirandaM/<repository-name>"
+repository-code: "https://github.com/JPMirandaM/cadd-v1.7-pp3-bp4-calibration"
 date-released: "2026-09-25"
 version: "0.1.0-dev"
 keywords:

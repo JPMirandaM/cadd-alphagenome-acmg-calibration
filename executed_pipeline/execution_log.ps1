@@ -150,3 +150,9 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A9_r
 git init -b main
 git config core.autocrlf false
 git config core.longpaths true
+git config user.name "Jose Patricio Miranda"
+git config user.email "90576224+JPMirandaM@users.noreply.github.com"   # GitHub no-reply address
+git add -A; git commit    # initial commit 3a5971f
+# Private GitHub repository (created by the author): JPMirandaM/cadd-v1.7-pp3-bp4-calibration
+git remote add origin https://github.com/JPMirandaM/cadd-v1.7-pp3-bp4-calibration.git
+git push -u origin main   # run by the author (browser authentication via Git Credential Manager)
