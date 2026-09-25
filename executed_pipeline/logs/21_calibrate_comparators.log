@@ -1,0 +1,113 @@
+﻿Intersection: ClinVar 59034 P/LP, 75306 B/LB (4725 genes); gnomAD 1888558
+[18:34] CADD seed 20260925: 6.3 min
+[18:40] CADD seed 101: 6.3 min
+[18:47] CADD seed 202: 6.6 min
+[18:53] CADD seed 303: 6.2 min
+[18:59] CADD seed 404: 6.1 min
+[19:05] AVI seed 20260925: 6.0 min
+[19:11] AVI seed 101: 5.8 min
+[19:17] AVI seed 202: 6.0 min
+[19:23] AVI seed 303: 5.9 min
+[19:29] AVI seed 404: 5.8 min
+[19:33] REVEL seed 20260925: 4.7 min
+[19:38] REVEL seed 101: 4.7 min
+[19:43] REVEL seed 202: 4.6 min
+[19:47] REVEL seed 303: 4.7 min
+[19:52] REVEL seed 404: 4.7 min
+[19:58] AlphaMissense seed 20260925: 5.9 min
+[20:04] AlphaMissense seed 101: 6.0 min
+[20:10] AlphaMissense seed 202: 5.9 min
+[20:16] AlphaMissense seed 303: 6.0 min
+[20:22] AlphaMissense seed 404: 5.9 min
+[20:26] BayesDel seed 20260925: 4.6 min
+[20:31] BayesDel seed 101: 4.6 min
+[20:35] BayesDel seed 202: 4.5 min
+[20:40] BayesDel seed 303: 4.7 min
+[20:45] BayesDel seed 404: 4.6 min
+
+== Thresholds on the intersection (median [range] over 5 seeds) ==
+             tool      level                    PP3                    BP4
+           <char>     <fctr>                 <char>                 <char>
+ 1:           AVI Supporting                  25.19                  22.98
+ 2:           AVI   Moderate                  26.44                  20.61
+ 3:           AVI     Strong            not reached       9.28 [9.26-9.28]
+ 4:           AVI VeryStrong            not reached            not reached
+ 5: AlphaMissense Supporting   0.6698 [0.6698-0.67] 0.2367 [0.2367-0.2368]
+ 6: AlphaMissense   Moderate 0.8605 [0.8603-0.8607]                   0.14
+ 7: AlphaMissense     Strong                 0.9898                 0.0763
+ 8: AlphaMissense VeryStrong            not reached            not reached
+ 9:      BayesDel Supporting                   0.14                  -0.13
+10:      BayesDel   Moderate                   0.27                  -0.25
+11:      BayesDel     Strong                   0.48                  -0.54
+12:      BayesDel VeryStrong            not reached            not reached
+13:          CADD Supporting                   25.6       22.7 [22.6-22.7]
+14:          CADD   Moderate                     28                  19.59
+15:          CADD     Strong            not reached                  8.383
+16:          CADD VeryStrong            not reached            not reached
+17:         REVEL Supporting                  0.642    0.396 [0.395-0.396]
+18:         REVEL   Moderate    0.752 [0.752-0.753]                  0.272
+19:         REVEL     Strong                  0.898                  0.087
+20:         REVEL VeryStrong            not reached            not reached
+             tool      level                    PP3                    BP4
+
+== % of intersection reference variants per evidence level ==
+Key: <tool, evidence>
+             tool       evidence  B/LB  P/LP
+           <char>         <char> <num> <num>
+ 1:           AVI   BP4_Moderate  39.1   2.7
+ 2:           AVI     BP4_Strong  22.7   0.3
+ 3:           AVI BP4_Supporting  18.3   4.3
+ 4:           AVI  Indeterminate  12.9  12.7
+ 5:           AVI   PP3_Moderate   4.0  68.0
+ 6:           AVI PP3_Supporting   3.0  12.0
+ 7: AlphaMissense   BP4_Moderate  35.9   2.3
+ 8: AlphaMissense     BP4_Strong  29.7   0.4
+ 9: AlphaMissense BP4_Supporting  13.3   3.1
+10: AlphaMissense  Indeterminate  14.7  14.7
+11: AlphaMissense   PP3_Moderate   2.8  34.0
+12: AlphaMissense     PP3_Strong   0.5  33.4
+13: AlphaMissense PP3_Supporting   3.1  12.2
+14:      BayesDel   BP4_Moderate  38.3   2.4
+15:      BayesDel     BP4_Strong  30.2   0.3
+16:      BayesDel BP4_Supporting  11.6   2.8
+17:      BayesDel  Indeterminate  14.1  12.8
+18:      BayesDel   PP3_Moderate   2.2  29.3
+19:      BayesDel     PP3_Strong   0.5  41.1
+20:      BayesDel PP3_Supporting   3.1  11.4
+21:          CADD   BP4_Moderate  29.0   2.1
+22:          CADD     BP4_Strong  23.9   0.3
+23:          CADD BP4_Supporting  16.7   4.3
+24:          CADD  Indeterminate  19.0  20.9
+25:          CADD   PP3_Moderate   4.8  46.1
+26:          CADD PP3_Supporting   6.6  26.2
+27:         REVEL   BP4_Moderate  38.3   2.5
+28:         REVEL     BP4_Strong  32.0   0.4
+29:         REVEL BP4_Supporting  12.5   3.1
+30:         REVEL  Indeterminate  12.0  11.3
+31:         REVEL   PP3_Moderate   2.0  27.1
+32:         REVEL     PP3_Strong   0.5  45.6
+33:         REVEL PP3_Supporting   2.6  10.1
+             tool       evidence  B/LB  P/LP
+
+== Discrimination on the intersection (95% bootstrap CI; paired differences vs AVI, 1,000 replicates) ==
+            tool  AUROC  AUPRC AUROC_lo AUROC_hi AUPRC_lo AUPRC_hi
+          <char>  <num>  <num>    <num>    <num>    <num>    <num>
+1:         REVEL 0.9606 0.9524   0.9596   0.9616   0.9510   0.9538
+2:      BayesDel 0.9573 0.9462   0.9562   0.9583   0.9447   0.9477
+3: AlphaMissense 0.9489 0.9350   0.9479   0.9500   0.9334   0.9367
+4:           AVI 0.9406 0.9175   0.9394   0.9419   0.9151   0.9197
+5:          CADD 0.9014 0.8492   0.8997   0.9030   0.8461   0.8523
+   dAUROC_vs_AVI dAUROC_lo dAUROC_hi n_dAUROC_ge0 dAUPRC_lo dAUPRC_hi
+           <num>     <num>     <num>        <int>     <num>     <num>
+1:      0.019998  0.018824  0.021189         1000   0.03275   0.03708
+2:      0.016636  0.015498  0.017731         1000   0.02667   0.03090
+3:      0.008262  0.007383  0.009053         1000   0.01585   0.01921
+4:      0.000000        NA        NA           NA        NA        NA
+5:     -0.039220 -0.040421 -0.038042            0  -0.07069  -0.06558
+   n_dAUPRC_ge0 dAUPRC_vs_AVI
+          <int>         <num>
+1:         1000       0.03494
+2:         1000       0.02876
+3:         1000       0.01757
+4:           NA       0.00000
+5:            0      -0.06824

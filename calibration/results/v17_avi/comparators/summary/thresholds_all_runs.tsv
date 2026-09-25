@@ -1,0 +1,101 @@
+tool	seed	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac
+CADD	20260925	VeryStrong					1	1
+CADD	20260925	Strong			10.2	8.383	1	0
+CADD	20260925	Moderate	27.8	28	19.81	19.59	0	0
+CADD	20260925	Supporting	25.5	25.6	22.7	22.7	0	0
+CADD	101	VeryStrong					1	1
+CADD	101	Strong			10.2	8.383	1	0
+CADD	101	Moderate	27.8	28	19.81	19.59	0	0
+CADD	101	Supporting	25.5	25.6	22.7	22.7	0	0
+CADD	202	VeryStrong					1	1
+CADD	202	Strong			10.2	8.383	1	0
+CADD	202	Moderate	27.8	28	19.81	19.59	0	0
+CADD	202	Supporting	25.5	25.6	22.7	22.7	0	0
+CADD	303	VeryStrong					1	1
+CADD	303	Strong			10.2	8.383	1	0
+CADD	303	Moderate	27.8	28	19.81	19.59	0	0
+CADD	303	Supporting	25.5	25.6	22.7	22.7	0	0
+CADD	404	VeryStrong					1	1
+CADD	404	Strong			10.2	8.383	1	0
+CADD	404	Moderate	27.8	28	19.81	19.59	0	0
+CADD	404	Supporting	25.5	25.6	22.7	22.6	0	0
+AVI	20260925	VeryStrong					1	1
+AVI	20260925	Strong	65		10.17	9.28	0.4823	0
+AVI	20260925	Moderate	26.37	26.44	21.24	20.61	0	0
+AVI	20260925	Supporting	25.12	25.19	23.02	22.98	0	0
+AVI	101	VeryStrong					1	1
+AVI	101	Strong	65		10.17	9.28	0.4686	0
+AVI	101	Moderate	26.37	26.44	21.24	20.61	0	0
+AVI	101	Supporting	25.12	25.19	23.02	22.98	0	0
+AVI	202	VeryStrong					1	1
+AVI	202	Strong	65		10.17	9.26	0.4848	0
+AVI	202	Moderate	26.37	26.44	21.24	20.61	0	0
+AVI	202	Supporting	25.12	25.19	23.02	22.98	0	0
+AVI	303	VeryStrong					1	1
+AVI	303	Strong	65		10.17	9.28	0.4774	0
+AVI	303	Moderate	26.37	26.44	21.24	20.61	0	0
+AVI	303	Supporting	25.12	25.19	23.02	22.98	0	0
+AVI	404	VeryStrong					1	1
+AVI	404	Strong	65		10.17	9.28	0.4733	0
+AVI	404	Moderate	26.37	26.44	21.24	20.61	0	0
+AVI	404	Supporting	25.12	25.19	23.02	22.98	0	0
+REVEL	20260925	VeryStrong					1	0.9937
+REVEL	20260925	Strong	0.894	0.898	0.09	0.087	0	0
+REVEL	20260925	Moderate	0.748	0.753	0.279	0.272	0	0
+REVEL	20260925	Supporting	0.637	0.642	0.4	0.396	0	0
+REVEL	101	VeryStrong					1	0.9931
+REVEL	101	Strong	0.894	0.898	0.09	0.087	0	0
+REVEL	101	Moderate	0.748	0.752	0.279	0.272	0	0
+REVEL	101	Supporting	0.637	0.642	0.4	0.396	0	0
+REVEL	202	VeryStrong					1	0.9918
+REVEL	202	Strong	0.894	0.898	0.09	0.087	0	0
+REVEL	202	Moderate	0.748	0.752	0.279	0.272	0	0
+REVEL	202	Supporting	0.637	0.642	0.4	0.395	0	0
+REVEL	303	VeryStrong					1	0.9912
+REVEL	303	Strong	0.894	0.898	0.09	0.087	0	0
+REVEL	303	Moderate	0.748	0.753	0.279	0.272	0	0
+REVEL	303	Supporting	0.637	0.642	0.4	0.395	0	0
+REVEL	404	VeryStrong					1	0.9925
+REVEL	404	Strong	0.894	0.898	0.09	0.087	0	0
+REVEL	404	Moderate	0.748	0.752	0.279	0.272	0	0
+REVEL	404	Supporting	0.637	0.642	0.4	0.396	0	0
+AlphaMissense	20260925	VeryStrong					1	1
+AlphaMissense	20260925	Strong	0.9884	0.9898	0.0799	0.0763	0	0
+AlphaMissense	20260925	Moderate	0.8487	0.8603	0.1504	0.14	0	0
+AlphaMissense	20260925	Supporting	0.661	0.67	0.2484	0.2367	0	0
+AlphaMissense	101	VeryStrong					1	1
+AlphaMissense	101	Strong	0.9884	0.9898	0.0799	0.0763	0	0
+AlphaMissense	101	Moderate	0.8487	0.8606	0.1504	0.14	0	0
+AlphaMissense	101	Supporting	0.661	0.6698	0.2484	0.2368	0	0
+AlphaMissense	202	VeryStrong					1	1
+AlphaMissense	202	Strong	0.9884	0.9898	0.0799	0.0763	0	0
+AlphaMissense	202	Moderate	0.8487	0.8607	0.1504	0.14	0	0
+AlphaMissense	202	Supporting	0.661	0.6698	0.2484	0.2367	0	0
+AlphaMissense	303	VeryStrong					1	1
+AlphaMissense	303	Strong	0.9884	0.9898	0.0799	0.0763	0	0
+AlphaMissense	303	Moderate	0.8487	0.8604	0.1504	0.14	0	0
+AlphaMissense	303	Supporting	0.661	0.67	0.2484	0.2367	0	0
+AlphaMissense	404	VeryStrong					1	1
+AlphaMissense	404	Strong	0.9884	0.9898	0.0799	0.0763	0	0
+AlphaMissense	404	Moderate	0.8487	0.8605	0.1504	0.14	0	0
+AlphaMissense	404	Supporting	0.661	0.6698	0.2484	0.2367	0	0
+BayesDel	20260925	VeryStrong					1	0.9996
+BayesDel	20260925	Strong	0.48	0.48	-0.49	-0.54	0	0
+BayesDel	20260925	Moderate	0.26	0.27	-0.23	-0.25	0	0
+BayesDel	20260925	Supporting	0.14	0.14	-0.13	-0.13	0	0
+BayesDel	101	VeryStrong					1	1
+BayesDel	101	Strong	0.48	0.48	-0.49	-0.54	0	0
+BayesDel	101	Moderate	0.26	0.27	-0.23	-0.25	0	0
+BayesDel	101	Supporting	0.14	0.14	-0.13	-0.13	0	0
+BayesDel	202	VeryStrong					1	0.9998
+BayesDel	202	Strong	0.48	0.48	-0.49	-0.54	0	0
+BayesDel	202	Moderate	0.26	0.27	-0.23	-0.25	0	0
+BayesDel	202	Supporting	0.14	0.14	-0.13	-0.13	0	0
+BayesDel	303	VeryStrong					1	0.9999
+BayesDel	303	Strong	0.48	0.48	-0.49	-0.54	0	0
+BayesDel	303	Moderate	0.26	0.27	-0.23	-0.25	0	0
+BayesDel	303	Supporting	0.14	0.14	-0.13	-0.13	0	0
+BayesDel	404	VeryStrong					1	0.9996
+BayesDel	404	Strong	0.48	0.48	-0.49	-0.54	0	0
+BayesDel	404	Moderate	0.26	0.27	-0.23	-0.25	0	0
+BayesDel	404	Supporting	0.14	0.14	-0.13	-0.13	0	0

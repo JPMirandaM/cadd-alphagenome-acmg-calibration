@@ -224,6 +224,12 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 # host -> Windows bsdtar called by full path; (2) import.chain() does not read .gz -> chain gunzipped.
 # Intermediate AlphaMissense/REVEL tables are cached between attempts. Peak R memory 14.4 GB (REVEL read).
 & $R .\scripts\20_extract_comparators.R                # -> logs\20_extract_comparators.log
+# [DONE 2026-09-25 18:28-20:50] 25 calibration runs (5 predictors x 5 seeds) + discrimination on the intersection:
+& $R .\scripts\21_calibrate_comparators.R 10           # -> logs\21_calibrate_comparators.log; results in calibration\results\v17_avi\comparators\
+# Step 10 Aim 8 ancestry (amendment A4) [RUNNING since 2026-09-25 ~20:55]:
+& $R .\scripts\22_ancestry.R                           # -> logs\22_ancestry.log
+# Step 11 Aim 7 VUS evidence (amendment A5) [PENDING]:
+# & $R .\scripts\23_vus_yield.R
 # Figure S3 (data copied to figures\data\FigS3_temporal_validation\; caption wrapped once after first render):
 & $R .\scripts\19_plot_temporal_lr.R C:/cadd/figures/data/FigS3_temporal_validation C:/cadd/figures/FigS3_temporal_validation
 

@@ -1,0 +1,21 @@
+tool	level	PP3	BP4
+AVI	Supporting	25.19	22.98
+AVI	Moderate	26.44	20.61
+AVI	Strong	not reached	9.28 [9.26-9.28]
+AVI	VeryStrong	not reached	not reached
+AlphaMissense	Supporting	0.6698 [0.6698-0.67]	0.2367 [0.2367-0.2368]
+AlphaMissense	Moderate	0.8605 [0.8603-0.8607]	0.14
+AlphaMissense	Strong	0.9898	0.0763
+AlphaMissense	VeryStrong	not reached	not reached
+BayesDel	Supporting	0.14	-0.13
+BayesDel	Moderate	0.27	-0.25
+BayesDel	Strong	0.48	-0.54
+BayesDel	VeryStrong	not reached	not reached
+CADD	Supporting	25.6	22.7 [22.6-22.7]
+CADD	Moderate	28	19.59
+CADD	Strong	not reached	8.383
+CADD	VeryStrong	not reached	not reached
+REVEL	Supporting	0.642	0.396 [0.395-0.396]
+REVEL	Moderate	0.752 [0.752-0.753]	0.272
+REVEL	Strong	0.898	0.087
+REVEL	VeryStrong	not reached	not reached

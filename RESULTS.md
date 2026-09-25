@@ -72,6 +72,54 @@ replicates for either metric (bootstrap p < 0.001).
 These proportions are computed on the calibration set itself; out-of-sample performance is
 assessed in R5.
 
+## R6. Head-to-head comparison with already-recommended predictors (Aim 6; amendment A3)
+
+Intersection of reference variants scored by all five predictors: 59,034 P/LP and 75,306 B/LB
+(4,725 genes); gnomAD set 1,888,558. Five seeds × B = 10,000 per predictor (script
+`21_calibrate_comparators.R`). Thresholds (median [range]; PP3 score ≥, BP4 score ≤):
+
+| Predictor | PP3 Sup | PP3 Mod | PP3 Strong | BP4 Sup | BP4 Mod | BP4 Strong |
+|---|---|---|---|---|---|---|
+| REVEL | 0.642 | 0.752 [0.752–0.753] | 0.898 | 0.396 [0.395–0.396] | 0.272 | 0.087 |
+| BayesDel noAF | 0.14 | 0.27 | 0.48 | −0.13 | −0.25 | −0.54 |
+| AlphaMissense | 0.6698 [0.6698–0.67] | 0.8605 [0.8603–0.8607] | 0.9898 | 0.2367 [0.2367–0.2368] | 0.14 | 0.0763 |
+| AVI | 25.19 | 26.44 | not reached | 22.98 | 20.61 | 9.28 [9.26–9.28] |
+| CADD v1.7 | 25.6 | 28.0 | not reached | 22.7 [22.6–22.7] | 19.59 | 8.383 |
+
+Very Strong was not reached by any predictor. CADD and AVI thresholds on the intersection are
+within 0.3 units of those on the full main set.
+**[VERIFY and tabulate the published thresholds for REVEL and BayesDel (Pejaver et al. 2022) and
+AlphaMissense (Bergquist et al. 2025) for comparison; several of our REVEL/BayesDel BP4 thresholds
+appear less stringent than published, to be checked.]**
+
+Discrimination on the intersection (95% bootstrap CI) and paired differences versus AVI (1,000
+paired replicates):
+
+| Predictor | AUROC | AUPRC | ΔAUROC vs AVI [95% CI] | ΔAUPRC vs AVI [95% CI] |
+|---|---|---|---|---|
+| REVEL | 0.961 [0.960–0.962] | 0.952 [0.951–0.954] | +0.020 [0.019–0.021] | +0.035 [0.033–0.037] |
+| BayesDel | 0.957 [0.956–0.958] | 0.946 [0.945–0.948] | +0.017 [0.015–0.018] | +0.029 [0.027–0.031] |
+| AlphaMissense | 0.949 [0.948–0.950] | 0.935 [0.933–0.937] | +0.008 [0.007–0.009] | +0.018 [0.016–0.019] |
+| AVI | 0.941 [0.939–0.942] | 0.918 [0.915–0.920] | — | — |
+| CADD v1.7 | 0.901 [0.900–0.903] | 0.849 [0.846–0.852] | −0.039 [−0.040 to −0.038] | −0.068 [−0.071 to −0.066] |
+
+All paired differences had the same sign in all 1,000 replicates.
+
+Evidence levels on the intersection (in-sample; % of P/LP / % of B/LB):
+
+| Predictor | PP3 Strong | PP3 Moderate | PP3 Supporting | Indeterminate | BP4 Sup | BP4 Mod | BP4 Strong |
+|---|---|---|---|---|---|---|---|
+| REVEL | 45.6 / 0.5 | 27.1 / 2.0 | 10.1 / 2.6 | 11.3 / 12.0 | 3.1 / 12.5 | 2.5 / 38.3 | 0.4 / 32.0 |
+| BayesDel | 41.1 / 0.5 | 29.3 / 2.2 | 11.4 / 3.1 | 12.8 / 14.1 | 2.8 / 11.6 | 2.4 / 38.3 | 0.3 / 30.2 |
+| AlphaMissense | 33.4 / 0.5 | 34.0 / 2.8 | 12.2 / 3.1 | 14.7 / 14.7 | 3.1 / 13.3 | 2.3 / 35.9 | 0.4 / 29.7 |
+| AVI | — | 68.0 / 4.0 | 12.0 / 3.0 | 12.7 / 12.9 | 4.3 / 18.3 | 2.7 / 39.1 | 0.3 / 22.7 |
+| CADD v1.7 | — | 46.1 / 4.8 | 26.2 / 6.6 | 20.9 / 19.0 | 4.3 / 16.7 | 2.1 / 29.0 | 0.3 / 23.9 |
+
+Interpretation (provisional): for missense variants, the missense-specialised predictors
+(REVEL, BayesDel, AlphaMissense) discriminate better than the genome-wide AVI and reach PP3
+Strong, which AVI and CADD do not; AVI clearly outperforms CADD v1.7. AVI's advantage over the
+missense-specialised tools, if any, would be expected outside missense variants (deferred Aim 9).
+
 ## R5. Temporal hold-out validation (Aim 2c; amendment A2)
 
 Consistency check: the 2026 reference sets rebuilt from the all-MANE gnomAD table were identical
