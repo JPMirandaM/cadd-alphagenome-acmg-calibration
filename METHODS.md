@@ -109,9 +109,23 @@ and 4 P/LP ClinVar variants at PHRED ≤ 0.31): its bootstrap thresholds are wid
 level, so the one-sided bound falls at about the 1.7th percentile of valid replicates. The
 published value equals the 1st percentile of our replicates. Because the original code seeds the
 generator from the clock, both values are single Monte Carlo draws; their seed dependence is
-quantified in section 3.2.1. **[PENDING: seed-sensitivity results.] [VERIFY in Table 2 the
-published PP3 Strong/VeryStrong and BP4 VeryStrong entries; the port gives all three not
-reached.]**
+quantified in section 3.2.1. **[VERIFY in Table 2 the published PP3 Strong/VeryStrong and BP4
+VeryStrong entries; the port gives all three not reached.]**
+
+#### 3.2.1 Seed (Monte Carlo) sensitivity
+
+The full calibration (B = 10,000) was repeated with four additional seeds (101, 202, 303, 404;
+20.6–24.1 min each). Thresholds estimated in data-rich regions were stable: PP3 Supporting
+25.2–25.3, PP3 Moderate 28.1 (all seeds), BP4 Supporting 22.6–22.7, BP4 Moderate 17.33–17.34.
+BP4 Strong alternated between two values: 0.152–0.155 in three seeds (matching the published
+0.15) and 0.310 in two. The switch is explained by the number of replicates that do not reach
+the level (3.3–3.7%): because they count toward the 5% bound, small differences move the bound
+between two plateaus of the bootstrap distribution separated by a gap between PHRED ~0.16 and
+0.31 (Figure S2, Table S2). We conclude that the port reproduces the published calibration, and
+that thresholds located in sparse score regions should be reported with their seed variability.
+For the CADD v1.7 calibration, thresholds will therefore be reported as the median and range
+over at least five seeds. Script: `scripts/05b_seed_sensitivity_cadd16.R`; log:
+`logs/05b_seed_sensitivity_cadd16.log`.
 Script: `scripts/05_reproduce_pejaver_cadd16.R`; log: `logs/05_reproduce_pejaver_cadd16_B10000.log`;
 full results: `calibration/results/cadd16_reproduction_B10000/`.
 
@@ -207,7 +221,9 @@ repeating the computations.
 | Figure | Content | Files | Status |
 |---|---|---|---|
 | S1 | Local posterior probability of CADD v1.6 PHRED, reproduced from the data of Pejaver et al. (2022); validation of the R port | `figures/FigS1_cadd16_reproduction.{png,pdf}`; data `figures/data/FigS1_cadd16_reproduction/` | Done 2026-09-25 |
-| Table S1 | Published vs reproduced CADD v1.6 thresholds | `figures/TableS1_port_validation.tsv` | Done 2026-09-25 (Strong/VeryStrong rows to verify) |
+| Table S1 | Published vs reproduced CADD v1.6 thresholds | `figures/TableS1_port_validation.tsv` | Done 2026-09-25 (PP3 Strong/VeryStrong and BP4 VeryStrong rows to verify) |
+| S2 | Seed sensitivity of the one-sided BP4 Strong bound (5 seeds × 10,000 replicates) | `figures/FigS2_seed_sensitivity.{png,pdf}`; data `figures/data/FigS2_seed_sensitivity/`; script `scripts/06b_plot_seed_sensitivity.R` | Done 2026-09-25 |
+| Table S2 | All thresholds per seed, with fraction of failed replicates | `figures/TableS2_seed_sensitivity.tsv` | Done 2026-09-25 |
 | 1 | Local posterior probability of CADD v1.7 PHRED with current ClinVar/gnomAD data | `figures/Fig1_cadd17_calibration.*` | [PENDING] |
 
 ## References [VERIFY all before submission]
@@ -243,3 +259,5 @@ repeating the computations.
 | 2026-09-25 | Aim 1 gene annotations downloaded (gnomAD v4.1 constraint; GenCC; ClinGen gene validity; ClinGen dosage; Gene2Phenotype), with provenance and hashes. Caveat for the mechanism stratum: 3,642 of 3,851 Gene2Phenotype records have an *inferred* (not evidence-based) molecular mechanism, and only ~330 records are gain of function or dominant negative. |
 | 2026-09-25 | Repository prepared for GitHub (private until publication): local user-profile paths redacted in versioned text files (A9; only path strings changed, A1 re-hashed); the single-connection download script that produced the first 84 MB of the CADD file archived as script 00; Git initialised with byte-for-byte storage so that published hashes remain verifiable; third-party data excluded and documented in the data manifest. |
 | 2026-09-25 | The reproduced BP4 Strong threshold (0.31) was questioned. Diagnosis: point estimate 1.90; bootstrap BP4 Strong thresholds are widely dispersed (1st percentile 0.15, median 1.84, 95th percentile 10.2; 3.4% of replicates fail the level, with ~450 ClinVar variants below PHRED 1). Because failed replicates count toward the 5% bound, the reported value is the ~1.7th percentile of valid replicates, a tail region sensitive to the random seed. A seed-sensitivity analysis (4 additional seeds, B = 10,000) was started (step 5c). Author confirmed non-commercial use of CADD. |
+| 2026-09-25 | Seed sensitivity completed: BP4 Strong = 0.152–0.155 in 3/5 seeds (published 0.15) and 0.31 in 2/5; all other levels stable (section 3.2.1). A first draft of Figure S2 excluded the failed replicates from the cumulative curve, making the 5% line cross at ~0.5; it was corrected so that failed replicates are counted first, as in the original rule. Decision: CADD v1.7 thresholds will be reported as median and range over ≥ 5 seeds. |
+| 2026-09-25 | Both parallel downloads (VEP cache, CADD) completed all parts but stopped before merging because a curl retry warning was treated as a terminating error; fixed in script v3 (03b), which also checks every part's exact length before merging. VEP cache verified (size, SHA-256, gzip CRC); gnomAD v4.1 confirmed in its info.txt. |

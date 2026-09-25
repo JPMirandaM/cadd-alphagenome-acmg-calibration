@@ -1,3 +1,17 @@
 ﻿seed 101 done in 20.6 min
 seed 202 done in 24.1 min
 seed 303 done in 20.6 min
+seed 404 done in 21.6 min
+
+Discounted thresholds across seeds:
+Key: <variable, level>
+         variable      level    101    202   303    404 20260925
+           <fctr>     <char>  <num>  <num> <num>  <num>    <num>
+1: PP3_discounted   Moderate 28.100 28.100 28.10 28.100    28.10
+2: PP3_discounted     Strong     NA     NA    NA     NA       NA
+3: PP3_discounted Supporting 25.200 25.200 25.30 25.200    25.30
+4: PP3_discounted VeryStrong     NA     NA    NA     NA       NA
+5: BP4_discounted   Moderate 17.330 17.330 17.34 17.330    17.33
+6: BP4_discounted     Strong  0.152  0.155  0.31  0.155     0.31
+7: BP4_discounted Supporting 22.700 22.600 22.70 22.700    22.70
+8: BP4_discounted VeryStrong     NA     NA    NA     NA       NA

@@ -85,7 +85,11 @@ tar.exe -xf C:\cadd\calibration\pejaver2022_data.zip -C C:\cadd\pj --exclude "__
 Copy-Item C:\cadd\calibration\results\cadd16_reproduction_B10000\posterior_curves.tsv, C:\cadd\calibration\results\cadd16_reproduction_B10000\posterior_levels.tsv, C:\cadd\calibration\results\cadd16_reproduction_B10000\thresholds.tsv, C:\cadd\calibration\results\cadd16_reproduction_B10000\bootstrap_thresholds.tsv C:\cadd\figures\data\FigS1_cadd16_reproduction
 & $R .\scripts\06_plot_posteriors.R C:/cadd/figures/data/FigS1_cadd16_reproduction C:/cadd/figures/FigS1_cadd16_reproduction "CADD v1.6 PHRED (data of Pejaver et al. 2022)"
 
-# Step 5c [RUNNING since 2026-09-25 ~01:15] Seed (Monte Carlo) sensitivity of the thresholds:
+# Step 5c [DONE 2026-09-25 ~02:40; 20.6-24.1 min per seed] -> Table S2; Figure S2 via:
+#   & $R .\scripts\06b_plot_seed_sensitivity.R C:/cadd/figures/data/FigS2_seed_sensitivity C:/cadd/figures/FigS2_seed_sensitivity
+#   (data copied from calibration\results\cadd16_seed_sensitivity_B10000\; figure script revised twice
+#    before the final render: failed replicates counted first; label position)
+# Originally: [RUNNING since 2026-09-25 ~01:15] Seed (Monte Carlo) sensitivity of the thresholds:
 # 4 additional seeds (101, 202, 303, 404), same data and parameters, B = 10,000, 10 workers.
 # The seed-20260925 results of step 5 were copied into the same folder in the same format first.
 # Outputs: C:\cadd\calibration\results\cadd16_seed_sensitivity_B10000\ ; log: logs\05b_seed_sensitivity_cadd16.log
