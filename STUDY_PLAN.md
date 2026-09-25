@@ -90,6 +90,20 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   five predictors (intersection), five seeds per predictor (25 runs). Discrimination (AUROC,
   AUPRC) on the intersection with paired bootstrap differences versus AVI.
 
+- A4 (2026-09-25, before running it): Aim 8 ancestry analysis. Universe: MANE Select missense
+  SNVs observed in gnomAD v4.1 (AF > 0 in exomes or genomes, VEP 116 cache). Genetic ancestry
+  groups: AFR, AMR, ASJ, EAS, FIN, MID, NFE, SAS (per-group AF = maximum of exome and genome AF)
+  and AMI (genomes only); "remaining" excluded. PP3 level assigned with the main-analysis median
+  thresholds of CADD v1.7 and AVI (Supporting, Moderate). Outcomes, per predictor: (1) number and
+  proportion of PP3-level variants with a group AF > 0.01 (proxy for a gene-agnostic BS1 level)
+  and > 0.05 (BA1 level); (2) the group with the highest AF (grpmax) among those variants;
+  (3) per group, the proportion of PP3-level variants observed in that group whose AF in that group
+  exceeds 0.01 / 0.05, with Wilson 95% intervals, and the number of PP3-level variants that exceed
+  0.01 only in that group ("group-specific common"). Descriptive analysis; no hypothesis test.
+  Limitation declared: the VEP cache has no allele numbers (AN), so the ClinGen requirement of a
+  minimum AN for BA1 cannot be applied; AN will be retrieved from the gnomAD joint VCF for the
+  variants in conflict (stage 2 of section 4.3).
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
