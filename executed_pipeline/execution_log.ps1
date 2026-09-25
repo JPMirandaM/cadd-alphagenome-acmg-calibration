@@ -23,7 +23,12 @@ $R = 'C:\Program Files\R\R-4.4.2\bin\Rscript.exe'
 & $R -e "install.packages('patchwork', repos='https://cloud.r-project.org', type='binary')"
 
 # -------------------------------------------------------------------------------------
-# Step 2 [RUNNING since 2026-09-24 ~23:20] CADD v1.7 GRCh38 whole_genome_SNVs.tsv.gz
+# Step 2 [DONE 2026-09-25] CADD v1.7 GRCh38 whole_genome_SNVs.tsv.gz  (started 2026-09-24 ~23:20)
+# All 8 parts complete at 02:31, but script 01 stopped before merging (same curl-stderr issue as the
+# VEP cache, see step 3b). Completed with script v3 (03b; verifies part lengths, then merges):
+#   powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\03b_download_parallel_v3.ps1 -Parts 8   -> logs\03b_cadd_merge.log
+# Verification: MD5 matches the official checksum files (whole_genome_SNVs.tsv.gz.md5, MD5SUMs,
+# downloaded to C:\cadd\data\checksums\); index MD5 also matches -> logs\cadd_file_checksums.log
 # 87,473,403,655 bytes; server Last-Modified 2024-01-29 12:26:37 GMT, ETag "145dd23707-61014c1cb9940".
 # The first 84,180,992 bytes (part 0) come from an earlier single-connection attempt (curl -C -,
 # same server and file); the rest from 8 parallel byte ranges. The script accepts only HTTP 206
@@ -116,6 +121,13 @@ $T = '<SCRATCH>\test'   # path hard-coded in A1 (<SCRATCH> = session temporary f
 & $R .\scripts\auxiliary\A4_benchmark_gnomad_remote.R
 # [DONE] A5 ClinVar reference counts                           -> logs\A5_clinvar_reference_counts.log
 & $R .\scripts\auxiliary\A5_clinvar_reference_counts.R
+# [DONE 2026-09-25] A11 space-saving extractor for STORED zip archives (for the 88.5 GB AlphaGenome
+# AVI zip, which requires a signed-in browser session and was downloaded manually by the author).
+# Tested on a synthetic ZIP64 archive built with bsdtar in store mode (4.35 GB, 3 members incl. one
+# > 4 GB): Verify passed CRC-32 for all members; Extract produced files MD5-identical to the
+# originals, including the first member shifted in place. The test also confirmed that archives
+# written by .NET with NoCompression (method 8) are rejected by the safety check.
+# powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_unzip_stored_inplace.ps1 -Zip <zip> -Mode List|Verify|Extract
 # [DONE] A7 package inventory                                  -> package_inventory.tsv
 & $R .\scripts\auxiliary\A7_record_environment.R C:\cadd\executed_pipeline
 
@@ -127,6 +139,14 @@ $T = '<SCRATCH>\test'   # path hard-coded in A1 (<SCRATCH> = session temporary f
 # -------------------------------------------------------------------------------------
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\07_download_aim1_gene_annotations.ps1
 & $R .\scripts\auxiliary\A8_inspect_aim1_gene_annotations.R
+
+# -------------------------------------------------------------------------------------
+# Step 5e [DONE 2026-09-25 05:48 UTC] GENCODE v50 protein translations (QC of the consequence engine)
+curl.exe -sS --ssl-no-revoke --fail -L -o C:\cadd\annot\gencode.v50.pc_translations.fa.gz https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.pc_translations.fa.gz
+# Step 5f [DONE 2026-09-25] MANE Select coding positions (19,229 transcripts; 33,463,877 coding nt)
+& $R .\scripts\08_build_mane_cds.R                     # -> logs\08_build_mane_cds.log
+# Step 5g [RUNNING since 2026-09-25] CADD v1.7 scores of all possible SNVs at those positions
+& $R .\scripts\09_extract_cadd_coding.R 10             # -> logs\09_extract_cadd_coding.log
 
 # -------------------------------------------------------------------------------------
 # Step 6 [PENDING: requires step 2] Selection and ranking of SNVs above the PHRED threshold

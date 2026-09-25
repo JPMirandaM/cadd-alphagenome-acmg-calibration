@@ -1,0 +1,8 @@
+﻿MANE Select transcripts with CDS: 19229 | genes: 19229 
+coding nucleotides: 33463877 | unique genomic positions: 33438724 
+CDS length multiple of 3: 19228 of 19229 
+transcripts with stop_codon feature: 19228 
+        gene_type     N
+           <char> <int>
+1: protein_coding 19229
+Written: C:/cadd/data/coding/mane_cds_positions.rds 

@@ -1,0 +1,52 @@
+﻿coding positions: 33438724 | merged regions: 191660 
+Rscript.exe : [W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+En línea: 1 Carácter: 302
++ ... tch {} } }; & 'C:\Program Files\R\R-4.4.2\bin\Rscript.exe' C:\cadd\ex ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([W::hts_idx_loa...SNVs.tsv.gz.tbi:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+[[1]]
+NULL
+
+[[2]]
+NULL
+
+[[3]]
+NULL
+
+[[4]]
+NULL
+
+[[5]]
+NULL
+
+[[6]]
+NULL
+
+[[7]]
+NULL
+
+[[8]]
+NULL
+
+[[9]]
+NULL
+
+[[10]]
+NULL
+
+rows: 100,316,172 in 6.0 min
+positions returned: 33438724 of 33438724 | with exactly 3 alleles: 33438724 
+duplicated rows: 0 
+coding positions without CADD rows: 0 
+Written per-chromosome files to C:/cadd/data/coding 

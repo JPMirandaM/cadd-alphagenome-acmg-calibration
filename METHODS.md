@@ -19,9 +19,12 @@ file provides chromosome, 1-based position, reference allele, alternative allele
 
 The file was downloaded with curl 8.21.0 as 8 byte ranges retrieved in parallel. Only HTTP 206
 (partial content) responses were accepted, the segments were concatenated in order, and
-integrity was checked by requiring the final size to match the size reported by the server
-exactly. **[PENDING: completion date, SHA-256 of the final file, and total number of rows
-scanned in section 2.]**
+integrity was checked by requiring every segment and the final file to have exactly the expected
+size, and by comparing MD5 checksums with those published by the CADD developers: both the score
+file (`88577a55f1cd519d44e0f415ba248eb9`) and its index (`347df8fac17ea374c4598f4f44c7ce8b`)
+matched (download completed 2026-09-25; SHA-256 of the score file:
+`11582f442d3db5bc529a3786e9ddfe27860642c2447d64e468387ad9c050645a`). **[PENDING: total number of
+rows scanned in section 2.]**
 
 ## 2. Variant selection
 
@@ -260,6 +263,7 @@ repeating the computations.
 | 2026-09-25 | Study scope agreed with the author: Aims 1–4 (stratified calibration by gene class, temporal/version stability, MAVE validation, genome-wide resource); Aim 5 (local population cohort) recorded as a future proposal because no cohort data are currently available. Literature scan performed to position each aim. See `STUDY_PLAN.md`. |
 | 2026-09-25 | Aim 1 gene annotations downloaded (gnomAD v4.1 constraint; GenCC; ClinGen gene validity; ClinGen dosage; Gene2Phenotype), with provenance and hashes. Caveat for the mechanism stratum: 3,642 of 3,851 Gene2Phenotype records have an *inferred* (not evidence-based) molecular mechanism, and only ~330 records are gain of function or dominant negative. |
 | 2026-09-25 | Repository prepared for GitHub (private until publication): local user-profile paths redacted in versioned text files (A9; only path strings changed, A1 re-hashed); the single-connection download script that produced the first 84 MB of the CADD file archived as script 00; Git initialised with byte-for-byte storage so that published hashes remain verifiable; third-party data excluded and documented in the data manifest. |
+| 2026-09-25 | Scope extended to increase clinical impact (STUDY_PLAN.md): head-to-head calibration of AVI (AlphaGenome Atlas, released 2026-09-08), CADD v1.7 and already-recommended predictors (Aim 6); VUS evidence yield (Aim 7); temporal hold-out validation (added to Aim 2); ancestry analysis (Aim 8). Noncoding/splicing calibration deferred (Aim 9). Two outputs planned (main article, resource article); target journals recorded. |
 | 2026-09-25 | The reproduced BP4 Strong threshold (0.31) was questioned. Diagnosis: point estimate 1.90; bootstrap BP4 Strong thresholds are widely dispersed (1st percentile 0.15, median 1.84, 95th percentile 10.2; 3.4% of replicates fail the level, with ~450 ClinVar variants below PHRED 1). Because failed replicates count toward the 5% bound, the reported value is the ~1.7th percentile of valid replicates, a tail region sensitive to the random seed. A seed-sensitivity analysis (4 additional seeds, B = 10,000) was started (step 5c). Author confirmed non-commercial use of CADD. |
 | 2026-09-25 | Seed sensitivity completed: BP4 Strong = 0.152–0.155 in 3/5 seeds (published 0.15) and 0.31 in 2/5; all other levels stable (section 3.2.1). A first draft of Figure S2 excluded the failed replicates from the cumulative curve, making the 5% line cross at ~0.5; it was corrected so that failed replicates are counted first, as in the original rule. Decision: CADD v1.7 thresholds will be reported as median and range over ≥ 5 seeds. |
 | 2026-09-25 | Both parallel downloads (VEP cache, CADD) completed all parts but stopped before merging because a curl retry warning was treated as a terminating error; fixed in script v3 (03b), which also checks every part's exact length before merging. VEP cache verified (size, SHA-256, gzip CRC); gnomAD v4.1 confirmed in its info.txt. |
