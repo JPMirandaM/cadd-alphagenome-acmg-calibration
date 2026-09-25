@@ -22,6 +22,51 @@ Thresholds are reported as median and range over ≥ 5 random seeds.
 2. **Resource article**: genome-wide catalogue of SNVs meeting each calibrated evidence level
    (Aim 4), with ready-to-use threshold tables and VEP-compatible files.
 
+## Pre-specified analysis plan v1 (frozen before any CADD v1.7 / AVI calibration result)
+
+Frozen on 2026-09-25 with the Git tag `analysis-plan-v1`. Any later change must be recorded as
+an amendment with date and reason, and results under the original plan must remain reported.
+
+**Reference sets** (following Pejaver et al. 2022 as closely as possible):
+1. ClinVar GRCh38 release 2026-09-23. SNVs that are missense in their GENCODE v50 MANE Select
+   transcript (our validated consequence annotation); SNVs with a non-missense protein-altering
+   consequence (stop gained/lost, start lost) in another overlapping MANE transcript are excluded.
+2. Labels: P/LP = Pathogenic, Likely_pathogenic, Pathogenic/Likely_pathogenic; B/LB = Benign,
+   Likely_benign, Benign/Likely_benign (exact CLNSIG values; VUS, conflicting and any combination
+   with other terms excluded).
+3. Review status ≥ 1 star (criteria provided).
+4. Rare: maximum of gnomAD v4.1 exome and genome AF (overall) < 0.01; absent from gnomAD = rare.
+5. Disease genes: genes (ClinVar GENEINFO) with ≥ 1 P/LP record of any variant type and ≥ 1 star.
+6. gnomAD set (window sizing only): MANE missense SNVs observed in gnomAD v4.1 (exomes or genomes)
+   with AF < 0.01, absent from ClinVar (any record), in the same disease genes.
+7. Declared deviations: no HGMD exclusion (licensed resource); no training-set exclusion (neither
+   CADD nor AVI was trained on ClinVar; verified); gnomAD genotype-quality (DP/GQ) and
+   low-complexity-region filters not reproducible from the VEP cache.
+
+**Scores**: CADD v1.7 PHRED (1 decimal as distributed); AVI Phred rounded to 2 decimals (the
+method evaluates every distinct score value; 5-decimal AVI would multiply computation without
+changing thresholds reported at 0.1 resolution).
+
+**Calibration**: R port of Pejaver et al. (validated), α = 0.0441, c = 1124, B = 10,000,
+minimum 100 ClinVar variants and 3% of the gnomAD set per window, window increment 0.1 for both
+Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 101, 202, 303,
+404); thresholds reported as median and range. Each sensitivity analysis: 1 seed (20260925).
+
+**Pre-specified sensitivity analyses** (the only ones to be run):
+- S1: review status ≥ 2 stars.
+- S2: rare defined as AF < 0.001 (addresses the overlap between frequency-based B/LB
+  classifications and AVI's frequency proxy training labels).
+- S3: gene-level (cluster) bootstrap: genes are resampled with replacement instead of variants,
+  for both the ClinVar and the gnomAD sets.
+- S4: excluding missense SNVs within 3 nt of an internal exon boundary (possible splicing effect).
+
+**Discrimination**: AUROC and AUPRC on the main reference set, with 95% bootstrap intervals
+(1,000 replicates, variant-level).
+
+**Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
+comparison uses the intersection of variants scored by all predictors; per-predictor full-set
+results are reported as secondary.
+
 ## Aims
 
 ### Aim 1 — Calibration stratified by gene class
