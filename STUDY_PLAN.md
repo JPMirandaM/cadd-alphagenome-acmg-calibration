@@ -104,6 +104,16 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   minimum AN for BA1 cannot be applied; AN will be retrieved from the gnomAD joint VCF for the
   variants in conflict (stage 2 of section 4.3).
 
+- A5 (2026-09-25, before running it): Aim 7 VUS evidence yield. Set: ClinVar 2026-09-23 SNVs
+  with CLNSIG exactly "Uncertain_significance", review status ≥ 1 star, MANE Select missense
+  (same annotation and exclusions as the reference sets), in disease genes; no frequency filter in
+  the main count (a secondary count restricted to AF < 0.01 is also reported). Each VUS is assigned
+  the PP3/BP4 level of each predictor with the median thresholds of (a) the main analysis for CADD
+  v1.7 and AVI and (b) the Aim 6 intersection analysis for all five predictors. Reported: number
+  and proportion of VUS per evidence level and the corresponding ACMG/AMP points (Tavtigian et
+  al. 2020: Supporting ±1, Moderate ±2, Strong ±4); agreement between CADD and AVI (cross-table).
+  This quantifies computational evidence only; it does not reclassify variants.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
