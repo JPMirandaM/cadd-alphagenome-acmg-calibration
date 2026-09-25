@@ -39,7 +39,8 @@ plateaued at ~0.37 (Figure 1).
 | AVI | BP4 Moderate | 20.52 | 20.81 | 20.45 | 20.16 | 20.36 |
 | AVI | BP4 Strong | 9.15 | 9.17 | 9.08 | 8.98 | 9.01 |
 
-Supporting and Moderate thresholds varied by ≤ 1 PHRED unit across all sensitivity analyses.
+Supporting and Moderate thresholds varied by ≤ 1.1 PHRED units across all sensitivity analyses
+(largest change: CADD BP4 Moderate 19.59 → 20.60 with ≥ 2-star variants).
 Restricting to AF < 0.001 (S2) did not change AVI's BP4 thresholds (≤ 0.07 units), giving no
 evidence that the overlap with AVI's frequency-based training labels favoured AVI. Gene-level
 resampling (S3) changed thresholds by ≤ 0.6 units. With ≥ 2-star variants (S1), AVI reached PP3
