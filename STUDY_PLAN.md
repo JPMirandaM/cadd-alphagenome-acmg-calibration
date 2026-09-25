@@ -63,6 +63,21 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
 **Discrimination**: AUROC and AUPRC on the main reference set, with 95% bootstrap intervals
 (1,000 replicates, variant-level).
 
+**Amendments to plan v1** (dated; the original plan above remains the primary specification)
+- A1 (2026-09-25, after the main results): paired bootstrap comparison of AUROC/AUPRC between
+  AVI and CADD v1.7 (1,000 paired replicates). Reason: plan v1 specified per-predictor intervals
+  only, which do not test the difference.
+- A2 (2026-09-25, before running it): temporal hold-out design for Aim 2c. Calibration set =
+  ClinVar release 2024-01-27 (last release before the CADD v1.7 score files, 2024-01-29/30),
+  built with the plan-v1 criteria; test set = variants of the 2026-09-23 main set absent from the
+  2024 set (variants whose label changed between releases are excluded and counted). Evaluation:
+  interval-based positive likelihood ratios of each evidence interval on the test set (95%
+  bootstrap intervals, 1,000 replicates) compared with the required LRs. AVI is evaluated with the
+  same split; because AVI was released in 2026, this tests the stability of its calibration on
+  newly classified variants rather than a post-release hold-out. Calibration: 1 seed (20260925),
+  B = 10,000. gnomAD frequencies for all MANE coding SNVs are extracted once (script 13a) and the
+  2026 reference sets are rebuilt from them as a consistency check before building the 2024 sets.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.

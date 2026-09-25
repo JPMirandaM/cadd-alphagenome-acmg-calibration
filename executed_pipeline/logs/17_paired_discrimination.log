@@ -1,0 +1,8 @@
+﻿   metric difference_AVI_minus_CADD lower95 upper95
+   <char>                     <num>   <num>   <num>
+1:  AUROC                   0.03866 0.03743 0.03994
+2:  AUPRC                   0.06775 0.06505 0.07054
+   replicates_with_difference_le_0     B     seed
+                             <int> <int>    <int>
+1:                               0  1000 20260925
+2:                               0  1000 20260925

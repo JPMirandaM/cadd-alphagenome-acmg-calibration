@@ -52,7 +52,10 @@ Strong (≥ 30.23) and CADD's BP4 Strong moved to 1.74 (fewer B/LB variants at l
 | CADD v1.7 | 0.902 [0.900–0.903] | 0.849 [0.846–0.853] |
 | AVI | 0.940 [0.939–0.942] | 0.917 [0.914–0.919] |
 
-**[PENDING: paired bootstrap for the AVI − CADD difference.]**
+Paired comparison (added after analysis plan v1; 1,000 paired bootstrap replicates, seed
+20260925; script `17_paired_discrimination.R`): AVI − CADD difference in AUROC +0.039
+[0.037–0.040] and in AUPRC +0.068 [0.065–0.071]; the difference was ≤ 0 in none of the 1,000
+replicates for either metric (bootstrap p < 0.001).
 
 ## R4. Evidence levels assigned to the reference variants (main median thresholds; in-sample)
 
