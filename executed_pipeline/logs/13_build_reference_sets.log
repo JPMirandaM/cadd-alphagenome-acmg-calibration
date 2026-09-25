@@ -1,0 +1,12 @@
+﻿ClinVar records: 4555421 | disease genes (>=1 P/LP any type, >=1 star): 6955 
+coding positions within 3 nt of an internal exon boundary: 1034755 
+MANE missense SNVs: 72,867,928 | in disease genes: 26,018,064 
+gnomAD SNV allele frequencies from VEP cache: 3,689,818 rows in 23.1 min 
+                                set  P_LP  B_LB genes  gnomAD
+                             <char> <int> <int> <int>   <int>
+1: ClinVar main (>=1 star, AF<0.01) 59979 77128  4826      NA
+2:                    S1: >=2 stars 24926 24777  3876      NA
+3:                     S2: AF<0.001 59886 64864  4752      NA
+4:                 S4: no exon-edge 56393 75727  4815      NA
+5:                       gnomAD set    NA    NA  5009 1955995
+P/LP exon-edge fraction: 5.98% | B/LB exon-edge fraction: 1.82% 

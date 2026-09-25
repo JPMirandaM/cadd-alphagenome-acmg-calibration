@@ -166,6 +166,35 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_unzip_stored_inplace.ps1 -Zip $Z -OutDir C:\cadd\avi -Mode Extract   # -> logs\A11_avi_zip_extract.log
 & $R .\scripts\auxiliary\A13_inspect_avi_file.R        # format check, TP53 R175H -> logs\A13_inspect_avi_file.log
 & $R .\scripts\12_extract_avi_coding.R 10              # 100,316,172 SNVs, 3.6 min -> logs\12_extract_avi_coding.log
+# Analysis plan v1 frozen: commit 148d5ff, tag analysis-plan-v1 (pushed to GitHub).
+# Step 5l [INTERRUPTED 2026-09-25] Reference sets, first version of script 13: stopped by Claude Code
+# because the machine ran low on memory, while loading ~73 M missense SNV rows with string columns
+# for all chromosomes at once. No output was written. Script revised (v2, memory-lean: per
+# chromosome, disease genes filtered before aggregation, fewer columns, 6 workers); criteria unchanged.
+# Rerun only after the author's approval.
+# Step 5l [RERUN 2026-09-25, approved] v2 ran with peak R memory 4.5 GB but failed when parsing the
+# VEP cache: (a) fread col.names given for all 42 columns while only 7 were selected; (b) the cache
+# stores end = "." for SNVs, so the filter start == end removed every record. Fixed (SNVs identified
+# by single-base allele_string; empty regions handled); parsing tested on TP53 before the rerun.
+# Note: some alleles carry AF = 0 in the cache; per plan v1 these are not "observed" for the gnomAD
+# set (AF > 0 required) and count as rare for the ClinVar set.
+& $R .\scripts\13_build_reference_sets.R 6            # -> logs\13_build_reference_sets.log
+# [DONE 2026-09-25, 23.1 min VEP step] Main set: 59,979 P/LP, 77,128 B/LB (4,826 genes); gnomAD set 1,955,995.
+
+# -------------------------------------------------------------------------------------
+# Step 7 CADD v1.7 and AVI calibration (analysis plan v1)
+# Smoke tests (B = 20, all 18 configurations; outputs deleted) found and fixed: integer overflow in
+# AUROC (n1 * n0 > 2^31) and column types in the summary. Timing with B = 200 extrapolated to
+# ~30 h for 18 runs, because each replicate sorts ~2 M gnomAD scores. A faster implementation
+# (04b_pejaver_port_fast.R: per-value counts instead of sorting; same sample.int draws) was
+# verified bit-identical to the validated port on the Pejaver CADD v1.6 data with auxiliary A14:
+# identical point posteriors, 25/25 identical replicates, and the B = 10,000 run with seed 20260925
+# reproduced all 80,000 bootstrap thresholds (same NA pattern, max abs difference 0) and all final
+# thresholds (6.9 vs 22.7 min). The element-wise check was first run inline (appended to the A14 log)
+# and then added to the A14 script.
+& $R .\scripts\auxiliary\A14_verify_fast_port.R        # -> logs\A14_verify_fast_port.log
+# [RUNNING since 2026-09-25 ~10:00] full calibration, 18 runs, B = 10,000, 10 workers:
+& $R .\scripts\14_calibrate_cadd17_avi.R 10            # -> logs\14_calibrate_cadd17_avi.log
 
 # -------------------------------------------------------------------------------------
 # Step 6 [PENDING: requires step 2] Selection and ranking of SNVs above the PHRED threshold
