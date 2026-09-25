@@ -215,6 +215,15 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 # after the author's approval.
 # [DONE 2026-09-25, rerun approved after the author closed other applications; peak R 4.7 GB]
 & $R .\scripts\18_temporal_holdout.R 8                 # -> logs\18_temporal_holdout.log; results in calibration\results\v17_avi\temporal_holdout\
+# -------------------------------------------------------------------------------------
+# Step 9 Aim 6 comparators (amendment A3)
+# AlphaMissense (MD5 matches Zenodo) and REVEL v1.3 downloaded to C:\cadd\comparators\ (see manifest);
+# BayesDel noAF bigWigs, hg38ToHg19 chain and hg19.2bit from UCSC -> C:\cadd\comparators\bayesdel\ (download_provenance.tsv)
+# rtracklayer 1.66.0 installed (BiocManager, binary) to read bigWig files and lift over coordinates.
+# Script 20 failed twice before completing: (1) a GNU tar earlier in R's PATH read "C:" as a remote
+# host -> Windows bsdtar called by full path; (2) import.chain() does not read .gz -> chain gunzipped.
+# Intermediate AlphaMissense/REVEL tables are cached between attempts. Peak R memory 14.4 GB (REVEL read).
+& $R .\scripts\20_extract_comparators.R                # -> logs\20_extract_comparators.log
 # Figure S3 (data copied to figures\data\FigS3_temporal_validation\; caption wrapped once after first render):
 & $R .\scripts\19_plot_temporal_lr.R C:/cadd/figures/data/FigS3_temporal_validation C:/cadd/figures/FigS3_temporal_validation
 

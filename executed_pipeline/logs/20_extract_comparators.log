@@ -1,0 +1,11 @@
+﻿unique SNVs to score: 2400264 
+AlphaMissense: SNVs with >1 value: 22302 
+REVEL: SNVs with >1 value: 122434 
+liftOver hg38 -> hg19: 1 hit 2399980 | 0 hits 284 | >1 hits 0 
+minus-strand mappings: 4187 | reference base mismatch after liftOver (excluded): 70 
+BayesDel: lifted SNVs with a score: 2393432 of 2399910 | exact zeros: 959 
+Coverage in the 2026 ClinVar main set (y = 1 P/LP, 0 B/LB):
+       y     n    AM REVEL BayesDel all_three
+   <int> <int> <int> <int>    <int>     <int>
+1:     0 77128 75584 76612    76923     75306
+2:     1 59979 59162 59846    59966     59034

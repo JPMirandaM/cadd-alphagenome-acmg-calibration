@@ -78,6 +78,18 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   B = 10,000. gnomAD frequencies for all MANE coding SNVs are extracted once (script 13a) and the
   2026 reference sets are rebuilt from them as a consistency check before building the 2024 sets.
 
+- A3 (2026-09-25, before running it): Aim 6 comparator calibration. Sources: AlphaMissense
+  (Zenodo 10813168, hg38), REVEL v1.3 (official file, GRCh38 positions), BayesDel noAF (UCSC hg19
+  track, lifted to GRCh38 with the UCSC chain and reference-base check; the developer site and
+  Google Drive were not reachable from the local network). Where a predictor has several values
+  for an SNV (transcripts/genes), the maximum is used. Score precision and window increment, chosen
+  to match the original study: BayesDel rounded to 2 decimals, increment 0.01 (the BayesDel data of
+  Pejaver et al. have 2 decimals); REVEL as distributed (3 decimals), increment 0.001; AlphaMissense
+  as distributed (4 decimals), increment 0.001 (default of the original code); CADD and AVI as in
+  plan v1 (increment 0.1). Main comparison: ClinVar and gnomAD reference variants scored by all
+  five predictors (intersection), five seeds per predictor (25 runs). Discrimination (AUROC,
+  AUPRC) on the intersection with paired bootstrap differences versus AVI.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
