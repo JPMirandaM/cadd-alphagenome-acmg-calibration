@@ -210,6 +210,48 @@ data (R6) would increase BP4 evidence relative to the published thresholds, whic
 considered before any clinical interpretation. Computational evidence alone does not reclassify a
 variant.
 
+## R9. Threshold drift across ClinVar releases and circularity (amendment A6)
+
+Reference sets (variants scored by all five predictors; plan-v1 criteria): ClinVar 2019-12-02
+17,330 P/LP / 11,379 B/LB; 2022-11-19 32,868 / 32,044; 2024-01-27 40,282 / 49,090; 2026-09-23
+59,034 / 75,306; within 2026, pre-2022 (present in the 2022-11-19 set) 29,027 / 23,923 and
+post-2022 (absent from it) 30,007 / 51,383. One seed, B = 10,000 per set and predictor (scripts
+`24a`–`24c`; tables `calibration/results/v17_avi/release_series/`).
+
+**1. The discrepancy with published thresholds is not temporal.** Calibrated on the same ClinVar
+release as the original study (2019-12-02), our reference-set construction already gave REVEL BP4
+thresholds of ≤ 0.400 (Supporting), ≤ 0.270 (Moderate), ≤ 0.045 (Strong) and ≤ 0.001 (Very
+Strong), versus published ≤ 0.290, ≤ 0.183, ≤ 0.016 and ≤ 0.003, and BayesDel BP4 ≤ −0.12 and
+≤ −0.22 versus ≤ −0.18 and ≤ −0.36; PP3 thresholds on the 2019 release were close to published
+(REVEL 0.682 / 0.780 / 0.928 vs 0.644 / 0.773 / 0.932). The difference is therefore attributable
+mainly to reference-set construction — in particular the original exclusion of HGMD variants and of
+predictor-training variants, which we could not apply, and other filters — rather than to changes
+over time. Absolute thresholds for REVEL, BayesDel and AlphaMissense from this study should not be
+used interchangeably with the published ClinGen thresholds.
+
+**2. Drift and circularity (post hoc common scale).** To compare predictors with different score
+scales, each threshold was expressed as the percentage of the 2026 gnomAD intersection variants
+(1,888,558) meeting it (higher = less stringent); this metric was added after A6 was registered
+(script `24d`, post hoc). Change in PP3 (percentage points of gnomAD variants):
+
+| Predictor (ClinGen recommendation) | Supporting, 2026 − 2019 | Supporting, post − pre | Moderate, 2026 − 2019 | Moderate, post − pre | Strong, 2026 − 2019 | Strong, post − pre |
+|---|---|---|---|---|---|---|
+| REVEL (2022) | +1.95 | +1.44 | +1.10 | +0.90 | +1.02 | +0.79 |
+| BayesDel (2022) | +2.35 | +1.21 | +1.57 | +0.40 | +0.52 | +0.28 |
+| CADD (2022) | +1.44 | +3.59 | +1.78 | +3.83 | — | — |
+| AlphaMissense (2025) | −0.04 | +1.15 | +0.78 | −0.24 | −0.34 | −0.20 |
+| AVI (2026; negative control) | +0.72 | +1.24 | −0.12 | −0.40 | — | — |
+
+At the Supporting level all predictors, including the negative control, relaxed by a similar
+amount between pre- and post-2022 variants (+1.2 to +1.4 points; CADD +3.6), which points to a
+change in the composition of ClinVar. At Moderate and Strong, and over the 2019–2026 series, PP3
+relaxation was present for the predictors recommended in 2022 (REVEL, BayesDel, CADD; +0.3 to +3.8
+points) and absent or smaller for AlphaMissense and AVI (−0.4 to +0.8), a pattern consistent with a
+modest circularity on the pathogenic side. BP4 thresholds did not show this pattern: post-2022
+variants gave more stringent BP4 thresholds for most predictors, including AVI.
+Limitations: one seed per set without bootstrap intervals for the differences; the pre/post split
+confounds time of classification with other differences between the two groups of variants.
+
 ## R5. Temporal hold-out validation (Aim 2c; amendment A2)
 
 Consistency check: the 2026 reference sets rebuilt from the all-MANE gnomAD table were identical

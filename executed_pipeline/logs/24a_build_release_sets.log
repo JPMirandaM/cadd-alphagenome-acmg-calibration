@@ -1,0 +1,24 @@
+﻿r2019: 504487 records, 3412 disease genes
+                                                revstat      N
+                                                 <char>  <int>
+1:                  criteria_provided,_single_submitter 341886
+2: criteria_provided,_multiple_submitters,_no_conflicts  78025
+3:                       no_assertion_criteria_provided  41877
+4:       criteria_provided,_conflicting_interpretations  22735
+5:                             reviewed_by_expert_panel  10115
+6:                                no_assertion_provided   9237
+7:             no_interpretation_for_the_single_variant    581
+8:                                   practice_guideline     31
+r2022: 1497298 records, 4587 disease genes
+                                                revstat       N
+                                                 <char>   <int>
+1:                  criteria_provided,_single_submitter 1139395
+2: criteria_provided,_multiple_submitters,_no_conflicts  208819
+3:       criteria_provided,_conflicting_interpretations   66450
+4:                       no_assertion_criteria_provided   57021
+5:                             reviewed_by_expert_panel   13673
+6:                                no_assertion_provided   11198
+7:             no_interpretation_for_the_single_variant     691
+8:                                   practice_guideline      51
+r2019 sets: 17529 P/LP, 11725 B/LB (2536 genes); gnomAD 1746191
+r2022 sets: 33354 P/LP, 32881 B/LB (3721 genes); gnomAD 2048432

@@ -228,6 +228,12 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 & $R .\scripts\21_calibrate_comparators.R 10           # -> logs\21_calibrate_comparators.log; results in calibration\results\v17_avi\comparators\
 # Step 10 Aim 8 ancestry (amendment A4) [DONE 2026-09-25 ~21:05]:
 & $R .\scripts\22_ancestry.R                           # -> logs\22_ancestry.log; results in calibration\results\v17_avi\ancestry\
+# Step 12 Amendment A6 (drift and circularity) [DONE 2026-09-26]
+# ClinVar archives 2019-12-02 and 2022-11-19 (MD5 match official; SHA-256 22423f28... / f3a6cccf...) -> annot\clinvar_archive\
+& $R .\scripts\24a_build_release_sets.R                # -> logs\24a_build_release_sets.log
+& $R .\scripts\24b_extract_comparators_releases.R      # 393,927 new SNVs; peak R 12 GB -> logs\24b_extract_comparators_releases.log
+& $R .\scripts\24c_calibrate_release_series.R 10       # 30 runs -> logs\24c_calibrate_release_series.log
+& $R .\scripts\24d_threshold_shift_common_scale.R      # POST HOC common-scale comparison -> logs\24d_threshold_shift_common_scale.log
 # Step 11 Aim 7 VUS evidence (amendment A5) [DONE 2026-09-25]:
 & $R .\scripts\23_vus_yield.R                          # -> logs\23_vus_yield.log
 # Figure S3 (data copied to figures\data\FigS3_temporal_validation\; caption wrapped once after first render):

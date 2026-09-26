@@ -1,0 +1,121 @@
+set	tool	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac
+r2019	REVEL	VeryStrong			0.001	0.001	1	0
+r2019	REVEL	Strong	0.921	0.928	0.088	0.045	0	0
+r2019	REVEL	Moderate	0.771	0.78	0.295	0.27	0	0
+r2019	REVEL	Supporting	0.67	0.682	0.444	0.4	0	0
+r2019	BayesDel	VeryStrong					1	0.9822
+r2019	BayesDel	Strong	0.51	0.52	-0.5	-0.53	0	0
+r2019	BayesDel	Moderate	0.28	0.31	-0.2	-0.22	0	0
+r2019	BayesDel	Supporting	0.17	0.18	-0.1	-0.12	0	0
+r2019	AlphaMissense	VeryStrong					1	0.9999
+r2019	AlphaMissense	Strong	0.9837	0.9878	0.0693	0.0546	0	0.0359
+r2019	AlphaMissense	Moderate	0.8518	0.8773	0.14	0.1173	0	0
+r2019	AlphaMissense	Supporting	0.6456	0.6688	0.236	0.207	0	0
+r2019	CADD	VeryStrong					1	1
+r2019	CADD	Strong			0.032		1	0.2862
+r2019	CADD	Moderate	27.3	28.5	21.2	19.99	0	0
+r2019	CADD	Supporting	25.6	25.8	22.8	22.6	0	0
+r2019	AVI	VeryStrong					1	1
+r2019	AVI	Strong	32.08		7.89		0.2536	0.0715
+r2019	AVI	Moderate	26.21	26.42	20.24	19.95	0	0
+r2019	AVI	Supporting	25.12	25.3	22.85	22.69	0	0
+r2022	REVEL	VeryStrong					1	0.9807
+r2022	REVEL	Strong	0.916	0.92	0.088	0.062	0	0
+r2022	REVEL	Moderate	0.769	0.775	0.296	0.264	0	0
+r2022	REVEL	Supporting	0.659	0.681	0.419	0.401	0	0
+r2022	BayesDel	VeryStrong					1	0.9972
+r2022	BayesDel	Strong	0.5	0.51	-0.49	-0.55	0	0
+r2022	BayesDel	Moderate	0.28	0.3	-0.21	-0.21	0	0
+r2022	BayesDel	Supporting	0.16	0.17	-0.1	-0.11	0	0
+r2022	AlphaMissense	VeryStrong					1	1
+r2022	AlphaMissense	Strong	0.9885	0.9904	0.0763	0.0703	0	0
+r2022	AlphaMissense	Moderate	0.8545	0.879	0.1538	0.1374	0	0
+r2022	AlphaMissense	Supporting	0.6709	0.6973	0.248	0.2169	0	0
+r2022	CADD	VeryStrong					1	1
+r2022	CADD	Strong			10.93	0.409	1	0.0028
+r2022	CADD	Moderate	28.7	29.2	20.5	20.1	0	0
+r2022	CADD	Supporting	26	26	22.9	22.8	0	0
+r2022	AVI	VeryStrong					1	1
+r2022	AVI	Strong			9.59	7.91	0.9773	2e-04
+r2022	AVI	Moderate	26.41	26.55	21.16	20.63	0	0
+r2022	AVI	Supporting	25.2	25.32	23.06	22.99	0	0
+r2024	REVEL	VeryStrong					1	0.9936
+r2024	REVEL	Strong	0.91	0.915	0.091	0.063	0	0
+r2024	REVEL	Moderate	0.768	0.772	0.301	0.271	0	0
+r2024	REVEL	Supporting	0.665	0.672	0.416	0.401	0	0
+r2024	BayesDel	VeryStrong					1	0.9936
+r2024	BayesDel	Strong	0.5	0.5	-0.5	-0.54	0	0
+r2024	BayesDel	Moderate	0.28	0.3	-0.21	-0.21	0	0
+r2024	BayesDel	Supporting	0.16	0.17	-0.1	-0.11	0	0
+r2024	AlphaMissense	VeryStrong					1	1
+r2024	AlphaMissense	Strong	0.9888	0.9905	0.0771	0.073	0	0
+r2024	AlphaMissense	Moderate	0.8602	0.8784	0.1539	0.1377	0	0
+r2024	AlphaMissense	Supporting	0.679	0.6963	0.2495	0.2396	0	0
+r2024	CADD	VeryStrong					1	1
+r2024	CADD	Strong			10.39	1.173	1	0
+r2024	CADD	Moderate	28.3	28.6	20.3	19.54	0	0
+r2024	CADD	Supporting	25.9	26	22.9	22.8	0	0
+r2024	AVI	VeryStrong					1	1
+r2024	AVI	Strong			9.37	8.96	0.9098	0
+r2024	AVI	Moderate	26.44	26.6	21.26	20.61	0	0
+r2024	AVI	Supporting	25.21	25.33	23.06	23.02	0	0
+r2026	REVEL	VeryStrong					1	0.9937
+r2026	REVEL	Strong	0.894	0.898	0.09	0.087	0	0
+r2026	REVEL	Moderate	0.748	0.753	0.279	0.272	0	0
+r2026	REVEL	Supporting	0.637	0.642	0.4	0.396	0	0
+r2026	BayesDel	VeryStrong					1	0.9996
+r2026	BayesDel	Strong	0.48	0.48	-0.49	-0.54	0	0
+r2026	BayesDel	Moderate	0.26	0.27	-0.23	-0.25	0	0
+r2026	BayesDel	Supporting	0.14	0.14	-0.13	-0.13	0	0
+r2026	AlphaMissense	VeryStrong					1	1
+r2026	AlphaMissense	Strong	0.9884	0.9898	0.0799	0.0763	0	0
+r2026	AlphaMissense	Moderate	0.8487	0.8603	0.1504	0.14	0	0
+r2026	AlphaMissense	Supporting	0.661	0.67	0.2484	0.2367	0	0
+r2026	CADD	VeryStrong					1	1
+r2026	CADD	Strong			10.2	8.383	1	0
+r2026	CADD	Moderate	27.8	28	19.81	19.59	0	0
+r2026	CADD	Supporting	25.5	25.6	22.7	22.7	0	0
+r2026	AVI	VeryStrong					1	1
+r2026	AVI	Strong	65		10.17	9.28	0.4823	0
+r2026	AVI	Moderate	26.37	26.44	21.24	20.61	0	0
+r2026	AVI	Supporting	25.12	25.19	23.02	22.98	0	0
+post2022	REVEL	VeryStrong					1	0.9536
+post2022	REVEL	Strong	0.889	0.892	0.09	0.069	0	0
+post2022	REVEL	Moderate	0.739	0.747	0.276	0.252	0	0
+post2022	REVEL	Supporting	0.629	0.639	0.387	0.37	0	0
+post2022	BayesDel	VeryStrong					1	0.9985
+post2022	BayesDel	Strong	0.48	0.48	-0.54	-0.55	0	0
+post2022	BayesDel	Moderate	0.26	0.27	-0.26	-0.27	0	0
+post2022	BayesDel	Supporting	0.13	0.14	-0.14	-0.15	0	0
+post2022	AlphaMissense	VeryStrong					1	0.9998
+post2022	AlphaMissense	Strong	0.9896	0.9905	0.0799	0.0756	0	0
+post2022	AlphaMissense	Moderate	0.8463	0.8657	0.1431	0.1364	0	0
+post2022	AlphaMissense	Supporting	0.6423	0.6669	0.2425	0.2268	0	0
+post2022	CADD	VeryStrong					1	1
+post2022	CADD	Strong			8.383	4.515	1	0
+post2022	CADD	Moderate	27.6	27.8	19.57	19.43	0	0
+post2022	CADD	Supporting	25.4	25.5	22.5	22.2	0	0
+post2022	AVI	VeryStrong					1	1
+post2022	AVI	Strong	64.41		9.9	7.9	0.361	0
+post2022	AVI	Moderate	26.44	26.5	20.08	19.77	0	0
+post2022	AVI	Supporting	25.05	25.13	23.01	22.91	0	0
+pre2022	REVEL	VeryStrong					1	0.9831
+pre2022	REVEL	Strong	0.909	0.915	0.088	0.071	0	0
+pre2022	REVEL	Moderate	0.763	0.769	0.331	0.271	0	0
+pre2022	REVEL	Supporting	0.652	0.668	0.427	0.409	0	0
+pre2022	BayesDel	VeryStrong					1	0.9789
+pre2022	BayesDel	Strong	0.49	0.5	-0.48	-0.5	0	0
+pre2022	BayesDel	Moderate	0.27	0.28	-0.21	-0.21	0	0
+pre2022	BayesDel	Supporting	0.15	0.16	-0.1	-0.11	0	0
+pre2022	AlphaMissense	VeryStrong					1	1
+pre2022	AlphaMissense	Strong	0.9872	0.9894	0.08	0.0735	0	0
+pre2022	AlphaMissense	Moderate	0.8487	0.8604	0.1565	0.1418	0	0
+pre2022	AlphaMissense	Supporting	0.6739	0.6994	0.2504	0.2397	0	0
+pre2022	CADD	VeryStrong					1	1
+pre2022	CADD	Strong			11.79	1.623	1	0
+pre2022	CADD	Moderate	28.4	28.9	20.7	20.2	0	0
+pre2022	CADD	Supporting	25.9	26	23	22.8	0	0
+pre2022	AVI	VeryStrong					1	1
+pre2022	AVI	Strong			10.03	9.25	0.6666	0
+pre2022	AVI	Moderate	26.21	26.41	21.27	21.08	0	0
+pre2022	AVI	Supporting	25.23	25.32	23.06	23.01	0	0

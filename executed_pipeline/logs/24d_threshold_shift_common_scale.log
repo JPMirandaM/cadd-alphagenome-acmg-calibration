@@ -1,0 +1,75 @@
+﻿gnomAD intersection variants: 1888558 
+
+== % of gnomAD variants meeting PP3 (higher = less stringent) ==
+Key: <tool, level>
+             tool      level post2022 pre2022 r2019 r2022 r2024 r2026
+           <char>     <char>    <num>   <num> <num> <num> <num> <num>
+ 1:           AVI   Moderate    13.49   13.88 13.84 13.25 13.05 13.72
+ 2:           AVI     Strong       NA      NA    NA    NA    NA    NA
+ 3:           AVI Supporting    21.01   19.77 19.88 19.77 19.72 20.60
+ 4: AlphaMissense   Moderate    11.92   12.16 11.38 11.30 11.33 12.17
+ 5: AlphaMissense     Strong     2.66    2.86  3.12  2.68  2.66  2.79
+ 6: AlphaMissense Supporting    19.57   18.42 19.50 18.49 18.52 19.46
+ 7:      BayesDel   Moderate     7.74    7.34  6.17  6.55  6.55  7.74
+ 8:      BayesDel     Strong     1.62    1.33  1.10  1.21  1.33  1.62
+ 9:      BayesDel Supporting    14.25   13.04 11.90 12.46 12.46 14.25
+10:          CADD   Moderate    11.59    7.77  9.02  6.91  8.70 10.81
+11:          CADD     Strong       NA      NA    NA    NA    NA    NA
+12:          CADD Supporting    24.64   21.05 22.44 21.05 21.05 23.88
+13:         REVEL   Moderate     8.07    7.17  6.73  6.93  7.05  7.82
+14:         REVEL     Strong     2.67    1.88  1.45  1.71  1.88  2.46
+15:         REVEL Supporting    13.06   11.62 10.96 11.01 11.43 12.91
+    post_minus_pre r2026_minus_r2019
+             <num>             <num>
+ 1:         -0.395           -0.1177
+ 2:             NA                NA
+ 3:          1.240            0.7192
+ 4:         -0.244            0.7833
+ 5:         -0.196           -0.3353
+ 6:          1.154           -0.0434
+ 7:          0.404            1.5673
+ 8:          0.282            0.5168
+ 9:          1.213            2.3509
+10:          3.826            1.7831
+11:             NA                NA
+12:          3.586            1.4424
+13:          0.900            1.0951
+14:          0.791            1.0156
+15:          1.436            1.9472
+
+== % of gnomAD variants meeting BP4 (higher = less stringent) ==
+Key: <tool, level>
+             tool      level post2022 pre2022  r2019 r2022 r2024 r2026
+           <char>     <char>    <num>   <num>  <num> <num> <num> <num>
+ 1:           AVI   Moderate    36.59   44.84 37.411 41.49 41.35  41.4
+ 2:           AVI     Strong     7.67   10.15     NA  7.68  9.62  10.2
+ 3:           AVI Supporting    59.56   60.61 57.255 60.40 60.72  60.3
+ 4: AlphaMissense   Moderate    40.51   41.92 34.408 40.78 40.86  41.5
+ 5: AlphaMissense     Strong    11.44    9.90  0.836  7.64  9.54  12.0
+ 6: AlphaMissense Supporting    56.31   57.73 53.867 55.14 57.72  57.4
+ 7:      BayesDel   Moderate    50.31   57.37 56.228 57.37 57.37  52.7
+ 8:      BayesDel     Strong    16.08   21.34 18.111 16.08 17.08  17.1
+ 9:      BayesDel Supporting    64.01   67.98 67.042 67.98 67.98  66.0
+10:          CADD   Moderate    33.07   36.12 35.383 35.67 33.49  33.7
+11:          CADD     Strong     6.91    4.85     NA  3.04  4.35  10.3
+12:          CADD Supporting    47.48   51.92 50.451 51.92 51.92  51.2
+13:         REVEL   Moderate    54.61   57.33 57.194 56.35 57.33  57.5
+14:         REVEL     Strong    17.94   18.52 10.509 15.84 16.14  23.0
+15:         REVEL Supporting    68.71   72.21 71.446 71.53 71.53  71.1
+    post_minus_pre r2026_minus_r2019
+             <num>             <num>
+ 1:         -8.252             3.939
+ 2:         -2.485                NA
+ 3:         -1.051             3.037
+ 4:         -1.414             7.055
+ 5:          1.537            11.119
+ 6:         -1.412             3.541
+ 7:         -7.061            -3.525
+ 8:         -5.257            -1.031
+ 9:         -3.979            -0.994
+10:         -3.051            -1.686
+11:          2.067                NA
+12:         -4.436             0.730
+13:         -2.719             0.278
+14:         -0.581            12.457
+15:         -3.500            -0.344

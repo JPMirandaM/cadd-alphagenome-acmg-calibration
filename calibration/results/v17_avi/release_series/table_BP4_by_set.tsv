@@ -1,0 +1,21 @@
+tool	level	r2019	r2022	r2024	r2026	pre2022	post2022
+AVI	Supporting	22.69	22.99	23.02	22.98	23.01	22.91
+AVI	Moderate	19.95	20.63	20.61	20.61	21.08	19.77
+AVI	Strong		7.91	8.96	9.28	9.25	7.9
+AVI	VeryStrong						
+AlphaMissense	Supporting	0.207	0.2169	0.2396	0.2367	0.2397	0.2268
+AlphaMissense	Moderate	0.1173	0.1374	0.1377	0.14	0.1418	0.1364
+AlphaMissense	Strong	0.0546	0.0703	0.073	0.0763	0.0735	0.0756
+AlphaMissense	VeryStrong						
+BayesDel	Supporting	-0.12	-0.11	-0.11	-0.13	-0.11	-0.15
+BayesDel	Moderate	-0.22	-0.21	-0.21	-0.25	-0.21	-0.27
+BayesDel	Strong	-0.53	-0.55	-0.54	-0.54	-0.5	-0.55
+BayesDel	VeryStrong						
+CADD	Supporting	22.6	22.8	22.8	22.7	22.8	22.2
+CADD	Moderate	19.99	20.1	19.54	19.59	20.2	19.43
+CADD	Strong		0.409	1.173	8.383	1.623	4.515
+CADD	VeryStrong						
+REVEL	Supporting	0.4	0.401	0.401	0.396	0.409	0.37
+REVEL	Moderate	0.27	0.264	0.271	0.272	0.271	0.252
+REVEL	Strong	0.045	0.062	0.063	0.087	0.071	0.069
+REVEL	VeryStrong	0.001					
