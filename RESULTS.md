@@ -283,6 +283,52 @@ PP3 25.6 / 28.0 unchanged, BP4 22.5 / 19.43 vs 22.7 / 19.59; AVI PP3 25.30 / 26.
 26.44, BP4 23.02 / 20.13 vs 22.98 / 20.61); their BP4 Strong thresholds, which lie in sparse score
 regions, changed more (CADD 8.38 → 2.76; AVI 9.28 → 8.52).
 
+## R11. Calibration by gene class (Aim 1; amendment A8)
+
+Single-gene 2026 intersection sets (59,014 P/LP, 75,303 B/LB); 296 reference genes lacked a
+LOEUF decile. All seven classes met the minimum size (script `26_gene_class_stratification.R`;
+Figure 2; tables `calibration/results/v17_avi/gene_classes/`):
+
+| Axis | Class | Genes | P/LP | B/LB | gnomAD |
+|---|---|---|---|---|---|
+| Constraint | LOEUF deciles 0–2 | 1,829 | 28,457 | 42,032 | 899,214 |
+| Constraint | LOEUF deciles 3–6 | 1,973 | 19,158 | 22,905 | 750,992 |
+| Constraint | LOEUF deciles 7–9 | 624 | 4,838 | 4,592 | 170,337 |
+| Inheritance | AD only | 1,202 | 23,713 | 32,326 | 432,895 |
+| Inheritance | AR only | 2,227 | 17,687 | 23,497 | 908,247 |
+| Mechanism | Loss of function | 1,800 | 33,633 | 38,451 | 707,521 |
+| Mechanism | Gain of function / dominant negative | 158 | 4,992 | 4,574 | 50,378 |
+
+PP3 Supporting thresholds by class (score ≥):
+
+| Predictor | LOEUF 0–2 | LOEUF 3–6 | LOEUF 7–9 | AD only | AR only | LoF | GoF/DN |
+|---|---|---|---|---|---|---|---|
+| REVEL | 0.663 | 0.631 | 0.581 | 0.666 | 0.584 | 0.667 | 0.745 |
+| BayesDel | 0.16 | 0.11 | 0.10 | 0.16 | 0.08 | 0.16 | 0.23 |
+| AlphaMissense | 0.788 | 0.515 | 0.493 | 0.829 | 0.496 | 0.695 | 0.775 |
+| AVI | 25.91 | 24.60 | 24.20 | 26.07 | 24.44 | 25.30 | 26.21 |
+| CADD v1.7 | 26.2 | 25.1 | 24.4 | 26.5 | 25.1 | 25.8 | 26.7 |
+
+BP4 Moderate thresholds by class (score ≤): REVEL 0.272 / 0.251 / 0.203 / 0.279 / 0.244 / 0.273 /
+0.261; BayesDel −0.23 / −0.29 / −0.36 / −0.21 / −0.30 / −0.22 / −0.29; AlphaMissense 0.198 / 0.120
+/ 0.109 / 0.202 / 0.116 / 0.140 / 0.135; AVI 22.59 / 19.22 / 14.23 / 21.93 / 19.17 / 20.72 / 19.56;
+CADD 21.2 / 18.34 / 14.45 / 21.1 / 18.27 / 20.1 / 17.06 (same class order).
+
+The direction was consistent across all five predictors: genes that are more constrained,
+associated with dominant inheritance, or with gain-of-function/dominant-negative mechanisms
+required higher scores for PP3 and allowed BP4 at higher scores; tolerant and recessive genes
+required lower scores for PP3 and much lower scores for BP4. Bootstrap 95% intervals did not
+overlap in 8–13 of 15–18 constraint comparisons, 4–5 of 5–6 inheritance comparisons and 1–3 of 3–6
+mechanism comparisons per predictor. Using class-specific instead of global thresholds changed the
+evidence level of 3–8% (LoF genes) to 26–44% (tolerant genes) of the reference variants, and of
+17–54% in GoF/DN genes, depending on the predictor (`reclassification.tsv`).
+
+Interpretation (provisional): a single genome-wide threshold does not fit all gene classes, for
+genome-wide (CADD, AVI) and missense-specialised predictors alike; the differences are large
+enough to change the evidence assigned to a substantial fraction of variants in some classes.
+Limitation: the same prior (0.0441) was used for every class, although the prior probability of
+pathogenicity likely differs between classes; class-specific priors would shift the thresholds.
+
 ## R5. Temporal hold-out validation (Aim 2c; amendment A2)
 
 Consistency check: the 2026 reference sets rebuilt from the all-MANE gnomAD table were identical

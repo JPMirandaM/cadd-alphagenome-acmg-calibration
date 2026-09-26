@@ -1,0 +1,281 @@
+axis	class	tool	crit	level	threshold	lo	hi
+constraint	LOEUF_0-2	REVEL	PP3	Supporting	0.663	0.64	0.664
+constraint	LOEUF_0-2	REVEL	PP3	Moderate	0.773	0.752	0.774
+constraint	LOEUF_0-2	REVEL	PP3	Strong	0.902	0.892	0.902
+constraint	LOEUF_0-2	REVEL	PP3	VeryStrong			
+constraint	LOEUF_0-2	REVEL	BP4	Supporting	0.398	0.398	0.429025
+constraint	LOEUF_0-2	REVEL	BP4	Moderate	0.272	0.269	0.303
+constraint	LOEUF_0-2	REVEL	BP4	Strong	0.088	0.087	0.113
+constraint	LOEUF_0-2	REVEL	BP4	VeryStrong		0.002	0.009
+constraint	LOEUF_0-2	BayesDel	PP3	Supporting	0.16	0.14	0.16
+constraint	LOEUF_0-2	BayesDel	PP3	Moderate	0.28	0.27	0.3
+constraint	LOEUF_0-2	BayesDel	PP3	Strong	0.48	0.47	0.48
+constraint	LOEUF_0-2	BayesDel	PP3	VeryStrong			
+constraint	LOEUF_0-2	BayesDel	BP4	Supporting	-0.13	-0.13	-0.05
+constraint	LOEUF_0-2	BayesDel	BP4	Moderate	-0.23	-0.24	-0.19
+constraint	LOEUF_0-2	BayesDel	BP4	Strong	-0.5	-0.54	-0.45
+constraint	LOEUF_0-2	BayesDel	BP4	VeryStrong		-2	-0.749000000000001
+constraint	LOEUF_0-2	AlphaMissense	PP3	Supporting	0.7883	0.7599	0.79
+constraint	LOEUF_0-2	AlphaMissense	PP3	Moderate	0.9282	0.9126	0.9289
+constraint	LOEUF_0-2	AlphaMissense	PP3	Strong	0.9915	0.9896	0.9916
+constraint	LOEUF_0-2	AlphaMissense	PP3	VeryStrong			
+constraint	LOEUF_0-2	AlphaMissense	BP4	Supporting	0.3318	0.328	0.3883025
+constraint	LOEUF_0-2	AlphaMissense	BP4	Moderate	0.1979	0.191	0.228
+constraint	LOEUF_0-2	AlphaMissense	BP4	Strong	0.079	0.0784	0.0904
+constraint	LOEUF_0-2	AlphaMissense	BP4	VeryStrong		0.026	0.026
+constraint	LOEUF_0-2	CADD	PP3	Supporting	26.2	26	26.2
+constraint	LOEUF_0-2	CADD	PP3	Moderate	28.5	28	28.7
+constraint	LOEUF_0-2	CADD	PP3	Strong			
+constraint	LOEUF_0-2	CADD	PP3	VeryStrong			
+constraint	LOEUF_0-2	CADD	BP4	Supporting	23.2	23.2	23.6
+constraint	LOEUF_0-2	CADD	BP4	Moderate	21.2	21.2	21.8
+constraint	LOEUF_0-2	CADD	BP4	Strong	10.53	10.47975	13.07
+constraint	LOEUF_0-2	CADD	BP4	VeryStrong		0.001	0.015375
+constraint	LOEUF_0-2	AVI	PP3	Supporting	25.91	25.74	25.94
+constraint	LOEUF_0-2	AVI	PP3	Moderate	27.11	27	27.12
+constraint	LOEUF_0-2	AVI	PP3	Strong		30.98	60.13
+constraint	LOEUF_0-2	AVI	PP3	VeryStrong			
+constraint	LOEUF_0-2	AVI	BP4	Supporting	23.75	23.74	24.06
+constraint	LOEUF_0-2	AVI	BP4	Moderate	22.59	21.89	22.99
+constraint	LOEUF_0-2	AVI	BP4	Strong	10.55	10.47	15.7
+constraint	LOEUF_0-2	AVI	BP4	VeryStrong		0.65	3.42
+constraint	LOEUF_3-6	REVEL	PP3	Supporting	0.631	0.593	0.632
+constraint	LOEUF_3-6	REVEL	PP3	Moderate	0.731	0.71	0.732
+constraint	LOEUF_3-6	REVEL	PP3	Strong	0.894	0.877	0.895
+constraint	LOEUF_3-6	REVEL	PP3	VeryStrong			
+constraint	LOEUF_3-6	REVEL	BP4	Supporting	0.341	0.34	0.383
+constraint	LOEUF_3-6	REVEL	BP4	Moderate	0.251	0.25	0.275
+constraint	LOEUF_3-6	REVEL	BP4	Strong	0.06	0.059	0.097
+constraint	LOEUF_3-6	REVEL	BP4	VeryStrong		0	0.013
+constraint	LOEUF_3-6	BayesDel	PP3	Supporting	0.11	0.09	0.12
+constraint	LOEUF_3-6	BayesDel	PP3	Moderate	0.24	0.2	0.24
+constraint	LOEUF_3-6	BayesDel	PP3	Strong	0.46	0.42	0.46
+constraint	LOEUF_3-6	BayesDel	PP3	VeryStrong			
+constraint	LOEUF_3-6	BayesDel	BP4	Supporting	-0.17	-0.17	-0.14
+constraint	LOEUF_3-6	BayesDel	BP4	Moderate	-0.29	-0.29	-0.26
+constraint	LOEUF_3-6	BayesDel	BP4	Strong	-0.54	-0.54	-0.46
+constraint	LOEUF_3-6	BayesDel	BP4	VeryStrong		-2	-0.77
+constraint	LOEUF_3-6	AlphaMissense	PP3	Supporting	0.5154	0.4588	0.518305
+constraint	LOEUF_3-6	AlphaMissense	PP3	Moderate	0.7394	0.6843	0.7425
+constraint	LOEUF_3-6	AlphaMissense	PP3	Strong	0.9841	0.9727	0.9844
+constraint	LOEUF_3-6	AlphaMissense	PP3	VeryStrong			
+constraint	LOEUF_3-6	AlphaMissense	BP4	Supporting	0.1643	0.1635	0.2068
+constraint	LOEUF_3-6	AlphaMissense	BP4	Moderate	0.1202	0.1178	0.1328
+constraint	LOEUF_3-6	AlphaMissense	BP4	Strong	0.0708	0.0703	0.0791
+constraint	LOEUF_3-6	AlphaMissense	BP4	VeryStrong		0	0.0198
+constraint	LOEUF_3-6	CADD	PP3	Supporting	25.1	24.6	25.1
+constraint	LOEUF_3-6	CADD	PP3	Moderate	27.3	26.6	27.3
+constraint	LOEUF_3-6	CADD	PP3	Strong			
+constraint	LOEUF_3-6	CADD	PP3	VeryStrong			
+constraint	LOEUF_3-6	CADD	BP4	Supporting	21.2	21.2	22
+constraint	LOEUF_3-6	CADD	BP4	Moderate	18.34	18.3	19.5
+constraint	LOEUF_3-6	CADD	BP4	Strong	4.986	3.92295	11.05
+constraint	LOEUF_3-6	CADD	BP4	VeryStrong			
+constraint	LOEUF_3-6	AVI	PP3	Supporting	24.6	24.25	24.64
+constraint	LOEUF_3-6	AVI	PP3	Moderate	25.67	25.44	25.72
+constraint	LOEUF_3-6	AVI	PP3	Strong	62.97	29.55	62.97
+constraint	LOEUF_3-6	AVI	PP3	VeryStrong			
+constraint	LOEUF_3-6	AVI	BP4	Supporting	21.22	21.19	21.77
+constraint	LOEUF_3-6	AVI	BP4	Moderate	19.22	19.11	19.86
+constraint	LOEUF_3-6	AVI	BP4	Strong	8.11	7.75	11.76
+constraint	LOEUF_3-6	AVI	BP4	VeryStrong		0.06	0.06
+constraint	LOEUF_7-9	REVEL	PP3	Supporting	0.581	0.54	0.585
+constraint	LOEUF_7-9	REVEL	PP3	Moderate	0.713	0.627	0.716025
+constraint	LOEUF_7-9	REVEL	PP3	Strong	0.88	0.829	0.881
+constraint	LOEUF_7-9	REVEL	PP3	VeryStrong		0.9675	0.987
+constraint	LOEUF_7-9	REVEL	BP4	Supporting	0.311	0.308	0.39
+constraint	LOEUF_7-9	REVEL	BP4	Moderate	0.203	0.19	0.293
+constraint	LOEUF_7-9	REVEL	BP4	Strong	0.027	0.026	0.108
+constraint	LOEUF_7-9	REVEL	BP4	VeryStrong	0.011	0.011	0.02
+constraint	LOEUF_7-9	BayesDel	PP3	Supporting	0.1	0.01	0.12
+constraint	LOEUF_7-9	BayesDel	PP3	Moderate	0.21	0.16	0.21
+constraint	LOEUF_7-9	BayesDel	PP3	Strong	0.42	0.34	0.43
+constraint	LOEUF_7-9	BayesDel	PP3	VeryStrong		1	1
+constraint	LOEUF_7-9	BayesDel	BP4	Supporting	-0.22	-0.24	-0.17
+constraint	LOEUF_7-9	BayesDel	BP4	Moderate	-0.36	-0.36	-0.26
+constraint	LOEUF_7-9	BayesDel	BP4	Strong	-0.63	-0.64	-0.5
+constraint	LOEUF_7-9	BayesDel	BP4	VeryStrong		-0.82	-0.69
+constraint	LOEUF_7-9	AlphaMissense	PP3	Supporting	0.493	0.4315	0.496
+constraint	LOEUF_7-9	AlphaMissense	PP3	Moderate	0.8056	0.5842	0.8126075
+constraint	LOEUF_7-9	AlphaMissense	PP3	Strong	0.9829	0.9371	0.9832
+constraint	LOEUF_7-9	AlphaMissense	PP3	VeryStrong		0.9943	0.9979
+constraint	LOEUF_7-9	AlphaMissense	BP4	Supporting	0.1492	0.1439	0.1843
+constraint	LOEUF_7-9	AlphaMissense	BP4	Moderate	0.1087	0.1044	0.1341
+constraint	LOEUF_7-9	AlphaMissense	BP4	Strong	0.0679	0.0678	0.0821
+constraint	LOEUF_7-9	AlphaMissense	BP4	VeryStrong		0	0.0588
+constraint	LOEUF_7-9	CADD	PP3	Supporting	24.4	23.8	24.5
+constraint	LOEUF_7-9	CADD	PP3	Moderate	26.5	25.9	26.5
+constraint	LOEUF_7-9	CADD	PP3	Strong		56	56
+constraint	LOEUF_7-9	CADD	PP3	VeryStrong			
+constraint	LOEUF_7-9	CADD	BP4	Supporting	17.61	17.48	19.96
+constraint	LOEUF_7-9	CADD	BP4	Moderate	14.45	13.71	17
+constraint	LOEUF_7-9	CADD	BP4	Strong	1.097	0.973975	10.2
+constraint	LOEUF_7-9	CADD	BP4	VeryStrong		0.04	0.243
+constraint	LOEUF_7-9	AVI	PP3	Supporting	24.2	23.62	24.27025
+constraint	LOEUF_7-9	AVI	PP3	Moderate	25.51	24.6	25.56
+constraint	LOEUF_7-9	AVI	PP3	Strong		27.5	60.13
+constraint	LOEUF_7-9	AVI	PP3	VeryStrong		60.13	60.13
+constraint	LOEUF_7-9	AVI	BP4	Supporting	19.03	18.85	20.61
+constraint	LOEUF_7-9	AVI	BP4	Moderate	14.23	14.14	18.66
+constraint	LOEUF_7-9	AVI	BP4	Strong	5.06	4.78	9.59025
+constraint	LOEUF_7-9	AVI	BP4	VeryStrong		0	0.84
+inheritance	AD_only	REVEL	PP3	Supporting	0.666	0.643	0.667
+inheritance	AD_only	REVEL	PP3	Moderate	0.78	0.763	0.783
+inheritance	AD_only	REVEL	PP3	Strong	0.911	0.897	0.913
+inheritance	AD_only	REVEL	PP3	VeryStrong			
+inheritance	AD_only	REVEL	BP4	Supporting	0.402	0.4	0.443
+inheritance	AD_only	REVEL	BP4	Moderate	0.279	0.278	0.337
+inheritance	AD_only	REVEL	BP4	Strong	0.067	0.063	0.114
+inheritance	AD_only	REVEL	BP4	VeryStrong		0.002	0.008
+inheritance	AD_only	BayesDel	PP3	Supporting	0.16	0.14	0.17
+inheritance	AD_only	BayesDel	PP3	Moderate	0.31	0.28	0.31
+inheritance	AD_only	BayesDel	PP3	Strong	0.49	0.48	0.49
+inheritance	AD_only	BayesDel	PP3	VeryStrong			
+inheritance	AD_only	BayesDel	BP4	Supporting	-0.08	-0.09	-0.05
+inheritance	AD_only	BayesDel	BP4	Moderate	-0.21	-0.22	-0.17
+inheritance	AD_only	BayesDel	BP4	Strong	-0.56	-0.56	-0.45
+inheritance	AD_only	BayesDel	BP4	VeryStrong		-2	-2
+inheritance	AD_only	AlphaMissense	PP3	Supporting	0.8286	0.8005	0.83
+inheritance	AD_only	AlphaMissense	PP3	Moderate	0.9472	0.9307	0.9477
+inheritance	AD_only	AlphaMissense	PP3	Strong	0.9926	0.9913	0.9926
+inheritance	AD_only	AlphaMissense	PP3	VeryStrong			
+inheritance	AD_only	AlphaMissense	BP4	Supporting	0.3758	0.3706	0.443
+inheritance	AD_only	AlphaMissense	BP4	Moderate	0.2018	0.193395	0.2367
+inheritance	AD_only	AlphaMissense	BP4	Strong	0.0813	0.0774	0.0904
+inheritance	AD_only	AlphaMissense	BP4	VeryStrong		0	0
+inheritance	AD_only	CADD	PP3	Supporting	26.5	26.2	26.6
+inheritance	AD_only	CADD	PP3	Moderate	30	28.7	30
+inheritance	AD_only	CADD	PP3	Strong			
+inheritance	AD_only	CADD	PP3	VeryStrong			
+inheritance	AD_only	CADD	BP4	Supporting	23.4	23.4	23.6
+inheritance	AD_only	CADD	BP4	Moderate	21.1	21	21.8
+inheritance	AD_only	CADD	BP4	Strong	1.527	1.512	12.95
+inheritance	AD_only	CADD	BP4	VeryStrong			
+inheritance	AD_only	AVI	PP3	Supporting	26.07	25.86	26.07
+inheritance	AD_only	AVI	PP3	Moderate	27.18	27.07	27.19
+inheritance	AD_only	AVI	PP3	Strong		54.232	61
+inheritance	AD_only	AVI	PP3	VeryStrong			
+inheritance	AD_only	AVI	BP4	Supporting	23.99	23.95	24.22
+inheritance	AD_only	AVI	BP4	Moderate	21.93	21.93	23.04
+inheritance	AD_only	AVI	BP4	Strong	9.79	9.54	15.16
+inheritance	AD_only	AVI	BP4	VeryStrong			
+inheritance	AR_only	REVEL	PP3	Supporting	0.584	0.561	0.586
+inheritance	AR_only	REVEL	PP3	Moderate	0.694	0.669	0.695
+inheritance	AR_only	REVEL	PP3	Strong	0.86	0.82	0.861
+inheritance	AR_only	REVEL	PP3	VeryStrong			
+inheritance	AR_only	REVEL	BP4	Supporting	0.335	0.332	0.37
+inheritance	AR_only	REVEL	BP4	Moderate	0.244	0.242	0.261
+inheritance	AR_only	REVEL	BP4	Strong	0.062	0.049	0.089
+inheritance	AR_only	REVEL	BP4	VeryStrong		0	0.012
+inheritance	AR_only	BayesDel	PP3	Supporting	0.08	0.05	0.08
+inheritance	AR_only	BayesDel	PP3	Moderate	0.21	0.17	0.21
+inheritance	AR_only	BayesDel	PP3	Strong	0.42	0.38	0.43
+inheritance	AR_only	BayesDel	PP3	VeryStrong			
+inheritance	AR_only	BayesDel	BP4	Supporting	-0.19	-0.21	-0.15
+inheritance	AR_only	BayesDel	BP4	Moderate	-0.3	-0.3	-0.28
+inheritance	AR_only	BayesDel	BP4	Strong	-0.56	-0.56	-0.46
+inheritance	AR_only	BayesDel	BP4	VeryStrong		-2	-0.81
+inheritance	AR_only	AlphaMissense	PP3	Supporting	0.4958	0.4588	0.5022
+inheritance	AR_only	AlphaMissense	PP3	Moderate	0.7131	0.6479975	0.7168
+inheritance	AR_only	AlphaMissense	PP3	Strong	0.9642	0.9388	0.9679
+inheritance	AR_only	AlphaMissense	PP3	VeryStrong			
+inheritance	AR_only	AlphaMissense	BP4	Supporting	0.1576	0.1561	0.1896
+inheritance	AR_only	AlphaMissense	BP4	Moderate	0.1156	0.1154	0.1276
+inheritance	AR_only	AlphaMissense	BP4	Strong	0.0703	0.0701	0.0786
+inheritance	AR_only	AlphaMissense	BP4	VeryStrong		0	0.0238925
+inheritance	AR_only	CADD	PP3	Supporting	25.1	24.6	25.1
+inheritance	AR_only	CADD	PP3	Moderate	27	26.6	27
+inheritance	AR_only	CADD	PP3	Strong		62	62
+inheritance	AR_only	CADD	PP3	VeryStrong			
+inheritance	AR_only	CADD	BP4	Supporting	21.2	21.2	22
+inheritance	AR_only	CADD	BP4	Moderate	18.27	18.14	19.52
+inheritance	AR_only	CADD	BP4	Strong	7.348	7.076	11.29
+inheritance	AR_only	CADD	BP4	VeryStrong		0.04	0.232
+inheritance	AR_only	AVI	PP3	Supporting	24.44	24.22	24.49
+inheritance	AR_only	AVI	PP3	Moderate	25.52	25.33	25.55
+inheritance	AR_only	AVI	PP3	Strong	30.14	29.28	30.23
+inheritance	AR_only	AVI	PP3	VeryStrong			
+inheritance	AR_only	AVI	BP4	Supporting	21.18	21.17	21.57025
+inheritance	AR_only	AVI	BP4	Moderate	19.17	18.93	19.75
+inheritance	AR_only	AVI	BP4	Strong	8.67	7.8	9.98
+inheritance	AR_only	AVI	BP4	VeryStrong		0	0.38
+mechanism	LoF	REVEL	PP3	Supporting	0.667	0.643	0.669
+mechanism	LoF	REVEL	PP3	Moderate	0.755	0.732	0.757
+mechanism	LoF	REVEL	PP3	Strong	0.896	0.883	0.896
+mechanism	LoF	REVEL	PP3	VeryStrong			
+mechanism	LoF	REVEL	BP4	Supporting	0.42	0.419	0.443
+mechanism	LoF	REVEL	BP4	Moderate	0.273	0.27	0.335
+mechanism	LoF	REVEL	BP4	Strong	0.061	0.061	0.132
+mechanism	LoF	REVEL	BP4	VeryStrong		0	0.007
+mechanism	LoF	BayesDel	PP3	Supporting	0.16	0.14	0.16
+mechanism	LoF	BayesDel	PP3	Moderate	0.28	0.27	0.28
+mechanism	LoF	BayesDel	PP3	Strong	0.49	0.48	0.49
+mechanism	LoF	BayesDel	PP3	VeryStrong			
+mechanism	LoF	BayesDel	BP4	Supporting	-0.12	-0.12	-0.05
+mechanism	LoF	BayesDel	BP4	Moderate	-0.22	-0.22	-0.19
+mechanism	LoF	BayesDel	BP4	Strong	-0.5	-0.5	-0.43
+mechanism	LoF	BayesDel	BP4	VeryStrong		-2	-2
+mechanism	LoF	AlphaMissense	PP3	Supporting	0.6949	0.6537	0.697
+mechanism	LoF	AlphaMissense	PP3	Moderate	0.8697	0.8332	0.8742
+mechanism	LoF	AlphaMissense	PP3	Strong	0.9915	0.9873	0.9916
+mechanism	LoF	AlphaMissense	PP3	VeryStrong			
+mechanism	LoF	AlphaMissense	BP4	Supporting	0.2452	0.2444	0.2571
+mechanism	LoF	AlphaMissense	BP4	Moderate	0.1397	0.1385975	0.1591
+mechanism	LoF	AlphaMissense	BP4	Strong	0.0745	0.0714	0.0833
+mechanism	LoF	AlphaMissense	BP4	VeryStrong			
+mechanism	LoF	CADD	PP3	Supporting	25.8	25.4	25.8
+mechanism	LoF	CADD	PP3	Moderate	28	27.5	28
+mechanism	LoF	CADD	PP3	Strong			
+mechanism	LoF	CADD	PP3	VeryStrong			
+mechanism	LoF	CADD	BP4	Supporting	22.8	22.7	23
+mechanism	LoF	CADD	BP4	Moderate	20.1	20	21
+mechanism	LoF	CADD	BP4	Strong	8.224	7.704	11.66
+mechanism	LoF	CADD	BP4	VeryStrong			
+mechanism	LoF	AVI	PP3	Supporting	25.3	25.09	25.31
+mechanism	LoF	AVI	PP3	Moderate	26.53	26.25	26.59
+mechanism	LoF	AVI	PP3	Strong		32.66	65
+mechanism	LoF	AVI	PP3	VeryStrong			
+mechanism	LoF	AVI	BP4	Supporting	23.02	22.99	23.4
+mechanism	LoF	AVI	BP4	Moderate	20.72	20.58	21.38
+mechanism	LoF	AVI	BP4	Strong	8.69	8.11975	12.79
+mechanism	LoF	AVI	BP4	VeryStrong			
+mechanism	GoF_DN	REVEL	PP3	Supporting	0.745	0.694	0.752
+mechanism	GoF_DN	REVEL	PP3	Moderate	0.846	0.781	0.847
+mechanism	GoF_DN	REVEL	PP3	Strong	0.944	0.92	0.946
+mechanism	GoF_DN	REVEL	PP3	VeryStrong			
+mechanism	GoF_DN	REVEL	BP4	Supporting	0.39	0.35	0.447
+mechanism	GoF_DN	REVEL	BP4	Moderate	0.261	0.254	0.335
+mechanism	GoF_DN	REVEL	BP4	Strong	0.019	0.017	0.157174999999999
+mechanism	GoF_DN	REVEL	BP4	VeryStrong		0.005	0.018
+mechanism	GoF_DN	BayesDel	PP3	Supporting	0.23	0.19	0.23
+mechanism	GoF_DN	BayesDel	PP3	Moderate	0.32	0.27	0.33
+mechanism	GoF_DN	BayesDel	PP3	Strong	0.53	0.5	0.53
+mechanism	GoF_DN	BayesDel	PP3	VeryStrong			
+mechanism	GoF_DN	BayesDel	BP4	Supporting	-0.13	-0.13	-0.03
+mechanism	GoF_DN	BayesDel	BP4	Moderate	-0.29	-0.3	-0.19
+mechanism	GoF_DN	BayesDel	BP4	Strong	-0.59	-0.59	-0.42
+mechanism	GoF_DN	BayesDel	BP4	VeryStrong		-1	-0.66
+mechanism	GoF_DN	AlphaMissense	PP3	Supporting	0.7747	0.6782	0.7852
+mechanism	GoF_DN	AlphaMissense	PP3	Moderate	0.9431	0.9001	0.9449
+mechanism	GoF_DN	AlphaMissense	PP3	Strong		0.9932	1
+mechanism	GoF_DN	AlphaMissense	PP3	VeryStrong			
+mechanism	GoF_DN	AlphaMissense	BP4	Supporting	0.2234	0.2205	0.3157
+mechanism	GoF_DN	AlphaMissense	BP4	Moderate	0.1353	0.1348	0.2073
+mechanism	GoF_DN	AlphaMissense	BP4	Strong	0.0788	0.0777	0.0973
+mechanism	GoF_DN	AlphaMissense	BP4	VeryStrong		0	0.0693
+mechanism	GoF_DN	CADD	PP3	Supporting	26.7	25.9	27.3
+mechanism	GoF_DN	CADD	PP3	Moderate		29.1	59
+mechanism	GoF_DN	CADD	PP3	Strong			
+mechanism	GoF_DN	CADD	PP3	VeryStrong			
+mechanism	GoF_DN	CADD	BP4	Supporting	21.4	21.4	23.2
+mechanism	GoF_DN	CADD	BP4	Moderate	17.06	17.01	19.91
+mechanism	GoF_DN	CADD	BP4	Strong		0.134	10.61
+mechanism	GoF_DN	CADD	BP4	VeryStrong		0.1051	0.258
+mechanism	GoF_DN	AVI	PP3	Supporting	26.21	25.44	26.22
+mechanism	GoF_DN	AVI	PP3	Moderate	27.42	26.82	27.47
+mechanism	GoF_DN	AVI	PP3	Strong		50.076	59.12
+mechanism	GoF_DN	AVI	PP3	VeryStrong			
+mechanism	GoF_DN	AVI	BP4	Supporting	23.22	23.22	23.69
+mechanism	GoF_DN	AVI	BP4	Moderate	19.56	19.49	22.59
+mechanism	GoF_DN	AVI	BP4	Strong		0.13	10.772
+mechanism	GoF_DN	AVI	BP4	VeryStrong		0.03	3.16

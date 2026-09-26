@@ -276,6 +276,7 @@ repeating the computations.
 | S2 | Seed sensitivity of the one-sided BP4 Strong bound (5 seeds × 10,000 replicates) | `figures/FigS2_seed_sensitivity.{png,pdf}`; data `figures/data/FigS2_seed_sensitivity/`; script `scripts/06b_plot_seed_sensitivity.R` | Done 2026-09-25 |
 | Table S2 | All thresholds per seed, with fraction of failed replicates | `figures/TableS2_seed_sensitivity.tsv` | Done 2026-09-25 |
 | S3 | Temporal validation: interval likelihood ratios on variants classified after ClinVar 2024-01-27 | `figures/FigS3_temporal_validation.{png,pdf}`; data `figures/data/FigS3_temporal_validation/`; script `scripts/19_plot_temporal_lr.R` | Done 2026-09-25 |
+| 2 | Calibrated PP3/BP4 thresholds by gene class (constraint, inheritance, mechanism), five predictors | `figures/Fig2_gene_classes.{png,pdf}`; data `figures/data/Fig2_gene_classes/`; script `scripts/27_plot_gene_classes.R` | Done 2026-09-26 |
 | 1 | Local posterior probability of CADD v1.7 PHRED and AVI Phred (main analysis, seed 20260925) | `figures/Fig1_cadd17_avi_calibration.{png,pdf}`; data `figures/data/Fig1_cadd17_avi_calibration/`; script `scripts/16_plot_figure1.R` | Done 2026-09-25 |
 
 ## References [VERIFY all before submission]

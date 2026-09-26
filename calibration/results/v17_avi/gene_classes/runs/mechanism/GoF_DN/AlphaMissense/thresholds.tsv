@@ -1,0 +1,5 @@
+level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac
+VeryStrong					1	0.6347
+Strong	0.9963		0.0944	0.0788	0.2577	0
+Moderate	0.9255	0.9431	0.1638	0.1353	0	0
+Supporting	0.7309	0.7747	0.2949	0.2234	0	0
