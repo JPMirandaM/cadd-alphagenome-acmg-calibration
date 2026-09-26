@@ -169,6 +169,20 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   of each class's reference variants whose evidence level changes when class-specific instead of
   global (main intersection, Aim 6) thresholds are used.
 
+- A9 (2026-09-26, before running it): Aim 4 genome-wide catalogue. Scope: every SNV in the CADD
+  v1.7 and AVI files (all chromosomes) with CADD PHRED ≥ 25.6 or AVI Phred ≥ 25.18 (main-analysis
+  median PP3 Supporting thresholds), found by full tabix scans (script 02 for CADD; an equivalent
+  scan for AVI). Each SNV carries both scores and the PP3 level of each predictor (main median
+  thresholds). Annotation: MANE Select consequence (coding SNVs) or overlap with GENCODE v50 gene
+  bodies (other SNVs; "intergenic" if none); ClinVar 2026-09-23 (CLNSIG, review stars, variation
+  ID; exact allele match); gnomAD v4.1 exome/genome/per-group AF and grpmax from the VEP 116 cache
+  (streamed over the whole cache; "not observed" when absent). A column "calibrated_context" is
+  TRUE only for MANE Select missense SNVs; for all other SNVs the PP3 level is provided for
+  prioritisation only and is not calibrated evidence. Per-gene summary (MANE missense): possible
+  SNVs, SNVs at each PP3 level per predictor, observed in gnomAD, common (group AF > 1%), and
+  ClinVar P/LP and B/LB counts. Outputs are kept outside the Git repository (third-party score
+  licences; CADD non-commercial); distribution terms to be verified before any release.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
