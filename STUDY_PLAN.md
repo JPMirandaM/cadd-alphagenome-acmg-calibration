@@ -131,6 +131,24 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   clearly smaller for AVI supports circularity; a similar relaxation for AVI points to changes in
   ClinVar composition instead. No formal test; thresholds and differences reported descriptively.
 
+- A7 (2026-09-26, approved by the author, before running it): HGMD exclusion sensitivity
+  analysis. HGMD Professional (licensed) cannot be used; the Ensembl VEP 116 cache contains
+  HGMD Public release 2020.4 records (allele_string "HGMD_MUTATION"; position only, no allele).
+  (a) Count HGMD Public 2020.4 records in the cache (all chromosomes; total, unique accessions,
+      unique positions, accession-prefix classes) to document its size (for reference: HGMD
+      Professional 2026.4 has 584,565 variants and the current public release 354,396; author).
+  (b) Exclude from the ClinVar and gnomAD reference sets every SNV located at a position of a
+      single-nucleotide HGMD Public record (start = end), i.e. a conservative position-level
+      exclusion, as an approximation of the original "not in HGMD 2019" filter.
+  (c) Recalibrate REVEL, BayesDel, AlphaMissense, CADD v1.7 and AVI on the HGMD-excluded
+      intersection sets of the ClinVar 2019-12-02 and 2026-09-23 releases (1 seed, 20260925,
+      B = 10,000; precision/increments as in A3), and compare with the non-excluded results and
+      with the published thresholds. Expectation fixed in advance: if HGMD inclusion explains the
+      discrepancy, the 2019 HGMD-excluded REVEL/BayesDel BP4 thresholds should move towards the
+      published values. Declared limitations: HGMD Public is a subset of HGMD Professional;
+      position-level exclusion also removes other alleles at the same site; predictor-training
+      variants are still not excluded.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
