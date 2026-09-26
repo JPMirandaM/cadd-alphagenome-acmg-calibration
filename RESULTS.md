@@ -252,6 +252,37 @@ variants gave more stringent BP4 thresholds for most predictors, including AVI.
 Limitations: one seed per set without bootstrap intervals for the differences; the pre/post split
 confounds time of classification with other differences between the two groups of variants.
 
+## R10. HGMD exclusion (amendment A7)
+
+HGMD Public release 2020.4 in the Ensembl VEP 116 cache: 225,016 records, 187,581 unique
+accessions at 170,107 unique positions (CM missense/nonsense 117,486 accessions; CD 30,860; CS
+18,547; CI 12,769; others < 4,000 each); 209,566 single-nucleotide records (159,235 positions),
+used for the position-level exclusion (scripts `25a`, `25b`). For reference (author), HGMD
+Professional 2026.4 contains 584,565 variants and the current public release 354,396.
+
+Reference sets after exclusion (intersection of the five predictors): ClinVar 2019-12-02 17,330 →
+5,395 P/LP and 11,379 → 9,681 B/LB (the original study had 5,704 P/LP and 6,059 B/LB); 2026-09-23
+59,034 → 26,254 P/LP and 75,306 → 72,077 B/LB; gnomAD sets reduced by < 2%.
+
+With the 2019 release and HGMD positions excluded, the published thresholds were reproduced
+closely: REVEL BP4 ≤ 0.288 / 0.188 / 0.014 / 0.008 (published 0.290 / 0.183 / 0.016 / 0.003), PP3
+≥ 0.641 / 0.759 / 0.921 (published 0.644 / 0.773 / 0.932); BayesDel BP4 ≤ −0.18 / −0.36
+(published −0.18 / −0.36), PP3 ≥ 0.12 / 0.23 / 0.50 (published 0.13 / 0.27 / 0.50);
+AlphaMissense moved towards but did not reach the values of Bergquist et al. (BP4 ≤ 0.187 / 0.115
+/ 0.018 vs 0.169 / 0.099 / 0.070; PP3 ≥ 0.743 / 0.889 / 0.985 vs 0.792 / 0.906 / 0.972). The
+discrepancy reported in R6/R9 is therefore explained mainly by the inclusion of HGMD-listed
+variants in our reference sets.
+
+With the 2026 release and HGMD excluded: REVEL PP3 ≥ 0.614 / 0.734 / 0.897 and BP4 ≤ 0.339 /
+0.206 / 0.036; BayesDel PP3 ≥ 0.11 / 0.25 / 0.49 and BP4 ≤ −0.17 / −0.34 / −0.58; AlphaMissense
+PP3 ≥ 0.694 / 0.879 / 0.990 and BP4 ≤ 0.242 / 0.138 / 0.069. PP3 thresholds of REVEL were more
+lenient than published even without HGMD, in line with the PP3 drift described in R9.
+
+CADD v1.7 and AVI were robust to the exclusion at the Supporting and Moderate levels (2026: CADD
+PP3 25.6 / 28.0 unchanged, BP4 22.5 / 19.43 vs 22.7 / 19.59; AVI PP3 25.30 / 26.53 vs 25.19 /
+26.44, BP4 23.02 / 20.13 vs 22.98 / 20.61); their BP4 Strong thresholds, which lie in sparse score
+regions, changed more (CADD 8.38 → 2.76; AVI 9.28 → 8.52).
+
 ## R5. Temporal hold-out validation (Aim 2c; amendment A2)
 
 Consistency check: the 2026 reference sets rebuilt from the all-MANE gnomAD table were identical

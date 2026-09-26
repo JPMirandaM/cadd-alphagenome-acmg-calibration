@@ -234,6 +234,9 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 & $R .\scripts\24b_extract_comparators_releases.R      # 393,927 new SNVs; peak R 12 GB -> logs\24b_extract_comparators_releases.log
 & $R .\scripts\24c_calibrate_release_series.R 10       # 30 runs -> logs\24c_calibrate_release_series.log
 & $R .\scripts\24d_threshold_shift_common_scale.R      # POST HOC common-scale comparison -> logs\24d_threshold_shift_common_scale.log
+# Step 13 Amendment A7 (HGMD Public 2020.4 exclusion) [DONE 2026-09-26]
+& $R .\scripts\25a_hgmd_public_positions.R             # 1,429,070,556 cache records scanned, 11.1 min -> logs\25a_hgmd_public_positions.log
+& $R .\scripts\25b_calibrate_hgmd_excluded.R 10        # 10 runs -> logs\25b_calibrate_hgmd_excluded.log; calibration\results\v17_avi\hgmd_excluded\
 # Step 11 Aim 7 VUS evidence (amendment A5) [DONE 2026-09-25]:
 & $R .\scripts\23_vus_yield.R                          # -> logs\23_vus_yield.log
 # Figure S3 (data copied to figures\data\FigS3_temporal_validation\; caption wrapped once after first render):

@@ -1,0 +1,29 @@
+﻿HGMD source in info.txt: source_HGMD-PUBLIC	20204 
+Rscript.exe : Aviso:
+En línea: 1 Carácter: 432
++ ... s.R -Force; & 'C:\Program Files\R\R-4.4.2\bin\Rscript.exe' C:\cadd\ex ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Aviso::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+In fifelse(end == ".", start, as.integer(end)) :
+  NAs introducidos por coerción
+all_vars records scanned: 1,429,070,556 in 11.1 min
+HGMD Public records: 225016 | unique accessions: 187581 | unique positions (start): 170107 | single-nucleotide records (start = end): 209566 
+     class records accessions
+    <char>   <int>      <int>
+ 1:     CM  140923     117486
+ 2:     CD   36966      30860
+ 3:     CS   22196      18547
+ 4:     CI   15362      12769
+ 5:     CR    4611       3801
+ 6:     CX    3158       2658
+ 7:     HM     750        601
+ 8:     BM     359        297
+ 9:     CP     303        246
+10:     HD     186        150
+11:     HS      90         68
+12:     HI      82         74
+13:     HX      14         10
+14:     HR      10          9
+15:     CG       6          5
