@@ -183,6 +183,30 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   ClinVar P/LP and B/LB counts. Outputs are kept outside the Git repository (third-party score
   licences; CADD non-commercial); distribution terms to be verified before any release.
 
+- A10 (2026-09-26, before running it): Aim 9 (noncoding and splicing) activated. Rationale: REVEL,
+  BayesDel and AlphaMissense score missense variants only; outside missense, genome-wide
+  predictors (CADD v1.7, AVI) are the only options, so this is where their calibration matters most.
+  (1) ClinVar by region: every ClinVar 2026-09-23 SNV outside MANE Select CDS is assigned, relative
+      to the MANE Select transcripts, to one class: canonical splice (intronic ±1–2), splice region
+      intronic (±3–8), near-intronic (9–50), deep intronic (> 50), 5′UTR, 3′UTR, upstream (≤ 5 kb),
+      downstream (≤ 5 kb), intergenic; coding synonymous SNVs are added as a class, split into
+      exon-edge (≤ 3 nt from an internal exon boundary) and other. Reference variants follow plan-v1
+      rules (P/LP vs B/LB, ≥ 1 star, AF < 0.01, disease genes = genes of the MANE transcript).
+      A class is calibrated (CADD, AVI; 1 seed, B = 10,000, increment 0.1; the gnomAD set being the
+      observed rare SNVs of the same class and genes) only if it has ≥ 1,000 P/LP and ≥ 1,000 B/LB;
+      otherwise the missense-calibrated thresholds are evaluated in that class with interval-based
+      likelihood ratios (as in Aim 2c) and AUROC, and classes may be pooled (all noncoding;
+      all intronic) if individually too small.
+  (2) Saturation-mutagenesis MPRA of 20 regulatory elements (Kircher et al. 2019; GRCh38 file from
+      github.com/kircherlab/MPRA_SaturationMutagenesis, data/elements.tsv.gz): SNVs with
+      pValue < 1e-5 and |Coefficient| ≥ 0.1 are "functional", the rest "non-functional"
+      [VERIFY against the CAGI5 definition]; AUROC of CADD and AVI overall and per element.
+      Note: the MPRA authors include CADD developers (possible developer familiarity bias).
+  (3) SpliceVarDB (experimentally assayed splicing variants): "splice-altering" vs "not
+      splice-altering" ("low-frequency" excluded); AUROC and interval likelihood ratios of CADD and
+      AVI at their thresholds. Pending: the database download (splicevardb.org is not reachable
+      from the local network; the GitHub publication data lack coordinates).
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
