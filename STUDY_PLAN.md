@@ -149,6 +149,26 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
       position-level exclusion also removes other alleles at the same site; predictor-training
       variants are still not excluded.
 
+- A8 (2026-09-26, before running it): Aim 1 gene-class stratification. Reference sets: the 2026
+  main intersection sets (HGMD included, as in the primary analysis). Gene assignment uses the
+  gene of the MANE Select transcript; SNVs assigned to more than one gene are excluded.
+  Classes: (1) Constraint: gnomAD v4.1 LOEUF decile (lof.oe_ci.upper_bin_decile) of the MANE
+  Select transcript: highly constrained (deciles 0–2), intermediate (3–6), tolerant (7–9).
+  (2) Inheritance: gene-level mode from ClinGen gene–disease validity (Definitive, Strong or
+  Moderate), and from GenCC (same classifications) when ClinGen has no such curation; "AD only"
+  vs "AR only" (genes with both modes, X-linked, semidominant or other modes are excluded).
+  (3) Mechanism: Gene2Phenotype molecular mechanism for records with confidence definitive,
+  strong or moderate: "loss of function" vs "gain of function or dominant negative"; genes with
+  both categories or only "undetermined" are excluded. For every class, the gnomAD set is
+  restricted to the genes of the class. Classes with < 1,000 P/LP or < 1,000 B/LB variants are
+  not calibrated. Calibration: REVEL, BayesDel, AlphaMissense, CADD v1.7 and AVI, 1 seed
+  (20260925), B = 10,000, precision/increments as in A3; global prior α = 0.0441 in all classes
+  (class-specific priors are a declared limitation). Pre-specified comparison: for each threshold,
+  the 2.5th–97.5th percentile interval of its 10,000 bootstrap values; two classes are reported
+  as different for a threshold when these intervals do not overlap. Also reported: the percentage
+  of each class's reference variants whose evidence level changes when class-specific instead of
+  global (main intersection, Aim 6) thresholds are used.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
