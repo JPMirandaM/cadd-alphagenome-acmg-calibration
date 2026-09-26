@@ -114,6 +114,23 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   al. 2020: Supporting ±1, Moderate ±2, Strong ±4); agreement between CADD and AVI (cross-table).
   This quantifies computational evidence only; it does not reclassify variants.
 
+- A6 (2026-09-25, approved by the author, before running it): threshold drift and circularity
+  (extends Aim 2). Motivation: with 2026 data, REVEL, BayesDel and AlphaMissense thresholds were
+  less stringent than published (R6). Design:
+  (a) Release series: reference sets built with the plan-v1 criteria from ClinVar GRCh38 releases
+      of December 2019 (the release used by Pejaver et al.), the last release before the ClinGen
+      recommendations (November 2022), 2024-01-27 and 2026-09-23; each predictor (REVEL,
+      BayesDel, AlphaMissense, CADD v1.7, AVI) calibrated on the variants of each release scored
+      by all five (1 seed, 20260925, B = 10,000, same gnomAD set construction per release).
+  (b) Before/after split within the 2026 main set: "pre" = variants already in the November 2022
+      reference set; "post" = variants absent from it. All five predictors calibrated separately
+      on pre and post variants (same 2026 gnomAD set; 1 seed).
+  Interpretation rule, fixed in advance: AVI (released 2026-09-08) cannot have been used as
+  evidence in any ClinVar classification and serves as a negative control. A relaxation of
+  thresholds on post-2022 variants that is present for REVEL/BayesDel (and CADD) but absent or
+  clearly smaller for AVI supports circularity; a similar relaxation for AVI points to changes in
+  ClinVar composition instead. No formal test; thresholds and differences reported descriptively.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.

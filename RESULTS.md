@@ -112,7 +112,12 @@ levels were less stringent with current data. Candidate explanations (to be test
 amendment A6): classifications after the 2022 ClinGen recommendations using these predictors as
 PP3/BP4 evidence (circularity); inclusion of predictor training variants and HGMD variants, which
 the original study excluded; changes in the composition of ClinVar.
-**[PENDING: AlphaMissense published thresholds (Bergquist et al. 2025) to be provided by the author.]**
+AlphaMissense (Bergquist et al. 2025; values provided by the author from the article on
+2026-09-25) versus this study: PP3 Very Strong ≥ 0.990 vs not reached; PP3 Strong ≥ 0.972 vs
+≥ 0.9898; PP3 Moderate ≥ 0.906 vs ≥ 0.8605; PP3 Supporting ≥ 0.792 vs ≥ 0.6698; BP4 Supporting
+≤ 0.169 vs ≤ 0.2367; BP4 Moderate ≤ 0.099 vs ≤ 0.14; BP4 Strong ≤ 0.070 vs ≤ 0.0763. Lower-level
+thresholds were again less stringent with current data, while PP3 Strong was more stringent and
+Very Strong was not reached.
 
 Discrimination on the intersection (95% bootstrap CI) and paired differences versus AVI (1,000
 paired replicates):
