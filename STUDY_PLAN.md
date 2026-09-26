@@ -207,6 +207,17 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
       AVI at their thresholds. Pending: the database download (splicevardb.org is not reachable
       from the local network; the GitHub publication data lack coordinates).
 
+- A11 (2026-09-26, agreed with the author): component (3) of A10 (SpliceVarDB) is deferred to a
+  second publication, because splicevardb.org is not reachable from the local network and the
+  public GitHub data lack coordinates. Components (1) ClinVar by region and (2) MPRA remain in this
+  study. Second-publication scope (future work, not in the current plan): splicing calibration
+  with SpliceVarDB, the AlphaGenome splicing scores (non-commercial file) and SpliceAI, against the
+  ClinGen SVI splicing recommendations; region-specific noncoding calibration; and an exploratory
+  characterisation of high-scoring intergenic SNVs far from genes (overlap with ultraconserved
+  elements, candidate cis-regulatory elements, CTCF/insulator sites, noncoding constraint, tested
+  enhancers; motif and feature clustering; conservation-driven vs function-driven high scores by
+  comparing CADD and AVI).
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
