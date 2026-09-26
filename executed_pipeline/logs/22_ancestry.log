@@ -1,0 +1,168 @@
+﻿$CADD
+Supporting   Moderate 
+      25.6       28.0 
+
+$AVI
+Supporting   Moderate 
+     25.18      26.44 
+
+1 221223 
+10 88002 
+11 131292 
+12 120187 
+13 38789 
+14 72748 
+15 77514 
+16 102306 
+17 137549 
+18 35671 
+19 123696 
+2 167853 
+20 56471 
+21 18979 
+22 49080 
+3 134718 
+4 83861 
+5 103447 
+6 107654 
+7 104457 
+8 81125 
+9 92911 
+X 25469 
+Y 378 
+MANE missense SNVs observed in gnomAD v4.1: 8214534 
+
+== PP3-level missense observed in gnomAD with group AF > 1% / > 5% ==
+     tool         PP3 n_observed n_grpAF_gt_0.01 pct_gt_0.01 n_grpAF_gt_0.05
+   <char>      <char>      <int>           <int>       <num>           <int>
+1:   CADD Supporting+    1756432            7399       0.421            1529
+2:   CADD    Moderate     816315            2914       0.357             553
+3:    AVI Supporting+    1430434            3950       0.276             857
+4:    AVI    Moderate     930564            2064       0.222             447
+   pct_gt_0.05
+         <num>
+1:      0.0871
+2:      0.0677
+3:      0.0599
+4:      0.0480
+
+== grpmax among PP3-level variants with group AF > 1% ==
+    grpmax     N   tool         PP3   pct
+    <char> <int> <char>      <char> <num>
+ 1:    AFR   358    AVI    Moderate  17.3
+ 2:    AMI   351    AVI    Moderate  17.0
+ 3:    FIN   297    AVI    Moderate  14.4
+ 4:    MID   253    AVI    Moderate  12.3
+ 5:    ASJ   231    AVI    Moderate  11.2
+ 6:    EAS   221    AVI    Moderate  10.7
+ 7:    AMR   156    AVI    Moderate   7.6
+ 8:    SAS   120    AVI    Moderate   5.8
+ 9:    NFE    77    AVI    Moderate   3.7
+10:    AFR   763    AVI Supporting+  19.3
+11:    AMI   638    AVI Supporting+  16.2
+12:    FIN   546    AVI Supporting+  13.8
+13:    MID   456    AVI Supporting+  11.5
+14:    EAS   442    AVI Supporting+  11.2
+15:    ASJ   432    AVI Supporting+  10.9
+16:    AMR   286    AVI Supporting+   7.2
+17:    SAS   241    AVI Supporting+   6.1
+18:    NFE   146    AVI Supporting+   3.7
+19:    AFR   556   CADD    Moderate  19.1
+20:    AMI   459   CADD    Moderate  15.8
+21:    FIN   397   CADD    Moderate  13.6
+22:    MID   365   CADD    Moderate  12.5
+23:    EAS   351   CADD    Moderate  12.0
+24:    ASJ   336   CADD    Moderate  11.5
+25:    AMR   175   CADD    Moderate   6.0
+26:    SAS   172   CADD    Moderate   5.9
+27:    NFE   103   CADD    Moderate   3.5
+28:    AFR  1610   CADD Supporting+  21.8
+29:    AMI  1073   CADD Supporting+  14.5
+30:    FIN   931   CADD Supporting+  12.6
+31:    EAS   900   CADD Supporting+  12.2
+32:    MID   882   CADD Supporting+  11.9
+33:    ASJ   814   CADD Supporting+  11.0
+34:    AMR   469   CADD Supporting+   6.3
+35:    SAS   464   CADD Supporting+   6.3
+36:    NFE   256   CADD Supporting+   3.5
+    grpmax     N   tool         PP3   pct
+
+== Per group: % of PP3-level variants observed in the group that exceed 1% / 5% there ==
+      tool         PP3  group n_observed_in_group pct_gt_0.01       CI_0.01
+    <char>      <char> <char>               <int>       <num>        <char>
+ 1:   CADD Supporting+    AFR              442573       0.533   0.512-0.554
+ 2:   CADD Supporting+    AMR              351008       0.488   0.466-0.512
+ 3:   CADD Supporting+    ASJ               63452       3.184   3.050-3.323
+ 4:   CADD Supporting+    EAS              275963       0.559   0.532-0.588
+ 5:   CADD Supporting+    FIN              126702       1.606   1.538-1.677
+ 6:   CADD Supporting+    MID               80943       2.760   2.649-2.875
+ 7:   CADD Supporting+    NFE             1207677       0.131   0.125-0.137
+ 8:   CADD Supporting+    SAS              436672       0.350   0.333-0.368
+ 9:   CADD Supporting+    AMI                4104      44.225 42.712-45.749
+10:   CADD    Moderate    AFR              216045       0.381   0.356-0.408
+11:   CADD    Moderate    AMR              170831       0.362   0.334-0.391
+12:   CADD    Moderate    ASJ               32933       2.356   2.198-2.526
+13:   CADD    Moderate    EAS              138409       0.433   0.400-0.470
+14:   CADD    Moderate    FIN               66320       1.233   1.152-1.320
+15:   CADD    Moderate    MID               38692       2.189   2.048-2.340
+16:   CADD    Moderate    NFE              587052       0.099   0.091-0.107
+17:   CADD    Moderate    SAS              219423       0.256   0.235-0.278
+18:   CADD    Moderate    AMI                1790      40.447 38.196-42.739
+19:    AVI Supporting+    AFR              300603       0.400   0.378-0.423
+20:    AVI Supporting+    AMR              236288       0.419   0.394-0.446
+21:    AVI Supporting+    ASJ               41750       2.721   2.569-2.881
+22:    AVI Supporting+    EAS              176390       0.488   0.456-0.521
+23:    AVI Supporting+    FIN               86335       1.392   1.316-1.473
+24:    AVI Supporting+    MID               44746       2.657   2.512-2.810
+25:    AVI Supporting+    NFE              932161       0.094   0.088-0.100
+26:    AVI Supporting+    SAS              285579       0.300   0.280-0.320
+27:    AVI Supporting+    AMI                2531      41.762 39.855-43.695
+28:    AVI    Moderate    AFR              188012       0.318   0.294-0.345
+29:    AVI    Moderate    AMR              147938       0.360   0.331-0.392
+30:    AVI    Moderate    ASJ               26792       2.314   2.141-2.501
+31:    AVI    Moderate    EAS              109773       0.411   0.375-0.450
+32:    AVI    Moderate    FIN               56143       1.172   1.086-1.264
+33:    AVI    Moderate    MID               26156       2.470   2.289-2.665
+34:    AVI    Moderate    NFE              608376       0.081   0.074-0.088
+35:    AVI    Moderate    SAS              178692       0.260   0.237-0.284
+36:    AVI    Moderate    AMI                1467      39.673 37.199-42.200
+      tool         PP3  group n_observed_in_group pct_gt_0.01       CI_0.01
+    pct_gt_0.05 n_group_specific_gt_0.01
+          <num>                    <int>
+ 1:       0.144                     1286
+ 2:       0.191                      211
+ 3:       0.936                      557
+ 4:       0.196                      639
+ 5:       0.492                      593
+ 6:       0.766                      635
+ 7:       0.050                       72
+ 8:       0.128                      303
+ 9:      16.472                      710
+10:       0.096                      442
+11:       0.138                       66
+12:       0.619                      235
+13:       0.135                      261
+14:       0.324                      265
+15:       0.563                      264
+16:       0.036                       29
+17:       0.091                      114
+18:      13.687                      324
+19:       0.117                      567
+20:       0.162                      117
+21:       0.802                      286
+22:       0.171                      306
+23:       0.424                      352
+24:       0.758                      311
+25:       0.035                       41
+26:       0.111                      164
+27:      14.579                      445
+28:       0.091                      268
+29:       0.135                       60
+30:       0.661                      142
+31:       0.144                      146
+32:       0.351                      188
+33:       0.673                      177
+34:       0.030                       20
+35:       0.092                       76
+36:      13.361                      262
+    pct_gt_0.05 n_group_specific_gt_0.01

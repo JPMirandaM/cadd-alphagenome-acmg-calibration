@@ -1,0 +1,44 @@
+﻿ClinVar SNV VUS (>=1 star): 2260073 
+MANE missense VUS in disease genes: 1208461 | AF < 0.01: 1208430 
+VUS liftOver: unmapped 3 | reference mismatch 10 
+
+== VUS per evidence level (thresholds: main = CADD/AVI main analysis; intersection = Aim 6) ==
+      thresholds       evidence   AVI AlphaMissense BayesDel  CADD REVEL
+          <char>         <char> <num>         <num>    <num> <num> <num>
+ 1: intersection BP4_VeryStrong   0.0           0.0      0.0   0.0   0.0
+ 2: intersection     BP4_Strong   8.5          10.6     12.4   8.1  17.4
+ 3: intersection   BP4_Moderate  29.3          28.4     31.9  21.4  31.2
+ 4: intersection BP4_Supporting  19.1          15.4     13.8  17.2  14.2
+ 5: intersection  Indeterminate  19.6          23.1     22.4  26.1  18.6
+ 6: intersection PP3_Supporting   7.2           7.6      7.8  14.4   6.5
+ 7: intersection   PP3_Moderate  16.3          10.5      8.6  12.9   7.9
+ 8: intersection     PP3_Strong   0.0           4.3      3.0   0.0   4.2
+ 9: intersection PP3_VeryStrong   0.0           0.0      0.0   0.0   0.0
+10:         main BP4_VeryStrong   0.0            NA       NA   0.0    NA
+11:         main     BP4_Strong   8.3            NA       NA   8.0    NA
+12:         main   BP4_Moderate  28.9            NA       NA  21.5    NA
+13:         main BP4_Supporting  19.4            NA       NA  16.4    NA
+14:         main  Indeterminate  19.8            NA       NA  26.8    NA
+15:         main PP3_Supporting   7.3            NA       NA  14.4    NA
+16:         main   PP3_Moderate  16.3            NA       NA  12.9    NA
+17:         main     PP3_Strong   0.0            NA       NA   0.0    NA
+18:         main PP3_VeryStrong   0.0            NA       NA   0.0    NA
+
+== CADD vs AVI evidence for VUS (main thresholds) ==
+Key: <CADD>
+             CADD BP4_Moderate BP4_Strong BP4_Supporting Indeterminate
+           <char>        <int>      <int>          <int>         <int>
+1:   BP4_Moderate       192950      32950          25306          7188
+2:     BP4_Strong        29760      66706            406            76
+3: BP4_Supporting        84844        844          70782         32755
+4:  Indeterminate        37772         58         105342        107801
+5:   PP3_Moderate          528          1           8221         33890
+6: PP3_Supporting         2883          0          24515         57738
+   PP3_Moderate PP3_Supporting
+          <int>          <int>
+1:          198            710
+2:            1              5
+3:         3341           5974
+4:        38051          34700
+5:        94100          19577
+6:        60898          27590

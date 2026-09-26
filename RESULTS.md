@@ -88,9 +88,31 @@ Intersection of reference variants scored by all five predictors: 59,034 P/LP an
 
 Very Strong was not reached by any predictor. CADD and AVI thresholds on the intersection are
 within 0.3 units of those on the full main set.
-**[VERIFY and tabulate the published thresholds for REVEL and BayesDel (Pejaver et al. 2022) and
-AlphaMissense (Bergquist et al. 2025) for comparison; several of our REVEL/BayesDel BP4 thresholds
-appear less stringent than published, to be checked.]**
+Comparison with published thresholds (Pejaver et al. 2022, Table 2; values provided by the
+author from the article on 2026-09-25):
+
+| Predictor | Level | Published (ClinVar 2019) | This study (ClinVar 2026, intersection) |
+|---|---|---|---|
+| BayesDel | PP3 Supporting | ≥ 0.13 | ≥ 0.14 |
+| BayesDel | PP3 Moderate | ≥ 0.27 | ≥ 0.27 |
+| BayesDel | PP3 Strong | ≥ 0.50 | ≥ 0.48 |
+| BayesDel | BP4 Supporting | ≤ −0.18 | ≤ −0.13 |
+| BayesDel | BP4 Moderate | ≤ −0.36 | ≤ −0.25 |
+| BayesDel | BP4 Strong | not reached | ≤ −0.54 |
+| REVEL | PP3 Supporting | ≥ 0.644 | ≥ 0.642 |
+| REVEL | PP3 Moderate | ≥ 0.773 | ≥ 0.752 |
+| REVEL | PP3 Strong | ≥ 0.932 | ≥ 0.898 |
+| REVEL | BP4 Supporting | ≤ 0.290 | ≤ 0.396 |
+| REVEL | BP4 Moderate | ≤ 0.183 | ≤ 0.272 |
+| REVEL | BP4 Strong | ≤ 0.016 | ≤ 0.087 |
+| REVEL | BP4 Very Strong | ≤ 0.003 | not reached |
+
+PP3 Supporting thresholds were reproduced almost exactly, whereas higher PP3 levels and all BP4
+levels were less stringent with current data. Candidate explanations (to be tested, proposed
+amendment A6): classifications after the 2022 ClinGen recommendations using these predictors as
+PP3/BP4 evidence (circularity); inclusion of predictor training variants and HGMD variants, which
+the original study excluded; changes in the composition of ClinVar.
+**[PENDING: AlphaMissense published thresholds (Bergquist et al. 2025) to be provided by the author.]**
 
 Discrimination on the intersection (95% bootstrap CI) and paired differences versus AVI (1,000
 paired replicates):
@@ -119,6 +141,69 @@ Interpretation (provisional): for missense variants, the missense-specialised pr
 (REVEL, BayesDel, AlphaMissense) discriminate better than the genome-wide AVI and reach PP3
 Strong, which AVI and CADD do not; AVI clearly outperforms CADD v1.7. AVI's advantage over the
 missense-specialised tools, if any, would be expected outside missense variants (deferred Aim 9).
+
+## R7. Population frequency of variants with computational evidence (Aim 8; amendment A4)
+
+Universe: 8,214,534 MANE missense SNVs observed in gnomAD v4.1. PP3 levels with the main-analysis
+median thresholds (CADD ≥ 25.6 / ≥ 28.0; AVI ≥ 25.18 / ≥ 26.44). Script `22_ancestry.R`.
+
+| Predictor | PP3 level | Observed in gnomAD | Group AF > 1% | Group AF > 5% |
+|---|---|---|---|---|
+| CADD v1.7 | Supporting or higher | 1,756,432 | 7,399 (0.42%) | 1,529 (0.087%) |
+| CADD v1.7 | Moderate | 816,315 | 2,914 (0.36%) | 553 (0.068%) |
+| AVI | Supporting or higher | 1,430,434 | 3,950 (0.28%) | 857 (0.060%) |
+| AVI | Moderate | 930,564 | 2,064 (0.22%) | 447 (0.048%) |
+
+Among PP3-level variants common (> 1%) in at least one group, the group with the highest
+frequency was rarely NFE (3.5–3.7% of such variants for both predictors and levels); the most
+frequent grpmax groups were AFR (17–22%), AMI (15–17%), FIN (13–14%), MID (11–13%), EAS (11–12%)
+and ASJ (11–12%). Variants common (> 1%) in only one group ("group-specific common"), CADD
+Supporting+ / AVI Supporting+: AFR 1,286 / 567; AMI 710 / 445; MID 635 / 311; EAS 639 / 306;
+FIN 593 / 352; ASJ 557 / 286; SAS 303 / 164; AMR 211 / 117; NFE 72 / 41. AVI assigned PP3 to
+fewer common variants than CADD, consistent with its frequency-based training labels.
+
+Per-group proportions of PP3-level variants exceeding 1% (pre-specified outcome 3; full table
+`calibration/results/v17_avi/ancestry/table_per_group.tsv`) ranged from 0.08–0.13% (NFE) to
+2.3–3.2% (ASJ, MID) and ~40–44% (AMI). **Caution (post hoc note):** this proportion is strongly
+affected by each group's sample size — in small cohorts (AMI, ASJ, MID) only variants of
+appreciable frequency are observed at all, and AF > 1% is reached with few allele counts — so it
+should not be compared across groups as a measure of risk; the grpmax distribution and the
+group-specific counts are less affected. Allele numbers are not available in the VEP cache (see A4).
+
+Interpretation (provisional): variants that would receive PP3 evidence but are common in some
+population are concentrated in non-European and founder populations; frequency-based criteria
+(BA1/BS1) protect against these only when the population is represented in reference databases,
+which motivates the future local-cohort analysis (Aim 5).
+
+## R8. Computational evidence for variants of uncertain significance (Aim 7; amendment A5)
+
+ClinVar 2026-09-23: 2,260,073 SNV VUS (≥ 1 star), of which 1,208,461 are MANE missense in disease
+genes (1,208,430 with AF < 0.01). Script `23_vus_yield.R`. Percent of VUS per evidence level
+(ACMG/AMP points in brackets):
+
+| Evidence | CADD v1.7 (main) | AVI (main) | REVEL | BayesDel | AlphaMissense |
+|---|---|---|---|---|---|
+| PP3 Strong [+4] | — | — | 4.2 | 3.0 | 4.3 |
+| PP3 Moderate [+2] | 12.9 | 16.3 | 7.9 | 8.6 | 10.5 |
+| PP3 Supporting [+1] | 14.4 | 7.3 | 6.5 | 7.8 | 7.6 |
+| Indeterminate [0] | 26.8 | 19.8 | 18.6 | 22.4 | 23.1 |
+| BP4 Supporting [−1] | 16.4 | 19.4 | 14.2 | 13.8 | 15.4 |
+| BP4 Moderate [−2] | 21.5 | 28.9 | 31.2 | 31.9 | 28.4 |
+| BP4 Strong [−4] | 8.0 | 8.3 | 17.4 | 12.4 | 10.6 |
+
+(REVEL, BayesDel and AlphaMissense with the Aim 6 intersection thresholds; CADD and AVI with
+main-analysis thresholds; their intersection-threshold results differ by ≤ 0.4 points.)
+
+CADD v1.7 vs AVI: the two predictors gave evidence in opposite directions for 46,377 VUS (3.8%):
+36,148 with PP3 by CADD and BP4 by AVI, and 10,229 the reverse (cross-table
+`calibration/results/v17_avi/vus/table_vus_cadd_vs_avi.tsv`).
+
+Interpretation (provisional): most missense VUS would receive benign-side computational
+evidence, and roughly one in five to one in four would receive pathogenic-side evidence. These
+proportions depend on the thresholds; the less stringent BP4 thresholds estimated with current
+data (R6) would increase BP4 evidence relative to the published thresholds, which must be
+considered before any clinical interpretation. Computational evidence alone does not reclassify a
+variant.
 
 ## R5. Temporal hold-out validation (Aim 2c; amendment A2)
 
