@@ -50,7 +50,7 @@ catalogue contains CADD and AVI scores). **[VERIFY each licence before deposit.]
 | Resource | Use here | Terms (as understood; verify) | Required attribution |
 |---|---|---|---|
 | CADD v1.7 and v1.6 GRCh38 scores | main predictor; Aim 2b | free for non-commercial use; commercial use requires a licence from the University of Washington | Schubach et al. 2024 (v1.7); Rentzsch et al. 2019/2021 (v1.6) |
-| AlphaGenome Variant Impact (AVI) SNV file | predictor | AlphaGenome Atlas download terms (permissive-use section) [VERIFY] | AlphaGenome Atlas preprint (medRxiv, 2026) |
+| AlphaGenome Variant Impact (AVI) SNV file | predictor | AlphaGenome Atlas download terms (permissive-use section) [VERIFY] | Cheng et al. AlphaGenome Atlas, medRxiv 2026 (doi:10.64898/2026.09.16.26363192); Avsec et al. Nature 2026;649:1206–1218 |
 | AlphaMissense hg38 predictions (Zenodo 10813168) | comparator | CC BY-NC-SA 4.0 | Cheng et al. 2023 |
 | REVEL v1.3 | comparator | free for non-commercial use [VERIFY] | Ioannidis et al. 2016 |
 | BayesDel noAF (UCSC track) | comparator | per developer / UCSC terms [VERIFY] | Feng 2017 |
