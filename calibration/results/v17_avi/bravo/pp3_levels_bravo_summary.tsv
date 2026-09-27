@@ -1,0 +1,5 @@
+predictor	level	n_snvs	n_observed_bravo_pass	n_bravo_af_gt_0.01	n_bravo_af_gt_0.05	n_bravo_gt_0.01_gnomad_grpmax_le_0.01	n_bravo_homozygotes_gt0
+CADD	Supporting	9968836	607740	967	297	0	11285
+CADD	Moderate	8566291	538224	481	124	0	6734
+AVI	Supporting	5685222	318672	353	111	0	5906
+AVI	Moderate	13135064	574209	329	85	0	6686

@@ -1,0 +1,52 @@
+﻿Genes: 18842 
+Totals: common overall > 1%: 2346 | common in some group > 1%: 8879 | > 5%: 1903 
+
+Top genes by overall AF > 1% (as reported in R12):
+       gene common_overall_gt_1pct common_group_gt_1pct
+     <char>                  <int>                <int>
+ 1:  PABPC1                     13                   21
+ 2:  KCNJ12                     11                   18
+ 3: SLC25A5                     11                   12
+ 4:     TTN                     10                   31
+ 5:  GXYLT1                      8                   10
+ 6:    CNN2                      6                    6
+ 7:   KRT18                      6                    7
+ 8:   RASA4                      6                    6
+ 9:   ESRRA                      5                    5
+10:   ITPR3                      5                   10
+
+Top genes by group AF > 1% (corrected definition):
+       gene missense_catalogued common_group_gt_1pct common_group_gt_5pct
+     <char>               <int>                <int>                <int>
+ 1:     TTN               56120                   31                    6
+ 2:  PABPC1                3329                   21                   13
+ 3:  KCNJ12                1640                   18                   10
+ 4:   HSPG2               10242                   12                    1
+ 5: SLC25A5                1292                   12                    9
+ 6:   DNAH7                9052                   11                    1
+ 7:   OBSCN                8868                   11                    0
+ 8:    OTOF                6407                   11                    2
+ 9:    TNXB                5573                   11                    5
+10:   DNAH1                9297                   10                    3
+11:  DNAH12                9071                   10                    3
+12:  GXYLT1                1268                   10                    6
+13:   ITPR3               10773                   10                    0
+14:     NEB                9612                   10                    4
+15:    OTOG                5219                   10                    4
+    common_overall_gt_1pct
+                     <int>
+ 1:                     10
+ 2:                     13
+ 3:                     11
+ 4:                      2
+ 5:                     11
+ 6:                      4
+ 7:                      1
+ 8:                      4
+ 9:                      5
+10:                      3
+11:                      4
+12:                      8
+13:                      5
+14:                      4
+15:                      4

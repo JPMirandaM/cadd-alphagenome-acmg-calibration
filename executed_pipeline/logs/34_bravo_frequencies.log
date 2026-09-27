@@ -1,0 +1,34 @@
+﻿MANE missense PP3-level catalogue SNVs: 24084172 | at a BRAVO site: 1421923 | PASS: 1405918 | elapsed min: 18.2 
+     pass       N
+   <lgcl>   <int>
+1:  FALSE   16005
+2:   TRUE 1405918
+   predictor      level   n_snvs n_observed_bravo_pass n_bravo_af_gt_0.01
+      <char>     <char>    <int>                 <int>              <int>
+1:      CADD Supporting  9968836                607740                967
+2:      CADD   Moderate  8566291                538224                481
+3:       AVI Supporting  5685222                318672                353
+4:       AVI   Moderate 13135064                574209                329
+   n_bravo_af_gt_0.05 n_bravo_gt_0.01_gnomad_grpmax_le_0.01
+                <int>                                 <int>
+1:                297                                     0
+2:                124                                     0
+3:                111                                     0
+4:                 85                                     0
+   n_bravo_homozygotes_gt0
+                     <int>
+1:                   11285
+2:                    6734
+3:                    5906
+4:                    6686
+                                             set n_observed n_af_gt_0.01
+                                          <char>      <int>        <int>
+1: ClinVar P/LP >=1 star (catalogue), BRAVO PASS       8856            4
+   n_af_gt_0.05
+          <int>
+1:            0
+    n_both spearman_bravo_vs_gnomad_overall
+     <int>                            <num>
+1: 1125239                        0.6697542
+BRAVO-only frequency conflicts (PP3 either predictor, BRAVO PASS AF > 0.01, gnomAD group max <= 0.01): 0 
+Empty data.table (0 rows and 11 cols): chrom,pos,ref,alt,gene,PP3_CADD...

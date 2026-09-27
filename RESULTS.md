@@ -337,12 +337,79 @@ forms the catalogue (script `29`; 24 per-chromosome files, 0.45 GB, kept outside
 296.6 min): 24,111,910 (74.1%) MANE Select missense (calibrated context), 4,446,346 other MANE
 coding SNVs, 3,928,565 in gene bodies outside MANE CDS, and 52,353 intergenic (0.16%). Both
 predictors assigned PP3 Moderate to 11,596,538 SNVs; 15.0 M SNVs reached PP3 with only one of them.
-The per-gene summary covers 18,842 genes (median 919 catalogued missense SNVs per gene). The genes
-with most PP3-level missense variants common (> 1%) in some population were PABPC1 (13), KCNJ12
-(11), SLC25A5 (11), TTN (10), GXYLT1 (8) and RASA4 (6); several of these have processed
-pseudogenes or segmental duplications, suggesting that such "common" variants may partly reflect
-paralogous sequence variation or mapping artefacts in gnomAD rather than common pathogenic
-variation — a caution for users of the catalogue.
+The per-gene summary covers 18,842 genes (median 919 catalogued missense SNVs per gene).
+**Correction (2026-09-27):** A9 defines "common" by the gnomAD group AF, but script 29 counted
+common variants with the overall AF (max of exome and genome AF); the counts were recomputed
+(script `29b_gene_summary_group_af.R`; both columns kept in `gene_summary.tsv`). PP3-level missense
+SNVs common in some gnomAD group: 8,879 with group AF > 1% and 1,903 with group AF > 5% (2,346 with
+overall AF > 1%, the figure implied by the first version). Genes with most such variants (group AF
+> 1%): TTN (31), PABPC1 (21), KCNJ12 (18), HSPG2 (12), SLC25A5 (12), DNAH7, OBSCN, OTOF, TNXB
+(11 each); with group AF > 5%: PABPC1 (13), KCNJ12 (10), SLC25A5 (9). By overall AF (first
+version): PABPC1 (13), KCNJ12 (11), SLC25A5 (11), TTN (10), GXYLT1 (8), RASA4 (6). PABPC1, KCNJ12
+and SLC25A5 have processed pseudogenes or close paralogs, suggesting that such "common" variants may
+partly reflect paralogous sequence variation or mapping artefacts in gnomAD rather than common
+pathogenic variation — a caution for users of the catalogue; large genes (TTN, HSPG2, OBSCN, NEB,
+dyneins) contribute by size.
+
+## R14. Mexico City Prospective Study frequencies (Aim 8 extension; amendment A12(a))
+
+Data: RGC-MCPS allele-frequency VCFs (release 20230130; ~140,000 adults; frequencies overall and
+by local ancestry: AFR, EUR, IMX = Indigenous Mexican). Script `32_mcps_frequencies.R`. Universe:
+24,084,172 PP3-level MANE Select missense SNVs of the Aim 4 catalogue (CADD or AVI); 678,887 were
+observed in MCPS (AC > 0; source: exome 659,603, array 14,120, genome 5,164). Levels are exclusive
+(Supporting = Supporting only). "gnomAD group max" = maximum over gnomAD v4.1 genetic ancestry groups.
+
+| Predictor | PP3 level | SNVs | Observed in MCPS | MCPS AF > 1% | MCPS AF > 5% | MCPS AF > 1% and gnomAD group max ≤ 1% | IMX AF > 1% | IMX AF > 1% and gnomAD group max ≤ 1% |
+|---|---|---|---|---|---|---|---|---|
+| CADD v1.7 | Supporting | 9,968,836 | 287,521 | 676 | 309 | 36 | 505 | 73 |
+| CADD v1.7 | Moderate | 8,566,291 | 280,389 | 349 | 138 | 30 | 274 | 69 |
+| AVI | Supporting | 5,685,222 | 144,585 | 247 | 119 | 15 | 189 | 36 |
+| AVI | Moderate | 13,135,064 | 267,222 | 238 | 97 | 18 | 178 | 38 |
+
+- Variants observed in MCPS but absent from gnomAD v4.1: 59,048–126,645 per predictor/level.
+- MCPS-only frequency conflicts (PP3 by either predictor, MCPS AF > 1%, every gnomAD group ≤ 1%):
+  74 SNVs (`calibration/results/v17_avi/mcps/mcps_only_frequency_conflicts.tsv`). Most have their
+  highest gnomAD frequency in the admixed American group (0.6–1%) and roughly 1.5-fold higher
+  frequency in the Indigenous Mexican ancestry component of MCPS (2–3%); several are classified
+  benign/likely benign in ClinVar. Using the Indigenous Mexican ancestry frequency, 36–73 PP3-level
+  SNVs per predictor/level exceed 1% while being ≤ 1% in every gnomAD group.
+- Quality check, ClinVar P/LP (≥ 1 star) catalogue SNVs: 6,009 of 52,020 observed in MCPS; only 2
+  with AF > 1% (1 > 5%). The latter, ALDH7A1 p.Asn195Ser (ClinVar Pathogenic), has MCPS AF 0.28 with
+  similar frequency in all three ancestry components but gnomAD AF 2 × 10⁻⁵, and was called only
+  from the genotyping array: most likely an array genotyping artefact.
+- Post hoc (not pre-specified): source of the 74 conflicting variants — exome 54, array 19,
+  genome 1; array-only calls should be interpreted with caution.
+- Concordance with gnomAD v4.1 admixed American AF (252,190 SNVs with AF > 0 in both): Spearman
+  ρ = 0.52 (overall MCPS AF); ρ = 0.10 for the Indigenous Mexican component.
+- Execution note: a first run compared MCPS with the gnomAD *overall* AF instead of the pre-specified
+  group maximum (354 apparent conflicts); corrected before interpretation (log
+  `32_mcps_frequencies_run1_overallAF_bug.log`).
+
+Interpretation (provisional): a small number of variants that CADD or AVI place at PP3 levels are
+common in the Mexican population, mostly Indigenous-ancestry alleles that gnomAD captures only
+partially; in Mexican patients, frequency criteria based on gnomAD alone would miss them.
+Licence: RGC-MCPS summary data used under its licence agreement (citation of Ziyatdinov et al. 2023
+and acknowledgement of RGC, University of Oxford, UNAM and INMEGEN required); only aggregate counts
+and variant identifiers are reported.
+
+## R15. TOPMed BRAVO frequencies (amendment A12(b))
+
+Data: BRAVO Freeze 10 public VCFs (overall AC/AF only; GRCh38); FILTER = PASS sites. Script
+`34_bravo_frequencies.R`. Of the 24,084,172 PP3-level MANE missense SNVs, 1,421,923 are at a BRAVO
+site (1,405,918 PASS).
+
+| Predictor | PP3 level | Observed (PASS) | AF > 1% | AF > 5% | AF > 1% and gnomAD group max ≤ 1% | With homozygotes |
+|---|---|---|---|---|---|---|
+| CADD v1.7 | Supporting | 607,740 | 967 | 297 | 0 | 11,285 |
+| CADD v1.7 | Moderate | 538,224 | 481 | 124 | 0 | 6,734 |
+| AVI | Supporting | 318,672 | 353 | 111 | 0 | 5,906 |
+| AVI | Moderate | 574,209 | 329 | 85 | 0 | 6,686 |
+
+ClinVar P/LP (≥ 1 star): 8,856 observed, 4 with AF > 1%, none > 5%. Spearman correlation of BRAVO
+AF with gnomAD overall AF: 0.67 (1,125,239 SNVs). No PP3-level SNV was common in BRAVO while ≤ 1% in
+every gnomAD group — expected, because gnomAD v4.1 genomes include many TOPMed samples (the two
+resources are not independent; A12). BRAVO therefore adds no population-specific frequency
+information beyond gnomAD groups for these variants, in contrast with MCPS (R14).
 
 ## R5. Temporal hold-out validation (Aim 2c; amendment A2)
 

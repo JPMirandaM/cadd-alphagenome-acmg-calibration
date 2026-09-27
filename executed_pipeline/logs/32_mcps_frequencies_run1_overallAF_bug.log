@@ -1,0 +1,142 @@
+MANE missense PP3-level catalogue SNVs: 24084172 | observed (AC>0) in MCPS: 678887 | elapsed min: 7.2 
+Source of matched variants:
+   source      N
+   <char>  <int>
+1:    WES 659603
+2:  Array  14120
+3:    WGS   5164
+   predictor      level   n_snvs n_observed_mcps n_mcps_af_gt_0.01
+      <char>     <char>    <int>           <int>             <int>
+1:      CADD Supporting  9968836          287521               676
+2:      CADD   Moderate  8566291          280389               349
+3:       AVI Supporting  5685222          144585               247
+4:       AVI   Moderate 13135064          267222               238
+   n_mcps_af_gt_0.05 n_mcps_gt_0.01_gnomad_max_le_0.01
+               <int>                             <int>
+1:               309                               185
+2:               138                               117
+3:               119                                74
+4:                97                                70
+   n_mcps_gt_0.05_gnomad_max_le_0.05 n_imx_af_gt_0.01
+                               <int>            <int>
+1:                                91              505
+2:                                52              274
+3:                                38              189
+4:                                34              178
+   n_imx_gt_0.01_gnomad_max_le_0.01 n_unrel_af_gt_0.01
+                              <int>              <int>
+1:                              227                675
+2:                              161                354
+3:                               96                253
+4:                               91                244
+   n_observed_mcps_not_gnomad
+                        <int>
+1:                     108457
+2:                      88023
+3:                      59048
+4:                     126645
+                                 set     n n_observed_mcps n_mcps_af_gt_0.01
+                              <char> <int>           <int>             <int>
+1: ClinVar P/LP >=1 star (catalogue) 52020            6009                 2
+   n_mcps_af_gt_0.05 n_imx_af_gt_0.01
+               <int>            <int>
+1:                 1                1
+   n_both spearman_mcps_vs_gnomad_amr spearman_imx_vs_gnomad_amr
+    <int>                       <num>                      <num>
+1: 252190                   0.5229367                 0.09678039
+MCPS-only frequency conflicts (PP3 by either predictor, MCPS AF > 0.01, gnomAD max <= 0.01): 354 
+     chrom       pos    ref    alt     gene       hgvsp CADD_PHRED AVI_PHRED
+    <char>     <int> <char> <char>   <char>      <char>      <num>     <num>
+ 1:      5 126577145      T      C  ALDH7A1 p.Asn195Ser       26.6     25.38
+ 2:      5 178121239      C      T    N4BP3 p.Arg332Cys       32.0     25.30
+ 3:      7  73842034      G      A  METTL27  p.Ala36Val       26.3     23.78
+ 4:      3  56594027      A      G   CCDC66 p.Gln468Arg       31.0     25.94
+ 5:     15  79313844      G      A    TMED3  p.Asp86Asn       29.6     24.63
+ 6:     17  64044182      G      T     ERN1 p.Leu914Met       26.1     27.95
+ 7:      3  63990813      G      A    ATXN7 p.Ala546Thr       32.0     23.72
+ 8:      1 183563302      G      A     NCF2 p.Arg395Trp       26.7     20.92
+ 9:     17  81983668      G      T  ASPSCR1  p.Met91Ile       27.3     25.16
+10:      1 168729060      C      T      DPT  p.Val39Met       26.6     24.87
+11:     11  57313408      C      T TNKS1BP1 p.Arg427Gln       26.6     25.91
+12:      3  50330660      T      C   RASSF1 p.His315Arg       26.1     23.84
+13:     15  74854025      G      T   SCAMP2  p.Pro74His       26.7     23.62
+14:     20  45419334      G      A     PIGT p.Arg178Gln       35.0     25.00
+15:     12  56349260      G      A    STAT2 p.Thr448Met       33.0     23.38
+16:      8  54459217      T      C    SOX17 p.Leu156Pro       26.1     23.30
+17:      6 109452528      C      T   MICAL1 p.Gly220Asp       25.2     26.13
+18:      4  95202802      G      C    UNC5C p.Pro689Ala       26.0     23.83
+19:     13  72835359      G      A    PIBF1 p.Arg405Gln       32.0     23.96
+20:     13  47954148      C      T   SUCLA2 p.Asp367Asn       24.2     25.54
+     chrom       pos    ref    alt     gene       hgvsp CADD_PHRED AVI_PHRED
+      PP3_CADD    PP3_AVI mcps_AF_RAW mcps_AF_IMX mcps_AF_EUR mcps_AF_AFR
+        <char>     <char>       <num>       <num>       <num>       <num>
+ 1: Supporting Supporting       0.283       0.304    2.45e-01    0.248000
+ 2:   Moderate Supporting       0.170       0.253    8.51e-04    0.001880
+ 3: Supporting       none       0.168       0.251    2.75e-03    0.003890
+ 4:   Moderate Supporting       0.167       0.248    3.71e-05    0.000000
+ 5:   Moderate       none       0.165       0.246    8.64e-04    0.001280
+ 6: Supporting   Moderate       0.165       0.249    1.61e-03    0.002080
+ 7:   Moderate       none       0.164       0.246    1.22e-05    0.000102
+ 8: Supporting       none       0.161       0.242    1.02e-03    0.000407
+ 9: Supporting       none       0.157       0.236    1.98e-03    0.001820
+10: Supporting       none       0.152       0.228    1.05e-03    0.000800
+11: Supporting Supporting       0.152       0.227    6.07e-05    0.000119
+12: Supporting       none       0.151       0.231    1.91e-04    0.001370
+13: Supporting       none       0.151       0.226    5.59e-04    0.002290
+14:   Moderate       none       0.148       0.222    8.08e-04    0.001160
+15:   Moderate       none       0.134       0.204    6.58e-04    0.002870
+16: Supporting       none       0.132       0.201    1.37e-03    0.000592
+17:       none Supporting       0.122       0.181    5.37e-04    0.000000
+18: Supporting       none       0.119       0.181    5.80e-04    0.000538
+19:   Moderate       none       0.114       0.172    1.39e-04    0.000226
+20:       none Supporting       0.113       0.170    6.13e-05    0.000278
+      PP3_CADD    PP3_AVI mcps_AF_RAW mcps_AF_IMX mcps_AF_EUR mcps_AF_AFR
+    gnomAD_AF_AMR gnomAD_AF_max grpmax
+            <num>         <num> <char>
+ 1:        0.0000      1.97e-05    AFR
+ 2:        0.1200      7.11e-03    AMR
+ 3:        0.1120      6.70e-03    AMR
+ 4:        0.1160      7.00e-03    AMR
+ 5:        0.1120      7.28e-03    AMR
+ 6:        0.1150      6.75e-03    AMR
+ 7:        0.1100      7.24e-03    AMR
+ 8:        0.0955      5.65e-03    AMR
+ 9:        0.1080      6.30e-03    AMR
+10:        0.1110      7.25e-03    AMR
+11:        0.1200      7.69e-03    AMR
+12:        0.1140      6.96e-03    AMR
+13:        0.1100      9.23e-03    AMR
+14:        0.0978      4.57e-03    AMR
+15:        0.1060      7.06e-03    AMR
+16:        0.0864      4.36e-03    AMR
+17:        0.0826      4.20e-03    AMR
+18:        0.0892      6.12e-03    AMR
+19:        0.0882      8.32e-03    AMR
+20:        0.0957      9.42e-03    AMR
+    gnomAD_AF_AMR gnomAD_AF_max grpmax
+                                          clnsig
+                                          <char>
+ 1:                                   Pathogenic
+ 2:                                             
+ 3:                                             
+ 4:                                             
+ 5:                                             
+ 6:                                             
+ 7:                                             
+ 8:                         Benign/Likely_benign
+ 9:                                             
+10:                                             
+11:                                             
+12:                                             
+13:                                             
+14:                                       Benign
+15:                         Benign/Likely_benign
+16:                                       Benign
+17:                                       Benign
+18:                                       Benign
+19: Conflicting_classifications_of_pathogenicity
+20:                                       Benign
+                                          clnsig
+Done.
+
+[exited with code 0]

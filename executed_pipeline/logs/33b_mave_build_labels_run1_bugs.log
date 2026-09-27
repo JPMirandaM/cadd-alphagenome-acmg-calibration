@@ -1,0 +1,125 @@
+﻿Rscript.exe : Aviso:
+En línea: 1 Carácter: 302
++ ... tch {} } }; & 'C:\Program Files\R\R-4.4.2\bin\Rscript.exe' C:\cadd\ex ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Aviso::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+package 'curl' was built under R version 4.4.3 
+Candidate score sets (normal + abnormal classes, mapping not failed): 89 
+[1/89] urn:mavedb:00001230-a-2 KCNH2: ok
+[2/89] urn:mavedb:00001224-a-1 BRCA2: ok
+[3/89] urn:mavedb:00001234-c-1 TP53: ok
+[4/89] urn:mavedb:00001234-f-1 TP53: ok
+[5/89] urn:mavedb:00001234-d-1 TP53: ok
+[6/89] urn:mavedb:00001234-b-1 TP53: ok
+[7/89] urn:mavedb:00001234-g-1 TP53: ok
+[8/89] urn:mavedb:00001234-a-1 TP53: ok
+[9/89] urn:mavedb:00001234-e-1 TP53: ok
+[10/89] urn:mavedb:00001234-h-1 TP53: ok
+[11/89] urn:mavedb:00000657-b-1 ASPA: ok
+[12/89] urn:mavedb:00000662-0-1 BAP1: ok
+[13/89] urn:mavedb:00000674-a-2 KCNE1: ok
+[14/89] urn:mavedb:00000674-c-1 KCNE1: ok
+[15/89] urn:mavedb:00000674-b-1 KCNE1: ok
+[16/89] urn:mavedb:00001231-a-2 KCNH2: ok
+[17/89] urn:mavedb:00001229-a-2 KCNH2: ok
+[18/89] urn:mavedb:00001280-a-1 CHEK2: ok
+[19/89] urn:mavedb:00001205-a-1 CHEK2: ok
+[20/89] urn:mavedb:00001234-0-1 TP53: ok
+[21/89] urn:mavedb:00001236-0-1 TP53: ok
+[22/89] urn:mavedb:00000659-a-1 SGCB: ok
+[23/89] urn:mavedb:00000658-0-1 DDX3X: ok
+[24/89] urn:mavedb:00001227-a-2 CRX: ok
+[25/89] urn:mavedb:00001197-a-5 FKRP: ok
+[26/89] urn:mavedb:00001254-a-1 LARGE1: ok
+[27/89] urn:mavedb:00000665-a-1 PAX6: ok
+[28/89] urn:mavedb:00000665-d-1 PAX6: ok
+[29/89] urn:mavedb:00000665-c-1 PAX6: ok
+[30/89] urn:mavedb:00000665-b-1 PAX6: ok
+[31/89] urn:mavedb:00001277-a-1 TP53: ok
+[32/89] urn:mavedb:00001226-a-1 CARD11: ok
+[33/89] urn:mavedb:00001226-b-1 CARD11: ok
+[34/89] urn:mavedb:00001200-d-1 F9: ok
+[35/89] urn:mavedb:00001200-b-1 F9: ok
+[36/89] urn:mavedb:00001200-c-1 F9: ok
+[37/89] urn:mavedb:00001200-e-1 F9: ok
+[38/89] urn:mavedb:00001200-a-1 F9: ok
+[39/89] urn:mavedb:00001200-0-1 F9: ok
+[40/89] urn:mavedb:00000112-a-1 OTC: ok
+[41/89] urn:mavedb:00001266-0-1 G6PD: ok
+[42/89] urn:mavedb:00001266-b-1 G6PD: ok
+[43/89] urn:mavedb:00000096-a-1 GCK: ok
+[44/89] urn:mavedb:00001268-0-1 BRCA2: ok
+[45/89] urn:mavedb:00001222-a-2 BRCA1: ok
+[46/89] urn:mavedb:00001198-a-1 JAG1: ok
+[47/89] urn:mavedb:00001216-a-1 KCNH2: ok
+[48/89] urn:mavedb:00000097-0-2 BRCA1: ok
+[49/89] urn:mavedb:00000108-0-1 HMBS: ok
+[50/89] urn:mavedb:00000108-b-1 HMBS: ok
+[51/89] urn:mavedb:00000108-a-1 HMBS: ok
+[53/89] urn:mavedb:00001222-b-2 BRCA1: ok
+[54/89] urn:mavedb:00000068-a-1 TP53: ok
+[55/89] urn:mavedb:00000068-c-1 TP53: ok
+[56/89] urn:mavedb:00000068-b-1 TP53: ok
+[57/89] urn:mavedb:00000663-a-1 NDUFAF6: ok
+[58/89] urn:mavedb:00001235-a-1 TP53: ok
+[59/89] urn:mavedb:00000094-a-3 KCNQ4: ok
+[60/89] urn:mavedb:00000094-a-2 KCNQ4: ok
+[61/89] urn:mavedb:00000054-a-1 PTEN: ok
+[62/89] urn:mavedb:00000013-a-1 PTEN: ok
+[63/89] urn:mavedb:00000673-0-1 RAD51C: ok
+[64/89] urn:mavedb:00000099-a-1 RHO: ok
+[65/89] urn:mavedb:00001262-a-3 CTCF: ok
+[66/89] urn:mavedb:00001259-a-2 PALB2: ok
+[67/89] urn:mavedb:00001260-a-2 RAD51D: ok
+[68/89] urn:mavedb:00001265-a-2 SFPQ: ok
+[69/89] urn:mavedb:00000675-a-1 VHL: ok
+[70/89] urn:mavedb:00001264-a-2 XRCC2: ok
+[71/89] urn:mavedb:00001228-a-1 DDX3X: ok
+[72/89] urn:mavedb:00001256-a-12 FGFR1: ok
+[73/89] urn:mavedb:00001256-a-9 FGFR2: ok
+[74/89] urn:mavedb:00001256-a-6 FGFR4: ok
+[75/89] urn:mavedb:00001256-a-8 FGFR4: ok
+[76/89] urn:mavedb:00001256-a-7 FGFR2: ok
+[77/89] urn:mavedb:00001256-a-5 FGFR3: ok
+[78/89] urn:mavedb:00001256-a-1 FGFR2: ok
+[79/89] urn:mavedb:00001256-a-10 FGFR1: ok
+[80/89] urn:mavedb:00001256-a-4 FGFR1: ok
+[81/89] urn:mavedb:00001256-a-3 FGFR3: ok
+[82/89] urn:mavedb:00001256-a-11 FGFR4: ok
+[83/89] urn:mavedb:00001256-a-2 FGFR3: ok
+[84/89] urn:mavedb:00000098-a-2 SCN5A: ok
+[85/89] urn:mavedb:00001268-c-1 BRCA2: ok
+[86/89] urn:mavedb:00001268-a-1 BRCA2: ok
+[87/89] urn:mavedb:00001242-a-1 BRCA2: ok
+[88/89] urn:mavedb:00000068-0-1 TP53: ok
+MANE missense SNVs in MAVE genes: 177146 
+Protein-level score sets dropped (< 90% MANE match): 36 
+Classified MANE missense SNVs: 49705 | discordant across sets (excluded): 1923 
+                      status     N
+                      <char> <int>
+1: dropped: < 90% MANE match    36
+2:           download failed     2
+3:                        ok    51
+      gene     n abnormal normal
+    <char> <int>    <int>  <int>
+ 1:  PALB2  5814      444   5370
+ 2: LARGE1  4993     1112   3881
+ 3:  BRCA2  4237      702   3535
+ 4:  KCNQ4  3763      562   3201
+ 5:  CHEK2  3561      838   2723
+ 6:   CTCF  3173      450   2723
+ 7:   FKRP  3126     1275   1851
+ 8:   SFPQ  2544      266   2278
+ 9:   TP53  2058      498   1560
+10:  BRCA1  1908      432   1476
+11:  FGFR1  1901       28   1873
+12:  FGFR4  1884      100   1784
+13: RAD51D  1819      227   1592
+14:  FGFR3  1811       15   1796
+15:  FGFR2  1674       48   1626
+16:  XRCC2  1668      170   1498
+17:   PTEN   994      146    848
+18:    OTC   777      452    325
+19:  KCNH2    77       63     14
