@@ -247,9 +247,14 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 # Correction 2026-09-27: the per-gene "common" count used the overall gnomAD AF instead of the group AF
 # specified in A9; recomputed (previous file kept as data\catalogue\gene_summary_v1_overallAF.tsv):
 & $R .\scripts\29b_gene_summary_group_af.R             # -> logs\29b_gene_summary_group_af.log
-# Step 16 Aim 9 noncoding (amendments A10, A11) [RUNNING 2026-09-26/27]; third attempt after fixing NA
-# joins (inner joins for exon table) and skipping sequences absent from the tabix indexes (MT):
+# Step 16 Aim 9 noncoding (amendments A10, A11) [2026-09-26/27]; third attempt after fixing NA
+# joins (inner joins for exon table) and skipping sequences absent from the tabix indexes (MT) ran >4 h in
+# its sequential tabix lookups and was lost when the Claude Code session ended (log kept as
+# logs\30_noncoding_clinvar_mpra_run3_interrupted.log). The lookups were rewritten to run per chromosome
+# in 4 workers with per-chromosome caching (results unchanged by design) and the script was rerun:
 & $R .\scripts\30_noncoding_clinvar_mpra.R             # -> logs\30_noncoding_clinvar_mpra.log
+# The MAVE label builder (33b) and the CADD v1.6 range download (35b) were also interrupted by the
+# session end; 33b was rerun from scratch (downloads cached) and 35b resumed (completed parts kept).
 # Step 17 Aim 8 extension, population frequencies (amendment A12) [2026-09-27]
 # (a) MCPS: official per-chromosome frequency VCFs (release 20230130), 23 files + .tbi, sizes verified:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\31_download_mcps_frequencies.ps1   # -> logs\31_download_mcps_frequencies.log; data\mcps\SHA256SUMS.txt
@@ -263,6 +268,11 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\31_download_mc
 # server Content-Length (headers kept in data\bravo\chr*.headers.txt). Files are plain gzip; script 34
 # recompresses them with bgzip and indexes them (originals kept):
 & $R .\scripts\34_bravo_frequencies.R                  # 3 workers -> logs\34_bravo_frequencies.log
+# Figures 3-5 [2026-09-27] (source tables copied into figures\data\<figure>\; Figure 3 legend set to two rows
+# after the first render truncated it):
+& $R .\scripts\36_plot_fig3_comparators.R C:/cadd/figures/data/Fig3_comparators C:/cadd/figures/Fig3_comparators
+& $R .\scripts\37_plot_fig4_population.R C:/cadd/figures/data/Fig4_population C:/cadd/figures/Fig4_population
+& $R .\scripts\38_plot_fig5_vus.R C:/cadd/figures/data/Fig5_vus C:/cadd/figures/Fig5_vus
 # Step 18 Aim 3 MAVE validation (amendment A13) [2026-09-27]
 & $R .\scripts\33a_mave_inventory.R                    # MaveDB metadata only -> logs\33a_mave_inventory.log
 & $R .\scripts\33b_mave_build_labels.R                 # scores + GRCh38 mappings -> logs\33b_mave_build_labels.log
