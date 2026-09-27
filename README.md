@@ -14,7 +14,7 @@ natively on Windows (R 4.4.2 + Rsamtools); no WSL/Linux required.
 |---|---|
 | `METHODS.md` | Publication-style methods, figure index, references and process log (appendix) |
 | `STUDY_PLAN.md` | Aims 1–4, future proposal (Aim 5), positioning against the literature |
-| `manuscript/` | Manuscript drafts (v3: AJHG draft with figures at the end and AI-use declaration; v2: first full draft), Supplemental information (supplemental_material_v1: Figures S1–S4, Tables S1–S16), Markdown + Word; helper scripts in manuscript/R |
+| `manuscript/` | Not in the repository: manuscript drafts are kept separately by the author (see Data and code availability of the article) |
 | `LICENSE`, `THIRD_PARTY_NOTICES.md`, `CITATION.cff` | MIT license (code), notice for code derived from Pejaver et al. (MIT), how to cite |
 | `executed_pipeline/execution_log.ps1` | Every command, in the order run, with status and date |
 | `executed_pipeline/scripts/` | Frozen copies of the scripts exactly as executed (`01`–`06` main pipeline) |
