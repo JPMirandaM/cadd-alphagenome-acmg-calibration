@@ -1,0 +1,85 @@
+﻿ClinVar P/LP+B/LB SNVs (>=1 star): 1481228 | outside MANE CDS: 517556 
+ClinVar noncoding/synonymous reference SNVs (disease genes; intergenic kept for description): 1123855 
+cv_cadd: 24 chromosomes computed (09:10)
+cv_avi: 24 chromosomes computed (10:09)
+cv_af: 28 chromosomes computed (10:38)
+
+== Reference SNVs per class (rare, >= 1 star) ==
+                     class  P_LP   B_LB genes calibratable
+                    <char> <int>  <int> <int>       <lgcl>
+ 1:       canonical_splice 40194    135  2902        FALSE
+ 2: splice_region_intronic  2392  68917  3703         TRUE
+ 3:                   5UTR   126   3915  1511        FALSE
+ 4:                   3UTR    54  10337  1892        FALSE
+ 5:          near_intronic   635 241278  3893        FALSE
+ 6:          deep_intronic   810  25431  2357        FALSE
+ 7:           upstream_5kb   169   2238   820        FALSE
+ 8:         downstream_5kb   104    657   114        FALSE
+ 9:             intergenic   157   2414     1        FALSE
+10:   synonymous_exon_edge   435  10981  2718        FALSE
+11:       synonymous_other   295 609779  4690        FALSE
+
+== AUROC per class ==
+                     class   tool AUROC
+                    <char> <char> <num>
+ 1:                   3UTR    AVI 0.880
+ 2:                   3UTR   CADD 0.837
+ 3:                   5UTR    AVI 0.696
+ 4:                   5UTR   CADD 0.659
+ 5:       canonical_splice    AVI 0.638
+ 6:       canonical_splice   CADD 0.596
+ 7:          deep_intronic    AVI 0.908
+ 8:          deep_intronic   CADD 0.834
+ 9:         downstream_5kb    AVI 0.942
+10:         downstream_5kb   CADD 0.961
+11:             intergenic    AVI 0.958
+12:             intergenic   CADD 0.944
+13:          near_intronic    AVI 0.956
+14:          near_intronic   CADD 0.779
+15: splice_region_intronic    AVI 0.991
+16: splice_region_intronic   CADD 0.962
+17:   synonymous_exon_edge    AVI 0.984
+18:   synonymous_exon_edge   CADD 0.978
+19:       synonymous_other    AVI 0.835
+20:       synonymous_other   CADD 0.781
+21:           upstream_5kb    AVI 0.874
+22:           upstream_5kb   CADD 0.805
+                     class   tool AUROC
+
+== Interval LRs of missense thresholds per class (meets = conservative 95% bound meets required LR) ==
+            class   tool       interval n_PLP n_BLB       LR       lo     hi
+           <char> <char>         <char> <int> <int>    <num>    <num>  <num>
+  1:         3UTR    AVI   BP4_Moderate    19  2887    1.260   0.8290  1.730
+  2:         3UTR    AVI     BP4_Strong     7  7271    0.184   0.0672  0.308
+  3:         3UTR    AVI BP4_Supporting     4   137    5.590   1.1800 11.400
+  4:         3UTR    AVI   PP3_Moderate    11     2 1050.000 310.0000    Inf
+  5:         3UTR    AVI PP3_Supporting     5     3  319.000  63.4000    Inf
+ ---                                                                        
+103: upstream_5kb    AVI PP3_Supporting    13     2   86.100  26.7000    Inf
+104: upstream_5kb   CADD   BP4_Moderate    90   750    1.590   1.3600  1.840
+105: upstream_5kb   CADD     BP4_Strong    27  1398    0.256   0.1780  0.344
+106: upstream_5kb   CADD BP4_Supporting    42    83    6.700   4.6400  9.390
+107: upstream_5kb   CADD PP3_Supporting     1     0      Inf      Inf    Inf
+      meets
+     <lgcl>
+  1:  FALSE
+  2:  FALSE
+  3:  FALSE
+  4:   TRUE
+  5:   TRUE
+ ---       
+103:   TRUE
+104:  FALSE
+105:  FALSE
+106:  FALSE
+107:   TRUE
+mpra_cadd: 13 chromosomes computed (10:56)
+mpra_avi: 13 chromosomes computed (10:57)
+Error en vecseq(f__, len__, if (allow.cartesian || notjoin || !anyDuplicated(f__, : 
+  Resultados del join en 151532 filas; más de 106016 = nrow(x)+nrow(i). Compruebe si hay valores clave duplicados en 
+i, cada uno de los cuales se une al mismo grupo en x una y otra vez. Si está bien, intente by=.EACHI para ejecutar 'j' 
+para cada grupo y evitar así una gran asignación. Si está seguro de que desea continuar, vuelva a ejecutar con 
+enable.cartesian=TRUE. De lo contrario, busque este mensaje de error en Preguntas frecuentes (FAQ), Wiki, Stack 
+Overflow y rastreador de problemas de data.table para obtener asesoramiento.
+Calls: merge ... merge -> merge.data.table -> [ -> [.data.table -> vecseq
+Ejecución interrumpida

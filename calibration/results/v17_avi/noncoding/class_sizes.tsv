@@ -1,0 +1,12 @@
+class	P_LP	B_LB	genes	calibratable
+canonical_splice	40194	135	2902	FALSE
+splice_region_intronic	2392	68917	3703	TRUE
+5UTR	126	3915	1511	FALSE
+3UTR	54	10337	1892	FALSE
+near_intronic	635	241278	3893	FALSE
+deep_intronic	810	25431	2357	FALSE
+upstream_5kb	169	2238	820	FALSE
+downstream_5kb	104	657	114	FALSE
+intergenic	157	2414	1	FALSE
+synonymous_exon_edge	435	10981	2718	FALSE
+synonymous_other	295	609779	4690	FALSE
