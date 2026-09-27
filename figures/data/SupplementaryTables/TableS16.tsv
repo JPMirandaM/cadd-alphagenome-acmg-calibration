@@ -1,0 +1,17 @@
+Item	Date	Analysis	Timing
+Amendment 1	2026-09-25	Paired bootstrap comparison of AUROC and AUPRC between AVI and CADD v1.7	after the main results
+Amendment 2	2026-09-25	Temporal hold-out validation (calibration on ClinVar 2024-01-27, test on later variants)	before running
+Amendment 3	2026-09-25	Calibration of REVEL, BayesDel and AlphaMissense on the five-predictor intersection	before running
+Amendment 4	2026-09-25	Population frequency and ancestry of PP3-level variants in gnomAD v4.1	before running
+Amendment 5	2026-09-25	Computational evidence for ClinVar missense variants of uncertain significance	before running
+Amendment 6	2026-09-25	Threshold drift across ClinVar releases and before/after November 2022 (AVI as negative control)	before running; motivated by the comparator results
+Amendment 7	2026-09-26	Exclusion of HGMD Public positions from the 2019 and 2026 reference sets	before running; motivated by the drift results
+Amendment 8	2026-09-26	Calibration by gene class (constraint, inheritance, mechanism)	before running
+Amendment 9	2026-09-26	Genome-wide catalogue of SNVs at PP3 levels	before running
+Amendment 10	2026-09-26	Noncoding variants (ClinVar region classes, calibration of classes with enough variants, MPRA)	before running
+Amendment 11	2026-09-26	SpliceVarDB analysis deferred to a later study (database not reachable)	scope change before running
+Amendment 12	2026-09-27	Population frequencies in the Mexico City Prospective Study and TOPMed BRAVO	before any MCPS or BRAVO result
+Amendment 13	2026-09-27	Validation with MAVE functional classes from MaveDB	before any MAVE score was downloaded
+Amendment 14	2026-09-27	CADD v1.6 versus v1.7 on identical reference data	before any CADD v1.6 score was read
+Post hoc	2026-09-26	Drift thresholds expressed on a common scale (percentage of gnomAD variants meeting each threshold)	post hoc
+Post hoc	2026-09-27	Source of MCPS genotypes (array, exome or genome) for variants with frequency conflicts	post hoc
