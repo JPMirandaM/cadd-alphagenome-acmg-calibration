@@ -253,6 +253,10 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 # logs\30_noncoding_clinvar_mpra_run3_interrupted.log). The lookups were rewritten to run per chromosome
 # in 4 workers with per-chromosome caching (results unchanged by design) and the script was rerun:
 & $R .\scripts\30_noncoding_clinvar_mpra.R             # -> logs\30_noncoding_clinvar_mpra.log
+# Run 4 failed at the MPRA join (an SNV can be tested in more than one element; log kept as
+# logs\30_noncoding_clinvar_mpra_run4_mpra_join_error.log); lookups deduplicated and rerun (run 5, completed).
+# The intronic splice region was the only class with >= 1,000 P/LP and >= 1,000 B/LB (A10 rule); calibrated:
+& $R .\scripts\30b_calibrate_splice_region.R           # -> logs\30b_calibrate_splice_region.log
 # The MAVE label builder (33b) and the CADD v1.6 range download (35b) were also interrupted by the
 # session end; 33b was rerun from scratch (downloads cached) and 35b resumed (completed parts kept).
 # Step 17 Aim 8 extension, population frequencies (amendment A12) [2026-09-27]
@@ -294,7 +298,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\35b_download_c
 # 35c run 1 concatenated the BGZF blocks of all ranges for tabix indexing and failed (records cut at range
 # junctions; logs\35c_cadd16_assemble_extract_run1_error.log); rewritten to decompress each range separately:
 & $R .\scripts\35c_cadd16_assemble_extract.R           # 938,158,116 records read; 2,093,102/2,093,102 reference SNVs scored; 28.6 min
-& $R .\scripts\35d_calibrate_cadd16_vs_17.R 6          # 2 versions x 5 seeds, B = 10,000 -> calibration\results\v17_avi\cadd16_vs_17\
+& $R .\scripts\35d_calibrate_cadd16_vs_17.R 6          # 2 versions x 5 seeds, B = 10,000 [DONE] -> calibration\results\v17_avi\cadd16_vs_17\
 # Step 18 Aim 3 MAVE validation (amendment A13) [2026-09-27]
 & $R .\scripts\33a_mave_inventory.R                    # MaveDB metadata only -> logs\33a_mave_inventory.log
 # 33b run 1 had two implementation errors (class-based calibrations not applied -> sets with 0 labels;

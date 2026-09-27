@@ -1,0 +1,38 @@
+﻿ClinVar reference: 137107, with v1.6 score 137107 | gnomAD set: 1955995, with v1.6 score 1955995
+Comparison set: 59979 P/LP, 77128 B/LB, 1955995 gnomAD
+[09:18] CADD16 seed 20260925: 15.7 min
+[09:38] CADD16 seed 101: 20.7 min
+[09:57] CADD16 seed 202: 18.7 min
+[10:12] CADD16 seed 303: 14.6 min
+[10:28] CADD16 seed 404: 16.3 min
+[10:42] CADD17 seed 20260925: 14.4 min
+[11:00] CADD17 seed 101: 18.0 min
+[11:19] CADD17 seed 202: 18.6 min
+[11:36] CADD17 seed 303: 17.0 min
+[11:48] CADD17 seed 404: 12.4 min
+
+== Thresholds (median [range] over five seeds) ==
+     tool      level   PP3 PP3_min PP3_max    BP4 BP4_min BP4_max
+   <char>     <char> <num>   <num>   <num>  <num>   <num>   <num>
+1: CADD16 VeryStrong    NA      NA      NA     NA      NA      NA
+2: CADD16     Strong    NA      NA      NA  7.348   7.338   7.348
+3: CADD16   Moderate  27.5    27.5    27.5 21.100  21.100  21.100
+4: CADD16 Supporting  25.2    25.2    25.2 22.900  22.900  22.900
+5: CADD17 VeryStrong    NA      NA      NA     NA      NA      NA
+6: CADD17     Strong    NA      NA      NA  8.342   8.341   8.342
+7: CADD17   Moderate  28.0    28.0    28.0 19.590  19.590  19.590
+8: CADD17 Supporting  25.6    25.6    25.6 22.600  22.600  22.700
+
+== Discrimination ==
+                   metric     estimate      lower95      upper95
+                   <char>        <num>        <num>        <num>
+1:        AUROC CADD v1.6  0.904053913  0.902382117  0.905690083
+2:        AUROC CADD v1.7  0.901720191  0.899849862  0.903406830
+3: difference v1.7 - v1.6 -0.002333722 -0.003296228 -0.001403373
+
+== Evidence level changes v1.6 -> v1.7 ==
+      set     n changed pct_changed direction_reversed
+   <char> <int>   <int>       <num>              <int>
+1:   B/LB 77128   25444        33.0                535
+2:   P/LP 59979   23106        38.5                333
+Spearman correlation v1.6 vs v1.7 (reference variants): 0.937 

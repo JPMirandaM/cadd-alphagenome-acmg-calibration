@@ -405,6 +405,41 @@ CADD; missense-calibrated thresholds must not be used for BP4 in noncoding class
 specific calibration (feasible for the splice region) yields much lower PP3 thresholds, including
 PP3 strong.
 
+## R17. CADD v1.6 versus v1.7 on identical reference data (Aim 2b; amendment A14)
+
+CADD v1.6 GRCh38 scores were extracted for all 2,093,102 reference SNVs from 6,419 byte ranges of the
+official file (9.38 GB of 86.6 GB; 938,158,116 records read; scripts `35a`–`35c`); every ClinVar and
+gnomAD reference SNV had a v1.6 score, so the comparison set equals the main set (59,979 P/LP,
+77,128 B/LB, 1,955,995 gnomAD). Spearman correlation v1.6–v1.7 on the ClinVar set 0.937. Both versions
+calibrated with five seeds, B = 10,000 (script `35d`; `calibration/results/v17_avi/cadd16_vs_17/`).
+
+| Level | CADD v1.6, 2026 data | CADD v1.7, 2026 data (this comparison) | CADD v1.6, published (2019 data) |
+|---|---|---|---|
+| PP3 Supporting | ≥ 25.2 | ≥ 25.6 | ≥ 25.3 |
+| PP3 Moderate | ≥ 27.5 | ≥ 28.0 | ≥ 28.1 |
+| BP4 Supporting | ≤ 22.9 | ≤ 22.6 [22.6–22.7] | ≤ 22.7 |
+| BP4 Moderate | ≤ 21.1 | ≤ 19.59 | ≤ 17.3 |
+| BP4 Strong | ≤ 7.35 [7.34–7.35] | ≤ 8.34 | ≤ 0.15 |
+
+PP3 strong was not reached by either version. The v1.7 thresholds reproduce the main analysis.
+
+- Discrimination: AUROC v1.6 0.904 [0.902–0.906], v1.7 0.902 [0.900–0.903]; paired difference
+  v1.7 − v1.6 −0.002 [−0.003 to −0.001]. On rare missense ClinVar variants, CADD v1.7 is not more
+  discriminative than v1.6.
+- Evidence levels (each version at its own median thresholds): 38.5% of P/LP (23,106) and 33.0% of
+  B/LB (25,444) reference variants change level between versions; 90% of P/LP and 88% of B/LB changes
+  are to an adjacent level; the direction of evidence is reversed (PP3 ↔ BP4) for 333 P/LP and 535
+  B/LB variants.
+- Separating version from data: with the same (2026) data, the version change moved thresholds by
+  ≤ 0.5 units except BP4 moderate (21.1 → 19.59) and BP4 strong (7.35 → 8.34); with the same version
+  (v1.6), the change of reference data from the 2019 study to 2026 moved BP4 moderate from 17.3 to 21.1
+  and BP4 strong from 0.15 to 7.35, consistent with the reference-set effects of R9–R10.
+
+Interpretation (provisional): the v1.7 update did not improve missense discrimination, and although
+thresholds shifted little, a third of reference variants would receive a different evidence level
+under v1.7 than under v1.6, so thresholds must be re-derived for each model version. The larger BP4
+differences with the published values are due to the reference data rather than to the version.
+
 ## R14. Mexico City Prospective Study frequencies (Aim 8 extension; amendment A12(a))
 
 Data: RGC-MCPS allele-frequency VCFs (release 20230130; ~140,000 adults; frequencies overall and
