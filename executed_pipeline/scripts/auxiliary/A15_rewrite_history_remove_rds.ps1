@@ -20,7 +20,7 @@ $commits = & $git rev-list --reverse --topo-order main
 foreach ($c in $commits) {
   $env:GIT_INDEX_FILE = $tmpIndex
   & $git read-tree $c
-  & $git rm -r --cached --ignore-unmatch -q -- '*.rds' 'manuscript' | Out-Null
+  & $git rm -r -f --cached --ignore-unmatch -q -- '*.rds' 'manuscript' | Out-Null   # -f: the temporary index need not match the working tree
   $tree = (& $git write-tree).Trim()
   Remove-Item Env:GIT_INDEX_FILE
   $raw = & $git cat-file commit $c
