@@ -234,6 +234,16 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 & $R .\scripts\24b_extract_comparators_releases.R      # 393,927 new SNVs; peak R 12 GB -> logs\24b_extract_comparators_releases.log
 & $R .\scripts\24c_calibrate_release_series.R 10       # 30 runs -> logs\24c_calibrate_release_series.log
 & $R .\scripts\24d_threshold_shift_common_scale.R      # POST HOC common-scale comparison -> logs\24d_threshold_shift_common_scale.log
+# Step 15 Aim 4 genome-wide catalogue (amendment A9)
+# CADD scan [DONE 2026-09-26, ~3 h, 8 workers, peak R 11.7 GB]: 8,812,917,339 SNVs read; 24,926,994 with PHRED >= 25.6
+& $R .\scripts\02_rank_top_windows.R C:/cadd/data/whole_genome_SNVs.tsv.gz 0 25.6 8   # -> logs\02_rank_cadd_ge25.6.log
+# AVI scan: started with 8 workers; stopped preventively by the assistant after 21 windows because free
+# memory fell to ~5 GB (no error occurred); the 21 saved windows were verified readable; resumed with 6 workers:
+& $R .\scripts\28_scan_avi.R 25.18 6                   # -> logs\28_scan_avi.log  [DONE; 26,743,913 SNVs]
+# Catalogue assembly: tested first on chromosome 21 with 4 workers (7.3 min, output kept); the script
+# was then set to 3 workers and run for all chromosomes (296.6 min; 32,539,174 SNVs):
+& $R .\scripts\29_build_catalogue.R 21                 # test run (chr21)
+& $R .\scripts\29_build_catalogue.R                    # -> logs\29_build_catalogue.log; data\catalogue\
 # Step 14 Aim 1 gene-class stratification (amendment A8) [DONE 2026-09-26] - 35 runs
 & $R .\scripts\26_gene_class_stratification.R 10       # -> logs\26_gene_class_stratification.log; calibration\results\v17_avi\gene_classes\
 & $R .\scripts\27_plot_gene_classes.R C:/cadd/figures/data/Fig2_gene_classes C:/cadd/figures/Fig2_gene_classes   # Figure 2

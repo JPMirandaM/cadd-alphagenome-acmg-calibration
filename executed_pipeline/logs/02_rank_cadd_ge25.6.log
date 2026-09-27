@@ -1,0 +1,107 @@
+﻿Chromosomes: 1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,3,4,5,6,7,8,9,X,Y
+Windows: 3000 (pending 3000), workers: 8, PHRED >= 25.6
+[14:02:17] batch 1/94, 2.1 min elapsed
+[14:04:25] batch 2/94, 4.2 min elapsed
+[14:06:14] batch 3/94, 6.0 min elapsed
+[14:08:14] batch 4/94, 8.0 min elapsed
+[14:10:16] batch 5/94, 10.0 min elapsed
+[14:12:11] batch 6/94, 12.0 min elapsed
+[14:12:11] batch 7/94, 12.0 min elapsed
+[14:12:42] batch 8/94, 12.5 min elapsed
+[14:14:49] batch 9/94, 14.6 min elapsed
+[14:17:03] batch 10/94, 16.8 min elapsed
+[14:17:03] batch 11/94, 16.8 min elapsed
+[14:17:57] batch 12/94, 17.7 min elapsed
+[14:20:16] batch 13/94, 20.0 min elapsed
+[14:22:01] batch 14/94, 21.8 min elapsed
+[14:22:01] batch 15/94, 21.8 min elapsed
+[14:22:32] batch 16/94, 22.3 min elapsed
+[14:24:11] batch 17/94, 24.0 min elapsed
+[14:25:01] batch 18/94, 24.8 min elapsed
+[14:25:01] batch 19/94, 24.8 min elapsed
+[14:25:39] batch 20/94, 25.4 min elapsed
+[14:27:01] batch 21/94, 26.8 min elapsed
+[14:27:30] batch 22/94, 27.3 min elapsed
+[14:27:30] batch 23/94, 27.3 min elapsed
+[14:28:00] batch 24/94, 27.8 min elapsed
+[14:29:22] batch 25/94, 29.1 min elapsed
+[14:29:33] batch 26/94, 29.3 min elapsed
+[14:29:33] batch 27/94, 29.3 min elapsed
+[14:30:37] batch 28/94, 30.4 min elapsed
+[14:31:43] batch 29/94, 31.5 min elapsed
+[14:31:43] batch 30/94, 31.5 min elapsed
+[14:31:43] batch 31/94, 31.5 min elapsed
+[14:32:48] batch 32/94, 32.6 min elapsed
+[14:33:40] batch 33/94, 33.4 min elapsed
+[14:33:40] batch 34/94, 33.4 min elapsed
+[14:33:41] batch 35/94, 33.5 min elapsed
+[14:34:52] batch 36/94, 34.6 min elapsed
+[14:35:28] batch 37/94, 35.2 min elapsed
+[14:35:29] batch 38/94, 35.3 min elapsed
+[14:35:29] batch 39/94, 35.3 min elapsed
+[14:36:53] batch 40/94, 36.7 min elapsed
+[14:36:53] batch 41/94, 36.7 min elapsed
+[14:36:53] batch 42/94, 36.7 min elapsed
+[14:37:06] batch 43/94, 36.9 min elapsed
+[14:38:29] batch 44/94, 38.3 min elapsed
+[14:39:51] batch 45/94, 39.6 min elapsed
+[14:41:14] batch 46/94, 41.0 min elapsed
+[14:42:33] batch 47/94, 42.3 min elapsed
+[14:43:55] batch 48/94, 43.7 min elapsed
+[14:43:55] batch 49/94, 43.7 min elapsed
+[14:43:55] batch 50/94, 43.7 min elapsed
+[14:44:23] batch 51/94, 44.2 min elapsed
+[14:45:15] batch 52/94, 45.0 min elapsed
+[14:45:15] batch 53/94, 45.0 min elapsed
+[14:45:15] batch 54/94, 45.0 min elapsed
+[14:45:48] batch 55/94, 45.6 min elapsed
+[14:46:32] batch 56/94, 46.3 min elapsed
+[14:46:32] batch 57/94, 46.3 min elapsed
+[14:46:32] batch 58/94, 46.3 min elapsed
+[14:47:12] batch 59/94, 47.0 min elapsed
+[14:48:44] batch 60/94, 48.5 min elapsed
+[14:50:09] batch 61/94, 49.9 min elapsed
+[14:51:19] batch 62/94, 51.1 min elapsed
+[14:51:58] batch 63/94, 51.7 min elapsed
+[14:53:18] batch 64/94, 53.1 min elapsed
+[14:54:48] batch 65/94, 54.6 min elapsed
+[14:55:33] batch 66/94, 55.3 min elapsed
+[14:56:47] batch 67/94, 56.6 min elapsed
+[14:58:31] batch 68/94, 58.3 min elapsed
+[14:59:58] batch 69/94, 59.7 min elapsed
+[15:00:31] batch 70/94, 60.3 min elapsed
+[15:01:47] batch 71/94, 61.6 min elapsed
+[15:03:07] batch 72/94, 62.9 min elapsed
+[15:04:27] batch 73/94, 64.2 min elapsed
+[15:04:27] batch 74/94, 64.2 min elapsed
+[15:05:36] batch 75/94, 65.4 min elapsed
+[15:06:58] batch 76/94, 66.7 min elapsed
+[15:08:05] batch 77/94, 67.9 min elapsed
+[15:08:05] batch 78/94, 67.9 min elapsed
+[15:09:21] batch 79/94, 69.1 min elapsed
+[15:10:41] batch 80/94, 70.5 min elapsed
+[15:11:21] batch 81/94, 71.1 min elapsed
+[15:11:21] batch 82/94, 71.1 min elapsed
+[15:12:26] batch 83/94, 72.2 min elapsed
+[15:13:47] batch 84/94, 73.6 min elapsed
+[15:14:15] batch 85/94, 74.0 min elapsed
+[15:14:40] batch 86/94, 74.4 min elapsed
+[15:16:00] batch 87/94, 75.8 min elapsed
+[15:17:27] batch 88/94, 77.2 min elapsed
+[15:18:03] batch 89/94, 77.8 min elapsed
+[15:18:30] batch 90/94, 78.3 min elapsed
+[15:19:01] batch 91/94, 78.8 min elapsed
+[15:19:01] batch 92/94, 78.8 min elapsed
+[15:19:01] batch 93/94, 78.8 min elapsed
+[15:19:01] batch 94/94, 78.8 min elapsed
+Rows scanned: 8,812,917,339 | candidates with PHRED >= 25.6: 24,926,994
+Variants written: 24,926,994 | PHRED range [25.6, 99]
+   PHRED_bin        N
+      <fctr>    <int>
+1:   [25,30) 15877354
+2:   [30,35)  5144635
+3:   [35,40)  2671258
+4:   [40,45)   843612
+5:   [45,50)   266765
+6: [50, Inf)   123370
+Written: C:/cadd/data/PHRED_ge25.6_CADDv1.7_GRCh38.tsv.gz 

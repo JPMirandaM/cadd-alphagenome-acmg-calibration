@@ -329,6 +329,21 @@ enough to change the evidence assigned to a substantial fraction of variants in 
 Limitation: the same prior (0.0441) was used for every class, although the prior probability of
 pathogenicity likely differs between classes; class-specific priors would shift the thresholds.
 
+## R12. Genome-wide catalogue (Aim 4; amendment A9)
+
+Full scans: both files contain the same 8,812,917,339 SNVs; 24,926,994 SNVs have CADD v1.7 PHRED
+≥ 25.6 and 26,743,913 have AVI Phred ≥ 25.18 (scripts `02`, `28`). Their union, 32,539,174 SNVs,
+forms the catalogue (script `29`; 24 per-chromosome files, 0.45 GB, kept outside the repository;
+296.6 min): 24,111,910 (74.1%) MANE Select missense (calibrated context), 4,446,346 other MANE
+coding SNVs, 3,928,565 in gene bodies outside MANE CDS, and 52,353 intergenic (0.16%). Both
+predictors assigned PP3 Moderate to 11,596,538 SNVs; 15.0 M SNVs reached PP3 with only one of them.
+The per-gene summary covers 18,842 genes (median 919 catalogued missense SNVs per gene). The genes
+with most PP3-level missense variants common (> 1%) in some population were PABPC1 (13), KCNJ12
+(11), SLC25A5 (11), TTN (10), GXYLT1 (8) and RASA4 (6); several of these have processed
+pseudogenes or segmental duplications, suggesting that such "common" variants may partly reflect
+paralogous sequence variation or mapping artefacts in gnomAD rather than common pathogenic
+variation — a caution for users of the catalogue.
+
 ## R5. Temporal hold-out validation (Aim 2c; amendment A2)
 
 Consistency check: the 2026 reference sets rebuilt from the all-MANE gnomAD table were identical

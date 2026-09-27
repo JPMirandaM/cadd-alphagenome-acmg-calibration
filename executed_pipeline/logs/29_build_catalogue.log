@@ -1,0 +1,85 @@
+﻿$CADD
+VeryStrong     Strong   Moderate Supporting 
+        NA         NA       28.0       25.6 
+
+$AVI
+VeryStrong     Strong   Moderate Supporting 
+        NA         NA      26.44      25.18 
+
+ [1] "1: 3307920 SNVs"  "2: 2503423 SNVs"  "3: 1998993 SNVs"  "4: 1286990 SNVs" 
+ [5] "5: 1565788 SNVs"  "6: 1632600 SNVs"  "7: 1520336 SNVs"  "8: 1134449 SNVs" 
+ [9] "9: 1326015 SNVs"  "10: 1325839 SNVs" "11: 1853424 SNVs" "12: 1847613 SNVs"
+[13] "13: 614897 SNVs"  "14: 1092915 SNVs" "15: 1145406 SNVs" "16: 1321426 SNVs"
+[17] "17: 1973332 SNVs" "18: 537972 SNVs"  "19: 1721494 SNVs" "20: 818152 SNVs" 
+[21] "21: exists"       "22: 674992 SNVs"  "X: 982990 SNVs"   "Y: 57918 SNVs"   
+catalogue built in 296.6 min
+                         region calibrated_context   PP3_CADD    PP3_AVI
+                         <char>             <lgcl>     <char>     <char>
+ 1:                 MANE coding               TRUE   Moderate   Moderate
+ 2:                 MANE coding               TRUE Supporting   Moderate
+ 3:                 MANE coding               TRUE Supporting       none
+ 4:                 MANE coding              FALSE   Moderate   Moderate
+ 5:                 MANE coding               TRUE       none Supporting
+ 6:                 MANE coding               TRUE       none   Moderate
+ 7:                 MANE coding               TRUE Supporting Supporting
+ 8:                 MANE coding               TRUE   Moderate       none
+ 9:                 MANE coding               TRUE   Moderate Supporting
+10:                 MANE coding              FALSE       none   Moderate
+11:                 MANE coding              FALSE   Moderate       none
+12:                 MANE coding              FALSE       none Supporting
+13:                 MANE coding              FALSE Supporting   Moderate
+14:                 MANE coding              FALSE   Moderate Supporting
+15:                 MANE coding              FALSE Supporting Supporting
+16:                 MANE coding              FALSE Supporting       none
+17: gene body (non-MANE-coding)              FALSE   Moderate   Moderate
+18: gene body (non-MANE-coding)              FALSE       none   Moderate
+19: gene body (non-MANE-coding)              FALSE       none Supporting
+20: gene body (non-MANE-coding)              FALSE Supporting   Moderate
+21: gene body (non-MANE-coding)              FALSE   Moderate       none
+22: gene body (non-MANE-coding)              FALSE Supporting       none
+23: gene body (non-MANE-coding)              FALSE   Moderate Supporting
+24: gene body (non-MANE-coding)              FALSE Supporting Supporting
+25:                  intergenic              FALSE       none Supporting
+26:                  intergenic              FALSE       none   Moderate
+27:                  intergenic              FALSE Supporting       none
+28:                  intergenic              FALSE Supporting   Moderate
+29:                  intergenic              FALSE   Moderate       none
+30:                  intergenic              FALSE Supporting Supporting
+31:                  intergenic              FALSE   Moderate   Moderate
+                         region calibrated_context   PP3_CADD    PP3_AVI
+          N
+      <int>
+ 1: 6319358
+ 2: 4191209
+ 3: 3985352
+ 4: 3652869
+ 5: 2923158
+ 6: 2639109
+ 7: 1802290
+ 8: 1283085
+ 9:  968349
+10:  321686
+11:  152011
+12:  133518
+13:   94259
+14:   61979
+15:   16941
+16:   13083
+17: 1624299
+18:  863786
+19:  679812
+20:  259644
+21:  188574
+22:  172025
+23:   90995
+24:   49430
+25:   31940
+26:   19171
+27:    1085
+28:      64
+29:      46
+30:      35
+31:      12
+          N
+total SNVs in catalogue: 32539174 
+genes in summary: 18842 
