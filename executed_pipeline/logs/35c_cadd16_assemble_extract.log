@@ -1,0 +1,32 @@
+﻿[[1]]
+[1] "data.table" "stats"      "graphics"   "grDevices"  "utils"     
+[6] "datasets"   "methods"    "base"      
+
+[[2]]
+[1] "data.table" "stats"      "graphics"   "grDevices"  "utils"     
+[6] "datasets"   "methods"    "base"      
+
+[[3]]
+[1] "data.table" "stats"      "graphics"   "grDevices"  "utils"     
+[6] "datasets"   "methods"    "base"      
+
+[[4]]
+[1] "data.table" "stats"      "graphics"   "grDevices"  "utils"     
+[6] "datasets"   "methods"    "base"      
+
+Ranges processed: 6419 | BGZF blocks: 444093 | records read: 938158116 | reference hits: 2093102 | 28.6 min
+Reference SNVs: 2093102 | with a CADD v1.6 score: 2093102 
+Unscored reference SNVs by chromosome:
+Key: <chrom>
+     chrom     N
+    <char> <int>
+ 1:   <NA>    NA
+ 2:   <NA>    NA
+ 3:   <NA>    NA
+ 4:   <NA>    NA
+ 5:   <NA>    NA
+ 6:   <NA>    NA
+ 7:   <NA>    NA
+ 8:   <NA>    NA
+ 9:   <NA>    NA
+10:   <NA>    NA

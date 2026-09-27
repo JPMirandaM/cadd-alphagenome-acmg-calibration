@@ -1,0 +1,132 @@
+﻿Labelled MANE missense SNVs: 93154 | abnormal: 18936 | normal: 74218 | genes: 39 
+Scored: CADD 93154 | AVI 93154 | AM 93154 | REVEL 93154 | BayesDel 93154 
+Primary set: 93154 | five-tool intersection: 93154 | primary without ClinVar reference SNVs: 89704 
+
+== Pooled AUROC ==
+       tool     n     AUROC        lo        hi                                          set
+     <char> <int>     <num>     <num>     <num>                                       <char>
+1:     CADD 93154 0.7252362 0.7214636 0.7290168                  primary (CADD & AVI scored)
+2:      AVI 93154 0.7636594 0.7601013 0.7672130                  primary (CADD & AVI scored)
+3:     CADD 93154 0.7252362 0.7212431 0.7291902                       five-tool intersection
+4:      AVI 93154 0.7636594 0.7599700 0.7672012                       five-tool intersection
+5:    REVEL 93154 0.7574554 0.7537585 0.7612761                       five-tool intersection
+6: BayesDel 93154 0.7662276 0.7626595 0.7699172                       five-tool intersection
+7:       AM 93154 0.7818330 0.7783366 0.7854206                       five-tool intersection
+8:     CADD 89704 0.7185640 0.7144642 0.7222641 sensitivity: ClinVar reference SNVs excluded
+9:      AVI 89704 0.7538196 0.7499782 0.7578816 sensitivity: ClinVar reference SNVs excluded
+
+== Paired AVI - CADD ==
+       set diff_AVI_minus_CADD         lo         hi
+    <char>               <num>      <num>      <num>
+1: primary          0.03842313 0.03604022 0.04087649
+
+== Interval LRs ==
+                                             set     tool       interval n_abnormal n_normal prop_abnormal    LR LR_lo LR_hi
+                                          <char>   <char>         <char>      <int>    <int>         <num> <num> <num> <num>
+ 1:                  primary (CADD & AVI scored)     CADD     PP3_Strong          0        0         0.000   NaN    NA    NA
+ 2:                  primary (CADD & AVI scored)     CADD   PP3_Moderate       7452    11671         0.390  2.50  2.44  2.56
+ 3:                  primary (CADD & AVI scored)     CADD PP3_Supporting       4703    11228         0.295  1.64  1.59  1.69
+ 4:                  primary (CADD & AVI scored)     CADD  Indeterminate       4448    19569         0.185  0.89  0.87  0.92
+ 5:                  primary (CADD & AVI scored)     CADD BP4_Supporting       1297    12293         0.095  0.41  0.39  0.44
+ 6:                  primary (CADD & AVI scored)     CADD   BP4_Moderate        878    14677         0.056  0.23  0.22  0.25
+ 7:                  primary (CADD & AVI scored)     CADD     BP4_Strong        158     4780         0.032  0.13  0.11  0.15
+ 8:                  primary (CADD & AVI scored)      AVI     PP3_Strong          0        0         0.000   NaN    NA    NA
+ 9:                  primary (CADD & AVI scored)      AVI   PP3_Moderate      11271    15431         0.422  2.86  2.81  2.92
+10:                  primary (CADD & AVI scored)      AVI PP3_Supporting       2387     6416         0.271  1.46  1.39  1.52
+11:                  primary (CADD & AVI scored)      AVI  Indeterminate       2682    14588         0.155  0.72  0.69  0.75
+12:                  primary (CADD & AVI scored)      AVI BP4_Supporting       1372    13621         0.092  0.39  0.37  0.42
+13:                  primary (CADD & AVI scored)      AVI   BP4_Moderate       1067    19159         0.053  0.22  0.21  0.23
+14:                  primary (CADD & AVI scored)      AVI     BP4_Strong        157     5003         0.030  0.12  0.10  0.14
+15:                       five-tool intersection     CADD     PP3_Strong          0        0         0.000   NaN    NA    NA
+16:                       five-tool intersection     CADD   PP3_Moderate       7452    11671         0.390  2.50  2.44  2.56
+17:                       five-tool intersection     CADD PP3_Supporting       4703    11228         0.295  1.64  1.59  1.69
+18:                       five-tool intersection     CADD  Indeterminate       4448    19569         0.185  0.89  0.87  0.92
+19:                       five-tool intersection     CADD BP4_Supporting       1297    12293         0.095  0.41  0.39  0.44
+20:                       five-tool intersection     CADD   BP4_Moderate        878    14677         0.056  0.23  0.22  0.25
+21:                       five-tool intersection     CADD     BP4_Strong        158     4780         0.032  0.13  0.11  0.15
+22:                       five-tool intersection      AVI     PP3_Strong          0        0         0.000   NaN    NA    NA
+23:                       five-tool intersection      AVI   PP3_Moderate      11271    15431         0.422  2.86  2.81  2.92
+24:                       five-tool intersection      AVI PP3_Supporting       2387     6416         0.271  1.46  1.40  1.52
+25:                       five-tool intersection      AVI  Indeterminate       2682    14588         0.155  0.72  0.69  0.75
+26:                       five-tool intersection      AVI BP4_Supporting       1372    13621         0.092  0.39  0.37  0.42
+27:                       five-tool intersection      AVI   BP4_Moderate       1067    19159         0.053  0.22  0.21  0.23
+28:                       five-tool intersection      AVI     BP4_Strong        157     5003         0.030  0.12  0.10  0.14
+29:                       five-tool intersection    REVEL     PP3_Strong       6026     5434         0.526  4.35  4.21  4.49
+30:                       five-tool intersection    REVEL   PP3_Moderate       4723     9342         0.336  1.98  1.92  2.05
+31:                       five-tool intersection    REVEL PP3_Supporting       2328     7682         0.233  1.19  1.14  1.24
+32:                       five-tool intersection    REVEL  Indeterminate       3409    19624         0.148  0.68  0.66  0.70
+33:                       five-tool intersection    REVEL BP4_Supporting       1134     9890         0.103  0.45  0.42  0.48
+34:                       five-tool intersection    REVEL   BP4_Moderate       1129    14828         0.071  0.30  0.28  0.32
+35:                       five-tool intersection    REVEL     BP4_Strong        187     7418         0.025  0.10  0.08  0.11
+36:                       five-tool intersection BayesDel     PP3_Strong       5431     3498         0.608  6.09  5.86  6.34
+37:                       five-tool intersection BayesDel   PP3_Moderate       4419     8960         0.330  1.93  1.87  2.00
+38:                       five-tool intersection BayesDel PP3_Supporting       3148     8084         0.280  1.53  1.47  1.59
+39:                       five-tool intersection BayesDel  Indeterminate       3967    25264         0.136  0.62  0.60  0.63
+40:                       five-tool intersection BayesDel BP4_Supporting        985     9442         0.094  0.41  0.38  0.43
+41:                       five-tool intersection BayesDel   BP4_Moderate        878    13964         0.059  0.25  0.23  0.26
+42:                       five-tool intersection BayesDel     BP4_Strong        108     5006         0.021  0.08  0.07  0.10
+43:                       five-tool intersection       AM     PP3_Strong       6347     5793         0.523  4.29  4.15  4.43
+44:                       five-tool intersection       AM   PP3_Moderate       5783    10349         0.358  2.19  2.13  2.25
+45:                       five-tool intersection       AM PP3_Supporting       1961     6505         0.232  1.18  1.13  1.24
+46:                       five-tool intersection       AM  Indeterminate       2807    17316         0.139  0.64  0.61  0.66
+47:                       five-tool intersection       AM BP4_Supporting        931    10740         0.080  0.34  0.32  0.36
+48:                       five-tool intersection       AM   BP4_Moderate        885    17700         0.048  0.20  0.18  0.21
+49:                       five-tool intersection       AM     BP4_Strong        222     5815         0.037  0.15  0.13  0.17
+50: sensitivity: ClinVar reference SNVs excluded     CADD     PP3_Strong          0        0         0.000   NaN    NA    NA
+51: sensitivity: ClinVar reference SNVs excluded     CADD   PP3_Moderate       6613    11426         0.367  2.47  2.41  2.53
+52: sensitivity: ClinVar reference SNVs excluded     CADD PP3_Supporting       4145    11046         0.273  1.60  1.55  1.65
+53: sensitivity: ClinVar reference SNVs excluded     CADD  Indeterminate       4035    19209         0.174  0.90  0.87  0.92
+54: sensitivity: ClinVar reference SNVs excluded     CADD BP4_Supporting       1251    12040         0.094  0.44  0.42  0.47
+55: sensitivity: ClinVar reference SNVs excluded     CADD   BP4_Moderate        844    14317         0.056  0.25  0.23  0.27
+56: sensitivity: ClinVar reference SNVs excluded     CADD     BP4_Strong        155     4623         0.032  0.14  0.12  0.17
+57: sensitivity: ClinVar reference SNVs excluded      AVI     PP3_Strong          0        0         0.000   NaN    NA    NA
+58: sensitivity: ClinVar reference SNVs excluded      AVI   PP3_Moderate       9829    15110         0.394  2.77  2.72  2.83
+59: sensitivity: ClinVar reference SNVs excluded      AVI PP3_Supporting       2148     6306         0.254  1.45  1.38  1.52
+60: sensitivity: ClinVar reference SNVs excluded      AVI  Indeterminate       2534    14340         0.150  0.75  0.72  0.78
+61: sensitivity: ClinVar reference SNVs excluded      AVI BP4_Supporting       1332    13391         0.090  0.42  0.40  0.45
+62: sensitivity: ClinVar reference SNVs excluded      AVI   BP4_Moderate       1044    18671         0.053  0.24  0.23  0.25
+63: sensitivity: ClinVar reference SNVs excluded      AVI     BP4_Strong        156     4843         0.031  0.14  0.12  0.16
+                                             set     tool       interval n_abnormal n_normal prop_abnormal    LR LR_lo LR_hi
+
+== Per gene ==
+       gene     n n_abnormal AUROC_CADD AUROC_AVI n_inter AUROC_REVEL AUROC_BayesDel AUROC_AM
+     <char> <int>      <int>      <num>     <num>   <int>       <num>          <num>    <num>
+ 1:    ASPA  1975        384      0.812     0.822    1975       0.825          0.831    0.837
+ 2:    BAP1  4504        994      0.798     0.798    4504       0.823          0.795    0.840
+ 3:   BRCA1  2080        428      0.837     0.908    2080       0.891          0.892    0.913
+ 4:   BRCA2  4237        702      0.745     0.780    4237       0.728          0.745    0.761
+ 5:   CHEK2  3186        619      0.814     0.825    3186       0.816          0.800    0.854
+ 6:     CRX  1615        422      0.730     0.760    1615       0.735          0.727    0.787
+ 7:    CTCF  3173        450      0.641     0.648    3173       0.722          0.755    0.748
+ 8:   DDX3X  4259        660      0.771     0.798    4259       0.903          0.877    0.937
+ 9:      F9  2345        662      0.841     0.848    2345       0.871          0.875    0.883
+10:   FGFR2  1674         48      0.564     0.653    1674       0.593          0.589    0.645
+11:   FGFR4  1884        100      0.564     0.559    1884       0.540          0.546    0.530
+12:    FKRP  3126       1275      0.815     0.859    3126       0.851          0.852    0.873
+13:    G6PD  2575        638      0.833     0.876    2575       0.870          0.866    0.907
+14:     GCK  2276       1474      0.694     0.731    2276       0.753          0.744    0.761
+15:    HMBS  1926        598      0.713     0.735    1926       0.757          0.764    0.754
+16:    JAG1  2191        439      0.601     0.662    2191       0.673          0.656    0.708
+17:   KCNE1   455        118      0.871     0.890     455       0.870          0.842    0.878
+18:   KCNH2  7078       1937      0.739     0.766    7078       0.803          0.796    0.797
+19:   KCNQ4  3763        562      0.798     0.808    3763       0.842          0.825    0.857
+20:  LARGE1  4993       1112      0.771     0.806    4993       0.813          0.773    0.870
+21:    MSH2  5862        415      0.822     0.875    5862       0.861          0.851    0.905
+22: NDUFAF6   534        247      0.597     0.624     534       0.600          0.618    0.602
+23:     OTC   777        452      0.848     0.864     777       0.880          0.874    0.867
+24:   PALB2  5814        444      0.843     0.885    5814       0.856          0.844    0.870
+25:    PAX6   838        313      0.722     0.809     838       0.866          0.822    0.928
+26:    PTEN  1840        497      0.726     0.741    1840       0.779          0.751    0.789
+27:  RAD51C  2376        634      0.874     0.903    2376       0.879          0.868    0.913
+28:  RAD51D  1819        227      0.808     0.885    1819       0.797          0.808    0.859
+29:     RHO   146         93      0.638     0.853     146       0.824          0.795    0.916
+30:   SCN5A    61         31      0.489     0.483      61       0.471          0.463    0.422
+31:    SFPQ  2544        266      0.776     0.729    2544       0.724          0.658    0.875
+32:    SGCB  2135        425      0.729     0.755    2135       0.762          0.738    0.763
+33:    TP53  1657        322      0.910     0.961    1657       0.962          0.971    0.983
+34:    TPK1   802        491      0.555     0.546     802       0.579          0.588    0.557
+35:     VHL   981        228      0.834     0.883     981       0.883          0.887    0.926
+36:   XRCC2  1668        170      0.862     0.897    1668       0.900          0.892    0.909
+       gene     n n_abnormal AUROC_CADD AUROC_AVI n_inter AUROC_REVEL AUROC_BayesDel AUROC_AM
+
+Genes where AVI AUROC > CADD AUROC: 32 of 36 

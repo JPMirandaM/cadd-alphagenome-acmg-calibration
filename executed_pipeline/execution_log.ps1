@@ -273,9 +273,21 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\31_download_mc
 & $R .\scripts\36_plot_fig3_comparators.R C:/cadd/figures/data/Fig3_comparators C:/cadd/figures/Fig3_comparators
 & $R .\scripts\37_plot_fig4_population.R C:/cadd/figures/data/Fig4_population C:/cadd/figures/Fig4_population
 & $R .\scripts\38_plot_fig5_vus.R C:/cadd/figures/data/Fig5_vus C:/cadd/figures/Fig5_vus
+# Step 19 Aim 2b CADD v1.6 vs v1.7 (amendment A14) [2026-09-27]
+& $R .\scripts\35a_cadd16_byte_ranges.R 20000          # tabix linear index -> 6,419 byte ranges (9.38 GB); also run with 2000 and 200000 to compare volumes
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\35b_download_cadd16_ranges.ps1   # 8 curl processes; interrupted by the session end, resumed; all ranges length-verified
+# 35c run 1 concatenated the BGZF blocks of all ranges for tabix indexing and failed (records cut at range
+# junctions; logs\35c_cadd16_assemble_extract_run1_error.log); rewritten to decompress each range separately:
+& $R .\scripts\35c_cadd16_assemble_extract.R           # 938,158,116 records read; 2,093,102/2,093,102 reference SNVs scored; 28.6 min
+& $R .\scripts\35d_calibrate_cadd16_vs_17.R 6          # 2 versions x 5 seeds, B = 10,000 -> calibration\results\v17_avi\cadd16_vs_17\
 # Step 18 Aim 3 MAVE validation (amendment A13) [2026-09-27]
 & $R .\scripts\33a_mave_inventory.R                    # MaveDB metadata only -> logs\33a_mave_inventory.log
+# 33b run 1 had two implementation errors (class-based calibrations not applied -> sets with 0 labels;
+# protein QC compared whole amino-acid changes -> 36 sets wrongly dropped at ~0.30 match); log kept as
+# logs\33b_mave_build_labels_run1_bugs.log. Fixed (class members from the calibration endpoint; reference-
+# residue check) and rerun: 89/89 sets ok, residue match 0.992-1.000, 98,413 labelled SNVs in 39 genes.
 & $R .\scripts\33b_mave_build_labels.R                 # scores + GRCh38 mappings -> logs\33b_mave_build_labels.log
+& $R .\scripts\33c_mave_evaluation.R                   # B = 2,000 -> logs\33c_mave_evaluation.log; calibration\results\v17_avi\mave\
 # Step 14 Aim 1 gene-class stratification (amendment A8) [DONE 2026-09-26] - 35 runs
 & $R .\scripts\26_gene_class_stratification.R 10       # -> logs\26_gene_class_stratification.log; calibration\results\v17_avi\gene_classes\
 & $R .\scripts\27_plot_gene_classes.R C:/cadd/figures/data/Fig2_gene_classes C:/cadd/figures/Fig2_gene_classes   # Figure 2

@@ -411,6 +411,54 @@ every gnomAD group — expected, because gnomAD v4.1 genomes include many TOPMed
 resources are not independent; A12). BRAVO therefore adds no population-specific frequency
 information beyond gnomAD groups for these variants, in contrast with MCPS (R14).
 
+## R16. Validation with multiplexed assays of variant effect (Aim 3; amendment A13)
+
+MaveDB (accessed 2026-09-27): 89 human score sets with investigator-provided (or other) normal /
+abnormal functional classes passed all checks (38 mapped at nucleotide level through MaveDB's GRCh38
+genomic mappings; 51 protein-level sets mapped through the RefSeq protein change, with 99.2–100% of
+their reference residues matching MANE Select). After excluding 5,259 SNVs classified discordantly
+by different score sets: 93,154 MANE Select missense SNVs in 39 genes (18,936 functionally abnormal,
+74,218 normal), all scored by the five predictors (scripts `33a`–`33c`; tables
+`calibration/results/v17_avi/mave/`).
+
+Likelihood ratio LR = P(interval | abnormal) / P(interval | normal) per evidence interval of the
+calibrated thresholds (95% bootstrap CI, B = 2,000):
+
+| Interval | CADD v1.7 | AVI | REVEL | BayesDel | AlphaMissense |
+|---|---|---|---|---|---|
+| PP3 Strong | — | — | 4.35 [4.21–4.49] | 6.09 [5.86–6.34] | 4.29 [4.15–4.43] |
+| PP3 Moderate | 2.50 [2.44–2.56] | 2.86 [2.81–2.92] | 1.98 [1.92–2.05] | 1.93 [1.87–2.00] | 2.19 [2.13–2.25] |
+| PP3 Supporting | 1.64 [1.59–1.69] | 1.46 [1.39–1.52] | 1.19 [1.14–1.24] | 1.53 [1.47–1.59] | 1.18 [1.13–1.24] |
+| Indeterminate | 0.89 [0.87–0.92] | 0.72 [0.69–0.75] | 0.68 [0.66–0.70] | 0.62 [0.60–0.63] | 0.64 [0.61–0.66] |
+| BP4 Supporting | 0.41 [0.39–0.44] | 0.39 [0.37–0.42] | 0.45 [0.42–0.48] | 0.41 [0.38–0.43] | 0.34 [0.32–0.36] |
+| BP4 Moderate | 0.23 [0.22–0.25] | 0.22 [0.21–0.23] | 0.30 [0.28–0.32] | 0.25 [0.23–0.26] | 0.20 [0.18–0.21] |
+| BP4 Strong | 0.13 [0.11–0.15] | 0.12 [0.10–0.14] | 0.10 [0.08–0.11] | 0.08 [0.07–0.10] | 0.15 [0.13–0.17] |
+
+- The pre-specified expectation was met for every predictor: LR > 1 for every PP3 interval and < 1
+  for every BP4 interval, with LRs ordered by evidence strength (monotonic) in all five predictors.
+  Proportion of abnormal variants: 39–42% at PP3 Moderate (CADD/AVI) and 52–61% at PP3 Strong
+  (missense-specialised tools) versus 2–4% at BP4 Strong (baseline 20.3%).
+- Pooled AUROC (abnormal vs normal): AlphaMissense 0.782 [0.778–0.785], BayesDel 0.766
+  [0.763–0.770], AVI 0.764 [0.760–0.767], REVEL 0.757 [0.754–0.761], CADD v1.7 0.725
+  [0.721–0.729]. AVI − CADD paired difference +0.038 [0.036–0.041]; AVI's AUROC exceeded CADD's in
+  32 of 36 genes with ≥ 30 abnormal and ≥ 30 normal SNVs. On this ClinVar-independent benchmark AVI
+  performed on par with REVEL and BayesDel, unlike on ClinVar (R6), where REVEL and BayesDel led by
+  0.017–0.020.
+- Sensitivity (A13): excluding the 3,450 SNVs of the ClinVar calibration set left the results
+  essentially unchanged (AUROC CADD 0.719, AVI 0.754; same LR pattern).
+- Per-gene AUROC varied widely (e.g. TP53 0.91–0.98, BRCA1 0.84–0.91; FGFR4, TPK1 and SCN5A ≤ 0.59
+  for all predictors), reflecting assay-specific phenotypes (for example, gain-of-function or
+  assay-limited readouts).
+- Caveat (pre-specified): functional abnormality is not pathogenicity, so these LRs are not
+  comparable with the ClinGen LR targets; they confirm the direction and ordering of the evidence
+  intervals on data independent of ClinVar.
+
+Interpretation (provisional): the ClinVar-calibrated intervals of all five predictors behave as
+expected on independent functional data; the ranking of predictors differs between ClinVar and
+MAVE benchmarks (AlphaMissense first and AVI comparable with REVEL/BayesDel on MAVE), consistent
+with ClinVar-based comparisons favouring predictors whose evidence has contributed to ClinVar
+classifications or whose training overlaps it.
+
 ## R5. Temporal hold-out validation (Aim 2c; amendment A2)
 
 Consistency check: the 2026 reference sets rebuilt from the all-MANE gnomAD table were identical
