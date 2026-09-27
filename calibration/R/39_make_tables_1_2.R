@@ -48,7 +48,7 @@ if (file.exists(f16)) {
   m16 <- fread(f16)[tool == "CADD16"]
   t1[, `CADD v1.6 PHRED (2026 data)` := vapply(seq_len(.N), function(i) {
     crit <- sub(" .*", "", Evidence[i]); L <- sub("Very strong", "VeryStrong", sub("^\\S+ ", "", Evidence[i]))
-    v <- m16[level == L][[crit]]; if (!length(v) || is.na(v)) "not reached" else paste(if (crit == "PP3") "≥" else "≤", fmt(v, 2)) }, "")]
+    v <- m16[level == L][[crit]]; if (!length(v) || is.na(v)) "not reached" else paste(if (crit == "PP3") "≥" else "≤", fmt(v, if (abs(v - round(v, 1)) < 1e-9) 1 else 2)) }, "")]
 }
 fwrite(t1, file.path(fig, "Table1_thresholds.tsv"), sep = "\t")
 
@@ -80,7 +80,7 @@ doc <- add_table(doc, "Table 1. Calibrated PP3/BP4 thresholds for CADD v1.7 and 
   "Thresholds are the one-sided 95% bootstrap bounds (10,000 replicates) of the ClinGen local posterior probability method (prior 0.0441), reported as the median [range] over five random seeds; a single value means identical results in all seeds. PP3 applies when the score is at or above the threshold and BP4 when it is at or below it.",
   "Reference set: 59,979 P/LP and 77,128 B/LB rare MANE Select missense ClinVar variants (4,826 genes; ≥ 1 star) and 1,955,995 rare gnomAD v4.1 missense variants. P/LP % and B/LB %: percentage of reference variants assigned to each evidence level with the median thresholds (in-sample).",
   "LR, likelihood ratio (odds of pathogenicity) required for each strength under the Bayesian adaptation of the ACMG/AMP guidelines. The AVI PP3 strong level was reached in 59% of bootstrap replicates, fewer than the 95% required.",
-  "CADD v1.6 thresholds from Pejaver et al. (2022; ClinVar 2019 with HGMD- and training-variant exclusions); these were reproduced from the original data with our implementation (Table S1)."))
+  "CADD v1.6 thresholds from Pejaver et al. (2022; ClinVar 2019 with HGMD- and training-variant exclusions); these were reproduced from the original data with our implementation (Table S1). The last column gives CADD v1.6 recalibrated on the same 2026 reference sets as CADD v1.7 (median of five seeds)."))
 doc <- body_add_break(doc)
 doc <- add_table(doc, "Table 2. Calibrated evidence intervals on MAVE functional classes (93,154 MANE missense SNVs, 39 genes)", t2, c(
   "Cells: likelihood ratio P(interval | functionally abnormal) / P(interval | functionally normal) [95% bootstrap interval, 2,000 replicates], and, in parentheses, numbers of abnormal / normal variants in the interval. Intervals are defined by each predictor's thresholds calibrated on ClinVar (CADD v1.7 and AVI: main analysis; REVEL, BayesDel and AlphaMissense: five-predictor intersection analysis). —: level not reached by the predictor.",
