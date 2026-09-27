@@ -352,3 +352,12 @@ git add -A; git commit    # initial commit 3a5971f
 # Private GitHub repository (created by the author): JPMirandaM/cadd-v1.7-pp3-bp4-calibration
 git remote add origin https://github.com/JPMirandaM/cadd-v1.7-pp3-bp4-calibration.git
 git push -u origin main   # run by the author (browser authentication via Git Credential Manager)
+
+# -------------------------------------------------------------------------------------
+# Repository release preparation [2026-09-27]
+# Per-variant .rds files (third-party scores, gnomAD-derived sets) are no longer versioned (git rm --cached;
+# files kept locally; .gitignore rule). They remain in earlier commits of the history. A mirror backup of the
+# repository was made (C:\cadd_git_backup_2026-09-27.git). git filter-branch failed (Git Bash fork error).
+# auxiliary\A15_rewrite_history_remove_rds.ps1 (plumbing-only rewrite) is prepared but NOT RUN: rewriting the
+# history requires the author's explicit authorization before the repository is made public.
+# -------------------------------------------------------------------------------------
