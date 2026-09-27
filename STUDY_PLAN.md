@@ -416,6 +416,11 @@ heterogeneity) are confirmed as the main message; Genetics in Medicine if the cl
 resource is the main message. Draft v1 follows the Genetics in Medicine structure provisionally.
 The title will be redefined at the same time to reflect the full scope of the work (author,
 2026-09-27); the draft title is a placeholder.
+**Decision (author, 2026-09-27, after the MAVE results):** main article to the *American Journal of
+Human Genetics*; Genetics in Medicine as fallback. Title: "Beyond a single threshold: calibration of
+CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across reference sets, genes and
+populations". The manuscript is to be fully developed (not summarised), with references throughout
+the Introduction and Discussion.
 
 ## Positioning (literature scan, 2026-09-25)
 
