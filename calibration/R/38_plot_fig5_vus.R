@@ -16,8 +16,7 @@ p <- ggplot(v, aes(pct, tool, fill = evidence)) + geom_col(width = 0.75) +
   geom_text(data = n_tool, aes(x = 101, y = tool, label = paste0("n = ", format(n, big.mark = ","))), inherit.aes = FALSE, hjust = 0, size = 2.5) +
   scale_fill_manual(values = cols, name = NULL, breaks = sub("_", " ", lv)) +
   scale_x_continuous(limits = c(0, 118), breaks = seq(0, 100, 25)) +
-  labs(x = "ClinVar missense VUS (%)", y = NULL, title = "Computational evidence available for missense variants of uncertain significance",
-       caption = "ClinVar 2026-09-23 VUS (>= 1 star, MANE Select missense, disease genes); intersection-calibrated thresholds (median of five seeds).") +
+  labs(x = "ClinVar missense VUS (%)", y = NULL) +   # title and notes moved to the figure legend (2026-09-27)
   theme_bw(base_size = 9) + theme(legend.position = "bottom", panel.grid.minor = element_blank(), plot.caption = element_text(size = 7)) +
   guides(fill = guide_legend(nrow = 1))
 ggsave(paste0(a[2], ".png"), p, width = 9.5, height = 3.6, dpi = 300, device = ragg::agg_png)

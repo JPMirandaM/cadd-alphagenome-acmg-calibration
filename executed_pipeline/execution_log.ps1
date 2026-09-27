@@ -273,6 +273,18 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\31_download_mc
 & $R .\scripts\36_plot_fig3_comparators.R C:/cadd/figures/data/Fig3_comparators C:/cadd/figures/Fig3_comparators
 & $R .\scripts\37_plot_fig4_population.R C:/cadd/figures/data/Fig4_population C:/cadd/figures/Fig4_population
 & $R .\scripts\38_plot_fig5_vus.R C:/cadd/figures/data/Fig5_vus C:/cadd/figures/Fig5_vus
+# Figure revision 2026-09-27 (author's comments): titles and explanatory notes removed from the images and
+# moved to the manuscript legends; panel tags A/B; Figure 3B percentages printed in segments >= 6% (a first
+# attempt labelled only those segments, which misplaced the stacked labels; fixed by labelling all segments
+# with empty text below 6%); Figure 4 long labels wrapped and panel spacing widened. plot_posteriors.R gained
+# show_caption (default FALSE), so Figure S1 was re-rendered as well. Re-run commands:
+& $R .\scripts\16_plot_figure1.R
+& $R .\scripts\06_plot_posteriors.R C:/cadd/figures/data/FigS1_cadd16_reproduction C:/cadd/figures/FigS1_cadd16_reproduction "CADD v1.6 PHRED (data of Pejaver et al. 2022)"
+& $R .\scripts\27_plot_gene_classes.R C:/cadd/figures/data/Fig2_gene_classes C:/cadd/figures/Fig2_gene_classes
+& $R .\scripts\36_plot_fig3_comparators.R C:/cadd/figures/data/Fig3_comparators C:/cadd/figures/Fig3_comparators
+& $R .\scripts\37_plot_fig4_population.R C:/cadd/figures/data/Fig4_population C:/cadd/figures/Fig4_population
+& $R .\scripts\38_plot_fig5_vus.R C:/cadd/figures/data/Fig5_vus C:/cadd/figures/Fig5_vus
+& $R .\scripts\40_plot_figS4_mave_genes.R C:/cadd/figures/data/FigS4_mave_genes C:/cadd/figures/FigS4_mave_genes
 # Tables 1-2 (TSV + Word, landscape); source tables copied into figures\data\Table1_thresholds and Table2_mave:
 & $R .\scripts\39_make_tables_1_2.R C:/cadd/figures
 & $R .\scripts\40_plot_figS4_mave_genes.R C:/cadd/figures/data/FigS4_mave_genes C:/cadd/figures/FigS4_mave_genes   # Figure S4
