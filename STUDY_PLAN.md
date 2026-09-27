@@ -216,7 +216,42 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   characterisation of high-scoring intergenic SNVs far from genes (overlap with ultraconserved
   elements, candidate cis-regulatory elements, CTCF/insulator sites, noncoding constraint, tested
   enhancers; motif and feature clustering; conservation-driven vs function-driven high scores by
-  comparing CADD and AVI).
+  comparing CADD and AVI); and (added 2026-09-26, author's suggestion) parent gene–pseudogene
+  pairs: positions conserved in the functional gene but diverged in its pseudogene (relaxed
+  selection), how CADD and AVI score them, detection of paralogous sequence variation / mapping
+  artefacts behind "common" PP3-level variants (e.g. PABPC1, KCNJ12, SLC25A5, RASA4 in R12), and
+  gene-conversion–derived pathogenic variants (e.g. CYP21A2, GBA1, PMS2).
+
+- A12 (2026-09-27, registered before any MCPS result): extension of Aim 8 with additional
+  population frequency resources enriched for under-represented ancestries. Access checked from
+  the local network on 2026-09-27:
+  (a) Mexico City Prospective Study (MCPS; ~140,000 adults, exome + WGS): per-chromosome
+      allele-frequency VCFs are officially downloadable from the Resources page of the RGC-MCPS
+      browser (release 20230130; pointed out by the author) under the RGC licence agreement
+      (research use; citation and acknowledgement statement required; no redistribution of the
+      data; no re-identification). -> Executed (see below).
+      RGC Million Exome (rgc-research.regeneron.com/me): interactive browser only, no bulk
+      download found; the browser's internal web API (reCAPTCHA-protected) is not used for bulk
+      querying (terms prohibit robots/crawlers). Its terms also require that the user is not
+      employed by a for-profit entity [author to confirm]. Not used.
+  (b) All of Us: the Public Data Browser allows per-gene/per-variant lookup only; bulk allele
+      frequencies (AC/AN/AF by ancestry) require the Researcher Workbench (registered/controlled
+      tier; institutional data use agreement), and dissemination is subject to the programme's
+      count-censoring policy (< 20).
+  (c) TOPMed BRAVO: bulk VCF download requires a personal login and acceptance of data use terms
+      [author action].
+  Pre-specified MCPS analysis (executed; the same design applies to (b)–(c) if access is obtained):
+  (1) MCPS variants are matched to the Aim 4 catalogue (MANE Select missense SNVs) by exact GRCh38
+      position and alleles; the frequency used is the all-sample AF (as displayed in the browser);
+      the unrelated-sample AF is a sensitivity analysis where present in the VCF.
+  (2) For SNVs at each PP3 level (CADD v1.7, AVI, and the three comparators where scored):
+      number observed in MCPS; AF distribution; number with MCPS AF > 0.01 (BS1-default level)
+      and AF > 0.05 (BA1), and, of these, how many are absent or below the same cut-off in every
+      gnomAD v4.1 group (MCPS-only frequency conflicts) or in gnomAD grpmax.
+  (3) Same for ClinVar P/LP missense reference variants (quality check: few should be common).
+  (4) Concordance of MCPS AF with gnomAD v4.1 AMR (admixed American) AF (Spearman correlation
+      for variants observed in both).
+  No threshold is recalibrated with MCPS data; the analysis is descriptive.
 
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
