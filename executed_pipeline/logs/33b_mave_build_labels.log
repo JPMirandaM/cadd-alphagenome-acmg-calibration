@@ -1,0 +1,38 @@
+﻿Rscript.exe : Aviso:
+En línea: 1 Carácter: 302
++ ... tch {} } }; & 'C:\Program Files\R\R-4.4.2\bin\Rscript.exe' C:\cadd\ex ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Aviso::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+package 'curl' was built under R version 4.4.3 
+Candidate score sets (normal + abnormal classes, mapping not failed): 89 
+[1/89] urn:mavedb:00001230-a-2 KCNH2: ok
+[2/89] urn:mavedb:00001224-a-1 BRCA2: ok
+[3/89] urn:mavedb:00001234-c-1 TP53: ok
+[4/89] urn:mavedb:00001234-f-1 TP53: ok
+[5/89] urn:mavedb:00001234-d-1 TP53: ok
+[6/89] urn:mavedb:00001234-b-1 TP53: ok
+[7/89] urn:mavedb:00001234-g-1 TP53: ok
+[8/89] urn:mavedb:00001234-a-1 TP53: ok
+[9/89] urn:mavedb:00001234-e-1 TP53: ok
+[10/89] urn:mavedb:00001234-h-1 TP53: ok
+[11/89] urn:mavedb:00000657-b-1 ASPA: ok
+[12/89] urn:mavedb:00000662-0-1 BAP1: ok
+[13/89] urn:mavedb:00000674-a-2 KCNE1: ok
+[14/89] urn:mavedb:00000674-c-1 KCNE1: ok
+[15/89] urn:mavedb:00000674-b-1 KCNE1: ok
+[16/89] urn:mavedb:00001231-a-2 KCNH2: ok
+[17/89] urn:mavedb:00001229-a-2 KCNH2: ok
+[18/89] urn:mavedb:00001280-a-1 CHEK2: ok
+[19/89] urn:mavedb:00001205-a-1 CHEK2: ok
+[20/89] urn:mavedb:00001234-0-1 TP53: ok
+[21/89] urn:mavedb:00001236-0-1 TP53: ok
+[22/89] urn:mavedb:00000659-a-1 SGCB: ok
+[23/89] urn:mavedb:00000658-0-1 DDX3X: ok
+[24/89] urn:mavedb:00001227-a-2 CRX: ok
+[25/89] urn:mavedb:00001197-a-5 FKRP: ok
+[26/89] urn:mavedb:00001254-a-1 LARGE1: ok
+[27/89] urn:mavedb:00000665-a-1 PAX6: ok
+[28/89] urn:mavedb:00000665-d-1 PAX6: ok
+[29/89] urn:mavedb:00000665-c-1 PAX6: ok

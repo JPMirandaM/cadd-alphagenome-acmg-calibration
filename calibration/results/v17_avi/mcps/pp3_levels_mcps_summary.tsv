@@ -1,0 +1,5 @@
+predictor	level	n_snvs	n_observed_mcps	n_mcps_af_gt_0.01	n_mcps_af_gt_0.05	n_mcps_gt_0.01_gnomad_grpmax_le_0.01	n_mcps_gt_0.05_gnomad_grpmax_le_0.05	n_imx_af_gt_0.01	n_imx_gt_0.01_gnomad_grpmax_le_0.01	n_unrel_af_gt_0.01	n_observed_mcps_not_gnomad
+CADD	Supporting	9968836	287521	676	309	36	13	505	73	675	108457
+CADD	Moderate	8566291	280389	349	138	30	11	274	69	354	88023
+AVI	Supporting	5685222	144585	247	119	15	8	189	36	253	59048
+AVI	Moderate	13135064	267222	238	97	18	6	178	38	244	126645

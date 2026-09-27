@@ -244,6 +244,28 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A11_
 # was then set to 3 workers and run for all chromosomes (296.6 min; 32,539,174 SNVs):
 & $R .\scripts\29_build_catalogue.R 21                 # test run (chr21)
 & $R .\scripts\29_build_catalogue.R                    # -> logs\29_build_catalogue.log; data\catalogue\
+# Correction 2026-09-27: the per-gene "common" count used the overall gnomAD AF instead of the group AF
+# specified in A9; recomputed (previous file kept as data\catalogue\gene_summary_v1_overallAF.tsv):
+& $R .\scripts\29b_gene_summary_group_af.R             # -> logs\29b_gene_summary_group_af.log
+# Step 16 Aim 9 noncoding (amendments A10, A11) [RUNNING 2026-09-26/27]; third attempt after fixing NA
+# joins (inner joins for exon table) and skipping sequences absent from the tabix indexes (MT):
+& $R .\scripts\30_noncoding_clinvar_mpra.R             # -> logs\30_noncoding_clinvar_mpra.log
+# Step 17 Aim 8 extension, population frequencies (amendment A12) [2026-09-27]
+# (a) MCPS: official per-chromosome frequency VCFs (release 20230130), 23 files + .tbi, sizes verified:
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\31_download_mcps_frequencies.ps1   # -> logs\31_download_mcps_frequencies.log; data\mcps\SHA256SUMS.txt
+# First run compared with the gnomAD overall AF instead of the pre-specified group maximum (bug; log kept as
+# logs\32_mcps_frequencies_run1_overallAF_bug.log); corrected and rerun:
+& $R .\scripts\32_mcps_frequencies.R                   # 4 workers, ~8 min, peak R ~10 GB -> logs\32_mcps_frequencies.log
+# Post hoc: MCPS SOURCE (array / exome / genome) added to mcps_only_frequency_conflicts.tsv by a one-line
+# tabix lookup (Rscript -e; logged in RESULTS R14).
+# (b) BRAVO (TOPMed Freeze 10): 23 public VCFs downloaded manually from signed links obtained by the author
+# (links expire after 15 min and contain temporary credentials; not stored). Sizes verified against the
+# server Content-Length (headers kept in data\bravo\chr*.headers.txt). Files are plain gzip; script 34
+# recompresses them with bgzip and indexes them (originals kept):
+& $R .\scripts\34_bravo_frequencies.R                  # 3 workers -> logs\34_bravo_frequencies.log
+# Step 18 Aim 3 MAVE validation (amendment A13) [2026-09-27]
+& $R .\scripts\33a_mave_inventory.R                    # MaveDB metadata only -> logs\33a_mave_inventory.log
+& $R .\scripts\33b_mave_build_labels.R                 # scores + GRCh38 mappings -> logs\33b_mave_build_labels.log
 # Step 14 Aim 1 gene-class stratification (amendment A8) [DONE 2026-09-26] - 35 runs
 & $R .\scripts\26_gene_class_stratification.R 10       # -> logs\26_gene_class_stratification.log; calibration\results\v17_avi\gene_classes\
 & $R .\scripts\27_plot_gene_classes.R C:/cadd/figures/data/Fig2_gene_classes C:/cadd/figures/Fig2_gene_classes   # Figure 2

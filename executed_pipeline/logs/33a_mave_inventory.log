@@ -1,0 +1,809 @@
+﻿Rscript.exe : Aviso:
+En línea: 1 Carácter: 302
++ ... tch {} } }; & 'C:\Program Files\R\R-4.4.2\bin\Rscript.exe' C:\cadd\ex ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Aviso::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+package 'curl' was built under R version 4.4.3 
+Aviso:
+JSON string contains (illegal) UTF8 byte-order-mark! 
+Published score sets: 2819 | human targets: 1369 
+Human score sets fetched: 1279 
+With >= 1 calibration having normal and abnormal classes: 92 
+                          urn                                        genes
+                       <char>                                       <char>
+  1:  urn:mavedb:00000657-b-1                                         ASPA
+  2:  urn:mavedb:00000657-b-1                                         ASPA
+  3:  urn:mavedb:00000657-b-1                                         ASPA
+  4:  urn:mavedb:00000662-0-1                                         BAP1
+  5:  urn:mavedb:00000662-0-1                                         BAP1
+  6:  urn:mavedb:00000662-0-1                                         BAP1
+  7:  urn:mavedb:00000662-0-1                                         BAP1
+  8:  urn:mavedb:00000662-0-1                                         BAP1
+  9:  urn:mavedb:00000662-0-1                                         BAP1
+ 10:  urn:mavedb:00001222-a-2                                        BRCA1
+ 11:  urn:mavedb:00001222-a-2                                        BRCA1
+ 12:  urn:mavedb:00001222-a-2                                        BRCA1
+ 13:  urn:mavedb:00001222-a-2                                        BRCA1
+ 14:  urn:mavedb:00001222-a-2                                        BRCA1
+ 15:  urn:mavedb:00000097-0-2                                        BRCA1
+ 16:  urn:mavedb:00000097-0-2                                        BRCA1
+ 17:  urn:mavedb:00000097-0-2                                        BRCA1
+ 18:  urn:mavedb:00000097-0-2                                        BRCA1
+ 19:  urn:mavedb:00000097-0-2                                        BRCA1
+ 20:  urn:mavedb:00000097-0-2                                        BRCA1
+ 21:  urn:mavedb:00001222-b-2                                        BRCA1
+ 22:  urn:mavedb:00001222-b-2                                        BRCA1
+ 23:  urn:mavedb:00001222-b-2                                        BRCA1
+ 24:  urn:mavedb:00001222-b-2                                        BRCA1
+ 25:  urn:mavedb:00001222-b-2                                        BRCA1
+ 26:  urn:mavedb:00001224-a-1                                        BRCA2
+ 27:  urn:mavedb:00001224-a-1                                        BRCA2
+ 28:  urn:mavedb:00001224-a-1                                        BRCA2
+ 29:  urn:mavedb:00001224-a-1                                        BRCA2
+ 30:  urn:mavedb:00001224-a-1                                        BRCA2
+ 31:  urn:mavedb:00001268-0-1                                        BRCA2
+ 32:  urn:mavedb:00001268-c-1                                        BRCA2
+ 33:  urn:mavedb:00001268-a-1                                        BRCA2
+ 34:  urn:mavedb:00001242-a-1                                        BRCA2
+ 35:  urn:mavedb:00001242-a-1                                        BRCA2
+ 36:  urn:mavedb:00001226-a-1                                       CARD11
+ 37:  urn:mavedb:00001226-b-1                                       CARD11
+ 38:  urn:mavedb:00001280-a-1                                        CHEK2
+ 39:  urn:mavedb:00001205-a-1                                        CHEK2
+ 40:  urn:mavedb:00001205-a-1                                        CHEK2
+ 41:  urn:mavedb:00001227-a-2                                          CRX
+ 42:  urn:mavedb:00001262-a-3                                         CTCF
+ 43:  urn:mavedb:00000658-0-1                                        DDX3X
+ 44:  urn:mavedb:00001228-a-1                                        DDX3X
+ 45:  urn:mavedb:00001200-d-1                                           F9
+ 46:  urn:mavedb:00001200-d-1                                           F9
+ 47:  urn:mavedb:00001200-b-1                                           F9
+ 48:  urn:mavedb:00001200-b-1                                           F9
+ 49:  urn:mavedb:00001200-c-1                                           F9
+ 50:  urn:mavedb:00001200-e-1                                           F9
+ 51:  urn:mavedb:00001200-a-1                                           F9
+ 52:  urn:mavedb:00001200-0-1                                           F9
+ 53: urn:mavedb:00001256-a-12                                        FGFR1
+ 54: urn:mavedb:00001256-a-10                                        FGFR1
+ 55:  urn:mavedb:00001256-a-4                                        FGFR1
+ 56:  urn:mavedb:00001256-a-9                                        FGFR2
+ 57:  urn:mavedb:00001256-a-7                                        FGFR2
+ 58:  urn:mavedb:00001256-a-1                                        FGFR2
+ 59:  urn:mavedb:00001256-a-5                                        FGFR3
+ 60:  urn:mavedb:00001256-a-3                                        FGFR3
+ 61:  urn:mavedb:00001256-a-2                                        FGFR3
+ 62:  urn:mavedb:00001256-a-6                                        FGFR4
+ 63:  urn:mavedb:00001256-a-8                                        FGFR4
+ 64: urn:mavedb:00001256-a-11                                        FGFR4
+ 65:  urn:mavedb:00001197-a-5                                         FKRP
+ 66:  urn:mavedb:00001197-a-5                                         FKRP
+ 67:  urn:mavedb:00001197-a-5                                         FKRP
+ 68:  urn:mavedb:00001197-a-5                                         FKRP
+ 69:  urn:mavedb:00001266-0-1                                         G6PD
+ 70:  urn:mavedb:00001266-0-1                                         G6PD
+ 71:  urn:mavedb:00001266-b-1                                         G6PD
+ 72:  urn:mavedb:00000096-a-1                                          GCK
+ 73:  urn:mavedb:00000096-a-1                                          GCK
+ 74:  urn:mavedb:00000096-a-1                                          GCK
+ 75:  urn:mavedb:00000108-0-1                                         HMBS
+ 76:  urn:mavedb:00000108-b-1                                         HMBS
+ 77:  urn:mavedb:00000108-a-1                                         HMBS
+ 78:  urn:mavedb:00001198-a-1                               JAG1 exons 1-7
+ 79:  urn:mavedb:00001198-a-1                               JAG1 exons 1-7
+ 80:  urn:mavedb:00001198-a-1                               JAG1 exons 1-7
+ 81:  urn:mavedb:00001198-a-1                               JAG1 exons 1-7
+ 82:  urn:mavedb:00001198-a-1                               JAG1 exons 1-7
+ 83:  urn:mavedb:00000674-a-2                                        KCNE1
+ 84:  urn:mavedb:00000674-a-2                                        KCNE1
+ 85:  urn:mavedb:00000674-c-1                                        KCNE1
+ 86:  urn:mavedb:00000674-c-1                                        KCNE1
+ 87:  urn:mavedb:00000674-b-1                                        KCNE1
+ 88:  urn:mavedb:00000674-b-1                                        KCNE1
+ 89:  urn:mavedb:00001230-a-2                                        KCNH2
+ 90:  urn:mavedb:00001230-a-2                                        KCNH2
+ 91:  urn:mavedb:00001230-a-2                                        KCNH2
+ 92:  urn:mavedb:00001230-a-2                                        KCNH2
+ 93:  urn:mavedb:00001231-a-2                                        KCNH2
+ 94:  urn:mavedb:00001231-a-2                                        KCNH2
+ 95:  urn:mavedb:00001231-a-2                                        KCNH2
+ 96:  urn:mavedb:00001231-a-2                                        KCNH2
+ 97:  urn:mavedb:00001229-a-2                                        KCNH2
+ 98:  urn:mavedb:00001229-a-2                                        KCNH2
+ 99:  urn:mavedb:00001229-a-2                                        KCNH2
+100:  urn:mavedb:00001229-a-2                                        KCNH2
+101:  urn:mavedb:00001216-a-1 KCNH2 Wildtype Sequence (ENST00000262186.10)
+102:  urn:mavedb:00000094-a-3                                        KCNQ4
+103:  urn:mavedb:00000094-a-3                                        KCNQ4
+104:  urn:mavedb:00000094-a-3                                        KCNQ4
+105:  urn:mavedb:00000094-a-2                                        KCNQ4
+106:  urn:mavedb:00000094-a-2                                        KCNQ4
+107:  urn:mavedb:00000094-a-2                                        KCNQ4
+108:  urn:mavedb:00000094-a-2                                        KCNQ4
+109:  urn:mavedb:00001254-a-1                                       LARGE1
+110:  urn:mavedb:00001254-a-1                                       LARGE1
+111:  urn:mavedb:00001254-a-1                                       LARGE1
+112:  urn:mavedb:00001254-a-1                                       LARGE1
+113:  urn:mavedb:00000050-a-1                                         MSH2
+114:  urn:mavedb:00000050-a-1                                         MSH2
+115:  urn:mavedb:00000050-a-1                                         MSH2
+116:  urn:mavedb:00000050-a-1                                         MSH2
+117:  urn:mavedb:00000050-a-1                                         MSH2
+118:  urn:mavedb:00000050-a-1                                         MSH2
+119:  urn:mavedb:00000663-a-1                                      NDUFAF6
+120:  urn:mavedb:00000663-a-1                                      NDUFAF6
+121:  urn:mavedb:00000663-a-1                                      NDUFAF6
+122:  urn:mavedb:00000663-a-1                                      NDUFAF6
+123:  urn:mavedb:00000112-a-1                                          OTC
+124:  urn:mavedb:00000112-a-1                                          OTC
+125:  urn:mavedb:00000112-a-1                                          OTC
+126:  urn:mavedb:00000112-a-1                                          OTC
+127:  urn:mavedb:00001259-a-2                                        PALB2
+128:  urn:mavedb:00001278-a-1                                        PALB2
+129:  urn:mavedb:00000665-a-1                                         PAX6
+130:  urn:mavedb:00000665-d-1                                         PAX6
+131:  urn:mavedb:00000665-c-1                                         PAX6
+132:  urn:mavedb:00000665-b-1                                         PAX6
+133:  urn:mavedb:00000054-a-1                                         PTEN
+134:  urn:mavedb:00000054-a-1                                         PTEN
+135:  urn:mavedb:00000054-a-1                                         PTEN
+136:  urn:mavedb:00000054-a-1                                         PTEN
+137:  urn:mavedb:00000013-a-1                                         PTEN
+138:  urn:mavedb:00000013-a-1                                         PTEN
+139:  urn:mavedb:00000013-a-1                                         PTEN
+140:  urn:mavedb:00000013-a-1                                         PTEN
+141:  urn:mavedb:00000013-a-1                                         PTEN
+142:  urn:mavedb:00000013-a-1                                         PTEN
+143:  urn:mavedb:00000673-0-1                                       RAD51C
+144:  urn:mavedb:00000673-0-1                                       RAD51C
+145:  urn:mavedb:00000673-0-1                                       RAD51C
+146:  urn:mavedb:00000673-0-1                                       RAD51C
+147:  urn:mavedb:00001260-a-2                                       RAD51D
+148:  urn:mavedb:00000099-a-1                                          RHO
+149:  urn:mavedb:00001233-a-1                                        SCN5A
+150:  urn:mavedb:00001233-a-1                                        SCN5A
+151:  urn:mavedb:00000098-a-2                                        SCN5A
+152:  urn:mavedb:00000098-a-2                                        SCN5A
+153:  urn:mavedb:00000098-a-2                                        SCN5A
+154:  urn:mavedb:00001265-a-2                                         SFPQ
+155:  urn:mavedb:00000659-a-1                                         SGCB
+156:  urn:mavedb:00000659-a-1                                         SGCB
+157:  urn:mavedb:00000659-a-1                                         SGCB
+158:  urn:mavedb:00000659-a-1                                         SGCB
+159:  urn:mavedb:00001234-c-1                                         TP53
+160:  urn:mavedb:00001234-c-1                                         TP53
+161:  urn:mavedb:00001234-f-1                                         TP53
+162:  urn:mavedb:00001234-f-1                                         TP53
+163:  urn:mavedb:00001234-d-1                                         TP53
+164:  urn:mavedb:00001234-d-1                                         TP53
+165:  urn:mavedb:00001234-b-1                                         TP53
+166:  urn:mavedb:00001234-b-1                                         TP53
+167:  urn:mavedb:00001234-g-1                                         TP53
+168:  urn:mavedb:00001234-g-1                                         TP53
+169:  urn:mavedb:00001234-a-1                                         TP53
+170:  urn:mavedb:00001234-a-1                                         TP53
+171:  urn:mavedb:00001234-e-1                                         TP53
+172:  urn:mavedb:00001234-e-1                                         TP53
+173:  urn:mavedb:00001234-h-1                                         TP53
+174:  urn:mavedb:00001234-h-1                                         TP53
+175:  urn:mavedb:00001234-0-1                                         TP53
+176:  urn:mavedb:00001234-0-1                                         TP53
+177:  urn:mavedb:00001234-0-1                                         TP53
+178:  urn:mavedb:00001234-0-1                                         TP53
+179:  urn:mavedb:00001234-0-1                                         TP53
+180:  urn:mavedb:00001236-0-1                                         TP53
+181:  urn:mavedb:00001277-a-1                                         TP53
+182:  urn:mavedb:00001235-a-1                                         TP53
+183:  urn:mavedb:00001235-a-1                                         TP53
+184:  urn:mavedb:00000068-0-1                                         TP53
+185:  urn:mavedb:00000068-0-1                                         TP53
+186:  urn:mavedb:00000068-a-1                                  TP53 (P72R)
+187:  urn:mavedb:00000068-c-1                                  TP53 (P72R)
+188:  urn:mavedb:00000068-c-1                                  TP53 (P72R)
+189:  urn:mavedb:00000068-b-1                                  TP53 (P72R)
+190:  urn:mavedb:00000068-b-1                                  TP53 (P72R)
+191:  urn:mavedb:00001251-a-1                                         TPK1
+192:  urn:mavedb:00001267-0-3                                         TSC2
+193:  urn:mavedb:00000675-a-1                                          VHL
+194:  urn:mavedb:00000675-a-1                                          VHL
+195:  urn:mavedb:00000675-a-1                                          VHL
+196:  urn:mavedb:00001264-a-2                                        XRCC2
+                          urn                                        genes
+     num_variants target_type         licence mapping_state
+            <int>      <char>          <char>        <char>
+  1:         6156         dna             CC0      complete
+  2:         6156         dna             CC0      complete
+  3:         6156         dna             CC0      complete
+  4:        18108   accession       CC BY 4.0    incomplete
+  5:        18108   accession       CC BY 4.0    incomplete
+  6:        18108   accession       CC BY 4.0    incomplete
+  7:        18108   accession       CC BY 4.0    incomplete
+  8:        18108   accession       CC BY 4.0    incomplete
+  9:        18108   accession       CC BY 4.0    incomplete
+ 10:         1427     protein             CC0      complete
+ 11:         1427     protein             CC0      complete
+ 12:         1427     protein             CC0      complete
+ 13:         1427     protein             CC0      complete
+ 14:         1427     protein             CC0      complete
+ 15:         3893   accession             CC0    incomplete
+ 16:         3893   accession             CC0    incomplete
+ 17:         3893   accession             CC0    incomplete
+ 18:         3893   accession             CC0    incomplete
+ 19:         3893   accession             CC0    incomplete
+ 20:         3893   accession             CC0    incomplete
+ 21:         2271     protein             CC0      complete
+ 22:         2271     protein             CC0      complete
+ 23:         2271     protein             CC0      complete
+ 24:         2271     protein             CC0      complete
+ 25:         2271     protein             CC0      complete
+ 26:          462         dna             CC0      complete
+ 27:          462         dna             CC0      complete
+ 28:          462         dna             CC0      complete
+ 29:          462         dna             CC0      complete
+ 30:          462         dna             CC0      complete
+ 31:          252   accession             CC0    incomplete
+ 32:          252   accession             CC0    incomplete
+ 33:          252   accession             CC0    incomplete
+ 34:         6545   accession             CC0    incomplete
+ 35:         6545   accession             CC0    incomplete
+ 36:         3844   accession             CC0      complete
+ 37:         3812   accession             CC0      complete
+ 38:         3912     protein             CC0      complete
+ 39:         8847         dna             CC0      complete
+ 40:         8847         dna             CC0      complete
+ 41:         5284     protein             CC0      complete
+ 42:         7766   accession             CC0    incomplete
+ 43:         9079   accession       CC BY 4.0    incomplete
+ 44:        12776   accession             CC0      complete
+ 45:         9682     protein             CC0      complete
+ 46:         9682     protein             CC0      complete
+ 47:         9682     protein             CC0      complete
+ 48:         9682     protein             CC0      complete
+ 49:         9682     protein             CC0      complete
+ 50:         9682     protein             CC0      complete
+ 51:         9682     protein             CC0      complete
+ 52:         9007     protein             CC0      complete
+ 53:         2103         dna             CC0      complete
+ 54:         2103         dna    CC BY-SA 4.0      complete
+ 55:         2103         dna    CC BY-SA 4.0      complete
+ 56:         2122         dna    CC BY-SA 4.0      complete
+ 57:         2122         dna    CC BY-SA 4.0      complete
+ 58:         2122         dna    CC BY-SA 4.0      complete
+ 59:         2102         dna    CC BY-SA 4.0      complete
+ 60:         2102         dna    CC BY-SA 4.0      complete
+ 61:         2102         dna    CC BY-SA 4.0      complete
+ 62:         2080         dna    CC BY-SA 4.0      complete
+ 63:         2080         dna    CC BY-SA 4.0      complete
+ 64:         2080         dna    CC BY-SA 4.0      complete
+ 65:         4455         dna       CC BY 4.0      complete
+ 66:         4455         dna       CC BY 4.0      complete
+ 67:         4455         dna       CC BY 4.0      complete
+ 68:         4455         dna       CC BY 4.0      complete
+ 69:         9504     protein             CC0    incomplete
+ 70:         9504     protein             CC0    incomplete
+ 71:        10674     protein             CC0      complete
+ 72:         9362         dna             CC0      complete
+ 73:         9362         dna             CC0      complete
+ 74:         9362         dna             CC0      complete
+ 75:         6590         dna             CC0      complete
+ 76:         6486         dna             CC0      complete
+ 77:         6044         dna             CC0      complete
+ 78:         2832         dna             CC0      complete
+ 79:         2832         dna             CC0      complete
+ 80:         2832         dna             CC0      complete
+ 81:         2832         dna             CC0      complete
+ 82:         2832         dna             CC0      complete
+ 83:         2554     protein             CC0      complete
+ 84:         2554     protein             CC0      complete
+ 85:         2544     protein             CC0      complete
+ 86:         2544     protein             CC0      complete
+ 87:         2539     protein             CC0      complete
+ 88:         2539     protein             CC0      complete
+ 89:           76     protein             CC0      complete
+ 90:           76     protein             CC0      complete
+ 91:           76     protein             CC0      complete
+ 92:           76     protein             CC0      complete
+ 93:        22824     protein             CC0      complete
+ 94:        22824     protein             CC0      complete
+ 95:        22824     protein             CC0      complete
+ 96:        22824     protein             CC0      complete
+ 97:          231     protein             CC0      complete
+ 98:          231     protein             CC0      complete
+ 99:          231     protein             CC0      complete
+100:          231     protein             CC0      complete
+101:        22806     protein             CC0      complete
+102:         3319     protein             CC0      complete
+103:         3319     protein             CC0      complete
+104:         3319     protein             CC0      complete
+105:         4085     protein             CC0      complete
+106:         4085     protein             CC0      complete
+107:         4085     protein             CC0      complete
+108:         4085     protein             CC0      complete
+109:         6804         dna       CC BY 4.0      complete
+110:         6804         dna       CC BY 4.0      complete
+111:         6804         dna       CC BY 4.0      complete
+112:         6804         dna       CC BY 4.0      complete
+113:        17746         dna             CC0      complete
+114:        17746         dna             CC0      complete
+115:        17746         dna             CC0      complete
+116:        17746         dna             CC0      complete
+117:        17746         dna             CC0      complete
+118:        17746         dna             CC0      complete
+119:         5715         dna             CC0    incomplete
+120:         5715         dna             CC0    incomplete
+121:         5715         dna             CC0    incomplete
+122:         5715         dna             CC0    incomplete
+123:         1570     protein CC BY-NC-SA 4.0      complete
+124:         1570     protein CC BY-NC-SA 4.0      complete
+125:         1570     protein CC BY-NC-SA 4.0      complete
+126:         1570     protein CC BY-NC-SA 4.0      complete
+127:        12851   accession             CC0    incomplete
+128:         7100     protein             CC0        failed
+129:         7764     protein       CC BY 4.0      complete
+130:         7370     protein             CC0      complete
+131:         7819     protein             CC0      complete
+132:         7391     protein             CC0      complete
+133:         8681         dna             CC0    incomplete
+134:         8681         dna             CC0    incomplete
+135:         8681         dna             CC0    incomplete
+136:         8681         dna             CC0    incomplete
+137:         4409         dna             CC0    incomplete
+138:         4409         dna             CC0    incomplete
+139:         4409         dna             CC0    incomplete
+140:         4409         dna             CC0    incomplete
+141:         4409         dna             CC0    incomplete
+142:         4409         dna             CC0    incomplete
+143:         9188   accession       CC BY 4.0    incomplete
+144:         9188   accession       CC BY 4.0    incomplete
+145:         9188   accession       CC BY 4.0    incomplete
+146:         9188   accession       CC BY 4.0    incomplete
+147:         5410   accession             CC0    incomplete
+148:          211         dna             CC0      complete
+149:           49     protein             CC0        failed
+150:           49     protein             CC0        failed
+151:          252     protein             CC0      complete
+152:          252     protein             CC0      complete
+153:          252     protein             CC0      complete
+154:         5861   accession             CC0    incomplete
+155:         6327     protein             CC0      complete
+156:         6327     protein             CC0      complete
+157:         6327     protein             CC0      complete
+158:         6327     protein             CC0      complete
+159:         2314     protein             CC0      complete
+160:         2314     protein             CC0      complete
+161:         2314     protein             CC0      complete
+162:         2314     protein             CC0      complete
+163:         2314     protein             CC0      complete
+164:         2314     protein             CC0      complete
+165:         2314     protein             CC0      complete
+166:         2314     protein             CC0      complete
+167:         2314     protein             CC0      complete
+168:         2314     protein             CC0      complete
+169:         2314     protein             CC0      complete
+170:         2314     protein             CC0      complete
+171:         2314     protein             CC0      complete
+172:         2314     protein             CC0      complete
+173:         2314     protein             CC0      complete
+174:         2314     protein             CC0      complete
+175:         2314     protein             CC0      complete
+176:         2314     protein             CC0      complete
+177:         2314     protein             CC0      complete
+178:         2314     protein             CC0      complete
+179:         2314     protein             CC0      complete
+180:         7893         dna             CC0    incomplete
+181:         8058   accession             CC0    incomplete
+182:         7893     protein             CC0    incomplete
+183:         7893     protein             CC0    incomplete
+184:         8258         dna             CC0    incomplete
+185:         8258         dna             CC0    incomplete
+186:         8274         dna             CC0    incomplete
+187:         8274         dna             CC0    incomplete
+188:         8274         dna             CC0    incomplete
+189:         8274         dna             CC0    incomplete
+190:         8274         dna             CC0    incomplete
+191:         9542         dna             CC0    incomplete
+192:         9496     protein             CC0        failed
+193:         2268   accession       CC BY 4.0    incomplete
+194:         2268   accession       CC BY 4.0    incomplete
+195:         2268   accession       CC BY 4.0    incomplete
+196:         3733   accession             CC0    incomplete
+     num_variants target_type         licence mapping_state
+                                                                     calibration
+                                                                          <char>
+  1:                                    Investigator-provided functional classes
+  2:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+  3:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+  4:                                    Investigator-provided functional classes
+  5:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+  6:                                 BBI - GMM- ClinVar (Feb 2026, All Variants)
+  7:                                                       BBI - GMM - KURIS/NDD
+  8:                                                        ExCALIBR calibration
+  9:                                         ExCALIBR calibration (ClinVar 2018)
+ 10:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 11:                                    Investigator-provided functional classes
+ 12:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 13:                                                        ExCALIBR calibration
+ 14:                                         ExCALIBR calibration (ClinVar 2018)
+ 15:                                    Investigator-provided functional classes
+ 16:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 17:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 18:                                                           Fayer calibration
+ 19:                                                        ExCALIBR calibration
+ 20:                                         ExCALIBR calibration (ClinVar 2018)
+ 21:                                    Investigator-provided functional classes
+ 22:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 23:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 24:                                                        ExCALIBR calibration
+ 25:                                         ExCALIBR calibration (ClinVar 2018)
+ 26:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 27:                                    Investigator-provided functional classes
+ 28:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 29:                                                        ExCALIBR calibration
+ 30:                                         ExCALIBR calibration (ClinVar 2018)
+ 31:                                                        ExCALIBR calibration
+ 32:                                                        ExCALIBR calibration
+ 33:                                                        ExCALIBR calibration
+ 34:                                                        ExCALIBR calibration
+ 35:                                         ExCALIBR calibration (ClinVar 2018)
+ 36:                                    Investigator-provided functional classes
+ 37:                                    Investigator-provided functional classes
+ 38:                                    Investigator-provided functional classes
+ 39:                                    Investigator-provided functional classes
+ 40:                                                        ExCALIBR calibration
+ 41:                                    Investigator-provided functional classes
+ 42:                                    Investigator-provided functional classes
+ 43:                                    Investigator-provided functional classes
+ 44:                                    Investigator-provided functional classes
+ 45:                                                        ExCALIBR calibration
+ 46:                                    Investigator-provided functional classes
+ 47:                                    Investigator-provided functional classes
+ 48:                                                        ExCALIBR calibration
+ 49:                                    Investigator-provided functional classes
+ 50:                                                        ExCALIBR calibration
+ 51:                                    Investigator-provided functional classes
+ 52:                             Investigator-provided functional classification
+ 53:                                    Investigator-provided functional classes
+ 54:                                    Investigator-provided functional classes
+ 55:                                    Investigator-provided functional classes
+ 56:                                    Investigator-provided functional classes
+ 57:                                    Investigator-provided functional classes
+ 58:                                    Investigator-provided functional classes
+ 59:                                    Investigator-provided functional classes
+ 60:                                    Investigator-provided functional classes
+ 61:                                    Investigator-provided functional classes
+ 62:                                    Investigator-provided functional classes
+ 63:                                    Investigator-provided functional classes
+ 64:                                    Investigator-provided functional classes
+ 65:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 66:                                                        ExCALIBR calibration
+ 67:                                    Investigator-provided functional classes
+ 68:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 69:                                    Investigator-provided functional classes
+ 70:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 71:                                    Investigator-provided functional classes
+ 72:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 73:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 74:                                    Investigator-provided functional classes
+ 75:                                                        ExCALIBR calibration
+ 76:                                                        ExCALIBR calibration
+ 77:                                                        ExCALIBR calibration
+ 78:                                    Investigator-provided functional classes
+ 79:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 80:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 81:                                                        ExCALIBR calibration
+ 82: Categorical calibration using log likelihood ratios of pathogenicity (LLRp)
+ 83:                                    Investigator-provided functional classes
+ 84:                                                        ExCALIBR calibration
+ 85:                                    Investigator-provided functional classes
+ 86:                                                        ExCALIBR calibration
+ 87:                                    Investigator-provided functional classes
+ 88:                                                        ExCALIBR calibration
+ 89:                                    Investigator-provided functional classes
+ 90:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 91:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 92:                                                        ExCALIBR calibration
+ 93:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 94:                                    Investigator-provided functional classes
+ 95:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+ 96:                                                        ExCALIBR calibration
+ 97:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+ 98:                                    Investigator-provided functional classes
+ 99:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+100:                                                        ExCALIBR calibration
+101:                                    Investigator-provided functional classes
+102:                                    Investigator-provided functional classes
+103:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+104:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+105:                                    Investigator-provided functional classes
+106:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+107:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+108:                                                        ExCALIBR calibration
+109:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+110:                                    Investigator-provided functional classes
+111:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+112:                                                        ExCALIBR calibration
+113:                                    Investigator-provided functional classes
+114:                                                           Scott calibration
+115:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+116:                                                        ExCALIBR calibration
+117:                                         ExCALIBR calibration (ClinVar 2018)
+118:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+119:                                                        ExCALIBR calibration
+120:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+121:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+122:                                    Investigator-provided functional classes
+123:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+124:                                                        ExCALIBR calibration
+125:                                    Investigator-provided functional classes
+126:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+127:                                    Investigator-provided functional classes
+128:                                    Investigator-provided functional classes
+129:                                                        ExCALIBR calibration
+130:                                                        ExCALIBR calibration
+131:                                                        ExCALIBR calibration
+132:                                                        ExCALIBR calibration
+133:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+134:                                                        ExCALIBR calibration
+135:                                         ExCALIBR calibration (ClinVar 2018)
+136:                                    Investigator-provided functional classes
+137:                                    Investigator-provided functional classes
+138:                                                        ExCALIBR calibration
+139:                                         ExCALIBR calibration (ClinVar 2018)
+140:                                       Calibration by Gaussian mixture model
+141:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+142:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+143:                                    Investigator-provided functional classes
+144:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+145:                                                        ExCALIBR calibration
+146:                                         ExCALIBR calibration (ClinVar 2018)
+147:                                    Investigator-provided functional classes
+148:                                    Investigator-provided functional classes
+149:                                    Investigator-provided functional classes
+150:                                                        ExCALIBR calibration
+151:                                    Investigator-provided functional classes
+152:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+153:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+154:                                    Investigator-provided functional classes
+155:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+156:                                    Investigator-provided functional classes
+157:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+158:                                                        ExCALIBR calibration
+159:                                                        ExCALIBR calibration
+160:                                         ExCALIBR calibration (ClinVar 2018)
+161:                                                        ExCALIBR calibration
+162:                                         ExCALIBR calibration (ClinVar 2018)
+163:                                                        ExCALIBR calibration
+164:                                         ExCALIBR calibration (ClinVar 2018)
+165:                                                        ExCALIBR calibration
+166:                                         ExCALIBR calibration (ClinVar 2018)
+167:                                                        ExCALIBR calibration
+168:                                         ExCALIBR calibration (ClinVar 2018)
+169:                                                        ExCALIBR calibration
+170:                                         ExCALIBR calibration (ClinVar 2018)
+171:                                                        ExCALIBR calibration
+172:                                         ExCALIBR calibration (ClinVar 2018)
+173:                                                        ExCALIBR calibration
+174:                                         ExCALIBR calibration (ClinVar 2018)
+175:                   IGVF Coding Variant Focus Group -- Controls: All Variants
+176:                                    Investigator-provided functional classes
+177:                                                        ExCALIBR calibration
+178:                                         ExCALIBR calibration (ClinVar 2018)
+179:         IGVF Coding Variant Focus Group -- Controls: Missense Variants Only
+180:                                    Investigator-provided functional classes
+181:                                     Investigator-provided functional ranges
+182:                                                        ExCALIBR calibration
+183:                                         ExCALIBR calibration (ClinVar 2018)
+184:                                                        ExCALIBR calibration
+185:                                         ExCALIBR calibration (ClinVar 2018)
+186:                                         ExCALIBR calibration (ClinVar 2018)
+187:                                                        ExCALIBR calibration
+188:                                         ExCALIBR calibration (ClinVar 2018)
+189:                                                        ExCALIBR calibration
+190:                                         ExCALIBR calibration (ClinVar 2018)
+191:                                                        ExCALIBR calibration
+192:                                    Investigator-provided functional classes
+193:                                    Investigator-provided functional classes
+194:                                                        ExCALIBR calibration
+195:                                         ExCALIBR calibration (ClinVar 2018)
+196:                                    Investigator-provided functional classes
+                                                                     calibration
+     research_use_only
+                <lgcl>
+  1:             FALSE
+  2:             FALSE
+  3:             FALSE
+  4:             FALSE
+  5:             FALSE
+  6:              TRUE
+  7:              TRUE
+  8:              TRUE
+  9:              TRUE
+ 10:             FALSE
+ 11:             FALSE
+ 12:             FALSE
+ 13:              TRUE
+ 14:              TRUE
+ 15:             FALSE
+ 16:             FALSE
+ 17:             FALSE
+ 18:             FALSE
+ 19:              TRUE
+ 20:              TRUE
+ 21:             FALSE
+ 22:             FALSE
+ 23:             FALSE
+ 24:              TRUE
+ 25:              TRUE
+ 26:             FALSE
+ 27:             FALSE
+ 28:             FALSE
+ 29:              TRUE
+ 30:              TRUE
+ 31:              TRUE
+ 32:              TRUE
+ 33:              TRUE
+ 34:              TRUE
+ 35:              TRUE
+ 36:             FALSE
+ 37:             FALSE
+ 38:             FALSE
+ 39:             FALSE
+ 40:              TRUE
+ 41:             FALSE
+ 42:             FALSE
+ 43:             FALSE
+ 44:             FALSE
+ 45:              TRUE
+ 46:             FALSE
+ 47:             FALSE
+ 48:              TRUE
+ 49:             FALSE
+ 50:              TRUE
+ 51:             FALSE
+ 52:             FALSE
+ 53:             FALSE
+ 54:             FALSE
+ 55:             FALSE
+ 56:             FALSE
+ 57:             FALSE
+ 58:             FALSE
+ 59:             FALSE
+ 60:             FALSE
+ 61:             FALSE
+ 62:             FALSE
+ 63:             FALSE
+ 64:             FALSE
+ 65:             FALSE
+ 66:              TRUE
+ 67:             FALSE
+ 68:             FALSE
+ 69:             FALSE
+ 70:             FALSE
+ 71:             FALSE
+ 72:             FALSE
+ 73:             FALSE
+ 74:             FALSE
+ 75:              TRUE
+ 76:              TRUE
+ 77:              TRUE
+ 78:             FALSE
+ 79:             FALSE
+ 80:             FALSE
+ 81:              TRUE
+ 82:             FALSE
+ 83:             FALSE
+ 84:              TRUE
+ 85:             FALSE
+ 86:              TRUE
+ 87:             FALSE
+ 88:              TRUE
+ 89:             FALSE
+ 90:             FALSE
+ 91:             FALSE
+ 92:              TRUE
+ 93:             FALSE
+ 94:             FALSE
+ 95:             FALSE
+ 96:              TRUE
+ 97:             FALSE
+ 98:             FALSE
+ 99:             FALSE
+100:              TRUE
+101:             FALSE
+102:             FALSE
+103:             FALSE
+104:             FALSE
+105:             FALSE
+106:             FALSE
+107:             FALSE
+108:              TRUE
+109:             FALSE
+110:             FALSE
+111:             FALSE
+112:              TRUE
+113:             FALSE
+114:             FALSE
+115:             FALSE
+116:              TRUE
+117:              TRUE
+118:             FALSE
+119:              TRUE
+120:             FALSE
+121:             FALSE
+122:             FALSE
+123:             FALSE
+124:              TRUE
+125:             FALSE
+126:             FALSE
+127:             FALSE
+128:             FALSE
+129:              TRUE
+130:              TRUE
+131:              TRUE
+132:              TRUE
+133:             FALSE
+134:              TRUE
+135:              TRUE
+136:             FALSE
+137:             FALSE
+138:              TRUE
+139:              TRUE
+140:             FALSE
+141:             FALSE
+142:             FALSE
+143:             FALSE
+144:             FALSE
+145:              TRUE
+146:              TRUE
+147:             FALSE
+148:             FALSE
+149:             FALSE
+150:              TRUE
+151:             FALSE
+152:             FALSE
+153:             FALSE
+154:             FALSE
+155:             FALSE
+156:             FALSE
+157:             FALSE
+158:              TRUE
+159:              TRUE
+160:              TRUE
+161:              TRUE
+162:              TRUE
+163:              TRUE
+164:              TRUE
+165:              TRUE
+166:              TRUE
+167:              TRUE
+168:              TRUE
+169:              TRUE
+170:              TRUE
+171:              TRUE
+172:              TRUE
+173:              TRUE
+174:              TRUE
+175:             FALSE
+176:             FALSE
+177:              TRUE
+178:              TRUE
+179:             FALSE
+180:             FALSE
+181:             FALSE
+182:              TRUE
+183:              TRUE
+184:              TRUE
+185:              TRUE
+186:              TRUE
+187:              TRUE
+188:              TRUE
+189:              TRUE
+190:              TRUE
+191:              TRUE
+192:             FALSE
+193:             FALSE
+194:              TRUE
+195:              TRUE
+196:             FALSE
+     research_use_only

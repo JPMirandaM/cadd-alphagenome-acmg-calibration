@@ -32,7 +32,10 @@ The CADD PHRED score is defined as −10·log₁₀(r/N), where r is the rank of
 N possible SNVs of the genome. Thus PHRED ≥ 10, ≥ 20 and ≥ 30 correspond to the top 10%, 1% and
 0.1% of variants. The selection threshold was derived from our own calibration of CADD v1.7
 against current ClinVar and gnomAD data (section 3), rather than adopting a conventional value.
-**[PENDING: final threshold. Provisional value: PHRED ≥ 25, i.e. the top ~0.32%.]** No prior
+The final threshold is the calibrated PP3 Supporting threshold of CADD v1.7, PHRED ≥ 25.6
+(median of five seeds; section 3.4), which selected 24,926,994 SNVs (the provisional value
+had been PHRED ≥ 25); the genome-wide catalogue (section 3.12) adds the SNVs with AVI Phred
+≥ 25.18. No prior
 filters on consequence, population frequency or ClinVar status were applied, so as not to exclude
 potentially deleterious variants that have not been reported to clinical databases.
 
@@ -45,8 +48,7 @@ size. Selected variants were sorted with data.table 1.16.4 by: (1) PHRED, descen
 RawScore, descending, to break ties between variants with equal (rounded) PHRED; (3) genomic
 position, ascending (chromosomes 1–22, X, Y, MT, then position); and (4) reference and
 alternative alleles, alphabetically, so that the order is deterministic among alleles at the same
-site. Each variant was assigned a consecutive rank. **[PENDING: number of selected variants and
-their distribution across PHRED bins.]**
+site. Each variant was assigned a consecutive rank.
 
 ### 2.1 Validation of the selection procedure
 
@@ -180,32 +182,211 @@ with "chr" sequence names). AVI scores were extracted for the same 100,316,172 c
 (`scripts/12`): every coding position had exactly three alleles, none was missing or duplicated,
 and the reference allele agreed with CADD at every position.
 
-### 3.4 Application to CADD v1.7 and AVI with current data [PENDING]
+### 3.4 Reference sets and calibration of CADD v1.7 and AVI (main analysis)
 
-The reference sets will be rebuilt with current data, following the inclusion criteria of the
-original study as closely as possible. **[PENDING: detailed definition of the ClinVar
-(2026-09-23 release) P/LP and B/LB missense sets and of the gnomAD set; documented deviations
-from the original criteria (e.g., HGMD exclusion is not reproducible without a licence); number
-of variants; resulting thresholds; Figure 1.]**
+The analysis plan was frozen before any CADD v1.7 or AVI calibration result (Git tag
+`analysis-plan-v1`, 2026-09-25; `STUDY_PLAN.md`); every later addition or change was recorded as a
+dated amendment (A1–A14) committed before the corresponding analysis was run, and results under
+the original plan are always reported.
 
-## 4. Variant annotation [PENDING]
+**Reference sets** (following Pejaver et al. 2022 as closely as possible; scripts `13`, `13a`).
+ClinVar GRCh38 release 2026-09-23: SNVs that are missense in their GENCODE v50 MANE Select
+transcript (our consequence annotation, section 3.3), excluding SNVs with a stop-gained, stop-lost
+or start-lost consequence in another overlapping MANE transcript. Labels were taken from exact
+CLNSIG values: P/LP = Pathogenic, Likely_pathogenic, Pathogenic/Likely_pathogenic; B/LB = Benign,
+Likely_benign, Benign/Likely_benign (uncertain, conflicting and combined terms excluded). Review
+status ≥ 1 star. Rare: maximum of the gnomAD v4.1 exome and genome overall allele frequency
+< 0.01 (absent = rare). Disease genes: genes (ClinVar GENEINFO) with ≥ 1 P/LP record of any
+variant type and ≥ 1 star. The unlabelled gnomAD set, used only to size the local windows, comprises
+MANE missense SNVs observed in gnomAD v4.1 (exomes or genomes) with AF < 0.01, absent from ClinVar
+(any record) and located in the same disease genes. The final sets contained 59,979 P/LP and
+77,128 B/LB variants (4,826 genes) and 1,955,995 gnomAD variants. Declared deviations from the
+original study: no exclusion of HGMD variants (licensed resource; see the HGMD sensitivity analysis,
+section 3.8), no exclusion of predictor-training variants (neither CADD nor AVI is trained on
+ClinVar), and no gnomAD genotype-quality or low-complexity filters (not available in the VEP cache).
+
+**Scores.** CADD v1.7 PHRED as distributed (one decimal); AVI Phred rounded to two decimals.
+
+**Calibration.** Validated R port (section 3.2; the faster implementation `04b_pejaver_port_fast.R`
+counts window members with `tabulate` instead of sorting and was verified to give bit-identical
+results, `auxiliary/A14`); α = 0.0441, c = 1124, B = 10,000, minimum 100 ClinVar variants and 3%
+of the gnomAD set per window, window increment 0.1 for both Phred scales, one-sided 95% bootstrap
+bound. Main analysis: five seeds (20260925, 101, 202, 303, 404); thresholds reported as the median
+and range across seeds (script `14_calibrate_cadd17_avi.R`; summary `15`; Figure 1, script `16`).
+
+### 3.5 Sensitivity analyses and discrimination
+
+Four sensitivity analyses were pre-specified (one seed each): S1, review status ≥ 2 stars; S2,
+rare defined as AF < 0.001 (AVI is trained with gnomAD frequency proxy labels, so frequency-based
+B/LB classifications could favour it); S3, gene-level (cluster) bootstrap, resampling genes instead
+of variants in both sets; S4, exclusion of missense SNVs within 3 nt of an internal exon boundary.
+Discrimination: AUROC and AUPRC on the main reference set with 95% bootstrap intervals (1,000
+variant-level replicates); the paired AVI − CADD difference (1,000 paired replicates) was added by
+amendment A1 (script `17`).
+
+### 3.6 Temporal hold-out validation (Aim 2c; amendment A2)
+
+Both predictors were recalibrated (seed 20260925, B = 10,000) on reference sets built with the same
+criteria from the ClinVar release of 2024-01-27, the last release before the CADD v1.7 score files.
+The test set comprised variants of the 2026 main set absent from the 2024 set (variants whose label
+changed between releases were excluded and counted). For each evidence interval, the positive
+likelihood ratio on the test set (95% bootstrap interval, 1,000 replicates) was compared with the
+likelihood ratio required for that evidence strength. Because AVI was released in 2026, this tests
+the stability of its calibration on newly classified variants rather than a post-release hold-out
+(scripts `18`, `19`; Figure S3).
+
+### 3.7 Comparison with already-recommended predictors (Aim 6; amendment A3)
+
+AlphaMissense (hg38 predictions, Zenodo 10813168), REVEL v1.3 (official file, GRCh38 positions)
+and BayesDel without allele frequency (UCSC hg19 bigWig tracks, one per alternative allele, lifted
+over to GRCh38 with the UCSC chain file and checked against the hg19 reference base; minus-strand
+mappings complemented) were extracted for all reference variants (script `20`); where a predictor
+had several values for an SNV, the maximum was used. Precision and window increments matched the
+original study (BayesDel two decimals, increment 0.01; REVEL three decimals and AlphaMissense four
+decimals, increment 0.001). The main comparison used the reference variants scored by all five
+predictors (intersection), five seeds per predictor, with AUROC/AUPRC and paired bootstrap
+differences versus AVI (script `21`).
+
+### 3.8 Threshold drift, circularity and HGMD exclusion (amendments A6, A7)
+
+*Release series (A6a).* Reference sets were rebuilt with the same criteria from ClinVar releases of
+2019-12-02 (used by Pejaver et al.), 2022-11-19 (last release before the ClinGen recommendations),
+2024-01-27 and 2026-09-23, and all five predictors were calibrated on the variants of each release
+scored by all five (one seed; scripts `24a`–`24c`). *Before/after split (A6b).* Within the 2026 main
+set, predictors were calibrated separately on variants already present in the November 2022 set and
+on variants added afterwards. Because AVI (released 2026-09-08) cannot have been used as evidence in
+any ClinVar classification, it served as a negative control: a threshold relaxation on post-2022
+variants present for REVEL/BayesDel/CADD but absent for AVI was pre-specified as supporting
+circularity. A post hoc common-scale comparison is reported separately (script `24d`).
+*HGMD exclusion (A7).* HGMD Professional is licensed; the Ensembl VEP 116 cache contains HGMD Public
+2020.4 records (position only). Every SNV at the position of a single-nucleotide HGMD Public record
+was excluded from the ClinVar and gnomAD sets of the 2019 and 2026 releases, and the five predictors
+were recalibrated (scripts `25a`, `25b`). The HGMD-included analysis remains primary; the excluded
+analysis is a sensitivity analysis.
+
+### 3.9 Calibration by gene class (Aim 1; amendment A8)
+
+Using the 2026 intersection sets, genes (MANE Select gene; SNVs assigned to more than one gene
+excluded) were classified by (1) constraint: gnomAD v4.1 LOEUF decile of the MANE transcript —
+highly constrained (deciles 0–2), intermediate (3–6), tolerant (7–9); (2) inheritance: ClinGen
+gene–disease validity (Definitive, Strong or Moderate), or GenCC with the same classifications when
+ClinGen had none — autosomal dominant only vs autosomal recessive only; (3) mechanism:
+Gene2Phenotype molecular mechanism (confidence definitive, strong or moderate) — loss of function vs
+gain of function or dominant negative. For each class the gnomAD set was restricted to the class's
+genes; classes with < 1,000 P/LP or < 1,000 B/LB variants were not calibrated. All five predictors
+were calibrated per class (one seed, global prior). Two classes were reported as different for a
+threshold when the 2.5th–97.5th percentile intervals of their bootstrap thresholds did not overlap;
+the percentage of variants changing evidence level under class-specific thresholds is also reported
+(scripts `26`, `27`; Figure 2).
+
+### 3.10 Evidence yield for variants of uncertain significance (Aim 7; amendment A5)
+
+ClinVar 2026-09-23 SNVs with CLNSIG exactly "Uncertain_significance", ≥ 1 star, MANE Select
+missense (same annotation and exclusions) in disease genes were assigned the PP3/BP4 level of each
+predictor (main-analysis thresholds for CADD and AVI; intersection thresholds for all five), with
+the corresponding ACMG/AMP points (Tavtigian et al. 2020). No frequency filter was applied in the
+main count (a secondary count is restricted to AF < 0.01). This quantifies computational evidence
+only (script `23`).
+
+### 3.11 Population frequency and ancestry (Aim 8; amendments A4, A12)
+
+*gnomAD (A4).* Universe: MANE Select missense SNVs observed in gnomAD v4.1. Per-group AF = maximum
+of exome and genome AF for AFR, AMR, ASJ, EAS, FIN, MID, NFE and SAS, and genome AF for AMI. For
+PP3-level SNVs (main median thresholds) we report the number with a group AF > 0.01 (proxy for a
+gene-agnostic BS1 level) and > 0.05 (BA1), the group with the highest AF, per-group proportions
+with Wilson intervals, and group-specific common variants (script `22`). The VEP cache has no
+allele numbers, so the ClinGen minimum-AN requirement for BA1 could not be applied.
+*Mexico City Prospective Study (A12a).* The official per-chromosome allele-frequency VCFs of the
+RGC-MCPS browser (release 20230130; ~140,000 adults; frequencies overall and by local ancestry:
+African, European and Indigenous Mexican) were downloaded (script `31`; sizes verified) and queried
+by tabix at the positions of the PP3-level MANE missense SNVs of the Aim 4 catalogue, matching
+position and alleles exactly (script `32`). For each predictor and PP3 level we report the number
+observed, with MCPS AF > 0.01 and > 0.05, and with MCPS AF > 0.01 while ≤ 0.01 in every gnomAD
+group ("MCPS-only frequency conflicts"), overall and for the Indigenous Mexican component; ClinVar
+P/LP variants were counted as a quality check, and the MCPS AF was correlated with the gnomAD AMR AF
+(Spearman). *TOPMed BRAVO (A12b).* The public Freeze 10 VCFs (overall AC/AF only; downloaded by the
+author from signed links; sizes verified) were recompressed with bgzip, indexed, and analysed in
+the same way using FILTER = PASS sites (script `34`). gnomAD v4.1 genomes include many TOPMed
+samples, so BRAVO is not independent of gnomAD; MCPS participants are not expected to overlap
+with either. The resources are reported separately and never pooled; no threshold is recalibrated
+with these data.
+
+### 3.12 Genome-wide catalogue (Aim 4; amendment A9)
+
+Every SNV of the CADD v1.7 and AVI files with CADD PHRED ≥ 25.6 or AVI Phred ≥ 25.18 (main median
+PP3 Supporting thresholds) was retrieved by full tabix scans (scripts `02`, `28`) and annotated with
+both scores, the PP3 level of each predictor, the MANE Select consequence (coding SNVs) or overlap
+with GENCODE v50 gene bodies (other SNVs; "intergenic" otherwise), ClinVar 2026-09-23 (CLNSIG,
+stars, variation ID; exact allele match) and gnomAD v4.1 exome, genome and per-group AF and grpmax
+(VEP 116 cache) (script `29`). A column `calibrated_context` is TRUE only for MANE Select missense
+SNVs; for all other SNVs the PP3 level is provided for prioritisation only. A per-gene summary
+(MANE missense) reports catalogued SNVs, SNVs at each PP3 level, gnomAD observation, common variants
+(group AF > 1% and > 5%; overall AF > 1% for comparison; script `29b`) and ClinVar P/LP and B/LB
+counts.
+
+### 3.13 Noncoding variants (Aim 9; amendments A10, A11)
+
+Every ClinVar 2026-09-23 SNV outside MANE Select coding sequence was assigned, relative to the MANE
+Select transcripts, to one region class (canonical splice ±1–2, intronic splice region ±3–8,
+near-intronic 9–50, deep intronic > 50 nt, 5′UTR, 3′UTR, upstream and downstream ≤ 5 kb,
+intergenic), and coding synonymous SNVs were added as a class split by distance to an internal exon
+boundary (≤ 3 nt vs other). Reference variants follow the plan-v1 rules. Classes with ≥ 1,000 P/LP
+and ≥ 1,000 B/LB variants would be calibrated; otherwise the missense-calibrated thresholds are
+evaluated with interval-based likelihood ratios and AUROC. In addition, CADD and AVI were evaluated
+against saturation-mutagenesis MPRA data of 20 regulatory elements (Kircher et al. 2019; functional
+= p < 10⁻⁵ and |coefficient| ≥ 0.1) (script `30`). SpliceVarDB-based splicing calibration was
+deferred to a second publication (A11). **[PENDING: results.]**
+
+### 3.14 Validation with multiplexed assays of variant effect (Aim 3; amendment A13)
+
+MaveDB (accessed 2026-09-27) was searched for published human score sets with a score calibration
+defining both "normal" and "abnormal" functional classes (metadata inventory, script `33a`; 92
+score sets in ~40 genes). For each set the investigator-provided calibration was used when
+available (otherwise the first calibration not flagged research-use-only). Range-based classes
+were applied to the scores; class-based (categorical) classes were retrieved as variant lists from
+the MaveDB calibration endpoint. Variants were mapped to GRCh38 with MaveDB's own mappings:
+nucleotide-level sets through genomic HGVS (SNVs only; current mapping, else the most recent), and
+protein-level sets through the mapped RefSeq protein change, which was matched to all MANE Select
+missense SNVs encoding the same amino-acid change; protein-level sets were kept only if ≥ 90% of
+their mapped (position, reference residue) pairs agreed with the MANE Select protein (script
+`33b`). SNVs classified discordantly by different sets were excluded. Evaluation (script `33c`):
+for each evidence interval of the calibrated thresholds, the proportion of abnormal variants and
+LR = P(interval | abnormal) / P(interval | normal) with 95% bootstrap intervals (B = 2,000);
+AUROC pooled and per gene (≥ 30 abnormal and ≥ 30 normal); paired AVI − CADD difference;
+secondary analysis on the SNVs scored by all five predictors; sensitivity analysis excluding
+variants of the ClinVar calibration set. Functional abnormality is not equivalent to
+pathogenicity, so the LRs test direction and consistency rather than the ClinGen LR targets.
+**[PENDING: results.]**
+
+### 3.15 CADD v1.6 versus v1.7 (Aim 2b; amendment A14)
+
+CADD v1.6 GRCh38 scores were obtained by partial download of the official whole-genome file (86.6
+GB): the tabix linear index was parsed to find the BGZF blocks covering the positions of the 2026
+reference sets (merged into 6,419 byte ranges, ~9.4 GB; script `35a`), the ranges were downloaded
+(script `35b`) and assembled into a valid BGZF file of complete blocks, which was indexed and queried
+with exact allele matching (script `35c`). CADD v1.6 is then calibrated on the same reference
+variants as the main analysis (five seeds), and thresholds, discrimination and evidence levels are
+compared with v1.7. **[PENDING: results.]**
+
+## 4. Variant annotation
 
 ### 4.1 Gene
-Variants will be assigned to genes by coordinate overlap with the GENCODE v50 *basic* annotation
-on GRCh38 (released 2026-06-09; Frankish et al., 2023 **[VERIFY most recent citation]**), using
-GenomicRanges 1.58.0. **[PENDING: exact criterion, e.g., the gene containing the variant, its
-biotype (protein-coding, lncRNA, etc.), and handling of variants in more than one gene or in
-intergenic regions.]**
+Coding SNVs are assigned to the gene of their GENCODE v50 MANE Select transcript (section 3.3).
+Other SNVs of the catalogue are annotated with every GENCODE v50 *basic* gene body they overlap on
+GRCh38 (released 2026-06-09; Frankish et al., 2023 **[VERIFY most recent citation]**), with gene
+identifiers and biotypes, using GenomicRanges 1.58.0; SNVs overlapping no gene are labelled
+intergenic.
 
 ### 4.2 ClinVar
-Clinical classifications will be taken from the ClinVar GRCh38 VCF (`fileDate=2026-09-23`;
-Landrum et al. **[VERIFY citation]**) by exact match of chromosome, position, reference and
-alternative allele. We will report clinical significance (CLNSIG), review status (CLNREVSTAT),
-associated condition (CLNDN) and the ClinVar variation ID. ClinVar is used only as a descriptive
-annotation, **not as a selection criterion**.
+Clinical classifications are taken from the ClinVar GRCh38 VCF (`fileDate=2026-09-23`; archived
+releases 2019-12-02, 2022-11-19 and 2024-01-27 for Aims 2 and 6; Landrum et al. **[VERIFY
+citation]**) by exact match of chromosome, position, reference and alternative allele (CLNSIG,
+review stars derived from CLNREVSTAT, variation ID). ClinVar labels define the calibration
+reference sets; in the genome-wide catalogue ClinVar is only a descriptive annotation and is
+**not a selection criterion**.
 
 ### 4.3 Population frequencies (gnomAD)
-Frequencies will be obtained in two stages:
+Frequencies are obtained in two stages:
 
 1. **All selected variants.** gnomAD allele frequencies for exomes and genomes, overall and per
    population, from the Ensembl VEP release 116 indexed cache for GRCh38
@@ -222,7 +403,13 @@ Frequencies will be obtained in two stages:
    number of homozygotes (nhomalt), combined exome + genome frequency (AF_joint), population with
    the highest frequency (grpmax) and filter status (FILTER), from the gnomAD v4.1 *joint* VCF
    (`gs://gcp-public-data--gnomad/release/4.1/vcf/joint/`) **[VERIFY citation]** through remote
-   tabix queries.
+   tabix queries. **[PENDING: not yet run; planned for the variants with frequency conflicts.]**
+
+Throughout, "overall AF" denotes the maximum of the gnomAD exome and genome overall AF (used for
+the plan-v1 rarity rule), and "group AF" the maximum over genetic ancestry groups of the per-group
+exome and genome AF (used for common-variant counts). An early version of the per-gene catalogue
+summary and a first run of the MCPS analysis used the overall AF where the group AF was specified;
+both were corrected (scripts `29b`, `32`) and the corrections are logged.
 
 The two-stage design was necessary because querying the *joint* VCF for all variants was not
 feasible. In a test over the coding regions of chromosome 21 (GENCODE CDS ± 10 bp; 300 regions,
