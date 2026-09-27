@@ -1,0 +1,17 @@
+criterion	tool	level	S1	S2	S3	S4	main
+PP3	AVI	Supporting	25.04	25.2	25.32	25.13	25.18
+PP3	AVI	Moderate	25.99	26.57	26.6	26.37	26.44
+PP3	AVI	Strong	30.23				
+PP3	AVI	VeryStrong					
+PP3	CADD	Supporting	25.9	25.6	25.9	25.5	25.6
+PP3	CADD	Moderate	28.2	28	28.2	27.8	28
+PP3	CADD	Strong					
+PP3	CADD	VeryStrong					
+BP4	AVI	Supporting	22.91	22.97	22.89	22.91	22.95
+BP4	AVI	Moderate	20.81	20.45	20.16	20.36	20.52
+BP4	AVI	Strong	9.17	9.08	8.98	9.01	9.15
+BP4	AVI	VeryStrong					
+BP4	CADD	Supporting	22.6	22.6	22.4	22.5	22.7
+BP4	CADD	Moderate	20.6	19.56	19.49	19.54	19.59
+BP4	CADD	Strong	1.74	8.342	7.773	8.302	8.341
+BP4	CADD	VeryStrong					

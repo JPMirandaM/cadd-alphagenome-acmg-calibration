@@ -1,0 +1,83 @@
+block	predictor	level	n_snvs	n_observed_mcps	n_mcps_af_gt_0.01	n_mcps_af_gt_0.05	n_mcps_gt_0.01_gnomad_grpmax_le_0.01	n_mcps_gt_0.05_gnomad_grpmax_le_0.05	n_imx_af_gt_0.01	n_imx_gt_0.01_gnomad_grpmax_le_0.01	n_unrel_af_gt_0.01	n_observed_mcps_not_gnomad	n_observed_bravo_pass	n_bravo_af_gt_0.01	n_bravo_af_gt_0.05	n_bravo_gt_0.01_gnomad_grpmax_le_0.01	n_bravo_homozygotes_gt0	chrom	pos	ref	alt	gene	hgvsp	CADD_PHRED	AVI_PHRED	PP3_CADD	PP3_AVI	mcps_AF_RAW	mcps_AF_IMX	mcps_AF_EUR	mcps_AF_AFR	gnomAD_AF_AMR	gnomAD_AF_group_max	gnomAD_AF_overall	grpmax	clnsig	source
+MCPS summary	CADD	Supporting	9968836	287521	676	309	36	13	505	73	675	108457																									
+MCPS summary	CADD	Moderate	8566291	280389	349	138	30	11	274	69	354	88023																									
+MCPS summary	AVI	Supporting	5685222	144585	247	119	15	8	189	36	253	59048																									
+MCPS summary	AVI	Moderate	13135064	267222	238	97	18	6	178	38	244	126645																									
+BRAVO summary	CADD	Supporting	9968836										607740	967	297	0	11285																				
+BRAVO summary	CADD	Moderate	8566291										538224	481	124	0	6734																				
+BRAVO summary	AVI	Supporting	5685222										318672	353	111	0	5906																				
+BRAVO summary	AVI	Moderate	13135064										574209	329	85	0	6686																				
+MCPS-only frequency conflicts																		5	126577145	T	C	ALDH7A1	p.Asn195Ser	26.6	25.38	Supporting	Supporting	0.283	0.304	0.245	0.248	0	2.99e-05	1.97e-05	AFR	Pathogenic	Array
+MCPS-only frequency conflicts																		6	36730694	G	C	RAB44	p.Glu974Gln	27.6	24.84	Supporting	none	0.0209	0.0324	0.00201	0	0.00824	0.00824	0.00106	AMR	""	WES
+MCPS-only frequency conflicts																		19	38100119	C	T	SIPA1L3	p.Thr608Met	26.9	19.73	Supporting	none	0.0204	0.0312	6.68e-05	0.00017	0.00958	0.00958	0.000474	AMR	Benign/Likely_benign	WES
+MCPS-only frequency conflicts																		1	224190018	T	A	DEGS1	p.Leu175Gln	25.6	20.92	Supporting	none	0.02	0.0297	0	0.000607	0.00883	0.00883	0.000273	AMR	Benign	WES
+MCPS-only frequency conflicts																		11	67469038	T	C	TMEM134	p.Gln52Arg	25.7	18.44	Supporting	none	0.0199	0.0301	7e-05	0	0.00941	0.00941	0.00024	AMR	Likely_benign	WES
+MCPS-only frequency conflicts																		14	23525908	A	G	ZFHX2	p.Leu1345Pro	23.1	25.42	none	Supporting	0.0192	0.028	0.00117	0.000437	0.00585	0.00585	0.000236	AMR	Benign	WES
+MCPS-only frequency conflicts																		2	237347829	G	T	COL6A3	p.Pro2336His	27.3	23.37	Supporting	none	0.0185	0.0274	0.000787	0.000194	6.54e-05	0.000174	6.57e-06	MID	Uncertain_significance	Array
+MCPS-only frequency conflicts																		19	49583940	A	G	PRRG2	p.Asn97Asp	25.9	23.98	Supporting	none	0.0185	0.0283	6.66e-05	0	0.00891	0.00891	0.000276	AMR	""	WES
+MCPS-only frequency conflicts																		20	62666451	C	T	SLCO4A1	p.Arg450Trp	29.7	23.28	Moderate	none	0.0182	0.0272	0.000208	0	0.00991	0.00991	0.000401	AMR	""	WES
+MCPS-only frequency conflicts																		19	49861609	C	T	PNKP	p.Arg462Gln	27.8	22.64	Supporting	none	0.0181	0.0277	0	0.000301	0.00735	0.00735	0.000195	AMR	Conflicting_classifications_of_pathogenicity	Array
+MCPS-only frequency conflicts																		3	12618603	C	T	RAF1	p.Arg40His	25.9	23.62	Supporting	none	0.0161	0.0242	0	0	0.00722	0.00722	0.000228	AMR	Benign	Array
+MCPS-only frequency conflicts																		22	38670927	G	T	CBY1	p.Gly41Val	28.3	26.31	Moderate	Supporting	0.016	0.0237	0.000127	0.000225	0.00863	0.00863	0.000266	AMR	""	WES
+MCPS-only frequency conflicts																		5	168666647	C	T	SLIT3	p.Arg1460His	26.8	21.4	Supporting	none	0.0154	0.0232	0.000107	0	0.00919	0.00919	0.000446	AMR	Benign/Likely_benign	WES
+MCPS-only frequency conflicts																		17	41769149	C	T	JUP	p.Arg176Gln	29.2	24.52	Moderate	none	0.0152	0.0225	0.000775	0.000105	0.00883	0.00883	0.000317	AMR	Benign/Likely_benign	Array
+MCPS-only frequency conflicts																		17	48801349	G	A	TTLL6	p.Arg173Trp	33	29.89	Moderate	Moderate	0.0152	0.0229	3.4e-05	0.000104	0.00795	0.00795	0.000519	AMR	Uncertain_significance	WES
+MCPS-only frequency conflicts																		19	51059972	G	A	KLK13	p.His121Tyr	23.8	25.21	none	Supporting	0.0152	0.0231	3e-04	0	0.00886	0.00886	0.000282	AMR	Uncertain_significance	WES
+MCPS-only frequency conflicts																		1	201077077	C	T	CACNA1S	p.Arg557His	26.2	17.31	Supporting	none	0.0151	0.0226	0.000321	0.000203	0.00937	0.00937	0.000327	AMR	Benign/Likely_benign	Array
+MCPS-only frequency conflicts																		6	117548066	C	T	DCBLD1	p.Pro592Leu	27.6	24.76	Supporting	none	0.0148	0.0222	3.09e-05	0.000102	0.00615	0.00615	0.000158	AMR	""	WES
+MCPS-only frequency conflicts																		8	74244771	C	T	JPH1	p.Val555Met	27.7	25.66	Supporting	Supporting	0.0148	0.0226	7.56e-05	0	0.00903	0.00903	0.000296	AMR	""	WES
+MCPS-only frequency conflicts																		17	28561545	G	A	PIGS	p.Arg185Cys	27.4	22.82	Supporting	none	0.0148	0.0214	0.00115	0.000163	0.00872	0.00872	0.00535	AMR	Benign/Likely_benign	WES
+MCPS-only frequency conflicts																		10	42791727	C	T	BMS1	p.Pro246Leu	29.6	26.1	Moderate	Supporting	0.0147	0.0206	0.00278	0.00613	0.00626	0.00904	0.00205	EAS	Likely_benign	Array
+MCPS-only frequency conflicts																		1	108817097	C	A	AKNAD1	p.Gly777Val	25.6	24.28	Supporting	none	0.0146	0.0215	0.00026	0	0.00749	0.00749	0.000231	AMR	""	WES
+MCPS-only frequency conflicts																		12	57204692	G	A	LRP1	p.Gly3713Arg	25.7	32.54	Supporting	Moderate	0.0146	0.0223	6.02e-05	0	0.00754	0.00754	0.000302	AMR	Likely_benign	WES
+MCPS-only frequency conflicts																		19	19269759	G	A	TM6SF2	p.Arg138Trp	29.8	23.16	Moderate	none	0.0146	0.0221	0	0	0.00937	0.00937	0.000315	AMR	Benign	WES
+MCPS-only frequency conflicts																		3	47336699	G	A	KLHL18	p.Ala355Thr	25.7	22.29	Supporting	none	0.0143	0.0216	6.88e-05	0	0.00825	0.00825	0.000256	AMR	""	WES
+MCPS-only frequency conflicts																		14	103491980	G	A	MARK3	p.Arg597Gln	28.2	22.65	Moderate	none	0.0142	0.0214	2.5e-05	0.000237	0.00624	0.00624	2e-04	AMR	""	WES
+MCPS-only frequency conflicts																		17	48032157	C	G	COPZ2	p.Gly165Arg	27.6	31.78	Supporting	Moderate	0.0139	0.0209	2.41e-05	0	0.0076	0.0076	0.000302	AMR	""	WES
+MCPS-only frequency conflicts																		10	100526976	G	A	NDUFB8	p.Pro104Leu	30	24.51	Moderate	none	0.0138	0.0204	0.000737	0.000391	0.00836	0.00836	0.000296	AMR	Benign	WES
+MCPS-only frequency conflicts																		11	75005459	G	A	NEU3	p.Arg118Gln	32	25.28	Moderate	Supporting	0.0138	0.0207	0.000208	0	0.00718	0.00718	0.000348	AMR	""	WES
+MCPS-only frequency conflicts																		12	6960166	C	T	PTPN6	p.Ala503Val	28.2	28.56	Moderate	Moderate	0.0136	0.0202	8.08e-05	0.000219	0.00897	0.00897	0.000287	AMR	""	Array
+MCPS-only frequency conflicts																		1	17095956	C	T	PADI2	p.Val122Met	27.9	25.64	Supporting	Supporting	0.0133	0.0197	0.000359	0	0.00969	0.00969	0.000381	AMR	Uncertain_significance	WES
+MCPS-only frequency conflicts																		11	113410831	C	T	DRD2	p.Ala410Thr	28.7	20.87	Moderate	none	0.0129	0.0194	0	0	0.00646	0.00646	0.00021	AMR	Benign	WES
+MCPS-only frequency conflicts																		6	123548606	G	A	TRDN	p.Ser80Phe	25.9	27.1	Supporting	Moderate	0.0127	0.0191	0.000231	0	0.0035	0.0035	0.00016	AMR	Conflicting_classifications_of_pathogenicity	WES
+MCPS-only frequency conflicts																		2	204546102	C	G	PARD3B	p.Leu35Val	27.4	23.99	Supporting	none	0.0126	0.0187	0.000359	0	0.0064	0.0064	0.000335	AMR	""	WES
+MCPS-only frequency conflicts																		9	5988505	C	A	BRD10	p.Gly212Cys	28.4	29.51	Moderate	Moderate	0.0126	0.0187	0.000381	0	0.00988	0.00988	0.000604	AMR	""	WES
+MCPS-only frequency conflicts																		11	47182475	C	T	PACSIN3	p.Ala47Thr	32	25.98	Moderate	Supporting	0.0126	0.0186	1.71e-05	0	0.00709	0.00709	0.000263	AMR	""	WES
+MCPS-only frequency conflicts																		11	62692394	G	A	BSCL2	p.Ala282Val	26.8	28.93	Supporting	Moderate	0.0126	0.0188	4.82e-05	0	0.00948	0.00948	0.00111	AMR	Conflicting_classifications_of_pathogenicity	Array
+MCPS-only frequency conflicts																		12	26580084	C	A	ITPR2	p.Met1484Ile	23.1	25.78	none	Supporting	0.0124	0.0186	4.72e-05	0	0.0066	0.0066	0.000203	AMR	Conflicting_classifications_of_pathogenicity	WES
+MCPS-only frequency conflicts																		18	35468678	C	T	INO80C	p.Arg171Gln	32	29.42	Moderate	Moderate	0.0124	0.018	0.00155	0.000319	0.00827	0.00827	0.0039	AMR	""	WES
+MCPS-only frequency conflicts																		12	77968694	G	T	NAV3	p.Met221Ile	24.8	28.7	none	Moderate	0.0123	0.0187	0.000112	0.000108	0.00792	0.00792	0.000335	AMR	""	WES
+MCPS-only frequency conflicts																		12	47985759	C	A	COL2A1	p.Arg550Leu	26.2	25.84	Supporting	Supporting	0.0122	0.0182	0.00024	0.000128	0.00778	0.00778	0.000847	AMR	Conflicting_classifications_of_pathogenicity	Array
+MCPS-only frequency conflicts																		2	96839631	G	C	ANKRD23	p.Pro279Arg	26.2	28.44	Supporting	Moderate	0.012	0.0181	7.29e-05	0	0.00446	0.00446	0.000158	AMR	""	WES
+MCPS-only frequency conflicts																		9	94571542	C	T	FBP2	p.Ala163Thr	24.4	27.35	none	Moderate	0.012	0.0158	0.00477	0.00039	0.00904	0.00904	0.00441	AMR	Likely_benign	WES
+MCPS-only frequency conflicts																		17	42782818	G	T	WNK4	p.Gly227Trp	32	29.26	Moderate	Moderate	0.012	0.018	0.00023	0.000166	0.00783	0.00783	0.000245	AMR	Conflicting_classifications_of_pathogenicity	Array
+MCPS-only frequency conflicts																		6	138442099	C	T	NHSL1	p.Arg183His	28.5	26.12	Moderate	Supporting	0.0119	0.0178	0.000168	0.000552	0.00464	0.00474	0.000251	EAS	""	WES
+MCPS-only frequency conflicts																		12	78175351	T	C	NAV3	p.Ile1676Thr	25.1	26.7	none	Moderate	0.0119	0.0181	0.000124	0.000228	0.00627	0.00627	0.00025	AMR	Uncertain_significance	WES
+MCPS-only frequency conflicts																		14	73593888	T	G	ACOT4	p.Met215Arg	26.1	25.95	Supporting	Supporting	0.0119	0.0177	6.14e-05	0	0.00743	0.00743	0.000232	AMR	""	WES
+MCPS-only frequency conflicts																		2	206757021	G	A	MDH1B	p.Ser97Phe	29.5	24.78	Moderate	none	0.0118	0.0177	0	0	0.00566	0.00566	0.00018	AMR	""	WES
+MCPS-only frequency conflicts																		12	56328023	A	C	PAN2	p.Phe208Cys	26	24.34	Supporting	none	0.0117	0.0178	0.000204	0	0.00812	0.00812	0.000637	AMR	""	WES
+MCPS-only frequency conflicts																		X	38408967	A	C	OTC	p.Gln270Pro	24.4	26.54	none	Moderate	0.0117	2.34e-05	0.0544	0		0		""	Pathogenic	Array
+MCPS-only frequency conflicts																		1	20318692	G	A	VWA5B1	p.Arg271Gln	26.7	22.27	Supporting	none	0.0115	0.0171	6.16e-05	0.000205	0.00476	0.00476	0.00017	AMR	""	WES
+MCPS-only frequency conflicts																		8	123698472	C	T	ANXA13	p.Ala92Thr	27.7	24.72	Supporting	none	0.0115	0.0175	0	0	0.00534	0.00534	0.000183	AMR	""	WES
+MCPS-only frequency conflicts																		8	109409941	T	G	PKHD1L1	p.Val683Gly	25.7	24.02	Supporting	none	0.0114	0.0173	0	0	0.00842	0.00842	0.000807	AMR	Uncertain_significance	WES
+MCPS-only frequency conflicts																		15	65331591	G	A	IGDCC3	p.Ala406Val	29.8	22.85	Moderate	none	0.0114	0.0169	0.000183	0.000616	0.00912	0.00912	0.000847	AMR	""	WES
+MCPS-only frequency conflicts																		9	37015163	C	T	PAX5	p.Val82Ile	26.7	24.69	Supporting	none	0.0113	0.0168	0.000258	0	0.00546	0.00546	0.000168	AMR	Benign/Likely_benign	WES
+MCPS-only frequency conflicts																		1	54599349	G	A	ACOT11	p.Arg273Gln	34	24.05	Moderate	none	0.0112	0.0169	0	0	0.0071	0.0071	0.000272	AMR	""	WES
+MCPS-only frequency conflicts																		3	42698237	G	A	HHATL	p.Arg200Cys	32	22.97	Moderate	none	0.0112	0.0167	0.000164	0	0.00821	0.00821	0.000597	AMR	""	WES
+MCPS-only frequency conflicts																		3	150882970	C	T	MINDY4B	p.Gly329Glu	23.5	28.59	none	Moderate	0.0112	0.017	0.000321	0	0.00473	0.00473	0.000305	AMR	""	WGS
+MCPS-only frequency conflicts																		8	60862623	C	T	CHD7	p.Pro2683Ser	27.3	24.8	Supporting	none	0.0112	0.0171	3.5e-05	0	0.00687	0.00687	0.000348	AMR	Benign/Likely_benign	Array
+MCPS-only frequency conflicts																		12	138424	G	A	IQSEC3	p.Arg354His	31	23.03	Moderate	none	0.0112	0.0167	9.69e-05	0	0.00549	0.00549	0.000174	AMR	Likely_benign	WES
+MCPS-only frequency conflicts																		17	53824540	C	T	KIF2B	p.Leu503Phe	26.1	23.44	Supporting	none	0.011	0.0166	0	0	0.00994	0.00994	0.00105	AMR	""	WES
+MCPS-only frequency conflicts																		22	36864973	C	T	NCF4	p.Arg58Cys	33	26.43	Moderate	Supporting	0.011	0.0163	0.000372	0	0.00955	0.00955	0.00103	AMR	Conflicting_classifications_of_pathogenicity	Array
+MCPS-only frequency conflicts																		18	60371544	A	T	MC4R	p.Ile269Asn	27.7	24.96	Supporting	none	0.0109	0.0163	6.06e-05	0.000425	0.00648	0.00648	0.000201	AMR	Conflicting_classifications_of_pathogenicity	Array
+MCPS-only frequency conflicts																		19	1057920	C	T	ABCA7	p.Ser1629Leu	27.8	26.39	Supporting	Supporting	0.0108	0.0159	9.8e-05	0.000473	0.00948	0.00948	0.000637	AMR	Benign/Likely_benign	WES
+MCPS-only frequency conflicts																		11	3693260	G	A	NUP98	p.Ala1428Val	29	24.46	Moderate	none	0.0107	0.0158	0.000304	0.000117	0.00939	0.00939	0.000591	AMR	Likely_benign	WES
+MCPS-only frequency conflicts																		18	31354330	C	T	DSG1	p.Arg712Cys	29.6	24.48	Moderate	none	0.0106	0.0152	0.00154	0.00036	0.008	0.008	0.00116	AMR	Benign/Likely_benign	Array
+MCPS-only frequency conflicts																		1	119723381	C	G	PHGDH	p.Pro99Arg	32	29.75	Moderate	Moderate	0.0105	0.0157	3.58e-05	0.000568	0.00724	0.00724	0.000315	AMR	Benign/Likely_benign	Array
+MCPS-only frequency conflicts																		5	54456136	G	A	HSPB3	p.Arg116Gln	31	26.53	Moderate	Moderate	0.0104	0.016	4.55e-05	0	0.00613	0.00613	0.000214	AMR	Benign/Likely_benign	WES
+MCPS-only frequency conflicts																		20	64048912	C	T	SOX18	p.Glu137Lys	32	29.76	Moderate	Moderate	0.0104	0.0154	8.66e-05	0.00026	0.00752	0.00752	0.000276	AMR	Benign	Array
+MCPS-only frequency conflicts																		9	136747538	G	A	LCN6	p.Ala39Val	27.3	23.45	Supporting	none	0.0103	0.0158	5.72e-05	0	0.0047	0.0047	0.000156	AMR	""	WES
+MCPS-only frequency conflicts																		11	86447189	C	T	ME3	p.Gly419Glu	28.6	23.29	Moderate	none	0.0103	0.0155	3.9e-05	0.000219	0.00534	0.00534	0.000168	AMR	""	WES
+MCPS-only frequency conflicts																		6	146544011	A	T	RAB32	p.His47Leu	31	24.52	Moderate	none	0.0102	0.0153	3.18e-05	0	0.00684	0.00684	0.000213	AMR	""	WES
+MCPS-only frequency conflicts																		7	44568183	C	T	DDX56	p.Arg475Gln	31	23.26	Moderate	none	0.0102	0.0154	0.000163	0	0.00528	0.00528	0.000263	AMR	""	WES
+MCPS-only frequency conflicts																		15	80173022	A	T	FAH	p.Ile239Phe	26.5	24.87	Supporting	none	0.0101	0.015	5.93e-05	0.000207	0.00532	0.00532	0.000164	AMR	Conflicting_classifications_of_pathogenicity	Array
