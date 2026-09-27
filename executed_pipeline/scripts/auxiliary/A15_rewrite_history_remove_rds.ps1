@@ -1,4 +1,5 @@
-# A15 (2026-09-27): rewrites the Git history of the repository removing every *.rds file from every
+# A15 (2026-09-27): rewrites the Git history of the repository removing every *.rds file and the manuscript/ folder
+# (drafts kept outside the public repository, author 2026-09-27) from every
 # commit, before the repository is made public. The removed files hold per-variant third-party scores
 # (CADD, AVI, REVEL, BayesDel, AlphaMissense) or gnomAD-derived reference sets, which must not be
 # redistributed (see THIRD_PARTY_NOTICES.md). git filter-branch could not be used because the Git-for-
@@ -19,7 +20,7 @@ $commits = & $git rev-list --reverse --topo-order main
 foreach ($c in $commits) {
   $env:GIT_INDEX_FILE = $tmpIndex
   & $git read-tree $c
-  & $git rm -r --cached --ignore-unmatch -q -- '*.rds' | Out-Null
+  & $git rm -r --cached --ignore-unmatch -q -- '*.rds' 'manuscript' | Out-Null
   $tree = (& $git write-tree).Trim()
   Remove-Item Env:GIT_INDEX_FILE
   $raw = & $git cat-file commit $c

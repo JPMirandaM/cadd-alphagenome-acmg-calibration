@@ -360,4 +360,6 @@ git push -u origin main   # run by the author (browser authentication via Git Cr
 # repository was made (C:\cadd_git_backup_2026-09-27.git). git filter-branch failed (Git Bash fork error).
 # auxiliary\A15_rewrite_history_remove_rds.ps1 (plumbing-only rewrite) is prepared but NOT RUN: rewriting the
 # history requires the author's explicit authorization before the repository is made public.
+# The manuscript/ folder was also removed from version control (kept locally; the author makes the final edits
+# manually in Word) and was added to the A15 rewrite so that drafts do not appear in the public history.
 # -------------------------------------------------------------------------------------

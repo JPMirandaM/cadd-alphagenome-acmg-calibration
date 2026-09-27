@@ -39,3 +39,6 @@ desktop.ini
 # Per-variant derived data (third-party scores / gnomAD-derived sets): never versioned
 /calibration/results/**/*.rds
 /calibration/results/v17_avi/noncoding/splice_region_intronic/tmp/
+
+# Manuscript drafts are kept outside the public code repository (author, 2026-09-27); final edits are made manually in Word
+/manuscript/
