@@ -1,0 +1,16 @@
+{
+  "title": "Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across reference sets, genes and populations — code, analysis plan and results",
+  "upload_type": "software",
+  "description": "Code, prespecified analysis plan with dated amendments, execution logs, script hashes, derived results, figures with source data and supplementary tables for the ClinGen calibration of CADD v1.7 and the AlphaGenome Variant Impact (AVI) score for ACMG/AMP PP3/BP4 evidence. Third-party data (CADD, AVI, REVEL, BayesDel, AlphaMissense, ClinVar, gnomAD, HGMD, MCPS, BRAVO, MaveDB) are not redistributed; their sources, versions, checksums and terms are listed in executed_pipeline/data_manifest.tsv and THIRD_PARTY_NOTICES.md.",
+  "creators": [
+    {
+      "name": "Miranda, Jose Patricio",
+      "affiliation": "Dirección de Desarrollo Médico y Académico, Bupa Chile, Providencia, Chile"
+    }
+  ],
+  "license": "MIT",
+  "keywords": ["CADD", "AlphaGenome", "variant effect prediction", "ACMG/AMP", "PP3/BP4", "ClinGen", "calibration", "ClinVar", "gnomAD", "MAVE", "Mexico City Prospective Study"],
+  "grants": [],
+  "notes": "Funded by Bupa Chile through the project 1000 Genomas Para Chile.",
+  "language": "eng"
+}

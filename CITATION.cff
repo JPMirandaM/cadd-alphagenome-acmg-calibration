@@ -1,21 +1,27 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite it as below. A DOI will be added at the first release."
-title: "Calibrated CADD v1.7 PHRED thresholds and genome-wide variant catalogue (GRCh38)"
+message: "If you use this code or these results, please cite them as below. The DOI will be added at the first archived release."
+title: "Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across reference sets, genes and populations (code and results)"
 type: software
 authors:
   - family-names: "Miranda"
     given-names: "Jose Patricio"
+    affiliation: "Dirección de Desarrollo Médico y Académico, Bupa Chile, Providencia, Chile"
+    email: "jose.miranda@bupa.cl"
 license: MIT
 repository-code: "https://github.com/JPMirandaM/cadd-v1.7-pp3-bp4-calibration"
-date-released: "2026-09-25"
-version: "0.1.0-dev"
+date-released: "2026-09-27"
+version: "1.0.0-submission"
 keywords:
   - CADD
+  - AlphaGenome
   - variant effect prediction
   - ACMG/AMP
   - PP3/BP4 calibration
+  - ClinGen
   - ClinVar
   - gnomAD
+  - MAVE
+  - Mexico City Prospective Study
 references:
   - type: article
     title: "Calibration of computational tools for missense variant pathogenicity classification and ClinGen recommendations for PP3/BP4 criteria"
