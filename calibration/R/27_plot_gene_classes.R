@@ -20,7 +20,9 @@ p <- ggplot(d, aes(class, threshold, colour = criterion, shape = criterion)) +
                                  "BP4 Supporting" = "#6E6E6E", "BP4 Moderate" = "#000000"), name = NULL) +
   labs(x = NULL, y = "Calibrated threshold (score)") +   # title and notes moved to the figure legend (2026-09-27)
   theme_bw(base_size = 9) + theme(legend.position = "bottom", panel.grid.minor = element_blank(),
-                                  strip.text.y = element_text(angle = 0), axis.text.x = element_text(size = 7))
+                                  strip.text.x = element_text(size = 12, face = "bold"), strip.text.y = element_text(angle = 0, size = 11),
+                                  axis.text.x = element_text(size = 9), axis.text.y = element_text(size = 9),
+                                  axis.title.y = element_text(size = 11), legend.text = element_text(size = 10))   # larger text for print (author, 2026-09-27)
 ggsave(paste0(a[2], ".png"), p, width = 10, height = 11, dpi = 300, device = ragg::agg_png)
 ggsave(paste0(a[2], ".pdf"), p, width = 10, height = 11, device = cairo_pdf)
 cat("Figure:", paste0(a[2], c(".png", ".pdf")), sep = "\n")
