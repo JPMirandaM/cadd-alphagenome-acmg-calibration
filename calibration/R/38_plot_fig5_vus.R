@@ -15,9 +15,9 @@ n_tool <- v[, .(n = sum(N)), by = tool]
 dark <- c("PP3 Strong", "PP3 Moderate", "BP4 Moderate", "BP4 Strong")
 v[, txt_col := fifelse(evidence %in% dark, "white", "black")]
 p <- ggplot(v, aes(pct, tool, fill = evidence)) + geom_col(width = 0.75) +
-  # percentages in segments >= 6% (author, 2026-09-27); all segments labelled (empty below 6%) so that the
+  # percentages in segments >= 3% (author, 2026-09-27; lowered from 6% so that PP3 strong is labelled); all segments labelled (empty below 3%) so that the
   # stacked labels align with the bars
-  geom_text(aes(label = ifelse(pct >= 6, round(pct), ""), colour = txt_col, group = evidence), position = position_stack(vjust = 0.5),
+  geom_text(aes(label = ifelse(pct >= 3, round(pct), ""), colour = txt_col, group = evidence), position = position_stack(vjust = 0.5),
             size = 2.4, show.legend = FALSE) + scale_colour_identity() +
   geom_text(data = n_tool, aes(x = 101, y = tool, label = paste0("n = ", format(n, big.mark = ","))), inherit.aes = FALSE, hjust = 0, size = 2.5) +
   scale_fill_manual(values = cols, name = NULL, breaks = sub("_", " ", lv)) +
