@@ -358,7 +358,12 @@ git push -u origin main   # run by the author (browser authentication via Git Cr
 # Per-variant .rds files (third-party scores, gnomAD-derived sets) are no longer versioned (git rm --cached;
 # files kept locally; .gitignore rule). They remain in earlier commits of the history. A mirror backup of the
 # repository was made (C:\cadd_git_backup_2026-09-27.git). git filter-branch failed (Git Bash fork error).
-# auxiliary\A15_rewrite_history_remove_rds.ps1 (plumbing-only rewrite) is prepared but NOT RUN: rewriting the
+# UPDATE 2026-09-27: A15 was RUN locally with the author's approval. The first pass removed nothing (git rm --cached
+# refused without -f in the temporary index); fixed and rerun: 0 .rds and 0 manuscript files remain in the 62
+# commits, and the analysis-plan-v1 commit keeps its original hash 3fe5c22 (it predates every removed file).
+# The cleaned history is pushed to a new public repository, not force-pushed over the private one.
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A15_rewrite_history_remove_rds.ps1
+# Original note: auxiliary\A15_rewrite_history_remove_rds.ps1 (plumbing-only rewrite) was prepared first; rewriting the
 # history requires the author's explicit authorization before the repository is made public.
 # The manuscript/ folder was also removed from version control (kept locally; the author makes the final edits
 # manually in Word) and was added to the A15 rewrite so that drafts do not appear in the public history.
