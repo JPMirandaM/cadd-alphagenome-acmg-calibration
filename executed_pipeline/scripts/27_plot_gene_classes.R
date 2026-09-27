@@ -15,10 +15,7 @@ p <- ggplot(d, aes(class, threshold, colour = criterion)) +
   facet_grid(tool ~ axis, scales = "free", space = "free_x") +
   scale_colour_manual(values = c("PP3 Moderate" = "#B2182B", "PP3 Supporting" = "#EF8A62",
                                  "BP4 Supporting" = "#67A9CF", "BP4 Moderate" = "#2166AC"), name = NULL) +
-  labs(x = NULL, y = "Calibrated threshold (score)",
-       title = "Calibrated PP3/BP4 thresholds by gene class",
-       caption = paste0("Points: one-sided 95% bootstrap bound (final threshold); bars: 2.5th-97.5th percentiles of 10,000 bootstrap thresholds.\n",
-                        "2026 ClinVar/gnomAD intersection sets restricted to the genes of each class; global prior 0.0441.")) +
+  labs(x = NULL, y = "Calibrated threshold (score)") +   # title and notes moved to the figure legend (2026-09-27)
   theme_bw(base_size = 9) + theme(legend.position = "bottom", panel.grid.minor = element_blank(),
                                   strip.text.y = element_text(angle = 0), axis.text.x = element_text(size = 7))
 ggsave(paste0(a[2], ".png"), p, width = 10, height = 11, dpi = 300, device = ragg::agg_png)

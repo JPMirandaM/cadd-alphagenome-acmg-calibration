@@ -16,9 +16,7 @@ p <- ggplot(l, aes(AUROC, gene, colour = tool, shape = tool)) +
   geom_vline(xintercept = 0.5, linetype = 2, colour = "grey60") + geom_point(size = 1.8, alpha = 0.9) +
   scale_colour_manual(values = pal, name = NULL) + scale_shape_manual(values = c(16, 17, 15, 18, 4), name = NULL) +
   scale_y_discrete(labels = setNames(lab$txt, as.character(lab$gene))) +
-  labs(x = "AUROC (functionally abnormal vs normal)", y = "Gene (abnormal/normal SNVs)",
-       title = "Discrimination of MAVE functional classes by gene",
-       caption = "MaveDB score sets with normal/abnormal functional classes; genes with >= 30 abnormal and >= 30 normal MANE missense SNVs; genes ordered by AVI AUROC.") +
+  labs(x = "AUROC (functionally abnormal vs normal)", y = "Gene (abnormal/normal SNVs)") +   # title and notes moved to the legend (2026-09-27)
   theme_bw(base_size = 9) + theme(legend.position = "bottom", panel.grid.minor = element_blank(), plot.caption = element_text(size = 7))
 ggsave(paste0(a[2], ".png"), p, width = 7.5, height = 8.5, dpi = 300, device = ragg::agg_png)
 ggsave(paste0(a[2], ".pdf"), p, width = 7.5, height = 8.5, device = cairo_pdf)

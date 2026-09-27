@@ -7,7 +7,7 @@
 # Usage: Rscript plot_posteriors.R <data_dir> <output_path_without_extension> "<title>"
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 
-plot_posteriors <- function(datadir, title, show_thresholds = TRUE) {
+plot_posteriors <- function(datadir, title, show_thresholds = TRUE, show_caption = FALSE) {
   cur <- fread(file.path(datadir, "posterior_curves.tsv"))
   lev <- fread(file.path(datadir, "posterior_levels.tsv"))
   thr <- fread(file.path(datadir, "thresholds.tsv"))
@@ -49,7 +49,8 @@ plot_posteriors <- function(datadir, title, show_thresholds = TRUE) {
     labs(x = "Score", y = "Posterior probability of benignity", title = paste(title, "- benign")) +
     base + guides(colour = guide_legend(nrow = 1, order = 1), linetype = guide_legend(nrow = 2, order = 2))
 
-  pp + pb + plot_annotation(caption = "Dashed vertical lines: final thresholds (one-sided 95% bootstrap confidence bound).")
+  # explanatory notes belong in the figure legend of the manuscript (2026-09-27); kept as an option
+  if (show_caption) pp + pb + plot_annotation(caption = "Dashed vertical lines: final thresholds (one-sided 95% bootstrap confidence bound).") else pp + pb
 }
 
 save_figure <- function(p, out, width = 11, height = 6) {
