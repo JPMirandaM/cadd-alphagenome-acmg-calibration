@@ -8,11 +8,11 @@
 # Usage: Rscript 37_plot_fig4_population.R <data_dir> <output_without_extension>
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 a <- commandArgs(trailingOnly = TRUE)
-pal <- c("CADD v1.7" = "#4D4D4D", "AVI" = "#1B9E77")
+pal <- c("CADD v1.7" = "#404040", "AVI" = "#C8C8C8")   # grayscale (author, 2026-09-27: colour figures incur a journal charge)
 g <- fread(file.path(a[1], "table_grpmax.tsv"))[PP3 == "Supporting+"]
 g[, tool := factor(tool, levels = c("CADD", "AVI"), labels = c("CADD v1.7", "AVI"))]
 ord <- g[, .(m = mean(pct)), by = grpmax][order(m), grpmax]; g[, grpmax := factor(grpmax, levels = ord)]
-pa <- ggplot(g, aes(pct, grpmax, fill = tool)) + geom_col(position = position_dodge(width = 0.8), width = 0.75) +
+pa <- ggplot(g, aes(pct, grpmax, fill = tool)) + geom_col(position = position_dodge(width = 0.8), width = 0.75, colour = "black", linewidth = 0.2) +
   scale_fill_manual(values = pal, name = NULL) +
   labs(x = "PP3-level variants common in >= 1 group (%)", y = "gnomAD group with highest AF") + theme_bw(base_size = 9) +
   theme(legend.position = "bottom", panel.grid.minor = element_blank())
@@ -24,7 +24,7 @@ m[, measure := factor(measure, levels = rev(c("v1", "v2", "v3", "v4")),
                       labels = rev(c("MCPS AF > 1%", "MCPS AF > 1%,\ngnomAD group max <= 1%",
                                      "Indigenous Mexican AF > 1%", "Indigenous Mexican AF > 1%,\ngnomAD group max <= 1%")))]
 m[, predictor := factor(predictor, levels = c("CADD", "AVI"), labels = c("CADD v1.7", "AVI"))]
-pb <- ggplot(m, aes(n, measure, fill = predictor)) + geom_col(position = position_dodge(width = 0.8), width = 0.75) +
+pb <- ggplot(m, aes(n, measure, fill = predictor)) + geom_col(position = position_dodge(width = 0.8), width = 0.75, colour = "black", linewidth = 0.2) +
   geom_text(aes(label = n), position = position_dodge(width = 0.8), hjust = -0.15, size = 2.5) +
   scale_fill_manual(values = pal, name = NULL) + scale_x_continuous(expand = expansion(mult = c(0, 0.15))) +
   labs(x = "PP3-level MANE missense SNVs", y = NULL) +
