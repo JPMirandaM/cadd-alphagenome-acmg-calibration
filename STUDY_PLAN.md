@@ -409,6 +409,14 @@ to a local sequencing cohort, which is not currently available (author, 2026-09-
 | Main article | *Genetics in Medicine* | *AJHG* (if the methodological findings, e.g. threshold drift, are strong); *Genome Medicine*; *HGG Advances* |
 | Resource article | *NAR Genomics and Bioinformatics* | *Human Mutation*; *NAR* Database issue (only with a maintained web portal) |
 
+Status (2026-09-27): main-article journal not yet decided (author's question). Genetics in Medicine
+vs AJHG to be decided after the MAVE (A13) and CADD v1.6 (A14) results: AJHG if the methodological
+findings (HGMD/reference-set dependence, drift with AVI as negative control, gene-class
+heterogeneity) are confirmed as the main message; Genetics in Medicine if the clinical threshold
+resource is the main message. Draft v1 follows the Genetics in Medicine structure provisionally.
+The title will be redefined at the same time to reflect the full scope of the work (author,
+2026-09-27); the draft title is a placeholder.
+
 ## Positioning (literature scan, 2026-09-25)
 
 | Work | What it covers | Gap left for this study |

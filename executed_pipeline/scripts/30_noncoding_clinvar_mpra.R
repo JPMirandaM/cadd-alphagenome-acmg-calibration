@@ -72,21 +72,35 @@ allc <- allc[!is.na(gene) & gene %chin% dg | class == "intergenic"]
 cat("ClinVar noncoding/synonymous reference SNVs (disease genes; intergenic kept for description):", nrow(allc), "\n")
 
 ## Scores (tabix) and gnomAD AF (VEP cache) -------------------------------------------------------
-lookup <- function(file, pref, d, col, round2 = FALSE) { sn <- seqnamesTabix(TabixFile(file))   # e.g. no MT in the CADD file
-  d <- d[paste0(pref, chrom) %chin% sn]
-  rbindlist(lapply(split(d, d$chrom), function(x) {
+# Lookups run per chromosome in 4 parallel workers; each chromosome's result is cached in out/tmp
+# so that an interrupted run resumes where it stopped (added after a 4-hour run was lost when the
+# session ended). Results are identical to the sequential version.
+tmpd <- file.path(out, "tmp"); dir.create(tmpd, showWarnings = FALSE)
+vep <- "C:/cadd/vep/homo_sapiens/116_GRCh38"
+vcols <- strsplit(sub("^variation_cols\t", "", grep("^variation_cols", readLines(file.path(vep, "info.txt")), value = TRUE)), ",")[[1]]
+lookup_chr <- function(file, pref, x, col, round2 = FALSE) {
   p <- sort(unique(x$pos)); grp <- cumsum(c(1L, diff(p) > 1L)); rg <- data.table(s = p, g = grp)[, .(start = min(s), end = max(s)), by = g]
   tf <- open(TabixFile(file)); on.exit(close(tf))
   r <- rbindlist(lapply(split(rg, ceiling(seq_len(nrow(rg)) / 5000)), function(b) {
     l <- unlist(scanTabix(tf, param = GenomicRanges::GRanges(paste0(pref, x$chrom[1]), IRanges::IRanges(b$start, b$end))), use.names = FALSE)
     if (!length(l)) return(NULL); fread(text = l, sep = "\t", header = FALSE, select = c(2, 3, 4, 6), col.names = c("pos", "ref", "alt", "sc"), nThread = 1) }))
-  if (round2) r[, sc := round(sc, 2)]; r[, chrom := x$chrom[1]]; setnames(r, "sc", col); r[x[, ..k], on = k, nomatch = NULL] })) }
-sc1 <- lookup("C:/cadd/data/whole_genome_SNVs.tsv.gz", "", allc, "CADD_PHRED")
-sc2 <- lookup("C:/cadd/avi/alphagenome_variant_impact_score_snvs.tsv.gz", "chr", allc, "AVI_PHRED", TRUE)
-allc <- merge(merge(allc, sc1, by = k, all.x = TRUE), sc2, by = k, all.x = TRUE)
-vep <- "C:/cadd/vep/homo_sapiens/116_GRCh38"
-vcols <- strsplit(sub("^variation_cols\t", "", grep("^variation_cols", readLines(file.path(vep, "info.txt")), value = TRUE)), ",")[[1]]
-af <- rbindlist(lapply(split(allc, allc$chrom), function(x) {
+  if (!nrow(r)) return(NULL)
+  if (round2) r[, sc := round(sc, 2)]; r[, chrom := x$chrom[1]]; setnames(r, "sc", col); r[x[, ..k], on = k, nomatch = NULL] }
+run_cached <- function(tag, d, fun) {
+  chs <- unique(d$chrom)
+  todo <- chs[!file.exists(file.path(tmpd, sprintf("%s_%s.rds", tag, chs)))]
+  if (length(todo)) {
+    cl <- parallel::makeCluster(4L); on.exit(parallel::stopCluster(cl))
+    parallel::clusterEvalQ(cl, suppressPackageStartupMessages({ library(data.table); library(Rsamtools) }))
+    parallel::clusterExport(cl, c("k", "vep", "vcols", "lookup_chr", "af_chr", "tmpd"), envir = globalenv())
+    parallel::clusterExport(cl, c("tag", "fun"), envir = environment())
+    parallel::parLapplyLB(cl, lapply(todo, function(ch) d[chrom == ch]), function(x) {
+      r <- fun(x); saveRDS(r, file.path(tmpd, sprintf("%s_%s.rds", tag, x$chrom[1]))); NULL })
+    cat(sprintf("%s: %d chromosomes computed (%s)\n", tag, length(todo), format(Sys.time(), "%H:%M")))
+  }
+  rbindlist(lapply(chs, function(ch) readRDS(file.path(tmpd, sprintf("%s_%s.rds", tag, ch)))), fill = TRUE)
+}
+af_chr <- function(x) {
   f <- file.path(vep, x$chrom[1], "all_vars.gz"); if (!file.exists(f)) return(NULL)
   p <- sort(unique(x$pos)); grp <- cumsum(c(1L, diff(p) > 1L))
   rg <- data.table(s = p, g = grp)[, .(start = min(s), end = max(s)), by = g]; tf <- open(TabixFile(f, index = paste0(f, ".csi"))); on.exit(close(tf))
@@ -98,7 +112,13 @@ af <- rbindlist(lapply(split(allc, allc$chrom), function(x) {
     lg <- rbindlist(lapply(c("gnomADe", "gnomADg"), function(kk) { y <- d[get(kk) != ".", .(pos = as.integer(start), allele_string, v = get(kk))]
       if (!nrow(y)) return(NULL); y <- y[, .(e = unlist(strsplit(v, ",", fixed = TRUE))), by = .(pos, allele_string)]
       y[, .(pos, ref = sub("/.*", "", allele_string), alt = sub(":.*", "", e), af = as.numeric(sub(".*:", "", e)))] }))
-    lg[, .(AF_max = max(af)), by = .(pos, ref, alt)][, chrom := x$chrom[1]] })) }))
+    lg[, .(AF_max = max(af)), by = .(pos, ref, alt)][, chrom := x$chrom[1]] })) }
+sn_cadd <- seqnamesTabix(TabixFile("C:/cadd/data/whole_genome_SNVs.tsv.gz"))                   # e.g. no MT in the CADD file
+sn_avi <- sub("^chr", "", seqnamesTabix(TabixFile("C:/cadd/avi/alphagenome_variant_impact_score_snvs.tsv.gz")))
+sc1 <- run_cached("cv_cadd", allc[chrom %chin% sn_cadd], function(x) lookup_chr("C:/cadd/data/whole_genome_SNVs.tsv.gz", "", x, "CADD_PHRED"))
+sc2 <- run_cached("cv_avi", allc[chrom %chin% sn_avi], function(x) lookup_chr("C:/cadd/avi/alphagenome_variant_impact_score_snvs.tsv.gz", "chr", x, "AVI_PHRED", TRUE))
+allc <- merge(merge(allc, sc1, by = k, all.x = TRUE), sc2, by = k, all.x = TRUE)
+af <- run_cached("cv_af", allc, af_chr)
 allc <- merge(allc, af[, .(AF_max = max(AF_max)), by = k], by = k, all.x = TRUE)[is.na(AF_max), AF_max := 0]
 allc <- allc[AF_max < 0.01 & !is.na(CADD_PHRED) & !is.na(AVI_PHRED)]
 saveRDS(allc, file.path(out, "clinvar_noncoding_reference.rds"))
@@ -134,7 +154,8 @@ fwrite(evalc, file.path(out, "evaluation_missense_thresholds_by_class.tsv"), sep
 m <- fread("C:/cadd/annot/mpra/elements.tsv.gz")[Release == "GRCh38" & Ref %chin% c("A", "C", "G", "T") & Alt %chin% c("A", "C", "G", "T")]
 m <- m[, .(chrom = as.character(Chrom), pos = Pos, ref = Ref, alt = Alt, Coefficient, pValue, Element)]
 m[, functional := as.integer(pValue < 1e-5 & abs(Coefficient) >= 0.1)]
-s1 <- lookup("C:/cadd/data/whole_genome_SNVs.tsv.gz", "", m, "CADD_PHRED"); s2 <- lookup("C:/cadd/avi/alphagenome_variant_impact_score_snvs.tsv.gz", "chr", m, "AVI_PHRED", TRUE)
+s1 <- run_cached("mpra_cadd", m[chrom %chin% sn_cadd], function(x) lookup_chr("C:/cadd/data/whole_genome_SNVs.tsv.gz", "", x, "CADD_PHRED"))
+s2 <- run_cached("mpra_avi", m[chrom %chin% sn_avi], function(x) lookup_chr("C:/cadd/avi/alphagenome_variant_impact_score_snvs.tsv.gz", "chr", x, "AVI_PHRED", TRUE))
 m <- merge(merge(m, s1, by = k, all.x = TRUE), s2, by = k, all.x = TRUE)[!is.na(CADD_PHRED) & !is.na(AVI_PHRED)]
 saveRDS(m, file.path(out, "mpra_scored.rds"))
 mres <- rbind(data.table(Element = "ALL", n = nrow(m), functional = sum(m$functional), CADD_AUROC = auroc(m$CADD_PHRED, m$functional), AVI_AUROC = auroc(m$AVI_PHRED, m$functional)),
