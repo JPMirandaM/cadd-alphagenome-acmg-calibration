@@ -351,6 +351,60 @@ partly reflect paralogous sequence variation or mapping artefacts in gnomAD rath
 pathogenic variation — a caution for users of the catalogue; large genes (TTN, HSPG2, OBSCN, NEB,
 dyneins) contribute by size.
 
+## R13. Noncoding and synonymous variants (Aim 9; amendments A10, A11)
+
+ClinVar 2026-09-23 SNVs with ≥ 1 star outside MANE Select CDS: 517,556; after region assignment,
+plan-v1 rules (rare, disease genes) and scoring: 1,123,855 noncoding/synonymous reference SNVs
+(script `30_noncoding_clinvar_mpra.R`; `calibration/results/v17_avi/noncoding/`). Execution notes:
+run 3 was lost when the session ended after > 4 h of sequential lookups; run 4 failed at the MPRA
+join (SNVs tested in more than one element); both fixed (cached parallel lookups; deduplicated join).
+
+Reference variants per class (P/LP / B/LB): canonical splice 40,194 / 135; intronic splice region
+(±3–8) 2,392 / 68,917; 5′UTR 126 / 3,915; 3′UTR 54 / 10,337; near-intronic (9–50) 635 / 241,278;
+deep intronic 810 / 25,431; upstream ≤ 5 kb 169 / 2,238; downstream ≤ 5 kb 104 / 657; intergenic
+157 / 2,414; synonymous exon-edge 435 / 10,981; other synonymous 295 / 609,779. Only the intronic
+splice region met the A10 criterion for calibration (≥ 1,000 of each).
+
+**Calibration of the intronic splice region (A10; script `30b`; one seed, B = 10,000).** gnomAD set:
+175,221 rare SNVs observed in gnomAD at splice-region intronic positions (709,506 candidate
+positions in the 3,703 reference genes), absent from ClinVar.
+
+| Predictor | PP3 Sup | PP3 Mod | PP3 Strong | BP4 Sup | BP4 Mod | BP4 Strong |
+|---|---|---|---|---|---|---|
+| CADD v1.7 (splice region) | ≥ 15.45 | ≥ 17.36 | ≥ 20.10 | ≤ 11.52 | ≤ 6.94 | not reached (31.6% of replicates fail) |
+| CADD v1.7 (missense, R1) | ≥ 25.6 | ≥ 28.0 | not reached | ≤ 22.6 | ≤ 19.59 | ≤ 8.34 |
+| AVI (splice region) | ≥ 21.30 | ≥ 22.44 | ≥ 24.09 | ≤ 17.50 | ≤ 14.01 | ≤ 0.11 (sparse region) |
+| AVI (missense, R1) | ≥ 25.18 | ≥ 26.44 | not reached | ≤ 22.95 | ≤ 20.52 | ≤ 9.15 |
+
+Both predictors reached PP3 strong in the splice region, with thresholds ~5–10 units lower than for
+missense variants. Caveat (declared in A10): the missense prior (0.0441) was used; the true prior in
+this region likely differs.
+
+**Missense thresholds applied to other classes (interval LRs, 1,000 bootstrap replicates;
+`evaluation_missense_thresholds_by_class.tsv`).** PP3 intervals met the required LR in almost every
+class where they contained variants (e.g. near-intronic AVI PP3 moderate LR 717; deep intronic CADD
+421), but captured few P/LP variants. BP4 intervals, by contrast, failed in almost every noncoding
+class, and the BP4 supporting interval had LR > 1 — i.e. was enriched for P/LP variants — in most
+classes (near-intronic AVI 15.8, CADD 12.0; splice region CADD 59.9; deep intronic AVI 8.8, CADD 7.5;
+other synonymous CADD 204). Pathogenic noncoding variants score lower than pathogenic missense
+variants, so missense BP4 thresholds would give false benign evidence outside missense variation.
+Canonical splice variants (40,194 P/LP, 135 B/LB) could not be evaluated meaningfully.
+
+**Discrimination (AUROC, P/LP vs B/LB) by class, AVI vs CADD:** splice region 0.991 vs 0.962;
+synonymous exon-edge 0.984 vs 0.978; near-intronic 0.956 vs 0.779; deep intronic 0.908 vs 0.834;
+3′UTR 0.880 vs 0.837; upstream 0.874 vs 0.805; other synonymous 0.835 vs 0.781; 5′UTR 0.696 vs 0.659;
+canonical splice 0.638 vs 0.596; intergenic 0.958 vs 0.944; downstream 0.942 vs 0.961.
+
+**MPRA (Kircher et al. 2019; 39,170 SNVs in 20 elements/conditions, 6,684 functional).** AUROC AVI
+0.679 vs CADD 0.565; difference 0.114 [95% CI 0.108–0.120]; AVI higher in 23 of 28 element conditions
+with enough variants (e.g. PKLR 0.81–0.83 vs 0.64–0.66, MSMB 0.76 vs 0.54, HBB 0.79 vs 0.64);
+both near 0.5 or below for SORT1 and BCL11A.
+
+Interpretation (provisional): outside missense variants, AVI is consistently more informative than
+CADD; missense-calibrated thresholds must not be used for BP4 in noncoding classes, while class-
+specific calibration (feasible for the splice region) yields much lower PP3 thresholds, including
+PP3 strong.
+
 ## R14. Mexico City Prospective Study frequencies (Aim 8 extension; amendment A12(a))
 
 Data: RGC-MCPS allele-frequency VCFs (release 20230130; ~140,000 adults; frequencies overall and

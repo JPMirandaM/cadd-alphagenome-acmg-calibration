@@ -1,0 +1,9 @@
+tool	level	PP3_splice_region	BP4_splice_region	PP3_missense	BP4_missense
+AVI	Moderate	22.44	14.01	26.44	20.52
+AVI	Strong	24.09	0.11		9.15
+AVI	Supporting	21.3	17.5	25.18	22.95
+AVI	VeryStrong				
+CADD	Moderate	17.36	6.943	28	19.59
+CADD	Strong	20.1			8.341
+CADD	Supporting	15.45	11.52	25.6	22.6
+CADD	VeryStrong				
