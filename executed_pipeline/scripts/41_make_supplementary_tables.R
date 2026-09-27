@@ -1,6 +1,6 @@
-# Supplementary Tables S1-S15 of the manuscript, assembled from the analysis outputs.
+# Supplementary Tables S1-S16 of the manuscript, assembled from the analysis outputs.
 # Each table is written as TSV to figures/data/SupplementaryTables/ and all of them, with a
-# "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S15.xlsx.
+# "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S16.xlsx.
 # No new computation: values are copied (and rounded for display) from calibration/results/.
 # Usage: Rscript 41_make_supplementary_tables.R
 suppressPackageStartupMessages({ library(data.table); library(openxlsx) })
@@ -107,6 +107,33 @@ add("S15", "CADD v1.6 versus v1.7 on identical reference data",
     rbind(rd(cd, "thresholds_median.tsv")[, block := "thresholds"], rd(cd, "discrimination.tsv")[, block := "discrimination"],
           rd(cd, "evidence_changes.tsv")[, block := "evidence level changes"], rd(cd, "evidence_crosstab.tsv")[, block := "cross-tabulation (y = 1 P/LP, 0 B/LB)"], fill = TRUE))
 
+## S16 analysis plan and amendments -----------------------------------------------------------------
+add("S16", "Prespecified analysis plan and dated amendments",
+    "The analysis plan was fixed on 25 September 2026 before any CADD v1.7 or AVI calibration result and tagged in the version-controlled repository (analysis-plan-v1). Each later analysis was specified in a dated amendment committed before it was run. The last column states whether the amendment was motivated by results already seen. Post hoc analyses that were not specified in any amendment are listed at the end.",
+    data.table(
+      Item = c(sprintf("Amendment %d", 1:14), "Post hoc", "Post hoc"),
+      Date = c(rep("2026-09-25", 6), rep("2026-09-26", 5), rep("2026-09-27", 3), "2026-09-26", "2026-09-27"),
+      Analysis = c("Paired bootstrap comparison of AUROC and AUPRC between AVI and CADD v1.7",
+                   "Temporal hold-out validation (calibration on ClinVar 2024-01-27, test on later variants)",
+                   "Calibration of REVEL, BayesDel and AlphaMissense on the five-predictor intersection",
+                   "Population frequency and ancestry of PP3-level variants in gnomAD v4.1",
+                   "Computational evidence for ClinVar missense variants of uncertain significance",
+                   "Threshold drift across ClinVar releases and before/after November 2022 (AVI as negative control)",
+                   "Exclusion of HGMD Public positions from the 2019 and 2026 reference sets",
+                   "Calibration by gene class (constraint, inheritance, mechanism)",
+                   "Genome-wide catalogue of SNVs at PP3 levels",
+                   "Noncoding variants (ClinVar region classes, calibration of classes with enough variants, MPRA)",
+                   "SpliceVarDB analysis deferred to a later study (database not reachable)",
+                   "Population frequencies in the Mexico City Prospective Study and TOPMed BRAVO",
+                   "Validation with MAVE functional classes from MaveDB",
+                   "CADD v1.6 versus v1.7 on identical reference data",
+                   "Drift thresholds expressed on a common scale (percentage of gnomAD variants meeting each threshold)",
+                   "Source of MCPS genotypes (array, exome or genome) for variants with frequency conflicts"),
+      Timing = c("after the main results", rep("before running", 4), "before running; motivated by the comparator results",
+                 "before running; motivated by the drift results", rep("before running", 3), "scope change before running",
+                 "before any MCPS or BRAVO result", "before any MAVE score was downloaded", "before any CADD v1.6 score was read",
+                 "post hoc", "post hoc")))
+
 ## Write -------------------------------------------------------------------------------------------
 wb <- createWorkbook(); hs <- createStyle(textDecoration = "bold")
 contents <- rbindlist(meta)
@@ -120,6 +147,6 @@ for (id in names(tabs)) {
   fwrite(d, file.path(out_dir, sprintf("Table%s.tsv", id)), sep = "\t")
 }
 fwrite(contents, file.path(out_dir, "contents.tsv"), sep = "\t")
-saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S15.xlsx"), overwrite = TRUE)
-cat("Written", length(tabs), "tables:", file.path(F, "Supplementary_Tables_S1-S15.xlsx"), "\n")
+saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S16.xlsx"), overwrite = TRUE)
+cat("Written", length(tabs), "tables:", file.path(F, "Supplementary_Tables_S1-S16.xlsx"), "\n")
 print(contents[, .(Table, Title, rows = vapply(tabs, nrow, 0L))])
