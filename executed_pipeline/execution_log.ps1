@@ -368,3 +368,10 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\auxiliary\A15_
 # The manuscript/ folder was also removed from version control (kept locally; the author makes the final edits
 # manually in Word) and was added to the A15 rewrite so that drafts do not appear in the public history.
 # -------------------------------------------------------------------------------------
+# New repository for the cleaned history [2026-09-27] (created by the author, private until the medRxiv preprint)
+# The old private repository is kept as remote "old-private" until the author deletes it.
+git remote rename origin old-private
+git remote add origin https://github.com/JPMirandaM/cadd-alphagenome-acmg-calibration.git
+git push -u origin main; git push origin analysis-plan-v1
+# CITATION.cff repository-code updated to the new URL.
+# -------------------------------------------------------------------------------------

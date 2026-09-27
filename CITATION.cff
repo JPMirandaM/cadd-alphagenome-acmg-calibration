@@ -8,7 +8,7 @@ authors:
     affiliation: "Dirección de Desarrollo Médico y Académico, Bupa Chile, Providencia, Chile"
     email: "jose.miranda@bupa.cl"
 license: MIT
-repository-code: "https://github.com/JPMirandaM/cadd-v1.7-pp3-bp4-calibration"
+repository-code: "https://github.com/JPMirandaM/cadd-alphagenome-acmg-calibration"
 date-released: "2026-09-27"
 version: "1.0.0-submission"
 keywords:
