@@ -273,6 +273,8 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\31_download_mc
 & $R .\scripts\36_plot_fig3_comparators.R C:/cadd/figures/data/Fig3_comparators C:/cadd/figures/Fig3_comparators
 & $R .\scripts\37_plot_fig4_population.R C:/cadd/figures/data/Fig4_population C:/cadd/figures/Fig4_population
 & $R .\scripts\38_plot_fig5_vus.R C:/cadd/figures/data/Fig5_vus C:/cadd/figures/Fig5_vus
+# Tables 1-2 (TSV + Word, landscape); source tables copied into figures\data\Table1_thresholds and Table2_mave:
+& $R .\scripts\39_make_tables_1_2.R C:/cadd/figures
 # Step 19 Aim 2b CADD v1.6 vs v1.7 (amendment A14) [2026-09-27]
 & $R .\scripts\35a_cadd16_byte_ranges.R 20000          # tabix linear index -> 6,419 byte ranges (9.38 GB); also run with 2000 and 200000 to compare volumes
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\35b_download_cadd16_ranges.ps1   # 8 curl processes; interrupted by the session end, resumed; all ranges length-verified
