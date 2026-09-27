@@ -1,0 +1,15 @@
+List of 14
+ $ alpha            : num 0.0441
+ $ c                : num 1124
+ $ B                : int 10000
+ $ seed             : int 20260925
+ $ workers          : int 6
+ $ cluster_bootstrap: logi FALSE
+ $ minpoints        : num 100
+ $ gft              : num 0.03
+ $ increment        : num 0.1
+ $ n_plp            : int 2392
+ $ n_blb            : int 68917
+ $ n_gnomad         : int 175221
+ $ w                : num 0.752
+ $ implementation   : chr "pejaver_port_fast.R"

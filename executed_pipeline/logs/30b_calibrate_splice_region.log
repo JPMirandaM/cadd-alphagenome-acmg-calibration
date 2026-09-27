@@ -1,0 +1,51 @@
+﻿ClinVar splice-region intronic reference: 2392 P/LP, 68917 B/LB, 3703 genes
+Candidate splice-region intronic positions in the reference genes: 709506 
+Rare gnomAD SNVs at splice-region intronic positions, absent from ClinVar: 175221 
+gnomAD set with both scores: 175221 
+CADD calibrated in 5.4 min
+AVI calibrated in 4.5 min
+
+== Splice-region intronic thresholds (one seed) ==
+     tool      level PP3_point PP3_discounted BP4_point BP4_discounted
+   <char>     <char>     <num>          <num>     <num>          <num>
+1:   CADD VeryStrong        NA             NA        NA             NA
+2:   CADD     Strong     19.80          20.10     0.004             NA
+3:   CADD   Moderate     16.71          17.36     8.768          6.943
+4:   CADD Supporting     15.27          15.45    12.660         11.520
+5:    AVI VeryStrong     47.35             NA        NA             NA
+6:    AVI     Strong     23.91          24.09     8.290          0.110
+7:    AVI   Moderate     22.20          22.44    16.610         14.010
+8:    AVI Supporting     21.00          21.30    18.350         17.500
+   PP3_boot_NA_frac BP4_boot_NA_frac
+              <num>            <num>
+1:           1.0000           0.8644
+2:           0.0000           0.3159
+3:           0.0000           0.0000
+4:           0.0000           0.0000
+5:           0.3579           0.6289
+6:           0.0000           0.0103
+7:           0.0000           0.0000
+8:           0.0000           0.0000
+
+== Comparison with missense thresholds ==
+Key: <tool, level>
+     tool      level PP3_splice_region BP4_splice_region PP3_missense
+   <char>     <char>             <num>             <num>        <num>
+1:    AVI   Moderate             22.44            14.010        26.44
+2:    AVI     Strong             24.09             0.110           NA
+3:    AVI Supporting             21.30            17.500        25.18
+4:    AVI VeryStrong                NA                NA           NA
+5:   CADD   Moderate             17.36             6.943        28.00
+6:   CADD     Strong             20.10                NA           NA
+7:   CADD Supporting             15.45            11.520        25.60
+8:   CADD VeryStrong                NA                NA           NA
+   BP4_missense
+          <num>
+1:       20.520
+2:        9.150
+3:       22.950
+4:           NA
+5:       19.590
+6:        8.341
+7:       22.600
+8:           NA

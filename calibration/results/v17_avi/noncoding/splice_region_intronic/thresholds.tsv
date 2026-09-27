@@ -1,0 +1,9 @@
+tool	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac
+CADD	VeryStrong					1	0.8644
+CADD	Strong	19.8	20.1	0.004		0	0.3159
+CADD	Moderate	16.71	17.36	8.768	6.943	0	0
+CADD	Supporting	15.27	15.45	12.66	11.52	0	0
+AVI	VeryStrong	47.35				0.3579	0.6289
+AVI	Strong	23.91	24.09	8.29	0.11	0	0.0103
+AVI	Moderate	22.2	22.44	16.61	14.01	0	0
+AVI	Supporting	21	21.3	18.35	17.5	0	0
