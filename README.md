@@ -1,8 +1,12 @@
-# CADD v1.7 calibrated-threshold variant set (GRCh38)
+# Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across reference sets, genes and populations
 
-Selection of GRCh38 SNVs above a CADD v1.7 PHRED threshold calibrated with the method of
-Pejaver et al. (2022) on current ClinVar/gnomAD data, annotated with gene, ClinVar and gnomAD.
-Runs natively on Windows (R 4.4.2 + Rsamtools); no WSL/Linux required.
+Pre-registered ClinGen (Pejaver et al. 2022) calibration of CADD v1.7 and the AlphaGenome Variant
+Impact (AVI) score for PP3/BP4 evidence, with comparison against REVEL, BayesDel and AlphaMissense,
+temporal hold-out, reference-set dependence (ClinVar release series, HGMD exclusion), MAVE
+validation (MaveDB), gene-class calibration, VUS evidence yield, population frequencies (gnomAD
+v4.1, Mexico City Prospective Study, TOPMed BRAVO) and a genome-wide catalogue of SNVs at PP3 levels
+(GRCh38). Target journal for the main article: *The American Journal of Human Genetics*. Runs
+natively on Windows (R 4.4.2 + Rsamtools); no WSL/Linux required.
 
 ## Directory map
 
@@ -10,6 +14,7 @@ Runs natively on Windows (R 4.4.2 + Rsamtools); no WSL/Linux required.
 |---|---|
 | `METHODS.md` | Publication-style methods, figure index, references and process log (appendix) |
 | `STUDY_PLAN.md` | Aims 1–4, future proposal (Aim 5), positioning against the literature |
+| `manuscript/` | Manuscript drafts (v2: full AJHG draft, Markdown + Word) and abstract drafts |
 | `LICENSE`, `THIRD_PARTY_NOTICES.md`, `CITATION.cff` | MIT license (code), notice for code derived from Pejaver et al. (MIT), how to cite |
 | `executed_pipeline/execution_log.ps1` | Every command, in the order run, with status and date |
 | `executed_pipeline/scripts/` | Frozen copies of the scripts exactly as executed (`01`–`06` main pipeline) |
