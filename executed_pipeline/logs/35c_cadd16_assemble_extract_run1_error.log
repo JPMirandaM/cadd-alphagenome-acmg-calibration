@@ -1,0 +1,14 @@
+﻿BGZF blocks kept: 444093 | truncated trailing blocks dropped: 6410 | file GB: 9.36 
+Rscript.exe : [E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+En línea: 1 Carácter: 407
++ ... ts\ -Force; & 'C:\Program Files\R\R-4.4.2\bin\Rscript.exe' C:\cadd\ex ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([E::get_intv] F...-p [type] used?:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+The offending line was: "	G	3.850212	26.1"
+[E::hts_idx_push] Unsorted positions on sequence #1: 2000957 followed by 2061
+Error en value[[3L]](cond): index build failed
+  file: C:/cadd/data/cadd16/cadd16_refset_subset.tsv.gz
+Calls: indexTabix ... tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+Ejecución interrumpida

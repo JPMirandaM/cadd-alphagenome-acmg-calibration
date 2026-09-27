@@ -36,3 +36,111 @@ Candidate score sets (normal + abnormal classes, mapping not failed): 89
 [27/89] urn:mavedb:00000665-a-1 PAX6: ok
 [28/89] urn:mavedb:00000665-d-1 PAX6: ok
 [29/89] urn:mavedb:00000665-c-1 PAX6: ok
+[30/89] urn:mavedb:00000665-b-1 PAX6: ok
+[31/89] urn:mavedb:00001277-a-1 TP53: ok
+[32/89] urn:mavedb:00001226-a-1 CARD11: ok
+[33/89] urn:mavedb:00001226-b-1 CARD11: ok
+[34/89] urn:mavedb:00001200-d-1 F9: ok
+[35/89] urn:mavedb:00001200-b-1 F9: ok
+[36/89] urn:mavedb:00001200-c-1 F9: ok
+[37/89] urn:mavedb:00001200-e-1 F9: ok
+[38/89] urn:mavedb:00001200-a-1 F9: ok
+[39/89] urn:mavedb:00001200-0-1 F9: ok
+[40/89] urn:mavedb:00000112-a-1 OTC: ok
+[41/89] urn:mavedb:00001266-0-1 G6PD: ok
+[42/89] urn:mavedb:00001266-b-1 G6PD: ok
+[43/89] urn:mavedb:00000096-a-1 GCK: ok
+[44/89] urn:mavedb:00001268-0-1 BRCA2: ok
+[45/89] urn:mavedb:00001222-a-2 BRCA1: ok
+[46/89] urn:mavedb:00001198-a-1 JAG1: ok
+[47/89] urn:mavedb:00001216-a-1 KCNH2: ok
+[48/89] urn:mavedb:00000097-0-2 BRCA1: ok
+[49/89] urn:mavedb:00000108-0-1 HMBS: ok
+[50/89] urn:mavedb:00000108-b-1 HMBS: ok
+[51/89] urn:mavedb:00000108-a-1 HMBS: ok
+[52/89] urn:mavedb:00000050-a-1 MSH2: ok
+[53/89] urn:mavedb:00001222-b-2 BRCA1: ok
+[54/89] urn:mavedb:00000068-a-1 TP53: ok
+[55/89] urn:mavedb:00000068-c-1 TP53: ok
+[56/89] urn:mavedb:00000068-b-1 TP53: ok
+[57/89] urn:mavedb:00000663-a-1 NDUFAF6: ok
+[58/89] urn:mavedb:00001235-a-1 TP53: ok
+[59/89] urn:mavedb:00000094-a-3 KCNQ4: ok
+[60/89] urn:mavedb:00000094-a-2 KCNQ4: ok
+[61/89] urn:mavedb:00000054-a-1 PTEN: ok
+[62/89] urn:mavedb:00000013-a-1 PTEN: ok
+[63/89] urn:mavedb:00000673-0-1 RAD51C: ok
+[64/89] urn:mavedb:00000099-a-1 RHO: ok
+[65/89] urn:mavedb:00001262-a-3 CTCF: ok
+[66/89] urn:mavedb:00001259-a-2 PALB2: ok
+[67/89] urn:mavedb:00001260-a-2 RAD51D: ok
+[68/89] urn:mavedb:00001265-a-2 SFPQ: ok
+[69/89] urn:mavedb:00000675-a-1 VHL: ok
+[70/89] urn:mavedb:00001264-a-2 XRCC2: ok
+[71/89] urn:mavedb:00001228-a-1 DDX3X: ok
+[72/89] urn:mavedb:00001256-a-12 FGFR1: ok
+[73/89] urn:mavedb:00001256-a-9 FGFR2: ok
+[74/89] urn:mavedb:00001256-a-6 FGFR4: ok
+[75/89] urn:mavedb:00001256-a-8 FGFR4: ok
+[76/89] urn:mavedb:00001256-a-7 FGFR2: ok
+[77/89] urn:mavedb:00001256-a-5 FGFR3: ok
+[78/89] urn:mavedb:00001256-a-1 FGFR2: ok
+[79/89] urn:mavedb:00001256-a-10 FGFR1: ok
+[80/89] urn:mavedb:00001256-a-4 FGFR1: ok
+[81/89] urn:mavedb:00001256-a-3 FGFR3: ok
+[82/89] urn:mavedb:00001256-a-11 FGFR4: ok
+[83/89] urn:mavedb:00001256-a-2 FGFR3: ok
+[84/89] urn:mavedb:00000098-a-2 SCN5A: ok
+[85/89] urn:mavedb:00001268-c-1 BRCA2: ok
+[86/89] urn:mavedb:00001268-a-1 BRCA2: ok
+[87/89] urn:mavedb:00001242-a-1 BRCA2: ok
+[88/89] urn:mavedb:00000068-0-1 TP53: ok
+[89/89] urn:mavedb:00001251-a-1 TPK1: ok
+MANE missense SNVs in MAVE genes: 184925 
+Protein-level score sets dropped (< 90% MANE match): 0 
+Classified MANE missense SNVs: 98413 | discordant across sets (excluded): 5259 
+   status     N
+   <char> <int>
+1:     ok    89
+       gene     n abnormal normal
+     <char> <int>    <int>  <int>
+ 1:   KCNH2  7078     1937   5141
+ 2:    MSH2  5862      415   5447
+ 3:   PALB2  5814      444   5370
+ 4:  LARGE1  4993     1112   3881
+ 5:    BAP1  4504      994   3510
+ 6:   DDX3X  4259      660   3599
+ 7:   BRCA2  4237      702   3535
+ 8:   KCNQ4  3763      562   3201
+ 9:   CHEK2  3186      619   2567
+10:    CTCF  3173      450   2723
+11:    FKRP  3126     1275   1851
+12:    G6PD  2575      638   1937
+13:    SFPQ  2544      266   2278
+14:  RAD51C  2376      634   1742
+15:      F9  2345      662   1683
+16:     GCK  2276     1474    802
+17:    JAG1  2191      439   1752
+18:    SGCB  2135      425   1710
+19:   BRCA1  2080      428   1652
+20:    ASPA  1975      384   1591
+21:    HMBS  1926      598   1328
+22:   FGFR1  1901       28   1873
+23:   FGFR4  1884      100   1784
+24:    PTEN  1840      497   1343
+25:  RAD51D  1819      227   1592
+26:   FGFR3  1811       15   1796
+27:   FGFR2  1674       48   1626
+28:   XRCC2  1668      170   1498
+29:    TP53  1657      322   1335
+30:     CRX  1615      422   1193
+31:     VHL   981      228    753
+32:    PAX6   838      313    525
+33:    TPK1   802      491    311
+34:     OTC   777      452    325
+35: NDUFAF6   534      247    287
+36:   KCNE1   455      118    337
+37:  CARD11   273       16    257
+38:     RHO   146       93     53
+39:   SCN5A    61       31     30
+       gene     n abnormal normal

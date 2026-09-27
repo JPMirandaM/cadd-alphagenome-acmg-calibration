@@ -63,3 +63,12 @@ catalogue contains CADD and AVI scores). **[VERIFY each licence before deposit.]
 | MaveDB score sets and calibrations | Aim 3 | per score set: CC0, CC BY 4.0, CC BY-SA 4.0 or CC BY-NC-SA 4.0 (listed in `calibration/results/v17_avi/mave/mavedb_human_scoreset_inventory.tsv`) | MaveDB (Rubin et al. 2025) and the primary publication of each score set |
 | Kircher et al. 2019 saturation mutagenesis MPRA | Aim 9 | per repository licence [VERIFY] | Kircher et al. *Nat Commun* 2019 |
 | gnomAD constraint, GenCC, ClinGen validity/dosage, Gene2Phenotype | Aim 1 | open (see `annot/genes/download_provenance.tsv`) | respective resources |
+
+**Before making the repository public [TO DO]:** the following versioned result files contain
+per-variant third-party scores (CADD, AVI, and in some files REVEL/BayesDel/AlphaMissense) and must
+be reviewed against the licences above (removed from history or replaced by identifiers only if
+redistribution is not allowed): `calibration/results/cadd16_reproduction_B10000/full_result.rds`,
+`calibration/results/v17_avi/ancestry/pp3_level_missense_observed_in_gnomad.rds`,
+`calibration/results/v17_avi/release_series/refsets_r2019.rds`, `refsets_r2022.rds`,
+`calibration/results/v17_avi/temporal_holdout/refsets_2024.rds`, `test_set.rds`,
+`calibration/results/v17_avi/vus/vus_scores.rds`.

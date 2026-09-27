@@ -32,3 +32,6 @@
 .Rproj.user/
 Thumbs.db
 desktop.ini
+
+# Per-chromosome lookup caches (contain third-party scores)
+/calibration/results/v17_avi/noncoding/tmp/

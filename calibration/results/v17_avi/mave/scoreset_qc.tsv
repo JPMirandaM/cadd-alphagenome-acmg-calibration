@@ -1,55 +1,55 @@
 urn	gene	status	calibration	calibration_rule	mapping	n_scored	n_normal	n_abnormal	n_mapped_classified	match_rate
-urn:mavedb:00000013-a-1	PTEN	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	4409	0	0	4252	0.321260583254939
-urn:mavedb:00000050-a-1		download failed								
+urn:mavedb:00000013-a-1	PTEN	ok	Investigator-provided functional classes	investigator-provided	protein	4409	2493	1915	4252	0.997222222222222
+urn:mavedb:00000050-a-1	MSH2	ok	Investigator-provided functional classes	investigator-provided	protein	17746	14973	1776	16749	0.998929336188437
 urn:mavedb:00000054-a-1	PTEN	ok	Investigator-provided functional classes	investigator-provided	genomic	8681	5188	1942	1066	
-urn:mavedb:00000068-0-1	TP53	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	8258	5254	2301	7198	0.290358432898027
-urn:mavedb:00000068-a-1	TP53	dropped: < 90% MANE match	ExCALIBR calibration (ClinVar 2018)	first (research-use-only)	protein	8274	5639	1626	6915	0.280115690527838
-urn:mavedb:00000068-b-1	TP53	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	8274	4592	2740	6987	0.293258909403177
-urn:mavedb:00000068-c-1	TP53	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	8274	5392	2412	7439	0.29170587444549
-urn:mavedb:00000094-a-2	KCNQ4	ok	Investigator-provided functional classes	investigator-provided	protein	4085	3128	665	3793	0.998418138676509
-urn:mavedb:00000094-a-3	KCNQ4	ok	Investigator-provided functional classes	investigator-provided	protein	3319	3040	279	3319	0.99879481771618
-urn:mavedb:00000096-a-1	GCK	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	9362	2292	5153	7193	0.284026136521618
+urn:mavedb:00000068-0-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	8258	5254	2301	7198	0.997455470737913
+urn:mavedb:00000068-a-1	TP53	ok	ExCALIBR calibration (ClinVar 2018)	first (research-use-only)	protein	8274	5639	1626	6915	0.997455470737913
+urn:mavedb:00000068-b-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	8274	4592	2740	6987	0.997455470737913
+urn:mavedb:00000068-c-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	8274	5392	2412	7439	0.997455470737913
+urn:mavedb:00000094-a-2	KCNQ4	ok	Investigator-provided functional classes	investigator-provided	protein	4085	3128	665	3793	0.998550724637681
+urn:mavedb:00000094-a-3	KCNQ4	ok	Investigator-provided functional classes	investigator-provided	protein	3319	3040	279	3319	0.998498498498498
+urn:mavedb:00000096-a-1	GCK	ok	Investigator-provided functional classes	investigator-provided	protein	9362	2292	5153	7193	1
 urn:mavedb:00000097-0-2	BRCA1	ok	Investigator-provided functional classes	investigator-provided	genomic	3893	2821	823	2674	
-urn:mavedb:00000098-a-2	SCN5A	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	252	0	0	236	0.283898305084746
-urn:mavedb:00000099-a-1	RHO	ok	Investigator-provided functional classes	investigator-provided	genomic	211	0	0	188	
-urn:mavedb:00000108-0-1	HMBS	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	6590	2980	2875	5561	0.30785829886711
-urn:mavedb:00000108-a-1	HMBS	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	6044	2124	2296	4175	0.296526946107784
-urn:mavedb:00000108-b-1	HMBS	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	6486	2577	2243	4560	0.30109649122807
+urn:mavedb:00000098-a-2	SCN5A	ok	Investigator-provided functional classes	investigator-provided	protein	252	110	84	182	1
+urn:mavedb:00000099-a-1	RHO	ok	Investigator-provided functional classes	investigator-provided	genomic	211	79	112	169	
+urn:mavedb:00000108-0-1	HMBS	ok	ExCALIBR calibration	first (research-use-only)	protein	6590	2980	2875	5561	1
+urn:mavedb:00000108-a-1	HMBS	ok	ExCALIBR calibration	first (research-use-only)	protein	6044	2124	2296	4175	1
+urn:mavedb:00000108-b-1	HMBS	ok	ExCALIBR calibration	first (research-use-only)	protein	6486	2577	2243	4560	1
 urn:mavedb:00000112-a-1	OTC	ok	Investigator-provided functional classes	investigator-provided	protein	1570	276	430	706	1
-urn:mavedb:00000657-b-1	ASPA	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	6156	4312	1535	5846	0.301744782757441
-urn:mavedb:00000658-0-1	DDX3X	ok	Investigator-provided functional classes	investigator-provided	genomic	9079	0	0	6087	
-urn:mavedb:00000659-a-1	SGCB	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	6327	4690	1594	5980	0.31438127090301
-urn:mavedb:00000662-0-1	BAP1	ok	Investigator-provided functional classes	investigator-provided	genomic	18108	0	0	6981	
-urn:mavedb:00000663-a-1	NDUFAF6	ok	Investigator-provided functional classes	investigator-provided	genomic	5715	0	0	734	
-urn:mavedb:00000665-a-1	PAX6	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	7764	1975	4199	2409	0.300954753009548
-urn:mavedb:00000665-b-1	PAX6	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	7391	2366	4477	2562	0.301327088212334
-urn:mavedb:00000665-c-1	PAX6	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	7819	2711	4047	2539	0.295391886569516
-urn:mavedb:00000665-d-1	PAX6	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	7370	1706	3974	2130	0.291079812206573
-urn:mavedb:00000673-0-1	RAD51C	ok	Investigator-provided functional classes	investigator-provided	genomic	9188	0	0	3431	
-urn:mavedb:00000674-a-2	KCNE1	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	2554	0	0	2456	0.301302931596091
-urn:mavedb:00000674-b-1	KCNE1	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	2539	1787	752	2441	0.303154444899631
-urn:mavedb:00000674-c-1	KCNE1	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	2544	0	0	2446	0.302125919869174
-urn:mavedb:00000675-a-1	VHL	ok	Investigator-provided functional classes	investigator-provided	genomic	2268	0	0	1694	
+urn:mavedb:00000657-b-1	ASPA	ok	Investigator-provided functional classes	investigator-provided	protein	6156	4312	1535	5846	1
+urn:mavedb:00000658-0-1	DDX3X	ok	Investigator-provided functional classes	investigator-provided	genomic	9079	7391	1688	6087	
+urn:mavedb:00000659-a-1	SGCB	ok	Investigator-provided functional classes	investigator-provided	protein	6327	4690	1594	5980	0.996845425867508
+urn:mavedb:00000662-0-1	BAP1	ok	Investigator-provided functional classes	investigator-provided	genomic	18108	11912	5665	6669	
+urn:mavedb:00000663-a-1	NDUFAF6	ok	Investigator-provided functional classes	investigator-provided	genomic	5715	2819	2502	691	
+urn:mavedb:00000665-a-1	PAX6	ok	ExCALIBR calibration	first (research-use-only)	protein	7764	1975	4199	2409	1
+urn:mavedb:00000665-b-1	PAX6	ok	ExCALIBR calibration	first (research-use-only)	protein	7391	2366	4477	2562	1
+urn:mavedb:00000665-c-1	PAX6	ok	ExCALIBR calibration	first (research-use-only)	protein	7819	2711	4047	2539	1
+urn:mavedb:00000665-d-1	PAX6	ok	ExCALIBR calibration	first (research-use-only)	protein	7370	1706	3974	2130	1
+urn:mavedb:00000673-0-1	RAD51C	ok	Investigator-provided functional classes	investigator-provided	genomic	9188	6045	3094	3406	
+urn:mavedb:00000674-a-2	KCNE1	ok	Investigator-provided functional classes	investigator-provided	protein	2554	655	1123	1693	0.992063492063492
+urn:mavedb:00000674-b-1	KCNE1	ok	Investigator-provided functional classes	investigator-provided	protein	2539	1787	752	2441	0.992125984251969
+urn:mavedb:00000674-c-1	KCNE1	ok	Investigator-provided functional classes	investigator-provided	protein	2544	815	990	1714	0.992063492063492
+urn:mavedb:00000675-a-1	VHL	ok	Investigator-provided functional classes	investigator-provided	genomic	2268	1700	327	1506	
 urn:mavedb:00001197-a-5	FKRP	ok	Investigator-provided functional classes	investigator-provided	genomic	4455	2977	1478	4455	
-urn:mavedb:00001198-a-1	JAG1	ok	Investigator-provided functional classes	investigator-provided	genomic	2832	0	0	2831	
-urn:mavedb:00001200-0-1	F9	dropped: < 90% MANE match	Investigator-provided functional classification	investigator-provided	protein	9007	5085	3922	8571	0.309998833274997
-urn:mavedb:00001200-a-1	F9	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	9682	5319	2192	7129	0.311684668256417
-urn:mavedb:00001200-b-1	F9	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	9682	5917	2790	8275	0.310815709969789
-urn:mavedb:00001200-c-1	F9	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	9682	5872	2804	8244	0.310650169820476
-urn:mavedb:00001200-d-1	F9	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	9682	5108	3502	8182	0.308970911757517
-urn:mavedb:00001200-e-1	F9	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	9682	3248	2245	5163	0.315126864226225
-urn:mavedb:00001205-a-1	CHEK2	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	8847	0	0	8374	0.338786720802484
-urn:mavedb:00001216-a-1	KCNH2	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	22806	15230	7576	21749	0.296381442824957
-urn:mavedb:00001222-a-2	BRCA1	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	1427	881	404	1285	0.406225680933852
-urn:mavedb:00001222-b-2	BRCA1	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	2271	1327	546	1873	0.334757074212493
+urn:mavedb:00001198-a-1	JAG1	ok	Investigator-provided functional classes	investigator-provided	genomic	2832	2346	486	2831	
+urn:mavedb:00001200-0-1	F9	ok	Investigator-provided functional classification	investigator-provided	protein	9007	5085	3922	8571	1
+urn:mavedb:00001200-a-1	F9	ok	Investigator-provided functional classes	investigator-provided	protein	9682	5319	2192	7129	1
+urn:mavedb:00001200-b-1	F9	ok	Investigator-provided functional classes	investigator-provided	protein	9682	5917	2790	8275	1
+urn:mavedb:00001200-c-1	F9	ok	Investigator-provided functional classes	investigator-provided	protein	9682	5872	2804	8244	1
+urn:mavedb:00001200-d-1	F9	ok	Investigator-provided functional classes	investigator-provided	protein	9682	5108	3502	8182	1
+urn:mavedb:00001200-e-1	F9	ok	ExCALIBR calibration	first (research-use-only)	protein	9682	3248	2245	5163	1
+urn:mavedb:00001205-a-1	CHEK2	ok	Investigator-provided functional classes	investigator-provided	protein	8847	3382	1660	4760	1
+urn:mavedb:00001216-a-1	KCNH2	ok	Investigator-provided functional classes	investigator-provided	protein	22806	15230	7576	21749	1
+urn:mavedb:00001222-a-2	BRCA1	ok	Investigator-provided functional classes	investigator-provided	protein	1427	881	404	1285	1
+urn:mavedb:00001222-b-2	BRCA1	ok	Investigator-provided functional classes	investigator-provided	protein	2271	1327	546	1873	1
 urn:mavedb:00001224-a-1	BRCA2	ok	Investigator-provided functional classes	investigator-provided	genomic	462	313	137	450	
-urn:mavedb:00001226-a-1	CARD11	ok	Investigator-provided functional classes	investigator-provided	genomic	3844	0	0	686	
-urn:mavedb:00001226-b-1	CARD11	ok	Investigator-provided functional classes	investigator-provided	genomic	3812	0	0	684	
-urn:mavedb:00001227-a-2	CRX	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	5284	0	0	5284	0.308289174867525
-urn:mavedb:00001228-a-1	DDX3X	ok	Investigator-provided functional classes	investigator-provided	genomic	12776	0	0	7944	
-urn:mavedb:00001229-a-2	KCNH2	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	231	75	145	211	0.293838862559242
+urn:mavedb:00001226-a-1	CARD11	ok	Investigator-provided functional classes	investigator-provided	genomic	3844	1050	1239	420	
+urn:mavedb:00001226-b-1	CARD11	ok	Investigator-provided functional classes	investigator-provided	genomic	3812	2260	140	427	
+urn:mavedb:00001227-a-2	CRX	ok	Investigator-provided functional classes	investigator-provided	protein	5284	3283	1399	4682	1
+urn:mavedb:00001228-a-1	DDX3X	ok	Investigator-provided functional classes	investigator-provided	genomic	12776	9344	2337	7315	
+urn:mavedb:00001229-a-2	KCNH2	ok	Investigator-provided functional classes	investigator-provided	protein	231	75	145	211	1
 urn:mavedb:00001230-a-2	KCNH2	ok	Investigator-provided functional classes	investigator-provided	protein	76	14	62	76	1
-urn:mavedb:00001231-a-2	KCNH2	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	22824	15240	7158	21365	0.297495904516733
+urn:mavedb:00001231-a-2	KCNH2	ok	Investigator-provided functional classes	investigator-provided	protein	22824	15240	7158	21365	1
 urn:mavedb:00001234-0-1	TP53	ok	Investigator-provided functional classes	investigator-provided	protein	2314	1239	493	1732	1
 urn:mavedb:00001234-a-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	2314	1517	662	2179	1
 urn:mavedb:00001234-b-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	2314	1231	822	2053	1
@@ -59,10 +59,10 @@ urn:mavedb:00001234-e-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	p
 urn:mavedb:00001234-f-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	2314	1628	541	2169	1
 urn:mavedb:00001234-g-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	2314	1596	552	2148	1
 urn:mavedb:00001234-h-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	2314	1699	459	2158	1
-urn:mavedb:00001235-a-1	TP53	dropped: < 90% MANE match	ExCALIBR calibration	first (research-use-only)	protein	7893	5202	1453	6600	0.285151515151515
-urn:mavedb:00001236-0-1	TP53	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	7893	5070	2823	7836	0.295048494129658
+urn:mavedb:00001235-a-1	TP53	ok	ExCALIBR calibration	first (research-use-only)	protein	7893	5202	1453	6600	1
+urn:mavedb:00001236-0-1	TP53	ok	Investigator-provided functional classes	investigator-provided	protein	7893	5070	2823	7836	1
 urn:mavedb:00001242-a-1	BRCA2	ok	ExCALIBR calibration	first (research-use-only)	genomic	6545	4818	1277	5592	
-urn:mavedb:00001251-a-1		download failed								
+urn:mavedb:00001251-a-1	TPK1	ok	ExCALIBR calibration	first (research-use-only)	genomic	9542	1975	4986	1609	
 urn:mavedb:00001254-a-1	LARGE1	ok	Investigator-provided functional classes	investigator-provided	genomic	6804	5392	1412	6804	
 urn:mavedb:00001256-a-1	FGFR2	ok	Investigator-provided functional classes	investigator-provided	genomic	2122	1307	448	1755	
 urn:mavedb:00001256-a-10	FGFR1	ok	Investigator-provided functional classes	investigator-provided	genomic	2103	1866	142	2008	
@@ -81,10 +81,10 @@ urn:mavedb:00001260-a-2	RAD51D	ok	Investigator-provided functional classes	inves
 urn:mavedb:00001262-a-3	CTCF	ok	Investigator-provided functional classes	investigator-provided	genomic	7766	5899	1285	4269	
 urn:mavedb:00001264-a-2	XRCC2	ok	Investigator-provided functional classes	investigator-provided	genomic	3733	3079	611	2521	
 urn:mavedb:00001265-a-2	SFPQ	ok	Investigator-provided functional classes	investigator-provided	genomic	5861	4592	1048	3482	
-urn:mavedb:00001266-0-1	G6PD	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	9504	2652	5337	7599	0.290432951704172
-urn:mavedb:00001266-b-1	G6PD	dropped: < 90% MANE match	Investigator-provided functional classes	investigator-provided	protein	10674	7820	2549	9882	0.298623760372394
+urn:mavedb:00001266-0-1	G6PD	ok	Investigator-provided functional classes	investigator-provided	protein	9504	2652	5337	7599	1
+urn:mavedb:00001266-b-1	G6PD	ok	Investigator-provided functional classes	investigator-provided	protein	10674	7820	2549	9882	1
 urn:mavedb:00001268-0-1	BRCA2	ok	ExCALIBR calibration	first (research-use-only)	genomic	252	13	5	13	
 urn:mavedb:00001268-a-1	BRCA2	ok	ExCALIBR calibration	first (research-use-only)	genomic	252	152	47	158	
 urn:mavedb:00001268-c-1	BRCA2	ok	ExCALIBR calibration	first (research-use-only)	genomic	252	173	19	160	
 urn:mavedb:00001277-a-1	TP53	ok	Investigator-provided functional ranges	investigator-provided	genomic	8058	2588	5470	1631	
-urn:mavedb:00001280-a-1	CHEK2	ok	Investigator-provided functional classes	investigator-provided	protein	3912	2960	952	3382	0.940567711413365
+urn:mavedb:00001280-a-1	CHEK2	ok	Investigator-provided functional classes	investigator-provided	protein	3912	2960	952	3382	0.998158379373849

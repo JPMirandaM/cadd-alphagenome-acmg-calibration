@@ -62,8 +62,8 @@ th <- rbind(tm[tool %in% c("CADD", "AVI"), .(tool, level, PP3 = num1(PP3), BP4 =
 th[tool == "AlphaMissense", tool := "AM"]
 fwrite(th, file.path(res_dir, "thresholds_used.tsv"), sep = "\t")
 lv <- c("Supporting", "Moderate", "Strong")
-interval_of <- function(x, tool) {
-  t <- th[tool == ..tool]; out <- rep("Indeterminate", length(x)); out[is.na(x)] <- NA
+interval_of <- function(x, tool_name) {
+  t <- th[tool == tool_name]; out <- rep("Indeterminate", length(x)); out[is.na(x)] <- NA
   for (l in lv) { p <- t[level == l, PP3]; b <- t[level == l, BP4]
     if (length(p) && !is.na(p)) out[!is.na(x) & x >= p] <- paste0("PP3_", l)
     if (length(b) && !is.na(b)) out[!is.na(x) & x <= b] <- paste0("BP4_", l) }
