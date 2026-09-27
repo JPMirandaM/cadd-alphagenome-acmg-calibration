@@ -156,7 +156,8 @@ m <- m[, .(chrom = as.character(Chrom), pos = Pos, ref = Ref, alt = Alt, Coeffic
 m[, functional := as.integer(pValue < 1e-5 & abs(Coefficient) >= 0.1)]
 s1 <- run_cached("mpra_cadd", m[chrom %chin% sn_cadd], function(x) lookup_chr("C:/cadd/data/whole_genome_SNVs.tsv.gz", "", x, "CADD_PHRED"))
 s2 <- run_cached("mpra_avi", m[chrom %chin% sn_avi], function(x) lookup_chr("C:/cadd/avi/alphagenome_variant_impact_score_snvs.tsv.gz", "chr", x, "AVI_PHRED", TRUE))
-m <- merge(merge(m, s1, by = k, all.x = TRUE), s2, by = k, all.x = TRUE)[!is.na(CADD_PHRED) & !is.na(AVI_PHRED)]
+# s1/s2 deduplicated: an SNV can be tested in more than one element
+m <- merge(merge(m, unique(s1, by = k), by = k, all.x = TRUE), unique(s2, by = k), by = k, all.x = TRUE)[!is.na(CADD_PHRED) & !is.na(AVI_PHRED)]
 saveRDS(m, file.path(out, "mpra_scored.rds"))
 mres <- rbind(data.table(Element = "ALL", n = nrow(m), functional = sum(m$functional), CADD_AUROC = auroc(m$CADD_PHRED, m$functional), AVI_AUROC = auroc(m$AVI_PHRED, m$functional)),
               m[, .(n = .N, functional = sum(functional), CADD_AUROC = if (sum(functional) >= 10 & sum(functional == 0) >= 10) auroc(CADD_PHRED, functional) else NA_real_,
