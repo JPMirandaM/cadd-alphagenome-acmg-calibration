@@ -472,6 +472,7 @@ repeating the computations.
 | 4 | Population frequency of PP3-level missense SNVs: gnomAD group with highest AF; MCPS overall and Indigenous Mexican frequencies | `figures/Fig4_population.{png,pdf}`; data `figures/data/Fig4_population/`; script `scripts/37_plot_fig4_population.R` | Done 2026-09-27 |
 | 5 | Computational evidence for ClinVar missense VUS, five predictors (intersection thresholds) | `figures/Fig5_vus.{png,pdf}`; data `figures/data/Fig5_vus/`; script `scripts/38_plot_fig5_vus.R` | Done 2026-09-27 |
 | Tables 1–2 | Table 1: calibrated thresholds of CADD v1.7 and AVI with evidence levels and published CADD v1.6 thresholds; Table 2: likelihood ratios of the calibrated intervals on MAVE functional classes, five predictors | `figures/Table1_thresholds.tsv`, `figures/Table2_mave.tsv`, `figures/Tables_1_2.docx`; data `figures/data/Table1_thresholds/`, `figures/data/Table2_mave/`; script `scripts/39_make_tables_1_2.R` | Done 2026-09-27 (Table 1 gains a CADD v1.6 2026-data column when A14 finishes) |
+| S4 | AUROC of five predictors for MAVE functional classes per gene (36 genes) | `figures/FigS4_mave_genes.{png,pdf}`; data `figures/data/FigS4_mave_genes/`; script `scripts/40_plot_figS4_mave_genes.R` | Done 2026-09-27 |
 
 ## References [VERIFY all before submission]
 
