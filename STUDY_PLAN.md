@@ -252,6 +252,39 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   (4) Concordance of MCPS AF with gnomAD v4.1 AMR (admixed American) AF (Spearman correlation
       for variants observed in both).
   No threshold is recalibrated with MCPS data; the analysis is descriptive.
+  (b) TOPMed BRAVO (Freeze 10, GRCh38): after this assessment the author obtained the per-chromosome
+      public VCFs (signed download links from the BRAVO site, 2026-09-27). They contain only overall
+      AC/AF, Het/Hom counts and FILTER (no AN, no ancestry). Planned use (same design as (a)(1)–(2)
+      but without ancestry): overall AF > 0.01 / > 0.05 among PP3-level SNVs, and PP3-level SNVs
+      common in BRAVO but not in any gnomAD v4.1 group; only FILTER = PASS sites are used.
+
+- A13 (2026-09-27, registered before any MAVE score is downloaded or analysed): Aim 3 (MAVE
+  validation) design.
+  Source: MaveDB (api.mavedb.org, accessed 2026-09-27); inventory of published human score sets in
+  `calibration/results/v17_avi/mave/mavedb_human_scoreset_inventory.tsv` (metadata only).
+  Inclusion: score sets with a score calibration defining both "normal" and "abnormal" functional
+  classes (92 score sets, ~40 genes); if a set has several calibrations, the investigator-provided
+  one is used, otherwise the first one not flagged research-use-only, otherwise the first one
+  (flagged). Score sets with failed variant mapping are excluded. Variants in the intermediate /
+  not-specified classes are excluded. Licences: CC0, CC BY, CC BY-SA and CC BY-NC-SA (research,
+  non-commercial use; attribution given per score set).
+  Variant mapping: nucleotide-level score sets use MaveDB's GRCh38 genomic mapping (hgvs.g, SNVs
+  only; the current mapping, otherwise the most recent); protein-level score sets use the mapped
+  protein change (hgvs.p on the RefSeq protein) matched to MANE Select missense SNVs with the same
+  gene and amino-acid change (all SNVs encoding that change inherit the class). A score set is kept
+  only if ≥ 90% of its mapped missense changes match a MANE Select change (reference residue check).
+  Analysis set: MANE Select missense SNVs. When several score sets classify the same SNV, concordant
+  classes are kept and discordant SNVs are excluded.
+  Metrics (CADD v1.7 and AVI primary; REVEL, BayesDel and AlphaMissense secondary, on the
+  intersection of scored SNVs): (1) for each evidence interval of the main thresholds (plan v1,
+  median of 5 seeds), the proportion of abnormal variants and LR = P(interval | abnormal) /
+  P(interval | normal) with 95% bootstrap CI (B = 2,000, resampling SNVs); (2) AUROC (abnormal vs
+  normal), pooled and per gene (genes with ≥ 30 abnormal and ≥ 30 normal SNVs); paired AVI − CADD
+  AUROC difference with bootstrap CI. Pre-specified expectation: LR > 1 for PP3 intervals and < 1
+  for BP4 intervals. Functional abnormality is not equivalent to pathogenicity, so the LRs are not
+  compared with the ClinGen LR targets; the analysis tests direction and consistency.
+  Sensitivity: excluding SNVs in the ClinVar calibration reference set (full independence from the
+  calibration data). No threshold is recalibrated with MAVE data.
 
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
