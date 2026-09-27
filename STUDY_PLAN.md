@@ -257,6 +257,12 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
       AC/AF, Het/Hom counts and FILTER (no AN, no ancestry). Planned use (same design as (a)(1)–(2)
       but without ancestry): overall AF > 0.01 / > 0.05 among PP3-level SNVs, and PP3-level SNVs
       common in BRAVO but not in any gnomAD v4.1 group; only FILTER = PASS sites are used.
+  Sample overlap (noted 2026-09-27 at the author's question): gnomAD v4.1 genomes (the v3.1 genome
+  set) include many TOPMed samples, so BRAVO is not independent of gnomAD [exact overlap not
+  quantified]; BRAVO-versus-gnomAD differences are interpreted as differences in cohort composition,
+  not as independent replication. MCPS participants (Mexico City residents, sequenced by RGC) are
+  not expected to overlap with TOPMed or gnomAD. The resources are therefore reported separately
+  and never pooled.
 
 - A13 (2026-09-27, registered before any MAVE score is downloaded or analysed): Aim 3 (MAVE
   validation) design.
@@ -285,6 +291,21 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   compared with the ClinGen LR targets; the analysis tests direction and consistency.
   Sensitivity: excluding SNVs in the ClinVar calibration reference set (full independence from the
   calibration data). No threshold is recalibrated with MAVE data.
+
+- A14 (2026-09-27, registered before any CADD v1.6 score is read): Aim 2b (CADD v1.6 vs v1.7 on
+  identical reference data). CADD v1.6 GRCh38 scores are obtained by a partial download of the
+  official whole-genome SNV file (krishna.gs.washington.edu, 86.6 GB): only the BGZF blocks covering
+  the positions of the 2026 main reference sets (planned from the tabix linear index; ~9.4 GB), with
+  a check that every retrieved block decompresses and that coordinates/alleles match. Analysis:
+  (1) CADD v1.6 calibrated on the 2026 main reference sets exactly as the main analysis (same
+  variants, 5 seeds, B = 10,000, increment 0.1, discounted thresholds, median of seeds); variants
+  without a v1.6 score are excluded from both versions' comparison set, and CADD v1.7 is recalibrated
+  on that same subset if it differs from the main set; (2) threshold differences v1.6 − v1.7 per
+  level; (3) AUROC of each version and paired difference (bootstrap, 1,000 replicates);
+  (4) cross-tabulation of evidence levels assigned by each version to the ClinVar reference variants
+  (each version at its own thresholds) and the proportion changing level. Interpretation: together
+  with Aim 2a (same version, different ClinVar releases), this separates the effect of the model
+  version from that of the reference data.
 
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
