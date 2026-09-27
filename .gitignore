@@ -35,3 +35,7 @@ desktop.ini
 
 # Per-chromosome lookup caches (contain third-party scores)
 /calibration/results/v17_avi/noncoding/tmp/
+
+# Per-variant derived data (third-party scores / gnomAD-derived sets): never versioned
+/calibration/results/**/*.rds
+/calibration/results/v17_avi/noncoding/splice_region_intronic/tmp/
