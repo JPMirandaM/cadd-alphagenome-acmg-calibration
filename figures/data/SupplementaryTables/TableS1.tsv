@@ -1,0 +1,9 @@
+criterion	level	published_Pejaver2022_Table2	reproduced_R_port_B10000	match
+PP3	Supporting	25.3	25.3	yes
+PP3	Moderate	28.1	28.1	yes
+PP3	Strong	not reached [VERIFY in Table 2]	not reached (NA)	[VERIFY]
+PP3	VeryStrong	not reached [VERIFY in Table 2]	not reached (NA)	[VERIFY]
+BP4	Supporting	22.7	22.70	yes
+BP4	Moderate	17.3	17.33	yes (published value rounded to 1 decimal)
+BP4	Strong	0.15	0.31 (seed 20260925); 0.152-0.310 across 5 seeds (0.152, 0.155, 0.155 in 3 of 5)	yes, within Monte Carlo variability (Table S2, Figure S2)
+BP4	VeryStrong	[VERIFY in Table 2]	not reached (NA)	[VERIFY]

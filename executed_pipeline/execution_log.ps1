@@ -292,6 +292,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\31_download_mc
 # Tables 1-2 (TSV + Word, landscape); source tables copied into figures\data\Table1_thresholds and Table2_mave:
 & $R .\scripts\39_make_tables_1_2.R C:/cadd/figures
 & $R .\scripts\40_plot_figS4_mave_genes.R C:/cadd/figures/data/FigS4_mave_genes C:/cadd/figures/FigS4_mave_genes   # Figure S4
+& $R .\scripts\41_make_supplementary_tables.R            # Supplementary Tables S1-S15 (xlsx + TSV); first run failed on a fread argument, fixed
 # Step 19 Aim 2b CADD v1.6 vs v1.7 (amendment A14) [2026-09-27]
 & $R .\scripts\35a_cadd16_byte_ranges.R 20000          # tabix linear index -> 6,419 byte ranges (9.38 GB); also run with 2000 and 200000 to compare volumes
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\35b_download_cadd16_ranges.ps1   # 8 curl processes; interrupted by the session end, resumed; all ranges length-verified

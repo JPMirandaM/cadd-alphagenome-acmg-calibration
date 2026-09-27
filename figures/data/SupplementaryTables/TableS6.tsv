@@ -1,0 +1,21 @@
+block	tool	interval	n_PLP	n_BLB	LR	lower95	upper95	level	LR_required	criterion	meets_point	meets_bound	PP3_2024	BP4_2024	PP3_2026	BP4_2026
+interval likelihood ratios	CADD	BP4_Moderate	566	15036	0.06038	0.05529	0.06528	Moderate	0.1727	LR <= 1/required	TRUE	TRUE				
+interval likelihood ratios	CADD	BP4_Strong	36	5675	0.01018	0.00698	0.01359	Strong	0.02983	LR <= 1/required	TRUE	TRUE				
+interval likelihood ratios	CADD	BP4_Supporting	1108	5853	0.3037	0.2858	0.3228	Supporting	0.4156	LR <= 1/required	TRUE	TRUE				
+interval likelihood ratios	CADD	Indeterminate	5904	6602	1.434	1.393	1.477	Indeterminate		""						
+interval likelihood ratios	CADD	PP3_Moderate	8588	1235	11.15	10.53	11.78	Moderate	5.79	LR >= required	TRUE	TRUE				
+interval likelihood ratios	CADD	PP3_Supporting	6424	1893	5.444	5.194	5.727	Supporting	2.406	LR >= required	TRUE	TRUE				
+interval likelihood ratios	AVI	BP4_Moderate	646	14269	0.07262	0.06709	0.07832	Moderate	0.1727	LR <= 1/required	TRUE	TRUE				
+interval likelihood ratios	AVI	BP4_Strong	82	9140	0.01439	0.01145	0.0177	Strong	0.02983	LR <= 1/required	TRUE	TRUE				
+interval likelihood ratios	AVI	BP4_Supporting	993	6038	0.2638	0.2464	0.281	Supporting	0.4156	LR <= 1/required	TRUE	TRUE				
+interval likelihood ratios	AVI	Indeterminate	3246	4505	1.156	1.108	1.205	Indeterminate		""						
+interval likelihood ratios	AVI	PP3_Moderate	14755	1305	18.14	17.26	19.07	Moderate	5.79	LR >= required	TRUE	TRUE				
+interval likelihood ratios	AVI	PP3_Supporting	2904	1037	4.492	4.183	4.811	Supporting	2.406	LR >= required	TRUE	TRUE				
+thresholds 2024 vs 2026	CADD							Moderate					28.6	19.5	28	19.59
+thresholds 2024 vs 2026	CADD							Strong						1.05		8.341
+thresholds 2024 vs 2026	CADD							Supporting					26	22.8	25.6	22.7
+thresholds 2024 vs 2026	CADD							VeryStrong								
+thresholds 2024 vs 2026	AVI							Moderate					26.59	20.6	26.44	20.52
+thresholds 2024 vs 2026	AVI							Strong						8.94		9.15
+thresholds 2024 vs 2026	AVI							Supporting					25.32	23	25.18	22.95
+thresholds 2024 vs 2026	AVI							VeryStrong								
