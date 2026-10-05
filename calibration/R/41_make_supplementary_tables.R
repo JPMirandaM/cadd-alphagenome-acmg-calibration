@@ -167,7 +167,7 @@ nice <- function(x) { x <- sub("^lo$|_lo$", " 95% CI lower", x); x <- sub("^hi$|
 for (id in names(tabs)) {
   d <- tabs[[id]]
   fwrite(d, file.path(out_dir, sprintf("Table%s.tsv", id)), sep = "\t")
-  blocks <- if ("block" %in% names(d)) split(d, factor(d$block, levels = unique(d$block))) else list(d)
+  blocks <- if ("block" %in% names(d)) split(d, factor(d$block, levels = unique(d$block))) else list(main = d)
   addWorksheet(wb, id, gridLines = FALSE)
   writeData(wb, id, paste0("Table ", id, ". ", meta[[id]]$Title), startRow = 1); addStyle(wb, id, title_st, rows = 1, cols = 1)
   writeData(wb, id, meta[[id]]$Legend, startRow = 2)
