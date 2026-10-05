@@ -1,17 +1,17 @@
-block	tool	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac	PP3_splice_region	BP4_splice_region	PP3_missense	BP4_missense
-splice-region thresholds	CADD	VeryStrong					1	0.8644				
-splice-region thresholds	CADD	Strong	19.8	20.1	0.004		0	0.3159				
-splice-region thresholds	CADD	Moderate	16.71	17.36	8.768	6.943	0	0				
-splice-region thresholds	CADD	Supporting	15.27	15.45	12.66	11.52	0	0				
-splice-region thresholds	AVI	VeryStrong	47.35				0.3579	0.6289				
-splice-region thresholds	AVI	Strong	23.91	24.09	8.29	0.11	0	0.0103				
-splice-region thresholds	AVI	Moderate	22.2	22.44	16.61	14.01	0	0				
-splice-region thresholds	AVI	Supporting	21	21.3	18.35	17.5	0	0				
-comparison with missense	AVI	Moderate							22.44	14.01	26.44	20.52
-comparison with missense	AVI	Strong							24.09	0.11		9.15
-comparison with missense	AVI	Supporting							21.3	17.5	25.18	22.95
-comparison with missense	AVI	VeryStrong										
-comparison with missense	CADD	Moderate							17.36	6.943	28	19.59
-comparison with missense	CADD	Strong							20.1			8.341
-comparison with missense	CADD	Supporting							15.45	11.52	25.6	22.6
-comparison with missense	CADD	VeryStrong										
+tool	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac	block	PP3_splice_region	BP4_splice_region	PP3_missense	BP4_missense
+CADD	VeryStrong					1	0.8644	splice-region thresholds				
+CADD	Strong	19.8	20.1	0.004		0	0.3159	splice-region thresholds				
+CADD	Moderate	16.71	17.36	8.768	6.943	0	0	splice-region thresholds				
+CADD	Supporting	15.27	15.45	12.66	11.52	0	0	splice-region thresholds				
+AVI	VeryStrong	47.35				0.3579	0.6289	splice-region thresholds				
+AVI	Strong	23.91	24.09	8.29	0.11	0	0.0103	splice-region thresholds				
+AVI	Moderate	22.2	22.44	16.61	14.01	0	0	splice-region thresholds				
+AVI	Supporting	21	21.3	18.35	17.5	0	0	splice-region thresholds				
+AVI	Moderate							comparison with missense	22.44	14.01	26.44	20.52
+AVI	Strong							comparison with missense	24.09	0.11		9.15
+AVI	Supporting							comparison with missense	21.3	17.5	25.18	22.95
+AVI	VeryStrong							comparison with missense				
+CADD	Moderate							comparison with missense	17.36	6.943	28	19.59
+CADD	Strong							comparison with missense	20.1			8.341
+CADD	Supporting							comparison with missense	15.45	11.52	25.6	22.6
+CADD	VeryStrong							comparison with missense				

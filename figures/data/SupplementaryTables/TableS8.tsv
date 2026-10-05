@@ -1,71 +1,71 @@
-block	tool	level	r2019	r2022	r2024	r2026	pre2022	post2022	criterion	post_minus_pre	r2026_minus_r2019
-thresholds	AVI	Supporting	25.3	25.32	25.33	25.19	25.32	25.13	PP3		
-thresholds	AVI	Moderate	26.42	26.55	26.6	26.44	26.41	26.5	PP3		
-thresholds	AVI	Strong							PP3		
-thresholds	AVI	VeryStrong							PP3		
-thresholds	AlphaMissense	Supporting	0.6688	0.6973	0.6963	0.67	0.6994	0.6669	PP3		
-thresholds	AlphaMissense	Moderate	0.8773	0.879	0.8784	0.8603	0.8604	0.8657	PP3		
-thresholds	AlphaMissense	Strong	0.9878	0.9904	0.9905	0.9898	0.9894	0.9905	PP3		
-thresholds	AlphaMissense	VeryStrong							PP3		
-thresholds	BayesDel	Supporting	0.18	0.17	0.17	0.14	0.16	0.14	PP3		
-thresholds	BayesDel	Moderate	0.31	0.3	0.3	0.27	0.28	0.27	PP3		
-thresholds	BayesDel	Strong	0.52	0.51	0.5	0.48	0.5	0.48	PP3		
-thresholds	BayesDel	VeryStrong							PP3		
-thresholds	CADD	Supporting	25.8	26	26	25.6	26	25.5	PP3		
-thresholds	CADD	Moderate	28.5	29.2	28.6	28	28.9	27.8	PP3		
-thresholds	CADD	Strong							PP3		
-thresholds	CADD	VeryStrong							PP3		
-thresholds	REVEL	Supporting	0.682	0.681	0.672	0.642	0.668	0.639	PP3		
-thresholds	REVEL	Moderate	0.78	0.775	0.772	0.753	0.769	0.747	PP3		
-thresholds	REVEL	Strong	0.928	0.92	0.915	0.898	0.915	0.892	PP3		
-thresholds	REVEL	VeryStrong							PP3		
-thresholds	AVI	Supporting	22.69	22.99	23.02	22.98	23.01	22.91	BP4		
-thresholds	AVI	Moderate	19.95	20.63	20.61	20.61	21.08	19.77	BP4		
-thresholds	AVI	Strong		7.91	8.96	9.28	9.25	7.9	BP4		
-thresholds	AVI	VeryStrong							BP4		
-thresholds	AlphaMissense	Supporting	0.207	0.2169	0.2396	0.2367	0.2397	0.2268	BP4		
-thresholds	AlphaMissense	Moderate	0.1173	0.1374	0.1377	0.14	0.1418	0.1364	BP4		
-thresholds	AlphaMissense	Strong	0.0546	0.0703	0.073	0.0763	0.0735	0.0756	BP4		
-thresholds	AlphaMissense	VeryStrong							BP4		
-thresholds	BayesDel	Supporting	-0.12	-0.11	-0.11	-0.13	-0.11	-0.15	BP4		
-thresholds	BayesDel	Moderate	-0.22	-0.21	-0.21	-0.25	-0.21	-0.27	BP4		
-thresholds	BayesDel	Strong	-0.53	-0.55	-0.54	-0.54	-0.5	-0.55	BP4		
-thresholds	BayesDel	VeryStrong							BP4		
-thresholds	CADD	Supporting	22.6	22.8	22.8	22.7	22.8	22.2	BP4		
-thresholds	CADD	Moderate	19.99	20.1	19.54	19.59	20.2	19.43	BP4		
-thresholds	CADD	Strong		0.409	1.173	8.383	1.623	4.515	BP4		
-thresholds	CADD	VeryStrong							BP4		
-thresholds	REVEL	Supporting	0.4	0.401	0.401	0.396	0.409	0.37	BP4		
-thresholds	REVEL	Moderate	0.27	0.264	0.271	0.272	0.271	0.252	BP4		
-thresholds	REVEL	Strong	0.045	0.062	0.063	0.087	0.071	0.069	BP4		
-thresholds	REVEL	VeryStrong	0.001						BP4		
-common scale (% of gnomAD variants)	AVI	Moderate	13.84	13.25	13.05	13.72	13.88	13.49	PP3	-0.3948	-0.1177
-common scale (% of gnomAD variants)	AVI	Strong							PP3		
-common scale (% of gnomAD variants)	AVI	Supporting	19.88	19.77	19.72	20.6	19.77	21.01	PP3	1.24	0.7192
-common scale (% of gnomAD variants)	AlphaMissense	Moderate	11.38	11.3	11.33	12.17	12.16	11.92	PP3	-0.244	0.7833
-common scale (% of gnomAD variants)	AlphaMissense	Strong	3.123	2.679	2.66	2.788	2.855	2.66	PP3	-0.1955	-0.3353
-common scale (% of gnomAD variants)	AlphaMissense	Supporting	19.5	18.49	18.52	19.46	18.42	19.57	PP3	1.154	-0.04342
-common scale (% of gnomAD variants)	BayesDel	Moderate	6.174	6.55	6.55	7.741	7.337	7.741	PP3	0.4037	1.567
-common scale (% of gnomAD variants)	BayesDel	Strong	1.099	1.211	1.334	1.616	1.334	1.616	PP3	0.2822	0.5168
-common scale (% of gnomAD variants)	BayesDel	Supporting	11.9	12.46	12.46	14.25	13.04	14.25	PP3	1.213	2.351
-common scale (% of gnomAD variants)	CADD	Moderate	9.023	6.911	8.699	10.81	7.767	11.59	PP3	3.826	1.783
-common scale (% of gnomAD variants)	CADD	Strong							PP3		
-common scale (% of gnomAD variants)	CADD	Supporting	22.44	21.05	21.05	23.88	21.05	24.64	PP3	3.586	1.442
-common scale (% of gnomAD variants)	REVEL	Moderate	6.727	6.926	7.049	7.822	7.171	8.071	PP3	0.9003	1.095
-common scale (% of gnomAD variants)	REVEL	Strong	1.447	1.715	1.88	2.462	1.88	2.671	PP3	0.7906	1.016
-common scale (% of gnomAD variants)	REVEL	Supporting	10.96	11.01	11.43	12.91	11.62	13.06	PP3	1.436	1.947
-common scale (% of gnomAD variants)	AVI	Moderate	37.41	41.49	41.35	41.35	44.84	36.59	BP4	-8.252	3.939
-common scale (% of gnomAD variants)	AVI	Strong		7.685	9.617	10.21	10.15	7.665	BP4	-2.485	
-common scale (% of gnomAD variants)	AVI	Supporting	57.26	60.4	60.72	60.29	60.61	59.56	BP4	-1.051	3.037
-common scale (% of gnomAD variants)	AlphaMissense	Moderate	34.41	40.78	40.86	41.46	41.92	40.51	BP4	-1.414	7.055
-common scale (% of gnomAD variants)	AlphaMissense	Strong	0.8356	7.643	9.541	11.95	9.898	11.44	BP4	1.537	11.12
-common scale (% of gnomAD variants)	AlphaMissense	Supporting	53.87	55.14	57.72	57.41	57.73	56.31	BP4	-1.412	3.541
-common scale (% of gnomAD variants)	BayesDel	Moderate	56.23	57.37	57.37	52.7	57.37	50.31	BP4	-7.061	-3.525
-common scale (% of gnomAD variants)	BayesDel	Strong	18.11	16.08	17.08	17.08	21.34	16.08	BP4	-5.257	-1.031
-common scale (% of gnomAD variants)	BayesDel	Supporting	67.04	67.98	67.98	66.05	67.98	64.01	BP4	-3.979	-0.9943
-common scale (% of gnomAD variants)	CADD	Moderate	35.38	35.67	33.49	33.7	36.12	33.07	BP4	-3.051	-1.686
-common scale (% of gnomAD variants)	CADD	Strong		3.039	4.349	10.27	4.847	6.914	BP4	2.067	
-common scale (% of gnomAD variants)	CADD	Supporting	50.45	51.92	51.92	51.18	51.92	47.48	BP4	-4.436	0.7302
-common scale (% of gnomAD variants)	REVEL	Moderate	57.19	56.35	57.33	57.47	57.33	54.61	BP4	-2.719	0.2779
-common scale (% of gnomAD variants)	REVEL	Strong	10.51	15.84	16.14	22.97	18.52	17.94	BP4	-0.5806	12.46
-common scale (% of gnomAD variants)	REVEL	Supporting	71.45	71.53	71.53	71.1	72.21	68.71	BP4	-3.5	-0.3439
+tool	level	r2019	r2022	r2024	r2026	pre2022	post2022	criterion	block	post_minus_pre	r2026_minus_r2019
+AVI	Supporting	25.3	25.32	25.33	25.19	25.32	25.13	PP3	thresholds		
+AVI	Moderate	26.42	26.55	26.6	26.44	26.41	26.5	PP3	thresholds		
+AVI	Strong							PP3	thresholds		
+AVI	VeryStrong							PP3	thresholds		
+AlphaMissense	Supporting	0.6688	0.6973	0.6963	0.67	0.6994	0.6669	PP3	thresholds		
+AlphaMissense	Moderate	0.8773	0.879	0.8784	0.8603	0.8604	0.8657	PP3	thresholds		
+AlphaMissense	Strong	0.9878	0.9904	0.9905	0.9898	0.9894	0.9905	PP3	thresholds		
+AlphaMissense	VeryStrong							PP3	thresholds		
+BayesDel	Supporting	0.18	0.17	0.17	0.14	0.16	0.14	PP3	thresholds		
+BayesDel	Moderate	0.31	0.3	0.3	0.27	0.28	0.27	PP3	thresholds		
+BayesDel	Strong	0.52	0.51	0.5	0.48	0.5	0.48	PP3	thresholds		
+BayesDel	VeryStrong							PP3	thresholds		
+CADD	Supporting	25.8	26	26	25.6	26	25.5	PP3	thresholds		
+CADD	Moderate	28.5	29.2	28.6	28	28.9	27.8	PP3	thresholds		
+CADD	Strong							PP3	thresholds		
+CADD	VeryStrong							PP3	thresholds		
+REVEL	Supporting	0.682	0.681	0.672	0.642	0.668	0.639	PP3	thresholds		
+REVEL	Moderate	0.78	0.775	0.772	0.753	0.769	0.747	PP3	thresholds		
+REVEL	Strong	0.928	0.92	0.915	0.898	0.915	0.892	PP3	thresholds		
+REVEL	VeryStrong							PP3	thresholds		
+AVI	Supporting	22.69	22.99	23.02	22.98	23.01	22.91	BP4	thresholds		
+AVI	Moderate	19.95	20.63	20.61	20.61	21.08	19.77	BP4	thresholds		
+AVI	Strong		7.91	8.96	9.28	9.25	7.9	BP4	thresholds		
+AVI	VeryStrong							BP4	thresholds		
+AlphaMissense	Supporting	0.207	0.2169	0.2396	0.2367	0.2397	0.2268	BP4	thresholds		
+AlphaMissense	Moderate	0.1173	0.1374	0.1377	0.14	0.1418	0.1364	BP4	thresholds		
+AlphaMissense	Strong	0.0546	0.0703	0.073	0.0763	0.0735	0.0756	BP4	thresholds		
+AlphaMissense	VeryStrong							BP4	thresholds		
+BayesDel	Supporting	-0.12	-0.11	-0.11	-0.13	-0.11	-0.15	BP4	thresholds		
+BayesDel	Moderate	-0.22	-0.21	-0.21	-0.25	-0.21	-0.27	BP4	thresholds		
+BayesDel	Strong	-0.53	-0.55	-0.54	-0.54	-0.5	-0.55	BP4	thresholds		
+BayesDel	VeryStrong							BP4	thresholds		
+CADD	Supporting	22.6	22.8	22.8	22.7	22.8	22.2	BP4	thresholds		
+CADD	Moderate	19.99	20.1	19.54	19.59	20.2	19.43	BP4	thresholds		
+CADD	Strong		0.409	1.173	8.383	1.623	4.515	BP4	thresholds		
+CADD	VeryStrong							BP4	thresholds		
+REVEL	Supporting	0.4	0.401	0.401	0.396	0.409	0.37	BP4	thresholds		
+REVEL	Moderate	0.27	0.264	0.271	0.272	0.271	0.252	BP4	thresholds		
+REVEL	Strong	0.045	0.062	0.063	0.087	0.071	0.069	BP4	thresholds		
+REVEL	VeryStrong	0.001						BP4	thresholds		
+AVI	Moderate	13.84	13.25	13.05	13.72	13.88	13.49	PP3	common scale (% of gnomAD variants)	-0.3948	-0.1177
+AVI	Strong							PP3	common scale (% of gnomAD variants)		
+AVI	Supporting	19.88	19.77	19.72	20.6	19.77	21.01	PP3	common scale (% of gnomAD variants)	1.24	0.7192
+AlphaMissense	Moderate	11.38	11.3	11.33	12.17	12.16	11.92	PP3	common scale (% of gnomAD variants)	-0.244	0.7833
+AlphaMissense	Strong	3.123	2.679	2.66	2.788	2.855	2.66	PP3	common scale (% of gnomAD variants)	-0.1955	-0.3353
+AlphaMissense	Supporting	19.5	18.49	18.52	19.46	18.42	19.57	PP3	common scale (% of gnomAD variants)	1.154	-0.04342
+BayesDel	Moderate	6.174	6.55	6.55	7.741	7.337	7.741	PP3	common scale (% of gnomAD variants)	0.4037	1.567
+BayesDel	Strong	1.099	1.211	1.334	1.616	1.334	1.616	PP3	common scale (% of gnomAD variants)	0.2822	0.5168
+BayesDel	Supporting	11.9	12.46	12.46	14.25	13.04	14.25	PP3	common scale (% of gnomAD variants)	1.213	2.351
+CADD	Moderate	9.023	6.911	8.699	10.81	7.767	11.59	PP3	common scale (% of gnomAD variants)	3.826	1.783
+CADD	Strong							PP3	common scale (% of gnomAD variants)		
+CADD	Supporting	22.44	21.05	21.05	23.88	21.05	24.64	PP3	common scale (% of gnomAD variants)	3.586	1.442
+REVEL	Moderate	6.727	6.926	7.049	7.822	7.171	8.071	PP3	common scale (% of gnomAD variants)	0.9003	1.095
+REVEL	Strong	1.447	1.715	1.88	2.462	1.88	2.671	PP3	common scale (% of gnomAD variants)	0.7906	1.016
+REVEL	Supporting	10.96	11.01	11.43	12.91	11.62	13.06	PP3	common scale (% of gnomAD variants)	1.436	1.947
+AVI	Moderate	37.41	41.49	41.35	41.35	44.84	36.59	BP4	common scale (% of gnomAD variants)	-8.252	3.939
+AVI	Strong		7.685	9.617	10.21	10.15	7.665	BP4	common scale (% of gnomAD variants)	-2.485	
+AVI	Supporting	57.26	60.4	60.72	60.29	60.61	59.56	BP4	common scale (% of gnomAD variants)	-1.051	3.037
+AlphaMissense	Moderate	34.41	40.78	40.86	41.46	41.92	40.51	BP4	common scale (% of gnomAD variants)	-1.414	7.055
+AlphaMissense	Strong	0.8356	7.643	9.541	11.95	9.898	11.44	BP4	common scale (% of gnomAD variants)	1.537	11.12
+AlphaMissense	Supporting	53.87	55.14	57.72	57.41	57.73	56.31	BP4	common scale (% of gnomAD variants)	-1.412	3.541
+BayesDel	Moderate	56.23	57.37	57.37	52.7	57.37	50.31	BP4	common scale (% of gnomAD variants)	-7.061	-3.525
+BayesDel	Strong	18.11	16.08	17.08	17.08	21.34	16.08	BP4	common scale (% of gnomAD variants)	-5.257	-1.031
+BayesDel	Supporting	67.04	67.98	67.98	66.05	67.98	64.01	BP4	common scale (% of gnomAD variants)	-3.979	-0.9943
+CADD	Moderate	35.38	35.67	33.49	33.7	36.12	33.07	BP4	common scale (% of gnomAD variants)	-3.051	-1.686
+CADD	Strong		3.039	4.349	10.27	4.847	6.914	BP4	common scale (% of gnomAD variants)	2.067	
+CADD	Supporting	50.45	51.92	51.92	51.18	51.92	47.48	BP4	common scale (% of gnomAD variants)	-4.436	0.7302
+REVEL	Moderate	57.19	56.35	57.33	57.47	57.33	54.61	BP4	common scale (% of gnomAD variants)	-2.719	0.2779
+REVEL	Strong	10.51	15.84	16.14	22.97	18.52	17.94	BP4	common scale (% of gnomAD variants)	-0.5806	12.46
+REVEL	Supporting	71.45	71.53	71.53	71.1	72.21	68.71	BP4	common scale (% of gnomAD variants)	-3.5	-0.3439

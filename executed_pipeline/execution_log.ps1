@@ -400,3 +400,6 @@ git push -u origin main; git push origin analysis-plan-v1
 & $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S18.xlsx
 # Manuscript v6 and supplemental material v3 built locally (manuscript/ not versioned).
 # -------------------------------------------------------------------------------------
+# [2026-10-05] Workbook layout revised (authors: sheets hard to read): multi-block tables written as separate
+# sub-tables with their own headers and only their own columns; readable column names; content-based widths.
+& $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S18.xlsx (same values)
