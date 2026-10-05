@@ -375,3 +375,18 @@ git remote add origin https://github.com/JPMirandaM/cadd-alphagenome-acmg-calibr
 git push -u origin main; git push origin analysis-plan-v1
 # CITATION.cff repository-code updated to the new URL.
 # -------------------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------------------
+# Manuscript v5 after co-author review [2026-10-04]
+# Amendment A15 registered in STUDY_PLAN.md before running (VUS of 2024 resolved by 2026).
+& $R .\scripts\42_vus_resolved.R                         # -> logs\42_vus_resolved.log (~70 min; RESULTS R18)
+# Figure 4 (noncoding; data copied from calibration/results/v17_avi/noncoding/ to figures\data\Fig4_noncoding\):
+& $R .\scripts\43_plot_fig_noncoding.R C:/cadd/figures/data/Fig4_noncoding C:/cadd/figures/Fig4_noncoding
+# Table 2 (resolved VUS) and Figure 3 (VUS; data in figures\data\Fig3_vus\, former Fig5_vus):
+& $R .\scripts\45_make_table2_vus_resolved.R             # -> logs\45_make_table2_vus_resolved.log
+& $R .\scripts\44_plot_fig3_vus.R C:/cadd/figures/data/Fig3_vus C:/cadd/figures/Fig3_vus
+# Figures renumbered for v5 (git mv): Fig3_comparators -> Fig2_comparators; Fig2_gene_classes -> Fig5_gene_classes;
+# Fig4_population -> FigS5_population; Fig5_vus -> Fig3_vus (now two panels). Former Table 2 (MAVE) -> Table S17.
+& $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S19.xlsx (S17-S19 added)
+# Manuscript v5 and supplemental material v2 built locally (manuscript/ not versioned).
+# -------------------------------------------------------------------------------------

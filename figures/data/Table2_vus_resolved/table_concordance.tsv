@@ -1,0 +1,6 @@
+tool	N	concordant	discordant	none	pct_concordant	pct_discordant
+CADD	5779	3499	785	1495	60.5	13.6
+AVI	5779	4191	568	1020	72.5	9.8
+REVEL	5771	4404	422	945	76.3	7.3
+AlphaMissense	5710	4139	470	1101	72.5	8.2
+BayesDel	5777	4295	468	1014	74.3	8.1

@@ -1,0 +1,49 @@
+thresholds	tool	level	PP3	BP4
+r2024	REVEL	VeryStrong		
+r2024	REVEL	Strong	0.915	0.063
+r2024	REVEL	Moderate	0.772	0.271
+r2024	REVEL	Supporting	0.672	0.401
+r2024	BayesDel	VeryStrong		
+r2024	BayesDel	Strong	0.5	-0.54
+r2024	BayesDel	Moderate	0.3	-0.21
+r2024	BayesDel	Supporting	0.17	-0.11
+r2024	AlphaMissense	VeryStrong		
+r2024	AlphaMissense	Strong	0.9905	0.073
+r2024	AlphaMissense	Moderate	0.8784	0.1377
+r2024	AlphaMissense	Supporting	0.6963	0.2396
+r2024	CADD	VeryStrong		
+r2024	CADD	Strong		1.173
+r2024	CADD	Moderate	28.6	19.54
+r2024	CADD	Supporting	26	22.8
+r2024	AVI	VeryStrong		
+r2024	AVI	Strong		8.96
+r2024	AVI	Moderate	26.6	20.61
+r2024	AVI	Supporting	25.33	23.02
+main2026	AVI	VeryStrong		
+main2026	AVI	Strong		9.15
+main2026	AVI	Moderate	26.44	20.52
+main2026	AVI	Supporting	25.18	22.95
+main2026	CADD	VeryStrong		
+main2026	CADD	Strong		8.341
+main2026	CADD	Moderate	28	19.59
+main2026	CADD	Supporting	25.6	22.6
+inter2026	CADD	VeryStrong		
+inter2026	CADD	Strong		8.383
+inter2026	CADD	Moderate	28	19.59
+inter2026	CADD	Supporting	25.6	22.7
+inter2026	AVI	VeryStrong		
+inter2026	AVI	Strong		9.28
+inter2026	AVI	Moderate	26.44	20.61
+inter2026	AVI	Supporting	25.19	22.98
+inter2026	REVEL	VeryStrong		
+inter2026	REVEL	Strong	0.898	0.087
+inter2026	REVEL	Moderate	0.752	0.272
+inter2026	REVEL	Supporting	0.642	0.396
+inter2026	AlphaMissense	VeryStrong		
+inter2026	AlphaMissense	Strong	0.9898	0.0763
+inter2026	AlphaMissense	Moderate	0.8605	0.14
+inter2026	AlphaMissense	Supporting	0.6698	0.2367
+inter2026	BayesDel	VeryStrong		
+inter2026	BayesDel	Strong	0.48	-0.54
+inter2026	BayesDel	Moderate	0.27	-0.25
+inter2026	BayesDel	Supporting	0.14	-0.13

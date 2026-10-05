@@ -579,3 +579,32 @@ Moderate 28.6 → 28.0; BP4 Supporting 22.8 → 22.7, Moderate 19.50 → 19.59, 
 AVI PP3 Supporting 25.32 → 25.18, Moderate 26.59 → 26.44; BP4 Supporting 23.00 → 22.95,
 Moderate 20.60 → 20.52, Strong 8.94 → 9.15. All thresholds moved by ≤ 0.6 units except CADD
 BP4 Strong, which lies in a sparse score region (compare sensitivity analysis S1, 1.74).
+
+## R18. VUS of January 2024 resolved by September 2026 (Aim 7b; amendment A15)
+
+Script `42_vus_resolved.R` (log `logs/42_vus_resolved.log`); Table 2 (manuscript v5), Figure 3B,
+Tables S18–S19. ClinVar 2024-01-27: 1,081,487 SNV VUS with >= 1 star; 657,215 MANE missense in
+disease genes (657,184 with AF_max < 0.01). By 2026-09-23: 1,790 resolved to P/LP and 3,989 to B/LB
+(0.9% of the rare VUS); 651,405 not resolved.
+
+Primary analysis (r2024 thresholds, AF < 0.01, resolved variants):
+
+| Predictor | P/LP with PP3 % (mean points) | B/LB with BP4 % (mean points) | Final direction / opposite % |
+|---|---|---|---|
+| CADD v1.7 | 65.5 (+0.93) | 58.3 (−0.82) | 60.5 / 13.6 |
+| AVI | 77.1 (+1.29) | 70.5 (−1.21) | 72.5 / 9.8 |
+| REVEL | 77.1 (+2.04) | 75.9 (−1.54) | 76.3 / 7.3 |
+| BayesDel | 76.4 (+1.90) | 73.4 (−1.57) | 74.3 / 8.1 |
+| AlphaMissense | 76.6 (+1.88) | 70.7 (−1.40) | 72.5 / 8.2 |
+
+Interval likelihood ratios (resolved P/LP vs B/LB): supporting and moderate intervals meet the
+targets at the conservative bound for all predictors except CADD PP3 moderate (5.54, 95% CI
+4.90–6.35; 5.79 required). AVI PP3 moderate 9.71 (8.64–11.0). BP4 strong not confirmed for CADD,
+AVI, REVEL and BayesDel (2–7 P/LP variants per interval); AlphaMissense PP3 strong 32.0 (23.8–46.6)
+short of 33.53; REVEL (46.9) and BayesDel (50.9) PP3 strong met. 2026 thresholds give the same pattern.
+Prespecified examples (expert-panel records): three MYOC variants (likely benign) with BP4 from all
+five predictors; RPE65 p.His527Arg (pathogenic) with PP3 from all five; LDLR p.Gly461Cys and PIK3CD
+p.Asn334Lys (likely pathogenic) with BP4 from AVI and CADD (PIK3CD: gain-of-function gene).
+Interpretation: calibrated evidence points in the final direction for about three quarters of resolved
+VUS (AVI and missense predictors), contributing one to two points on average; AVI (negative control)
+is close to the missense predictors that 2026 classifications could cite.

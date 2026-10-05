@@ -1,0 +1,73 @@
+outcome	N	PP3_any	BP4_any	indeterminate	mean_points	thresholds	tool	subset
+Not resolved	651405	24.2	47.9	28	-0.5	r2024	CADD	AF<0.01
+P/LP	1790	65.5	8.5	25.9	0.93	r2024	CADD	AF<0.01
+B/LB	3989	15.8	58.3	25.8	-0.82	r2024	CADD	AF<0.01
+Not resolved	651436	24.2	47.9	28	-0.5	r2024	CADD	all
+P/LP	1790	65.5	8.5	25.9	0.93	r2024	CADD	all
+B/LB	3989	15.8	58.3	25.8	-0.82	r2024	CADD	all
+Not resolved	651405	22	58	20	-0.76	r2024	AVI	AF<0.01
+P/LP	1790	77.1	7.2	15.8	1.29	r2024	AVI	AF<0.01
+B/LB	3989	11	70.5	18.5	-1.21	r2024	AVI	AF<0.01
+Not resolved	651436	22	58	20	-0.76	r2024	AVI	all
+P/LP	1790	77.1	7.2	15.8	1.29	r2024	AVI	all
+B/LB	3989	11	70.5	18.5	-1.21	r2024	AVI	all
+Not resolved	647202	17.5	62.1	20.5	-0.96	r2024	REVEL	AF<0.01
+P/LP	1788	77.1	6.5	16.4	2.04	r2024	REVEL	AF<0.01
+B/LB	3983	7.7	75.9	16.4	-1.54	r2024	REVEL	AF<0.01
+Not resolved	647233	17.5	62.1	20.5	-0.96	r2024	REVEL	all
+P/LP	1788	77.1	6.5	16.4	2.04	r2024	REVEL	all
+B/LB	3983	7.7	75.9	16.4	-1.54	r2024	REVEL	all
+Not resolved	640105	20.7	55.9	23.5	-0.72	r2024	AlphaMissense	AF<0.01
+B/LB	3951	9.3	70.7	20	-1.4	r2024	AlphaMissense	AF<0.01
+P/LP	1759	76.6	5.7	17.7	1.88	r2024	AlphaMissense	AF<0.01
+Not resolved	640136	20.7	55.9	23.5	-0.72	r2024	AlphaMissense	all
+B/LB	3951	9.3	70.7	20	-1.4	r2024	AlphaMissense	all
+P/LP	1759	76.6	5.7	17.7	1.88	r2024	AlphaMissense	all
+Not resolved	651121	18	59.3	22.8	-0.97	r2024	BayesDel	AF<0.01
+P/LP	1790	76.4	7.4	16.2	1.9	r2024	BayesDel	AF<0.01
+B/LB	3987	8.4	73.4	18.2	-1.57	r2024	BayesDel	AF<0.01
+Not resolved	651152	18	59.3	22.8	-0.97	r2024	BayesDel	all
+P/LP	1790	76.4	7.4	16.2	1.9	r2024	BayesDel	all
+B/LB	3987	8.4	73.4	18.2	-1.57	r2024	BayesDel	all
+Not resolved	651405	27.2	46.4	26.4	-0.53	main2026	CADD	AF<0.01
+P/LP	1790	69.6	7.8	22.6	1.03	main2026	CADD	AF<0.01
+B/LB	3989	17.8	56.6	25.5	-0.9	main2026	CADD	AF<0.01
+Not resolved	651436	27.2	46.4	26.4	-0.53	main2026	CADD	all
+P/LP	1790	69.6	7.8	22.6	1.03	main2026	CADD	all
+B/LB	3989	17.8	56.6	25.5	-0.9	main2026	CADD	all
+Not resolved	651405	22.9	57.3	19.8	-0.74	main2026	AVI	AF<0.01
+P/LP	1790	78.5	7.1	14.4	1.33	main2026	AVI	AF<0.01
+B/LB	3989	11.9	69.7	18.4	-1.19	main2026	AVI	AF<0.01
+Not resolved	651436	22.9	57.3	19.8	-0.74	main2026	AVI	all
+P/LP	1790	78.5	7.1	14.4	1.33	main2026	AVI	all
+B/LB	3989	11.9	69.7	18.4	-1.19	main2026	AVI	all
+Not resolved	651405	27.2	47.1	25.7	-0.54	inter2026	CADD	AF<0.01
+P/LP	1790	69.6	8.2	22.2	1.02	inter2026	CADD	AF<0.01
+B/LB	3989	17.8	57.6	24.6	-0.91	inter2026	CADD	AF<0.01
+Not resolved	651436	27.2	47.1	25.7	-0.54	inter2026	CADD	all
+P/LP	1790	69.6	8.2	22.2	1.02	inter2026	CADD	all
+B/LB	3989	17.8	57.6	24.6	-0.91	inter2026	CADD	all
+Not resolved	651405	22.9	57.6	19.6	-0.75	inter2026	AVI	AF<0.01
+P/LP	1790	78.3	7.2	14.6	1.32	inter2026	AVI	AF<0.01
+B/LB	3989	11.9	70.1	18	-1.21	inter2026	AVI	AF<0.01
+Not resolved	651436	22.9	57.6	19.6	-0.75	inter2026	AVI	all
+P/LP	1790	78.3	7.2	14.6	1.32	inter2026	AVI	all
+B/LB	3989	11.9	70.1	18	-1.21	inter2026	AVI	all
+Not resolved	647202	19.4	61.6	19	-1.01	inter2026	REVEL	AF<0.01
+P/LP	1788	80	6.3	13.8	2.19	inter2026	REVEL	AF<0.01
+B/LB	3983	8.8	75.3	15.9	-1.66	inter2026	REVEL	AF<0.01
+Not resolved	647233	19.4	61.6	19	-1.01	inter2026	REVEL	all
+P/LP	1788	80	6.3	13.8	2.19	inter2026	REVEL	all
+B/LB	3983	8.8	75.3	15.9	-1.66	inter2026	REVEL	all
+Not resolved	640105	21.6	55.6	22.8	-0.75	inter2026	AlphaMissense	AF<0.01
+B/LB	3951	10.3	70.5	19.2	-1.45	inter2026	AlphaMissense	AF<0.01
+P/LP	1759	77.8	5.6	16.6	1.93	inter2026	AlphaMissense	AF<0.01
+Not resolved	640136	21.6	55.6	22.8	-0.75	inter2026	AlphaMissense	all
+B/LB	3951	10.3	70.5	19.2	-1.45	inter2026	AlphaMissense	all
+P/LP	1759	77.8	5.6	16.6	1.93	inter2026	AlphaMissense	all
+Not resolved	651121	20.1	57.1	22.8	-0.85	inter2026	BayesDel	AF<0.01
+P/LP	1790	78.7	6.3	15	2.04	inter2026	BayesDel	AF<0.01
+B/LB	3987	9.9	71.4	18.7	-1.48	inter2026	BayesDel	AF<0.01
+Not resolved	651152	20.1	57.1	22.8	-0.85	inter2026	BayesDel	all
+P/LP	1790	78.7	6.3	15	2.04	inter2026	BayesDel	all
+B/LB	3987	9.9	71.4	18.7	-1.48	inter2026	BayesDel	all
