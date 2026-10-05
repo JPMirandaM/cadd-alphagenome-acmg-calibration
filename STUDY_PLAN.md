@@ -472,3 +472,12 @@ versions (Aim 2) [VERIFY before submission].
 - Tenywa et al. 2025: https://pmc.ncbi.nlm.nih.gov/articles/PMC12629842/
 - MAVE/predictors: https://www.biorxiv.org/content/10.1101/2025.07.31.667868.full.pdf ; https://www.biorxiv.org/content/10.64898/2026.03.27.714777v1
 - AlphaGenome Atlas: https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/ ; technical report https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/alphagenome-atlas.pdf ; medRxiv https://www.medrxiv.org/content/10.64898/2026.09.16.26363192v1.full.pdf ; Ensembl VEP integration https://www.ensembl.info/2026/09/08/alphagenome-variant-impact-scores-integrated-into-ensembl-vep/
+
+## Scope decision for the main article (2026-10-05, authors)
+
+The population analyses (amendments A4 and A12: gnomAD ancestry of PP3-level variants, Mexico City
+Prospective Study and TOPMed BRAVO frequencies) are not reported in the main article and are reserved
+for a separate study on Latin American population data (with 1000 Genomas Para Chile), so that the
+main article keeps a single clinical message. The analyses, scripts and results remain in this
+repository (RESULTS R7, R14, R15); Table S15 of the article lists them as not reported. The
+genome-wide catalogue (A9) stays in the companion resource article.

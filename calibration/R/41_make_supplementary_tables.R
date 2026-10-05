@@ -1,6 +1,6 @@
-# Supplementary Tables S1-S19 of the manuscript (S17-S19 added 2026-10-04 for manuscript v5), assembled from the analysis outputs.
+# Supplementary Tables S1-S18 of the manuscript (v6, 2026-10-05; MCPS/BRAVO table removed), assembled from the analysis outputs.
 # Each table is written as TSV to figures/data/SupplementaryTables/ and all of them, with a
-# "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S19.xlsx.
+# "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S18.xlsx.
 # No new computation: values are copied (and rounded for display) from calibration/results/.
 # Usage: Rscript 41_make_supplementary_tables.R
 suppressPackageStartupMessages({ library(data.table); library(openxlsx) })
@@ -33,8 +33,9 @@ add("S3", "Predictors, score precision and window increments",
 ## S4 sensitivity analyses -----------------------------------------------------------------------
 p <- rd("summary", "table_sensitivity_PP3.tsv")[, criterion := "PP3"]; b <- rd("summary", "table_sensitivity_BP4.tsv")[, criterion := "BP4"]
 add("S4", "Sensitivity analyses of the CADD v1.7 and AVI calibration",
-    "Thresholds (seed 20260925) in the main analysis and in the pre-specified sensitivity analyses S1 (review status of at least two stars), S2 (rarity defined as AF below 0.001), S3 (gene-level bootstrap) and S4 (exclusion of missense SNVs within 3 nucleotides of an internal exon boundary). Empty cells indicate levels not reached.",
-    setcolorder(rbind(p, b, fill = TRUE), c("criterion", "tool", "level")))
+    "Thresholds (seed 20260925) in the main analysis and in the four prespecified sensitivity analyses, namely review status of at least two stars (two_stars), rarity defined as AF below 0.001 (AF_below_0.001), gene-level bootstrap (gene_bootstrap) and exclusion of missense SNVs within 3 nucleotides of an internal exon boundary (no_exon_edge_3nt). Empty cells indicate levels not reached.",
+    setnames(setcolorder(rbind(p, b, fill = TRUE), c("criterion", "tool", "level")), c("S1", "S2", "S3", "S4"),
+             c("two_stars", "AF_below_0.001", "gene_bootstrap", "no_exon_edge_3nt")))   # descriptive names (v6): "S1-S4" collided with supplementary item numbers
 
 ## S5 HGMD exclusion ------------------------------------------------------------------------------
 h <- rd("hgmd_excluded", "table_thresholds_hgmd.tsv"); hs <- rd("hgmd_excluded", "set_sizes.tsv")
@@ -88,28 +89,25 @@ add("S12", "Missense-calibrated thresholds in noncoding and synonymous variant c
     rbind(rd("noncoding", "class_sizes.tsv")[, block := "class sizes"], ev[, block := "interval likelihood ratios"],
           rd("noncoding", "mpra_auroc.tsv")[, block := "MPRA AUROC"], fill = TRUE))
 
-## S13 population resources ------------------------------------------------------------------------
-add("S13", "PP3-level missense variants in the Mexico City Prospective Study and TOPMed BRAVO",
-    "Summary counts per predictor and PP3 level in MCPS (overall and Indigenous Mexican ancestry, IMX) and BRAVO, and the 74 PP3-level SNVs with MCPS AF above 1% and at or below 1% in every gnomAD v4.1 group, with MCPS variant source (array, exome or genome; added post hoc). MCPS data from the Regeneron Genetics Center and collaborators (Ziyatdinov et al. 2023).",
-    rbind(rd("mcps", "pp3_levels_mcps_summary.tsv")[, block := "MCPS summary"], rd("bravo", "pp3_levels_bravo_summary.tsv")[, block := "BRAVO summary"],
-          fread(file.path(R, "mcps", "mcps_only_frequency_conflicts.tsv"), colClasses = list(character = "chrom"))[, block := "MCPS-only frequency conflicts"], fill = TRUE))
+## Manuscript v6 (2026-10-05): the population table (MCPS and BRAVO) is no longer part of this article
+## (population analyses reserved for a separate study); later tables are renumbered S13-S18.
 
-## S14 MAVE score sets -----------------------------------------------------------------------------
+## S13 MAVE score sets -----------------------------------------------------------------------------
 qc <- rd("mave", "scoreset_qc.tsv"); inv <- unique(rd("mave", "mavedb_human_scoreset_inventory.tsv")[, .(urn, title, licence, pmid)], by = "urn")
-add("S14", "MaveDB score sets used for validation",
+add("S13", "MaveDB score sets used for validation",
     "The 89 MaveDB score sets with normal and abnormal functional classes, with gene, calibration used, mapping level, numbers of scored and classified variants, protein reference-residue match rate, licence and primary publication (PubMed ID); the second block gives classified MANE missense SNVs per gene after excluding discordant classifications. Please cite MaveDB and the primary publication of each score set.",
     rbind(merge(qc, inv, by = "urn", all.x = TRUE)[, block := "score sets"], rd("mave", "labels_per_gene.tsv")[, block := "labelled SNVs per gene"], fill = TRUE))
 
-## S15 CADD v1.6 vs v1.7 ---------------------------------------------------------------------------
+## S14 CADD v1.6 vs v1.7 ---------------------------------------------------------------------------
 cd <- file.path("cadd16_vs_17")
-add("S15", "CADD v1.6 versus v1.7 on identical reference data",
+add("S14", "CADD v1.6 versus v1.7 on identical reference data",
     "Thresholds (median and range over five seeds) of CADD v1.6 and v1.7 calibrated on the same 2026 reference sets, AUROC with 95% bootstrap intervals and the paired difference, the percentage of reference variants whose evidence level changes between versions, and the full cross-tabulation of evidence levels (each version at its own thresholds).",
     rbind(rd(cd, "thresholds_median.tsv")[, block := "thresholds"], rd(cd, "discrimination.tsv")[, block := "discrimination"],
           rd(cd, "evidence_changes.tsv")[, block := "evidence level changes"], rd(cd, "evidence_crosstab.tsv")[, block := "cross-tabulation (y = 1 P/LP, 0 B/LB)"], fill = TRUE))
 
-## S16 analysis plan and amendments -----------------------------------------------------------------
-add("S16", "Prespecified analysis plan and dated amendments",
-    "The analysis plan was fixed on 25 September 2026 before any CADD v1.7 or AVI calibration result and tagged in the version-controlled repository (analysis-plan-v1). Each later analysis was specified in a dated amendment committed before it was run. The last column states whether the amendment was motivated by results already seen. Post hoc analyses that were not specified in any amendment are listed at the end.",
+## S15 analysis plan and amendments -----------------------------------------------------------------
+add("S15", "Prespecified analysis plan and dated amendments",
+    "The analysis plan was fixed on 25 September 2026 before any CADD v1.7 or AVI calibration result and tagged in the version-controlled repository (analysis-plan-v1). Each later analysis was specified in a dated amendment committed before it was run. The Timing column states whether the amendment was motivated by results already seen, and the last column whether the analysis is reported in this article. Post hoc analyses that were not specified in any amendment are listed at the end.",
     data.table(
       Item = c(sprintf("Amendment %d", 1:15), "Post hoc", "Post hoc"),
       Date = c(rep("2026-09-25", 6), rep("2026-09-26", 5), rep("2026-09-27", 3), "2026-10-04", "2026-09-26", "2026-09-27"),
@@ -133,18 +131,21 @@ add("S16", "Prespecified analysis plan and dated amendments",
       Timing = c("after the main results", rep("before running", 4), "before running; motivated by the comparator results",
                  "before running; motivated by the drift results", rep("before running", 3), "scope change before running",
                  "before any MCPS or BRAVO result", "before any MAVE score was downloaded", "before any CADD v1.6 score was read", "before any result; motivated by co-author review",
-                 "post hoc", "post hoc")))
+                 "post hoc", "post hoc"),
+      Reported_in_this_article = c("yes", "yes", "yes", "no (population analyses reserved for a separate study)", "yes", "yes", "yes", "yes",
+                                   "no (companion resource article)", "yes", "no (deferred)", "no (population analyses reserved for a separate study)",
+                                   "yes", "yes", "yes", "yes", "no (population analyses reserved for a separate study)")))
 
-## S17-S19 (manuscript v5, 2026-10-04) ------------------------------------------------------------
-add("S17", "Calibrated evidence intervals on MAVE functional classes",
-    "For each predictor and ClinVar-calibrated evidence interval, the likelihood ratio P(interval | functionally abnormal) / P(interval | functionally normal) with 95% bootstrap interval (2,000 replicates) and abnormal/normal variants in the interval, and the pooled AUROC, on 93,154 MANE missense SNVs in 39 genes (18,936 abnormal, 74,218 normal) from 89 MaveDB score sets. Functional abnormality is not pathogenicity; the ratios test direction and ordering, not the ClinGen targets. Main-text Table 2 of earlier drafts.",
+## S16-S18 (added for manuscript v5, 2026-10-04; renumbered in v6) ------------------------------------------------------------
+add("S16", "Calibrated evidence intervals on MAVE functional classes",
+    "For each predictor and ClinVar-calibrated evidence interval, the likelihood ratio P(interval | functionally abnormal) / P(interval | functionally normal) with 95% bootstrap interval (2,000 replicates) and abnormal/normal variants in the interval, and the pooled AUROC, on 93,154 MANE missense SNVs in 39 genes (18,936 abnormal, 74,218 normal) from 89 MaveDB score sets. Functional abnormality is not pathogenicity; the ratios test direction and ordering, not the ClinGen targets.",
     fread(file.path(F, "Table2_mave.tsv")))
 vr <- file.path("vus_resolved")
-add("S18", "Calibrated evidence for ClinVar VUS of January 2024 that were resolved by September 2026",
+add("S17", "Calibrated evidence for ClinVar VUS of January 2024 that were resolved by September 2026",
     "Amendment A15. VUS (>= 1 star, MANE Select missense, disease gene) in the ClinVar release of 27 January 2024, followed to the release of 23 September 2026. Thresholds: r2024 = calibrated on the January 2024 release only (five-predictor intersection, primary); main2026 and inter2026 = 2026 thresholds (secondary). Blocks: set sizes; percentage of variants with PP3 or BP4 evidence and mean ACMG/AMP points by 2026 outcome; concordance of the evidence with the 2026 classification; likelihood ratio of each interval, P(interval | resolved P/LP) / P(interval | resolved B/LB), with 95% bootstrap interval (2,000 replicates), the ratio required and whether the conservative bound meets it. Subset AF<0.01 (gnomAD v4.1 group maximum) is primary.",
     rbind(rd(vr, "set_sizes.tsv")[, block := "set sizes"], rd(vr, "table_direction.tsv")[, block := "direction by outcome"],
           rd(vr, "table_concordance.tsv")[, block := "concordance (r2024, AF<0.01)"], rd(vr, "table_interval_LR.tsv")[, block := "interval likelihood ratios"], fill = TRUE))
-add("S19", "Illustrative resolved VUS",
+add("S18", "Illustrative resolved VUS",
     "Variants selected by the rule fixed in amendment A15 before inspection: VUS in January 2024 whose September 2026 record was reviewed by an expert panel or practice guideline, up to three per direction with the largest absolute AVI points (r2024 thresholds), ties broken by genomic position. Scores and evidence levels of all five predictors with the r2024 thresholds.",
     fread(file.path(R, vr, "table_examples.tsv"), colClasses = list(character = "chrom")))
 
@@ -161,6 +162,6 @@ for (id in names(tabs)) {
   fwrite(d, file.path(out_dir, sprintf("Table%s.tsv", id)), sep = "\t")
 }
 fwrite(contents, file.path(out_dir, "contents.tsv"), sep = "\t")
-saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S19.xlsx"), overwrite = TRUE)
-cat("Written", length(tabs), "tables:", file.path(F, "Supplementary_Tables_S1-S19.xlsx"), "\n")
+saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S18.xlsx"), overwrite = TRUE)
+cat("Written", length(tabs), "tables:", file.path(F, "Supplementary_Tables_S1-S18.xlsx"), "\n")
 print(contents[, .(Table, Title, rows = vapply(tabs, nrow, 0L))])

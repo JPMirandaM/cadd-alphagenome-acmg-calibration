@@ -1,6 +1,6 @@
 Aviso:
 package 'openxlsx' was built under R version 4.4.3 
-Written 19 tables: C:/cadd/figures/Supplementary_Tables_S1-S19.xlsx 
+Written 18 tables: C:/cadd/figures/Supplementary_Tables_S1-S18.xlsx 
      Table
     <char>
  1:     S1
@@ -21,7 +21,6 @@ Written 19 tables: C:/cadd/figures/Supplementary_Tables_S1-S19.xlsx
 16:    S16
 17:    S17
 18:    S18
-19:    S19
                                                                                        Title
                                                                                       <char>
  1:                                         Published versus reproduced CADD v1.6 thresholds
@@ -36,13 +35,12 @@ Written 19 tables: C:/cadd/figures/Supplementary_Tables_S1-S19.xlsx
 10:           Computational evidence for ClinVar missense variants of uncertain significance
 11:                           Calibration of CADD v1.7 and AVI in the intronic splice region
 12:     Missense-calibrated thresholds in noncoding and synonymous variant classes, and MPRA
-13:        PP3-level missense variants in the Mexico City Prospective Study and TOPMed BRAVO
-14:                                                    MaveDB score sets used for validation
-15:                                        CADD v1.6 versus v1.7 on identical reference data
-16:                                          Prespecified analysis plan and dated amendments
-17:                                 Calibrated evidence intervals on MAVE functional classes
-18: Calibrated evidence for ClinVar VUS of January 2024 that were resolved by September 2026
-19:                                                                Illustrative resolved VUS
+13:                                                    MaveDB score sets used for validation
+14:                                        CADD v1.6 versus v1.7 on identical reference data
+15:                                          Prespecified analysis plan and dated amendments
+16:                                 Calibrated evidence intervals on MAVE functional classes
+17: Calibrated evidence for ClinVar VUS of January 2024 that were resolved by September 2026
+18:                                                                Illustrative resolved VUS
      rows
     <int>
  1:     8
@@ -57,10 +55,9 @@ Written 19 tables: C:/cadd/figures/Supplementary_Tables_S1-S19.xlsx
 10:   161
 11:    16
 12:   170
-13:    82
-14:   128
-15:    72
-16:    17
-17:     8
-18:   297
-19:     6
+13:   128
+14:    72
+15:    17
+16:     8
+17:   297
+18:     6
