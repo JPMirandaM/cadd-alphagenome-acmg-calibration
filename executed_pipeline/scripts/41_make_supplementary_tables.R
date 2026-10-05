@@ -154,12 +154,42 @@ wb <- createWorkbook(); hs <- createStyle(textDecoration = "bold")
 contents <- rbindlist(meta)
 addWorksheet(wb, "Contents"); writeData(wb, "Contents", contents, headerStyle = hs)
 setColWidths(wb, "Contents", cols = 1:3, widths = c(8, 60, 120)); addStyle(wb, "Contents", createStyle(wrapText = TRUE, valign = "top"), rows = 2:(nrow(contents) + 1), cols = 1:3, gridExpand = TRUE)
+# Layout (v6, 2026-10-05, authors found the sheets hard to read): tables that combine several blocks
+# with different columns are no longer written as one wide sheet full of empty cells. Each block is
+# written as its own sub-table (bold subheading, its own header row, only the columns it uses),
+# separated by a blank row; the title and legend sit above, column names are made readable, and
+# column widths follow the content. The TSV copies keep the long machine-readable format.
+title_st <- createStyle(textDecoration = "bold", fontSize = 12)
+leg_st <- createStyle(wrapText = TRUE, valign = "top")
+sub_st <- createStyle(textDecoration = "bold", fontSize = 11)
+head_st <- createStyle(textDecoration = "bold", fgFill = "#E7E6E6", border = "Bottom", wrapText = TRUE, valign = "center")
+nice <- function(x) { x <- sub("^lo$|_lo$", " 95% CI lower", x); x <- sub("^hi$|_hi$", " 95% CI upper", x); x <- gsub("(^|_| )P_?LP($|_| )", "\\1P/LP\\2", x); x <- gsub("(^|_| )B_?LB($|_| )", "\\1B/LB\\2", x); trimws(gsub("_", " ", x)) }
 for (id in names(tabs)) {
-  d <- tabs[[id]]; if ("block" %in% names(d)) setcolorder(d, c("block", setdiff(names(d), "block")))
-  addWorksheet(wb, id); writeData(wb, id, paste0("Table ", id, ". ", meta[[id]]$Title), startRow = 1)
-  addStyle(wb, id, hs, rows = 1, cols = 1); writeData(wb, id, d, startRow = 3, headerStyle = hs)
-  freezePane(wb, id, firstActiveRow = 4); setColWidths(wb, id, cols = seq_len(ncol(d)), widths = "auto")
+  d <- tabs[[id]]
   fwrite(d, file.path(out_dir, sprintf("Table%s.tsv", id)), sep = "\t")
+  blocks <- if ("block" %in% names(d)) split(d, factor(d$block, levels = unique(d$block))) else list(d)
+  addWorksheet(wb, id, gridLines = FALSE)
+  writeData(wb, id, paste0("Table ", id, ". ", meta[[id]]$Title), startRow = 1); addStyle(wb, id, title_st, rows = 1, cols = 1)
+  writeData(wb, id, meta[[id]]$Legend, startRow = 2)
+  ncol_max <- max(vapply(blocks, function(b) sum(vapply(b, function(v) any(!is.na(v) & v != ""), TRUE)), 0L))
+  mergeCells(wb, id, cols = 1:max(6, ncol_max), rows = 2); addStyle(wb, id, leg_st, rows = 2, cols = 1)
+  setRowHeights(wb, id, rows = 2, heights = 15 * ceiling(nchar(meta[[id]]$Legend) / 140))
+  r <- 4; widths <- numeric(0)
+  for (nm in names(blocks)) {
+    b <- copy(blocks[[nm]]); if ("block" %in% names(b)) b[, block := NULL]
+    keep <- names(b)[vapply(b, function(v) any(!is.na(v) & as.character(v) != ""), TRUE)]
+    b <- b[, ..keep]
+    idc <- intersect(c("thresholds", "set", "analysis", "subset", "class", "criterion", "tool", "predictor", "level", "evidence", "interval", "outcome"), names(b))
+    setcolorder(b, c(idc, setdiff(names(b), idc)))   # identifying columns first
+    setnames(b, vapply(nice(names(b)), function(s) paste0(toupper(substr(s, 1, 1)), substring(s, 2)), ""))
+    if (length(blocks) > 1) { writeData(wb, id, paste0(toupper(substr(nm, 1, 1)), substring(nm, 2)), startRow = r); addStyle(wb, id, sub_st, rows = r, cols = 1); r <- r + 1 }
+    writeData(wb, id, b, startRow = r, headerStyle = head_st, na.string = "")
+    w <- pmin(40, pmax(8, vapply(seq_along(b), function(j) max(nchar(c(names(b)[j], as.character(b[[j]]))), na.rm = TRUE) + 2, 0)))
+    widths <- pmax(c(widths, rep(0, max(0, length(w) - length(widths)))), c(w, rep(0, max(0, length(widths) - length(w)))))
+    r <- r + nrow(b) + 2
+  }
+  setColWidths(wb, id, cols = seq_along(widths), widths = widths)
+  if (length(blocks) == 1) freezePane(wb, id, firstActiveRow = 5)
 }
 fwrite(contents, file.path(out_dir, "contents.tsv"), sep = "\t")
 saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S18.xlsx"), overwrite = TRUE)

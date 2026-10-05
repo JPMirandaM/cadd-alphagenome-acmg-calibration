@@ -1,26 +1,26 @@
-block	tool	level	PP3	BP4	AUROC	AUPRC	AUROC_lo	AUROC_hi	AUPRC_lo	AUPRC_hi	dAUROC_vs_AVI	dAUROC_lo	dAUROC_hi	n_dAUROC_ge0	dAUPRC_lo	dAUPRC_hi	n_dAUPRC_ge0	dAUPRC_vs_AVI
-thresholds	AVI	Supporting	25.19	22.98														
-thresholds	AVI	Moderate	26.44	20.61														
-thresholds	AVI	Strong	not reached	9.28 [9.26-9.28]														
-thresholds	AVI	VeryStrong	not reached	not reached														
-thresholds	AlphaMissense	Supporting	0.6698 [0.6698-0.67]	0.2367 [0.2367-0.2368]														
-thresholds	AlphaMissense	Moderate	0.8605 [0.8603-0.8607]	0.14														
-thresholds	AlphaMissense	Strong	0.9898	0.0763														
-thresholds	AlphaMissense	VeryStrong	not reached	not reached														
-thresholds	BayesDel	Supporting	0.14	-0.13														
-thresholds	BayesDel	Moderate	0.27	-0.25														
-thresholds	BayesDel	Strong	0.48	-0.54														
-thresholds	BayesDel	VeryStrong	not reached	not reached														
-thresholds	CADD	Supporting	25.6	22.7 [22.6-22.7]														
-thresholds	CADD	Moderate	28	19.59														
-thresholds	CADD	Strong	not reached	8.383														
-thresholds	CADD	VeryStrong	not reached	not reached														
-thresholds	REVEL	Supporting	0.642	0.396 [0.395-0.396]														
-thresholds	REVEL	Moderate	0.752 [0.752-0.753]	0.272														
-thresholds	REVEL	Strong	0.898	0.087														
-thresholds	REVEL	VeryStrong	not reached	not reached														
-discrimination	AVI				0.9406	0.9175	0.9394	0.9419	0.9151	0.9197	0							0
-discrimination	AlphaMissense				0.9489	0.935	0.9479	0.95	0.9334	0.9367	0.008262	0.007383	0.009053	1000	0.01585	0.01921	1000	0.01757
-discrimination	BayesDel				0.9573	0.9462	0.9562	0.9583	0.9447	0.9477	0.01664	0.0155	0.01773	1000	0.02667	0.0309	1000	0.02876
-discrimination	CADD				0.9014	0.8492	0.8997	0.903	0.8461	0.8523	-0.03922	-0.04042	-0.03804	0	-0.07069	-0.06558	0	-0.06824
-discrimination	REVEL				0.9606	0.9524	0.9596	0.9616	0.951	0.9538	0.02	0.01882	0.02119	1000	0.03275	0.03708	1000	0.03494
+tool	level	PP3	BP4	block	AUROC	AUPRC	AUROC_lo	AUROC_hi	AUPRC_lo	AUPRC_hi	dAUROC_vs_AVI	dAUROC_lo	dAUROC_hi	n_dAUROC_ge0	dAUPRC_lo	dAUPRC_hi	n_dAUPRC_ge0	dAUPRC_vs_AVI
+AVI	Supporting	25.19	22.98	thresholds														
+AVI	Moderate	26.44	20.61	thresholds														
+AVI	Strong	not reached	9.28 [9.26-9.28]	thresholds														
+AVI	VeryStrong	not reached	not reached	thresholds														
+AlphaMissense	Supporting	0.6698 [0.6698-0.67]	0.2367 [0.2367-0.2368]	thresholds														
+AlphaMissense	Moderate	0.8605 [0.8603-0.8607]	0.14	thresholds														
+AlphaMissense	Strong	0.9898	0.0763	thresholds														
+AlphaMissense	VeryStrong	not reached	not reached	thresholds														
+BayesDel	Supporting	0.14	-0.13	thresholds														
+BayesDel	Moderate	0.27	-0.25	thresholds														
+BayesDel	Strong	0.48	-0.54	thresholds														
+BayesDel	VeryStrong	not reached	not reached	thresholds														
+CADD	Supporting	25.6	22.7 [22.6-22.7]	thresholds														
+CADD	Moderate	28	19.59	thresholds														
+CADD	Strong	not reached	8.383	thresholds														
+CADD	VeryStrong	not reached	not reached	thresholds														
+REVEL	Supporting	0.642	0.396 [0.395-0.396]	thresholds														
+REVEL	Moderate	0.752 [0.752-0.753]	0.272	thresholds														
+REVEL	Strong	0.898	0.087	thresholds														
+REVEL	VeryStrong	not reached	not reached	thresholds														
+AVI				discrimination	0.9406	0.9175	0.9394	0.9419	0.9151	0.9197	0							0
+AlphaMissense				discrimination	0.9489	0.935	0.9479	0.95	0.9334	0.9367	0.008262	0.007383	0.009053	1000	0.01585	0.01921	1000	0.01757
+BayesDel				discrimination	0.9573	0.9462	0.9562	0.9583	0.9447	0.9477	0.01664	0.0155	0.01773	1000	0.02667	0.0309	1000	0.02876
+CADD				discrimination	0.9014	0.8492	0.8997	0.903	0.8461	0.8523	-0.03922	-0.04042	-0.03804	0	-0.07069	-0.06558	0	-0.06824
+REVEL				discrimination	0.9606	0.9524	0.9596	0.9616	0.951	0.9538	0.02	0.01882	0.02119	1000	0.03275	0.03708	1000	0.03494
