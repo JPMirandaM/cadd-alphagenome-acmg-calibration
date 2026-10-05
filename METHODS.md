@@ -288,6 +288,22 @@ the corresponding ACMG/AMP points (Tavtigian et al. 2020). No frequency filter w
 main count (a secondary count is restricted to AF < 0.01). This quantifies computational evidence
 only (script `23`).
 
+### 3.10b VUS resolved between ClinVar releases (Aim 7b; amendment A15)
+
+SNVs classified Uncertain significance (>= 1 star) in the ClinVar release of 27 January 2024 that are
+MANE Select missense in a disease gene (disease genes from the 2024 release; same exclusions as the
+reference sets) were followed to the release of 23 September 2026 and grouped as resolved to P/LP,
+resolved to B/LB or not resolved. Primary analysis: gnomAD v4.1 AF_max < 0.01 and thresholds
+calibrated on the January 2024 release only (amendment A6 release series, set r2024, five-predictor
+intersection, one seed). Secondary: 2026 main and intersection thresholds, and all VUS. For each
+predictor: percentage of resolved variants with PP3 or BP4 evidence and mean ACMG/AMP points by
+outcome; concordance with the final classification; likelihood ratio of each interval among resolved
+variants (P/LP vs B/LB, 2,000 bootstrap replicates) against the ClinGen targets. AVI (not citable by
+ClinVar submitters before 2026) is the negative control for circularity. Illustrative examples follow
+a rule fixed before inspection (2026 record reviewed by an expert panel or practice guideline; up to
+three per direction with the largest absolute AVI points). Script `42_vus_resolved.R`; Table 2,
+Figure 3B, Tables S18–S19.
+
 ### 3.11 Population frequency and ancestry (Aim 8; amendments A4, A12)
 
 *gnomAD (A4).* Universe: MANE Select missense SNVs observed in gnomAD v4.1. Per-group AF = maximum
@@ -466,14 +482,16 @@ repeating the computations.
 | S2 | Seed sensitivity of the one-sided BP4 Strong bound (5 seeds × 10,000 replicates) | `figures/FigS2_seed_sensitivity.{png,pdf}`; data `figures/data/FigS2_seed_sensitivity/`; script `scripts/06b_plot_seed_sensitivity.R` | Done 2026-09-25 |
 | Table S2 | All thresholds per seed, with fraction of failed replicates | `figures/TableS2_seed_sensitivity.tsv` | Done 2026-09-25 |
 | S3 | Temporal validation: interval likelihood ratios on variants classified after ClinVar 2024-01-27 | `figures/FigS3_temporal_validation.{png,pdf}`; data `figures/data/FigS3_temporal_validation/`; script `scripts/19_plot_temporal_lr.R` | Done 2026-09-25 |
-| 2 | Calibrated PP3/BP4 thresholds by gene class (constraint, inheritance, mechanism), five predictors | `figures/Fig2_gene_classes.{png,pdf}`; data `figures/data/Fig2_gene_classes/`; script `scripts/27_plot_gene_classes.R` | Done 2026-09-26 |
+| 5 (Figure 2 until manuscript v4) | Calibrated PP3/BP4 thresholds by gene class (constraint, inheritance, mechanism), five predictors | `figures/Fig5_gene_classes.{png,pdf}`; data `figures/data/Fig5_gene_classes/`; script `scripts/27_plot_gene_classes.R` | Done 2026-09-26; renumbered 2026-10-04 |
 | 1 | Local posterior probability of CADD v1.7 PHRED and AVI Phred (main analysis, seed 20260925) | `figures/Fig1_cadd17_avi_calibration.{png,pdf}`; data `figures/data/Fig1_cadd17_avi_calibration/`; script `scripts/16_plot_figure1.R` | Done 2026-09-25 |
-| 3 | Head-to-head comparison on the intersection set: AUROC and evidence levels of P/LP and B/LB variants, five predictors | `figures/Fig3_comparators.{png,pdf}`; data `figures/data/Fig3_comparators/`; script `scripts/36_plot_fig3_comparators.R` | Done 2026-09-27 |
-| 4 | Population frequency of PP3-level missense SNVs: gnomAD group with highest AF; MCPS overall and Indigenous Mexican frequencies | `figures/Fig4_population.{png,pdf}`; data `figures/data/Fig4_population/`; script `scripts/37_plot_fig4_population.R` | Done 2026-09-27 |
-| 5 | Computational evidence for ClinVar missense VUS, five predictors (intersection thresholds) | `figures/Fig5_vus.{png,pdf}`; data `figures/data/Fig5_vus/`; script `scripts/38_plot_fig5_vus.R` | Done 2026-09-27 |
+| 2 (Figure 3 until manuscript v4) | Head-to-head comparison on the intersection set: AUROC and evidence levels of P/LP and B/LB variants, five predictors | `figures/Fig2_comparators.{png,pdf}`; data `figures/data/Fig2_comparators/`; script `scripts/36_plot_fig3_comparators.R` | Done 2026-09-27; renumbered 2026-10-04 |
+| S5 (Figure 4 until manuscript v4) | Population frequency of PP3-level missense SNVs: gnomAD group with highest AF; MCPS overall and Indigenous Mexican frequencies | `figures/FigS5_population.{png,pdf}`; data `figures/data/FigS5_population/`; script `scripts/37_plot_fig4_population.R` | Done 2026-09-27; moved to the supplement 2026-10-04 |
+| 3 (Figure 5 until manuscript v4, now panel A) | Computational evidence for ClinVar missense VUS, five predictors: (A) 2026 VUS, intersection thresholds; (B) 2024 VUS resolved by 2026, thresholds calibrated on the 2024 release (amendment A15) | `figures/Fig3_vus.{png,pdf}`; data `figures/data/Fig3_vus/`; script `scripts/44_plot_fig3_vus.R` (replaces `38_plot_fig5_vus.R`) | Done 2026-10-04 |
+| 4 | Missense-calibrated thresholds outside missense variation: likelihood ratios of the BP4 intervals and AUROC of CADD v1.7 and AVI per ClinVar region class (grayscale) | `figures/Fig4_noncoding.{png,pdf}`; data `figures/data/Fig4_noncoding/`; script `scripts/43_plot_fig_noncoding.R` | Done 2026-10-04 |
+| Table 2 (manuscript v5) | Calibrated evidence for VUS of January 2024 resolved by September 2026 (amendment A15); the former Table 2 (MAVE) is now Table S17 | `figures/Table2_vus_resolved.{tsv,md}`; data `figures/data/Table2_vus_resolved/`; script `scripts/45_make_table2_vus_resolved.R` | Done 2026-10-04 |
 | Tables 1–2 | Table 1: calibrated thresholds of CADD v1.7 and AVI with evidence levels and published CADD v1.6 thresholds; Table 2: likelihood ratios of the calibrated intervals on MAVE functional classes, five predictors | `figures/Table1_thresholds.tsv`, `figures/Table2_mave.tsv`, `figures/Tables_1_2.docx`; data `figures/data/Table1_thresholds/`, `figures/data/Table2_mave/`; script `scripts/39_make_tables_1_2.R` | Done 2026-09-27 (Table 1 gains a CADD v1.6 2026-data column when A14 finishes) |
 | S4 | AUROC of five predictors for MAVE functional classes per gene (36 genes) | `figures/FigS4_mave_genes.{png,pdf}`; data `figures/data/FigS4_mave_genes/`; script `scripts/40_plot_figS4_mave_genes.R` | Done 2026-09-27 |
-| Tables S1–S16 | Supplementary tables (reproduction, seeds, predictor settings, sensitivity, HGMD, temporal hold-out, comparators, release series, gene classes, VUS, splice region, noncoding and MPRA, MCPS/BRAVO, MaveDB score sets, CADD v1.6 vs v1.7) | `figures/Supplementary_Tables_S1-S16.xlsx` (Contents sheet with titles and legends); TSV copies in `figures/data/SupplementaryTables/`; script `scripts/41_make_supplementary_tables.R` | Done 2026-09-27 |
+| Tables S1–S19 | Supplementary tables (reproduction, seeds, predictor settings, sensitivity, HGMD, temporal hold-out, comparators, release series, gene classes, VUS, splice region, noncoding and MPRA, MCPS/BRAVO, MaveDB score sets, CADD v1.6 vs v1.7, plan and amendments, MAVE intervals (S17), resolved VUS (S18), illustrative resolved VUS (S19)) | `figures/Supplementary_Tables_S1-S19.xlsx` (Contents sheet with titles and legends); TSV copies in `figures/data/SupplementaryTables/`; script `scripts/41_make_supplementary_tables.R` | Done 2026-09-27; S17–S19 added 2026-10-04 |
 
 ## References [VERIFY all before submission]
 

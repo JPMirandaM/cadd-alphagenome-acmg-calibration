@@ -307,6 +307,29 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   with Aim 2a (same version, different ClinVar releases), this separates the effect of the model
   version from that of the reference data.
 
+- A15 (2026-10-04, registered before any result; requested after co-author review asking for the
+  practical clinical impact): Aim 7b, prospective test of the calibrated evidence on VUS that were
+  later resolved. Variants: ClinVar 2024-01-27 SNVs classified "Uncertain_significance" with >= 1
+  star, MANE Select missense in a disease gene (rules of script 23, disease genes from the 2024
+  release). Outcome: their classification in the 2026-09-23 release, grouped as resolved to P/LP
+  (Pathogenic, Likely_pathogenic, Pathogenic/Likely_pathogenic), resolved to B/LB (Benign,
+  Likely_benign, Benign/Likely_benign), or not resolved (anything else, including conflicting).
+  Primary subset: gnomAD v4.1 AF_max < 0.01 (the calibration domain); all VUS as secondary.
+  Thresholds (primary): those derived from the 2024-01-27 release only (amendment A6 release series,
+  set r2024, all five predictors, intersection of scored variants), so that the evidence is what a
+  laboratory could have applied in January 2024. Secondary: 2026 main thresholds (CADD, AVI) and
+  2026 intersection thresholds (all five). Metrics per predictor: (1) proportion of variants
+  resolved to P/LP with PP3 evidence (any strength) and with BP4 evidence (discordant), and the
+  reverse for B/LB; (2) LR of each evidence interval, P(interval | resolved P/LP) /
+  P(interval | resolved B/LB), with 95% bootstrap CI (B = 2,000), compared with the ClinGen LR
+  targets; (3) ACMG/AMP points contributed (Tavtigian 2020) and the proportion of resolved variants
+  whose calibrated computational evidence pointed in the final direction. Circularity caveat:
+  2026 classifications may cite REVEL/BayesDel/CADD/AlphaMissense as PP3/BP4; AVI (released 2026,
+  not citable by submitters before) is the negative control. Illustrative examples, chosen by rule
+  before inspection: resolved variants whose 2026 record is reviewed by an expert panel (3 stars)
+  or practice guideline (4 stars); up to 3 per direction with the largest |AVI points|, ties broken
+  by genomic position.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.

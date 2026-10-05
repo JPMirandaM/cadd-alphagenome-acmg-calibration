@@ -1,6 +1,6 @@
-# Supplementary Tables S1-S16 of the manuscript, assembled from the analysis outputs.
+# Supplementary Tables S1-S19 of the manuscript (S17-S19 added 2026-10-04 for manuscript v5), assembled from the analysis outputs.
 # Each table is written as TSV to figures/data/SupplementaryTables/ and all of them, with a
-# "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S16.xlsx.
+# "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S19.xlsx.
 # No new computation: values are copied (and rounded for display) from calibration/results/.
 # Usage: Rscript 41_make_supplementary_tables.R
 suppressPackageStartupMessages({ library(data.table); library(openxlsx) })
@@ -111,8 +111,8 @@ add("S15", "CADD v1.6 versus v1.7 on identical reference data",
 add("S16", "Prespecified analysis plan and dated amendments",
     "The analysis plan was fixed on 25 September 2026 before any CADD v1.7 or AVI calibration result and tagged in the version-controlled repository (analysis-plan-v1). Each later analysis was specified in a dated amendment committed before it was run. The last column states whether the amendment was motivated by results already seen. Post hoc analyses that were not specified in any amendment are listed at the end.",
     data.table(
-      Item = c(sprintf("Amendment %d", 1:14), "Post hoc", "Post hoc"),
-      Date = c(rep("2026-09-25", 6), rep("2026-09-26", 5), rep("2026-09-27", 3), "2026-09-26", "2026-09-27"),
+      Item = c(sprintf("Amendment %d", 1:15), "Post hoc", "Post hoc"),
+      Date = c(rep("2026-09-25", 6), rep("2026-09-26", 5), rep("2026-09-27", 3), "2026-10-04", "2026-09-26", "2026-09-27"),
       Analysis = c("Paired bootstrap comparison of AUROC and AUPRC between AVI and CADD v1.7",
                    "Temporal hold-out validation (calibration on ClinVar 2024-01-27, test on later variants)",
                    "Calibration of REVEL, BayesDel and AlphaMissense on the five-predictor intersection",
@@ -127,12 +127,26 @@ add("S16", "Prespecified analysis plan and dated amendments",
                    "Population frequencies in the Mexico City Prospective Study and TOPMed BRAVO",
                    "Validation with MAVE functional classes from MaveDB",
                    "CADD v1.6 versus v1.7 on identical reference data",
+                   "Calibrated evidence for VUS of January 2024 resolved by September 2026 (requested by co-author review)",
                    "Drift thresholds expressed on a common scale (percentage of gnomAD variants meeting each threshold)",
                    "Source of MCPS genotypes (array, exome or genome) for variants with frequency conflicts"),
       Timing = c("after the main results", rep("before running", 4), "before running; motivated by the comparator results",
                  "before running; motivated by the drift results", rep("before running", 3), "scope change before running",
-                 "before any MCPS or BRAVO result", "before any MAVE score was downloaded", "before any CADD v1.6 score was read",
+                 "before any MCPS or BRAVO result", "before any MAVE score was downloaded", "before any CADD v1.6 score was read", "before any result; motivated by co-author review",
                  "post hoc", "post hoc")))
+
+## S17-S19 (manuscript v5, 2026-10-04) ------------------------------------------------------------
+add("S17", "Calibrated evidence intervals on MAVE functional classes",
+    "For each predictor and ClinVar-calibrated evidence interval, the likelihood ratio P(interval | functionally abnormal) / P(interval | functionally normal) with 95% bootstrap interval (2,000 replicates) and abnormal/normal variants in the interval, and the pooled AUROC, on 93,154 MANE missense SNVs in 39 genes (18,936 abnormal, 74,218 normal) from 89 MaveDB score sets. Functional abnormality is not pathogenicity; the ratios test direction and ordering, not the ClinGen targets. Main-text Table 2 of earlier drafts.",
+    fread(file.path(F, "Table2_mave.tsv")))
+vr <- file.path("vus_resolved")
+add("S18", "Calibrated evidence for ClinVar VUS of January 2024 that were resolved by September 2026",
+    "Amendment A15. VUS (>= 1 star, MANE Select missense, disease gene) in the ClinVar release of 27 January 2024, followed to the release of 23 September 2026. Thresholds: r2024 = calibrated on the January 2024 release only (five-predictor intersection, primary); main2026 and inter2026 = 2026 thresholds (secondary). Blocks: set sizes; percentage of variants with PP3 or BP4 evidence and mean ACMG/AMP points by 2026 outcome; concordance of the evidence with the 2026 classification; likelihood ratio of each interval, P(interval | resolved P/LP) / P(interval | resolved B/LB), with 95% bootstrap interval (2,000 replicates), the ratio required and whether the conservative bound meets it. Subset AF<0.01 (gnomAD v4.1 group maximum) is primary.",
+    rbind(rd(vr, "set_sizes.tsv")[, block := "set sizes"], rd(vr, "table_direction.tsv")[, block := "direction by outcome"],
+          rd(vr, "table_concordance.tsv")[, block := "concordance (r2024, AF<0.01)"], rd(vr, "table_interval_LR.tsv")[, block := "interval likelihood ratios"], fill = TRUE))
+add("S19", "Illustrative resolved VUS",
+    "Variants selected by the rule fixed in amendment A15 before inspection: VUS in January 2024 whose September 2026 record was reviewed by an expert panel or practice guideline, up to three per direction with the largest absolute AVI points (r2024 thresholds), ties broken by genomic position. Scores and evidence levels of all five predictors with the r2024 thresholds.",
+    fread(file.path(R, vr, "table_examples.tsv"), colClasses = list(character = "chrom")))
 
 ## Write -------------------------------------------------------------------------------------------
 wb <- createWorkbook(); hs <- createStyle(textDecoration = "bold")
@@ -147,6 +161,6 @@ for (id in names(tabs)) {
   fwrite(d, file.path(out_dir, sprintf("Table%s.tsv", id)), sep = "\t")
 }
 fwrite(contents, file.path(out_dir, "contents.tsv"), sep = "\t")
-saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S16.xlsx"), overwrite = TRUE)
-cat("Written", length(tabs), "tables:", file.path(F, "Supplementary_Tables_S1-S16.xlsx"), "\n")
+saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S19.xlsx"), overwrite = TRUE)
+cat("Written", length(tabs), "tables:", file.path(F, "Supplementary_Tables_S1-S19.xlsx"), "\n")
 print(contents[, .(Table, Title, rows = vapply(tabs, nrow, 0L))])

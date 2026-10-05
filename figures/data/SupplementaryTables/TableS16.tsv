@@ -13,5 +13,6 @@ Amendment 11	2026-09-26	SpliceVarDB analysis deferred to a later study (database
 Amendment 12	2026-09-27	Population frequencies in the Mexico City Prospective Study and TOPMed BRAVO	before any MCPS or BRAVO result
 Amendment 13	2026-09-27	Validation with MAVE functional classes from MaveDB	before any MAVE score was downloaded
 Amendment 14	2026-09-27	CADD v1.6 versus v1.7 on identical reference data	before any CADD v1.6 score was read
+Amendment 15	2026-10-04	Calibrated evidence for VUS of January 2024 resolved by September 2026 (requested by co-author review)	before any result; motivated by co-author review
 Post hoc	2026-09-26	Drift thresholds expressed on a common scale (percentage of gnomAD variants meeting each threshold)	post hoc
 Post hoc	2026-09-27	Source of MCPS genotypes (array, exome or genome) for variants with frequency conflicts	post hoc
