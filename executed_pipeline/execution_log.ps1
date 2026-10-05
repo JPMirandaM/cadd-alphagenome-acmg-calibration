@@ -403,3 +403,7 @@ git push -u origin main; git push origin analysis-plan-v1
 # [2026-10-05] Workbook layout revised (authors: sheets hard to read): multi-block tables written as separate
 # sub-tables with their own headers and only their own columns; readable column names; content-based widths.
 & $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S18.xlsx (same values)
+# [2026-10-05] Fix: single-block supplementary tables (S1-S5, S15, S16, S18) were written empty by the new
+# layout code (unnamed block list); Table S1 [VERIFY] placeholders resolved against Pejaver et al. 2022
+# (CADD v1.6: PP3 strong/very strong and BP4 very strong not reached) and its column names made readable.
+& $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S18.xlsx (all 18 sheets with data)
