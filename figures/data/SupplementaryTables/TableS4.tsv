@@ -1,4 +1,4 @@
-criterion	tool	level	S1	S2	S3	S4	main
+criterion	tool	level	two_stars	AF_below_0.001	gene_bootstrap	no_exon_edge_3nt	main
 PP3	AVI	Supporting	25.04	25.2	25.32	25.13	25.18
 PP3	AVI	Moderate	25.99	26.57	26.6	26.37	26.44
 PP3	AVI	Strong	30.23				

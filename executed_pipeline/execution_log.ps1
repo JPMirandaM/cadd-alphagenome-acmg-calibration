@@ -390,3 +390,13 @@ git push -u origin main; git push origin analysis-plan-v1
 & $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S19.xlsx (S17-S19 added)
 # Manuscript v5 and supplemental material v2 built locally (manuscript/ not versioned).
 # -------------------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------------------
+# Manuscript v6 [2026-10-05] (authors' revision of v5; co-authors added)
+# Population analyses (MCPS/BRAVO/gnomAD ancestry) removed from the article (STUDY_PLAN scope decision).
+# Supplementary tables renumbered: MCPS/BRAVO table removed; S14-S19 -> S13-S18; Table S4 sensitivity
+# columns given descriptive names (the labels S1-S4 collided with supplementary item numbers);
+# Table S15 gains a "Reported_in_this_article" column.
+& $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S18.xlsx
+# Manuscript v6 and supplemental material v3 built locally (manuscript/ not versioned).
+# -------------------------------------------------------------------------------------

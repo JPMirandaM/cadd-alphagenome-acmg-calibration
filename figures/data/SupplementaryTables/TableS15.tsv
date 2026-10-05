@@ -1,73 +1,18 @@
-block	tool	level	PP3	PP3_min	PP3_max	BP4	BP4_min	BP4_max	metric	estimate	lower95	upper95	set	n	changed	pct_changed	direction_reversed	y	lv16	lv17	N
-thresholds	CADD16	VeryStrong																			
-thresholds	CADD16	Strong				7.348	7.338	7.348													
-thresholds	CADD16	Moderate	27.5	27.5	27.5	21.1	21.1	21.1													
-thresholds	CADD16	Supporting	25.2	25.2	25.2	22.9	22.9	22.9													
-thresholds	CADD17	VeryStrong																			
-thresholds	CADD17	Strong				8.342	8.341	8.342													
-thresholds	CADD17	Moderate	28	28	28	19.59	19.59	19.59													
-thresholds	CADD17	Supporting	25.6	25.6	25.6	22.6	22.6	22.7													
-discrimination									AUROC CADD v1.6	0.9041	0.9024	0.9057									
-discrimination									AUROC CADD v1.7	0.9017	0.8998	0.9034									
-discrimination									difference v1.7 - v1.6	-0.002334	-0.003296	-0.001403									
-evidence level changes													B/LB	77128	25444	33	535				
-evidence level changes													P/LP	59979	23106	38.5	333				
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Moderate	BP4_Moderate	19265
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Moderate	BP4_Strong	2248
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Moderate	BP4_Supporting	4534
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Moderate	Indeterminate	1124
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Moderate	PP3_Moderate	9
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Moderate	PP3_Supporting	41
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Strong	BP4_Moderate	1254
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Strong	BP4_Strong	16131
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Strong	BP4_Supporting	3
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Strong	Indeterminate	2
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Strong	PP3_Supporting	1
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Supporting	BP4_Moderate	1611
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Supporting	BP4_Supporting	4607
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Supporting	Indeterminate	3327
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Supporting	PP3_Moderate	46
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	BP4_Supporting	PP3_Supporting	214
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	Indeterminate	BP4_Moderate	340
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	Indeterminate	BP4_Supporting	3023
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	Indeterminate	Indeterminate	7608
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	Indeterminate	PP3_Moderate	514
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	Indeterminate	PP3_Supporting	1728
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Moderate	BP4_Moderate	1
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Moderate	BP4_Supporting	18
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Moderate	Indeterminate	556
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Moderate	PP3_Moderate	2003
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Moderate	PP3_Supporting	1016
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Supporting	BP4_Moderate	5
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Supporting	BP4_Supporting	200
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Supporting	Indeterminate	2517
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Supporting	PP3_Moderate	1112
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		0	PP3_Supporting	PP3_Supporting	2070
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Moderate	BP4_Moderate	925
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Moderate	BP4_Strong	71
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Moderate	BP4_Supporting	338
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Moderate	Indeterminate	111
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Moderate	PP3_Moderate	20
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Moderate	PP3_Supporting	22
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Strong	BP4_Moderate	24
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Strong	BP4_Strong	137
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Supporting	BP4_Moderate	255
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Supporting	BP4_Supporting	881
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Supporting	Indeterminate	680
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Supporting	PP3_Moderate	98
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	BP4_Supporting	PP3_Supporting	98
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	Indeterminate	BP4_Moderate	54
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	Indeterminate	BP4_Supporting	1131
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	Indeterminate	Indeterminate	6743
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	Indeterminate	PP3_Moderate	781
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	Indeterminate	PP3_Supporting	2625
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Moderate	BP4_Moderate	2
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Moderate	BP4_Supporting	10
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Moderate	Indeterminate	1017
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Moderate	PP3_Moderate	20111
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Moderate	PP3_Supporting	4858
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Supporting	BP4_Moderate	1
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Supporting	BP4_Supporting	82
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Supporting	Indeterminate	4156
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Supporting	PP3_Moderate	6672
-cross-tabulation (y = 1 P/LP, 0 B/LB)																		1	PP3_Supporting	PP3_Supporting	8076
+Item	Date	Analysis	Timing	Reported_in_this_article
+Amendment 1	2026-09-25	Paired bootstrap comparison of AUROC and AUPRC between AVI and CADD v1.7	after the main results	yes
+Amendment 2	2026-09-25	Temporal hold-out validation (calibration on ClinVar 2024-01-27, test on later variants)	before running	yes
+Amendment 3	2026-09-25	Calibration of REVEL, BayesDel and AlphaMissense on the five-predictor intersection	before running	yes
+Amendment 4	2026-09-25	Population frequency and ancestry of PP3-level variants in gnomAD v4.1	before running	no (population analyses reserved for a separate study)
+Amendment 5	2026-09-25	Computational evidence for ClinVar missense variants of uncertain significance	before running	yes
+Amendment 6	2026-09-25	Threshold drift across ClinVar releases and before/after November 2022 (AVI as negative control)	before running; motivated by the comparator results	yes
+Amendment 7	2026-09-26	Exclusion of HGMD Public positions from the 2019 and 2026 reference sets	before running; motivated by the drift results	yes
+Amendment 8	2026-09-26	Calibration by gene class (constraint, inheritance, mechanism)	before running	yes
+Amendment 9	2026-09-26	Genome-wide catalogue of SNVs at PP3 levels	before running	no (companion resource article)
+Amendment 10	2026-09-26	Noncoding variants (ClinVar region classes, calibration of classes with enough variants, MPRA)	before running	yes
+Amendment 11	2026-09-26	SpliceVarDB analysis deferred to a later study (database not reachable)	scope change before running	no (deferred)
+Amendment 12	2026-09-27	Population frequencies in the Mexico City Prospective Study and TOPMed BRAVO	before any MCPS or BRAVO result	no (population analyses reserved for a separate study)
+Amendment 13	2026-09-27	Validation with MAVE functional classes from MaveDB	before any MAVE score was downloaded	yes
+Amendment 14	2026-09-27	CADD v1.6 versus v1.7 on identical reference data	before any CADD v1.6 score was read	yes
+Amendment 15	2026-10-04	Calibrated evidence for VUS of January 2024 resolved by September 2026 (requested by co-author review)	before any result; motivated by co-author review	yes
+Post hoc	2026-09-26	Drift thresholds expressed on a common scale (percentage of gnomAD variants meeting each threshold)	post hoc	yes
+Post hoc	2026-09-27	Source of MCPS genotypes (array, exome or genome) for variants with frequency conflicts	post hoc	no (population analyses reserved for a separate study)
