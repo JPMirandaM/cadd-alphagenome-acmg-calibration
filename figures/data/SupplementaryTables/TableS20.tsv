@@ -1,0 +1,84 @@
+tool	level	PP3	BP4	block	item	value	N	pct	CADD16	CADD17	AVI
+AVI	VeryStrong			thresholds used							
+AVI	Strong		9.15	thresholds used							
+AVI	Moderate	26.44	20.52	thresholds used							
+AVI	Supporting	25.18	22.95	thresholds used							
+CADD	VeryStrong			thresholds used							
+CADD	Strong		8.341	thresholds used							
+CADD	Moderate	28	19.59	thresholds used							
+CADD	Supporting	25.6	22.6	thresholds used							
+AlphaMissense	Moderate	0.906	0.099	thresholds used							
+AlphaMissense	Strong	0.972	0.07	thresholds used							
+AlphaMissense	Supporting	0.792	0.169	thresholds used							
+AlphaMissense	VeryStrong	0.99		thresholds used							
+BayesDel	Moderate	0.27	-0.36	thresholds used							
+BayesDel	Strong	0.5		thresholds used							
+BayesDel	Supporting	0.13	-0.18	thresholds used							
+REVEL	Moderate	0.773	0.183	thresholds used							
+REVEL	Strong	0.932	0.016	thresholds used							
+REVEL	Supporting	0.644	0.29	thresholds used							
+REVEL	VeryStrong		0.003	thresholds used							
+CADD16	Supporting	25.3	22.7	thresholds used							
+CADD16	Moderate	28.1	17.3	thresholds used							
+CADD16	Strong		0.15	thresholds used							
+				counts	concordant points	-2	167479	13.86			
+				counts	concordant points	-1	210699	17.44			
+				counts	concordant points	0	724755	59.97			
+				counts	concordant points	1	48013	3.97			
+				counts	concordant points	2	46931	3.88			
+				counts	concordant points	4	10553	0.87			
+				counts	concordant points (3-4 stars)	-2	112	0.01			
+				counts	concordant points (3-4 stars)	-1	175	0.01			
+				counts	concordant points (3-4 stars)	0	1854	0.15			
+				counts	concordant points (3-4 stars)	1	280	0.02			
+				counts	concordant points (3-4 stars)	2	341	0.03			
+				counts	concordant points (3-4 stars)	4	186	0.02			
+				counts	change level: CADD v1.6 transferred vs CADD v1.7 calibrated	TRUE	216454	17.91			
+				counts	change level: CADD v1.6 transferred vs AVI calibrated	TRUE	727644	60.21			
+				counts	flip direction: CADD v1.6 transferred vs CADD v1.7 calibrated	TRUE	0	0			
+				counts	flip direction: CADD v1.6 transferred vs AVI calibrated	TRUE	55003	4.55			
+				counts	rare VUS	all	1208430	100			
+				CADD v1.6 transferred versus CADD v1.7 calibrated			284579		Indeterminate	Indeterminate	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			198534		BP4_Supporting	BP4_Supporting	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			173620		PP3_Supporting	PP3_Supporting	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			166520		BP4_Moderate	BP4_Moderate	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			151244		PP3_Moderate	PP3_Moderate	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			92776		BP4_Supporting	BP4_Moderate	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			79467		BP4_Moderate	BP4_Strong	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			30239		PP3_Supporting	Indeterminate	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			17479		BP4_Strong	BP4_Strong	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			8900		BP4_Supporting	Indeterminate	
+				CADD v1.6 transferred versus CADD v1.7 calibrated			5072		PP3_Supporting	PP3_Moderate	
+				CADD v1.6 transferred versus AVI calibrated			154486		BP4_Supporting		BP4_Moderate
+				CADD v1.6 transferred versus AVI calibrated			154159		BP4_Moderate		BP4_Moderate
+				CADD v1.6 transferred versus AVI calibrated			95105		Indeterminate		BP4_Supporting
+				CADD v1.6 transferred versus AVI calibrated			94490		Indeterminate		Indeterminate
+				CADD v1.6 transferred versus AVI calibrated			91620		PP3_Moderate		PP3_Moderate
+				CADD v1.6 transferred versus AVI calibrated			91514		BP4_Supporting		BP4_Supporting
+				CADD v1.6 transferred versus AVI calibrated			80988		BP4_Moderate		BP4_Strong
+				CADD v1.6 transferred versus AVI calibrated			70292		PP3_Supporting		Indeterminate
+				CADD v1.6 transferred versus AVI calibrated			70267		PP3_Supporting		PP3_Moderate
+				CADD v1.6 transferred versus AVI calibrated			40010		BP4_Supporting		Indeterminate
+				CADD v1.6 transferred versus AVI calibrated			34359		Indeterminate		BP4_Moderate
+				CADD v1.6 transferred versus AVI calibrated			32783		PP3_Supporting		PP3_Supporting
+				CADD v1.6 transferred versus AVI calibrated			32486		PP3_Moderate		Indeterminate
+				CADD v1.6 transferred versus AVI calibrated			31590		PP3_Supporting		BP4_Supporting
+				CADD v1.6 transferred versus AVI calibrated			30809		Indeterminate		PP3_Moderate
+				CADD v1.6 transferred versus AVI calibrated			29768		Indeterminate		PP3_Supporting
+				CADD v1.6 transferred versus AVI calibrated			18808		PP3_Moderate		PP3_Supporting
+				CADD v1.6 transferred versus AVI calibrated			16220		BP4_Strong		BP4_Strong
+				CADD v1.6 transferred versus AVI calibrated			8498		BP4_Moderate		BP4_Supporting
+				CADD v1.6 transferred versus AVI calibrated			7840		PP3_Moderate		BP4_Supporting
+				CADD v1.6 transferred versus AVI calibrated			7054		BP4_Supporting		PP3_Supporting
+				CADD v1.6 transferred versus AVI calibrated			3999		PP3_Supporting		BP4_Moderate
+				CADD v1.6 transferred versus AVI calibrated			3852		BP4_Supporting		PP3_Moderate
+				CADD v1.6 transferred versus AVI calibrated			3294		BP4_Supporting		BP4_Strong
+				CADD v1.6 transferred versus AVI calibrated			2164		BP4_Moderate		Indeterminate
+				CADD v1.6 transferred versus AVI calibrated			1237		BP4_Strong		BP4_Moderate
+				CADD v1.6 transferred versus AVI calibrated			489		PP3_Moderate		BP4_Moderate
+				CADD v1.6 transferred versus AVI calibrated			142		BP4_Moderate		PP3_Supporting
+				CADD v1.6 transferred versus AVI calibrated			48		Indeterminate		BP4_Strong
+				CADD v1.6 transferred versus AVI calibrated			36		BP4_Moderate		PP3_Moderate
+				CADD v1.6 transferred versus AVI calibrated			20		BP4_Strong		BP4_Supporting
+				CADD v1.6 transferred versus AVI calibrated			2		BP4_Strong		Indeterminate
+				CADD v1.6 transferred versus AVI calibrated			1		PP3_Moderate		BP4_Strong

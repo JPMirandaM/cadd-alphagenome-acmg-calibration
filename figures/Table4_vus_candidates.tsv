@@ -1,0 +1,24 @@
+gene	expert_panel_VUS	concordant	PP3_strong	PP3_moderate	PP3_supporting	BP4_supporting	BP4_moderate	examples_PP3_strong
+RUNX1	674	217	52	48	39	45	33	p.Pro200His, p.Pro200Ser, p.Gly199Ala
+RYR1	217	101	11	47	42	1	0	p.Glu160Gly, p.Gly165Arg, p.Asp166Gly
+HNF1A	133	58	18	27	13	0	0	p.Leu12His, p.Leu12Pro, p.Leu16Pro
+LDLR	255	58	16	20	16	5	1	p.Asp47Tyr, p.Asp57Ala, p.Cys160Tyr
+HNF4A	80	41	17	11	5	6	2	p.Gly47Ser, p.His49Pro, p.His49Arg
+PAH	116	40	15	12	13	0	0	p.Gly344Val, p.Gly344Arg, p.Gly312Arg
+MYOC	113	39	0	3	6	17	13	
+GCK	78	38	13	18	7	0	0	p.Gly444Asp, p.Leu430Pro, p.Phe423Ser
+ITGA2B	66	30	0	2	9	10	9	
+SLC6A8	44	28	3	9	3	6	7	p.Gly87Arg, p.Gly113Asp, p.Met510Lys
+DICER1	76	27	0	10	8	8	1	
+ITGB3	54	26	9	5	5	6	1	p.Cys64Tyr, p.Leu146Pro, p.Ser149Pro
+DCLRE1C	52	20	1	5	5	4	5	p.His33Tyr
+MYH7	46	18	2	10	6	0	0	p.Arg243His, p.Tyr115His
+PTEN	36	18	4	10	3	1	0	p.Ile33Thr, p.Met35Ile, p.Pro38Ser
+CDH1	26	16	0	3	1	4	8	
+IDUA	37	16	0	4	11	1	0	
+ATM	20	13	1	6	3	0	3	p.Pro2699Leu
+RPGR	17	11	2	6	2	1	0	p.Gly303Glu, p.Gly251Val
+SERPINC1	27	11	1	4	3	1	2	p.Ser111Pro
+ACADVL	32	10	2	3	5	0	0	p.Gly193Arg, p.Gly193Asp
+RAG1	16	10	0	3	2	4	1	
+TP53	29	10	1	5	4	0	0	p.Gly334Arg

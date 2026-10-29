@@ -407,3 +407,12 @@ git push -u origin main; git push origin analysis-plan-v1
 # layout code (unnamed block list); Table S1 [VERIFY] placeholders resolved against Pejaver et al. 2022
 # (CADD v1.6: PP3 strong/very strong and BP4 very strong not reached) and its column names made readable.
 & $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S18.xlsx (all 18 sheets with data)
+
+# -------------------------------------------------------------------------------------
+# Manuscript v7 [2026-10-29] (authors: humanized text, clearer impact, list of variants whose classification could change)
+# Amendment A16 registered in STUDY_PLAN.md before running (current ClinVar VUS; thresholds transferred between CADD versions).
+& $R .\scripts\46_vus_reclassification_candidates.R      # -> logs\46_vus_reclassification_candidates.log (~45 min; RESULTS R19)
+& $R .\scripts\47_make_table4_vus_candidates.R           # -> figures\Table4_vus_candidates.tsv (manuscript Table 4)
+& $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S20.xlsx (S19-S20 added; replaces S1-S18 workbook)
+# Manuscript v7 and supplemental material v4 built locally (manuscript/ not versioned).
+# -------------------------------------------------------------------------------------
