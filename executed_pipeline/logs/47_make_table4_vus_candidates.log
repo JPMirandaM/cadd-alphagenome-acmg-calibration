@@ -1,0 +1,53 @@
+        gene expert_panel_VUS concordant PP3_strong PP3_moderate PP3_supporting
+      <char>            <int>      <num>      <int>        <int>          <int>
+ 1:    RUNX1              674        217         52           48             39
+ 2:     RYR1              217        101         11           47             42
+ 3:    HNF1A              133         58         18           27             13
+ 4:     LDLR              255         58         16           20             16
+ 5:    HNF4A               80         41         17           11              5
+ 6:      PAH              116         40         15           12             13
+ 7:     MYOC              113         39          0            3              6
+ 8:      GCK               78         38         13           18              7
+ 9:   ITGA2B               66         30          0            2              9
+10:   SLC6A8               44         28          3            9              3
+11:   DICER1               76         27          0           10              8
+12:    ITGB3               54         26          9            5              5
+13:  DCLRE1C               52         20          1            5              5
+14:     MYH7               46         18          2           10              6
+15:     PTEN               36         18          4           10              3
+16:     CDH1               26         16          0            3              1
+17:     IDUA               37         16          0            4             11
+18:      ATM               20         13          1            6              3
+19:     RPGR               17         11          2            6              2
+20: SERPINC1               27         11          1            4              3
+21:   ACADVL               32         10          2            3              5
+22:     RAG1               16         10          0            3              2
+23:     TP53               29         10          1            5              4
+        gene expert_panel_VUS concordant PP3_strong PP3_moderate PP3_supporting
+    BP4_supporting BP4_moderate                   examples_PP3_strong
+             <int>        <int>                                <char>
+ 1:             45           33 p.Pro200His, p.Pro200Ser, p.Gly199Ala
+ 2:              1            0 p.Glu160Gly, p.Gly165Arg, p.Asp166Gly
+ 3:              0            0    p.Leu12His, p.Leu12Pro, p.Leu16Pro
+ 4:              5            1   p.Asp47Tyr, p.Asp57Ala, p.Cys160Tyr
+ 5:              6            2    p.Gly47Ser, p.His49Pro, p.His49Arg
+ 6:              0            0 p.Gly344Val, p.Gly344Arg, p.Gly312Arg
+ 7:             17           13                                  <NA>
+ 8:              0            0 p.Gly444Asp, p.Leu430Pro, p.Phe423Ser
+ 9:             10            9                                  <NA>
+10:              6            7  p.Gly87Arg, p.Gly113Asp, p.Met510Lys
+11:              8            1                                  <NA>
+12:              6            1  p.Cys64Tyr, p.Leu146Pro, p.Ser149Pro
+13:              4            5                            p.His33Tyr
+14:              0            0              p.Arg243His, p.Tyr115His
+15:              1            0    p.Ile33Thr, p.Met35Ile, p.Pro38Ser
+16:              4            8                                  <NA>
+17:              1            0                                  <NA>
+18:              0            3                          p.Pro2699Leu
+19:              1            0              p.Gly303Glu, p.Gly251Val
+20:              1            2                           p.Ser111Pro
+21:              0            0              p.Gly193Arg, p.Gly193Asp
+22:              4            1                                  <NA>
+23:              0            0                           p.Gly334Arg
+    BP4_supporting BP4_moderate                   examples_PP3_strong
+All expert-panel VUS: 2948 | concordant: 1094 | genes: 97 | genes in Table 4: 23 | variants in Table 4: 856 

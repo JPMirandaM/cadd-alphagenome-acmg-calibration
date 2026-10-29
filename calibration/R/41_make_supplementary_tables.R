@@ -1,6 +1,6 @@
-# Supplementary Tables S1-S18 of the manuscript (v6, 2026-10-05; MCPS/BRAVO table removed), assembled from the analysis outputs.
+# Supplementary Tables S1-S20 of the manuscript (v7, 2026-10-29; S19-S20 added for amendment A16; v6 removed the MCPS/BRAVO table), assembled from the analysis outputs.
 # Each table is written as TSV to figures/data/SupplementaryTables/ and all of them, with a
-# "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S18.xlsx.
+# "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S20.xlsx.
 # No new computation: values are copied (and rounded for display) from calibration/results/.
 # Usage: Rscript 41_make_supplementary_tables.R
 suppressPackageStartupMessages({ library(data.table); library(openxlsx) })
@@ -149,6 +149,17 @@ add("S18", "Illustrative resolved VUS",
     "Variants selected by the rule fixed in amendment A15 before inspection: VUS in January 2024 whose September 2026 record was reviewed by an expert panel or practice guideline, up to three per direction with the largest absolute AVI points (r2024 thresholds), ties broken by genomic position. Scores and evidence levels of all five predictors with the r2024 thresholds.",
     fread(file.path(R, vr, "table_examples.tsv"), colClasses = list(character = "chrom")))
 
+## S19-S20 (added for manuscript v7, 2026-10-29; amendment A16) ---------------------------------------
+vc <- file.path(R, "vus_candidates")
+add("S19", "ClinVar missense VUS reviewed by an expert panel with concordant calibrated computational evidence",
+    "Amendment A16. VUS in the ClinVar release of 23 September 2026 (MANE Select missense, disease gene) whose record was reviewed by an expert panel or practice guideline and for which REVEL, BayesDel and AlphaMissense (published ClinGen thresholds) and AVI (Table 1) all gave evidence in the same direction. Comp points, the smallest absolute ACMG/AMP points among the three missense predictors. Scenario, the other evidence with which these points would complete a likely pathogenic (>= +6 points) or likely benign (<= -1 point) classification under the ACMG/AMP point system; it is not a reclassification, because ClinVar does not record the points of the remaining evidence and expert panels may already have applied their own computational criteria. Ev CADD16, CADD v1.7 scores read with the published CADD v1.6 thresholds; Flip AVI, evidence in opposite directions under those thresholds and under calibrated AVI. AF max, gnomAD v4.1 group maximum allele frequency. Ordered by absolute points and genomic position. The 483,690 VUS with concordant evidence at any review status are in the repository (calibration/results/v17_avi/vus_candidates/vus_concordant_evidence.tsv.gz).",
+    fread(file.path(vc, "vus_concordant_expert_panel.tsv"), colClasses = list(character = "chrom")))
+add("S20", "Concordant calibrated evidence and transferred thresholds for all ClinVar missense VUS",
+    "Amendment A16. The 1,208,430 rare (gnomAD v4.1 AF max < 0.01) MANE Select missense VUS with at least one star in disease genes, ClinVar release of 23 September 2026. Blocks: thresholds used (CADD and AVI, Table 1; REVEL, BayesDel and AlphaMissense, published ClinGen values; CADD16, published CADD v1.6 values applied to CADD v1.7 scores); number of VUS by concordant ACMG/AMP points, for all VUS and for those reviewed by an expert panel or practice guideline (3-4 stars), and number whose evidence level or direction differs between transferred CADD v1.6 thresholds and calibrated CADD v1.7 or AVI thresholds; cross-tabulations of evidence levels under transferred CADD v1.6 thresholds against calibrated CADD v1.7 and against calibrated AVI.",
+    rbind(rd("vus_candidates", "thresholds_used.tsv")[, block := "thresholds used"], rd("vus_candidates", "summary.tsv")[, block := "counts"],
+          rd("vus_candidates", "crosstab_cadd16_vs_cadd17.tsv")[, block := "CADD v1.6 transferred versus CADD v1.7 calibrated"],
+          rd("vus_candidates", "crosstab_cadd16_vs_avi.tsv")[, block := "CADD v1.6 transferred versus AVI calibrated"], fill = TRUE))
+
 ## Write -------------------------------------------------------------------------------------------
 wb <- createWorkbook(); hs <- createStyle(textDecoration = "bold")
 contents <- rbindlist(meta)
@@ -192,6 +203,6 @@ for (id in names(tabs)) {
   if (length(blocks) == 1) freezePane(wb, id, firstActiveRow = 5)
 }
 fwrite(contents, file.path(out_dir, "contents.tsv"), sep = "\t")
-saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S18.xlsx"), overwrite = TRUE)
-cat("Written", length(tabs), "tables:", file.path(F, "Supplementary_Tables_S1-S18.xlsx"), "\n")
+saveWorkbook(wb, file.path(F, "Supplementary_Tables_S1-S20.xlsx"), overwrite = TRUE)
+cat("Written", length(tabs), "tables:", file.path(F, "Supplementary_Tables_S1-S20.xlsx"), "\n")
 print(contents[, .(Table, Title, rows = vapply(tabs, nrow, 0L))])

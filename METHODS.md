@@ -304,6 +304,22 @@ a rule fixed before inspection (2026 record reviewed by an expert panel or pract
 three per direction with the largest absolute AVI points). Script `42_vus_resolved.R`; Table 2,
 Figure 3B, Tables S18–S19.
 
+### 3.10c Current VUS and thresholds transferred between versions (Aim 7c; amendment A16)
+
+The 1,208,461 ClinVar 2026-09-23 MANE Select missense VUS (>= 1 star, disease genes; scores from
+script 23) were annotated with their ClinVar ID, review stars and MANE protein change. Evidence:
+CADD v1.7 and AVI at the 2026 main thresholds (Table 1); REVEL, BayesDel and AlphaMissense at the
+published ClinGen thresholds (same values as script 25b). Concordant evidence: the three missense
+predictors and AVI all in the same direction; points = smallest absolute ACMG/AMP points among the
+three missense predictors. Scenario (point system, Tavtigian 2020): other evidence with which these
+points would complete a likely pathogenic (>= +6) or likely benign (<= -1) classification; not a
+reclassification, because ClinVar does not record the points of the remaining evidence. Transferred
+thresholds: CADD v1.7 scores read with the published CADD v1.6 thresholds, compared level by level
+with calibrated CADD v1.7 and with calibrated AVI. Counts use AF_max < 0.01; no variant is removed
+from the lists. Scripts `46_vus_reclassification_candidates.R` (results in
+`calibration/results/v17_avi/vus_candidates/`) and `47_make_table4_vus_candidates.R`; Table 4,
+Tables S19–S20 (manuscript v7 numbering).
+
 ### 3.11 Population frequency and ancestry (Aim 8; amendments A4, A12)
 
 *gnomAD (A4).* Universe: MANE Select missense SNVs observed in gnomAD v4.1. Per-group AF = maximum
@@ -489,6 +505,7 @@ repeating the computations.
 | 3 (Figure 5 until manuscript v4, now panel A) | Computational evidence for ClinVar missense VUS, five predictors: (A) 2026 VUS, intersection thresholds; (B) 2024 VUS resolved by 2026, thresholds calibrated on the 2024 release (amendment A15) | `figures/Fig3_vus.{png,pdf}`; data `figures/data/Fig3_vus/`; script `scripts/44_plot_fig3_vus.R` (replaces `38_plot_fig5_vus.R`) | Done 2026-10-04 |
 | 4 | Missense-calibrated thresholds outside missense variation: likelihood ratios of the BP4 intervals and AUROC of CADD v1.7 and AVI per ClinVar region class (grayscale) | `figures/Fig4_noncoding.{png,pdf}`; data `figures/data/Fig4_noncoding/`; script `scripts/43_plot_fig_noncoding.R` | Done 2026-10-04 |
 | Table 2 (manuscript v5) | Calibrated evidence for VUS of January 2024 resolved by September 2026 (amendment A15); the former Table 2 (MAVE) is now Table S17 | `figures/Table2_vus_resolved.{tsv,md}`; data `figures/data/Table2_vus_resolved/`; script `scripts/45_make_table2_vus_resolved.R` | Done 2026-10-04 |
+| Table 4 (manuscript v7) | Expert-panel ClinVar missense VUS with concordant calibrated evidence, by gene (amendment A16); variant-level list in Table S19, genome-wide counts and transferred thresholds in Table S20 | `figures/Table4_vus_candidates.tsv`; data `calibration/results/v17_avi/vus_candidates/`; scripts `scripts/46_vus_reclassification_candidates.R`, `scripts/47_make_table4_vus_candidates.R` | Done 2026-10-29 |
 | Tables 1–2 | Table 1: calibrated thresholds of CADD v1.7 and AVI with evidence levels and published CADD v1.6 thresholds; Table 2: likelihood ratios of the calibrated intervals on MAVE functional classes, five predictors | `figures/Table1_thresholds.tsv`, `figures/Table2_mave.tsv`, `figures/Tables_1_2.docx`; data `figures/data/Table1_thresholds/`, `figures/data/Table2_mave/`; script `scripts/39_make_tables_1_2.R` | Done 2026-09-27 (Table 1 gains a CADD v1.6 2026-data column when A14 finishes) |
 | S4 | AUROC of five predictors for MAVE functional classes per gene (36 genes) | `figures/FigS4_mave_genes.{png,pdf}`; data `figures/data/FigS4_mave_genes/`; script `scripts/40_plot_figS4_mave_genes.R` | Done 2026-09-27 |
 | Tables S1–S18 (manuscript v6) | Supplementary tables (reproduction, seeds, predictor settings, sensitivity, HGMD, temporal hold-out, comparators, release series, gene classes, VUS, splice region, noncoding and MPRA, MaveDB score sets (S13), CADD v1.6 vs v1.7 (S14), plan and amendments (S15), MAVE intervals (S16), resolved VUS (S17), illustrative resolved VUS (S18); the MCPS/BRAVO table was removed in v6) | `figures/Supplementary_Tables_S1-S18.xlsx` (Contents sheet with titles and legends); TSV copies in `figures/data/SupplementaryTables/`; script `scripts/41_make_supplementary_tables.R` | Done 2026-09-27; S16–S18 added 2026-10-04; renumbered 2026-10-05 |

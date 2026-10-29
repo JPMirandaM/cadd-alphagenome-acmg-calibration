@@ -608,3 +608,33 @@ p.Asn334Lys (likely pathogenic) with BP4 from AVI and CADD (PIK3CD: gain-of-func
 Interpretation: calibrated evidence points in the final direction for about three quarters of resolved
 VUS (AVI and missense predictors), contributing one to two points on average; AVI (negative control)
 is close to the missense predictors that 2026 classifications could cite.
+
+## R19. Current ClinVar missense VUS with concordant calibrated evidence (Aim 7c; amendment A16)
+
+Script `46_vus_reclassification_candidates.R` (log `executed_pipeline/logs/46_vus_reclassification_candidates.log`),
+2026-10-29. 1,208,461 VUS (MANE Select missense, >= 1 star, disease genes; ClinVar 2026-09-23), 1,208,430 with
+AF_max < 0.01 (counts below).
+
+| Concordant evidence (REVEL, BayesDel, AlphaMissense published thresholds + AVI) | All rare VUS | Expert panel/guideline |
+|---|---|---|
+| PP3 strong (+4) | 10,553 (0.87%) | 186 |
+| PP3 moderate (+2) | 46,931 (3.88%) | 341 |
+| PP3 supporting (+1) | 48,013 (3.97%) | 280 |
+| BP4 supporting (−1) | 210,699 (17.44%) | 175 |
+| BP4 moderate (−2) | 167,479 (13.86%) | 112 |
+| None | 724,755 (59.97%) | 1,854 |
+| Total | 1,208,430 | 2,948 |
+
+Concordant VUS: 483,690 (483,675 rare); expert-panel concordant 1,094 in 97 genes; 23 genes with >= 10
+(856 variants; Table 4): RUNX1 217 (139 PP3, 78 BP4), RYR1 101 (100 PP3), HNF1A 58, LDLR 58, HNF4A 41, PAH 40
+(all PP3), MYOC 39 (30 BP4), GCK 38 (all PP3), ITGA2B 30 (19 BP4). In the gene-class annotation RUNX1, RYR1,
+HNF1A, HNF4A and CDH1 are LOEUF 0–2.
+Transferred thresholds (CADD v1.7 scores, published v1.6 thresholds) vs calibrated CADD v1.7: 216,454 (17.91%)
+change level (92,776 BP4 supporting -> moderate; 79,467 BP4 moderate -> strong; 30,239 PP3 supporting ->
+indeterminate; 8,900 BP4 supporting -> indeterminate; 5,072 PP3 supporting -> moderate), none change direction.
+Transferred CADD v1.6 vs calibrated AVI: 55,003 (4.55%) opposite directions (43,919 PP3 by CADD and BP4 by AVI;
+11,084 the reverse).
+Interpretation: calibrated predictors agree on evidence for 40% of current missense VUS; concordant PP3 strong
+completes a likely pathogenic classification with two further points. Expert panels may already apply their
+own computational criteria, so the list identifies candidates for reassessment, not reclassifications.
+Transferring v1.6 thresholds to v1.7 mainly weakens benign evidence.

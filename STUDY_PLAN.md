@@ -330,6 +330,27 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   or practice guideline (4 stars); up to 3 per direction with the largest |AVI points|, ties broken
   by genomic position.
 
+- A16 (2026-10-29, registered before any result; requested by the authors for manuscript v7, a list
+  of variants whose classification could change): Aim 7c, current VUS whose classification could
+  change with calibrated computational evidence. Variants: ClinVar 2026-09-23 SNVs classified
+  "Uncertain_significance" with >= 1 star, MANE Select missense in a disease gene (the 1,208,461 VUS
+  of script 23); no variant is removed, and gnomAD v4.1 AF_max is reported for each variant (the
+  calibration domain, AF_max < 0.01, is used for the counts in the text). Evidence: CADD v1.7 and
+  AVI at the 2026 main thresholds (Table 1); REVEL, BayesDel and AlphaMissense at the published
+  ClinGen thresholds (Pejaver 2022; Bergquist 2025), as a laboratory following Table 3 would apply
+  them. Concordant computational evidence: all three missense predictors and AVI give evidence in
+  the same direction; its points are the smallest absolute ACMG/AMP points (Tavtigian 2020) among
+  the three missense predictors (conservative; a laboratory applies one predictor). Scenario: under
+  the point system (P >= 10, LP 6-9, VUS 0-5, LB -1 to -6, B <= -7), report the other evidence a
+  VUS would need for the computational points to complete a likely pathogenic (>= 6) or likely
+  benign (<= -1) classification. Reclassification is never asserted, because ClinVar does not
+  record the points of the remaining evidence. Comparison with current practice: CADD v1.7 scores
+  read with the published CADD v1.6 thresholds (PP3 >= 25.3 and >= 28.1; BP4 <= 22.7, <= 17.3 and
+  <= 0.15), i.e. thresholds transferred between versions, versus calibrated AVI and calibrated
+  CADD v1.7 evidence; changes of level and of direction are counted. Lists: all variants with
+  concordant evidence (supplementary table), and those reviewed by an expert panel (3 stars) or
+  practice guideline (4 stars), ordered by |points| then genomic position (main text).
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.

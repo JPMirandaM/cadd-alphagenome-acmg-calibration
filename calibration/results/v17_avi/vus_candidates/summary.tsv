@@ -1,0 +1,18 @@
+item	value	N	pct
+concordant points	-2	167479	13.86
+concordant points	-1	210699	17.44
+concordant points	0	724755	59.97
+concordant points	1	48013	3.97
+concordant points	2	46931	3.88
+concordant points	4	10553	0.87
+concordant points (3-4 stars)	-2	112	0.01
+concordant points (3-4 stars)	-1	175	0.01
+concordant points (3-4 stars)	0	1854	0.15
+concordant points (3-4 stars)	1	280	0.02
+concordant points (3-4 stars)	2	341	0.03
+concordant points (3-4 stars)	4	186	0.02
+change level: CADD v1.6 transferred vs CADD v1.7 calibrated	TRUE	216454	17.91
+change level: CADD v1.6 transferred vs AVI calibrated	TRUE	727644	60.21
+flip direction: CADD v1.6 transferred vs CADD v1.7 calibrated	TRUE	0	0
+flip direction: CADD v1.6 transferred vs AVI calibrated	TRUE	55003	4.55
+rare VUS	all	1208430	100
