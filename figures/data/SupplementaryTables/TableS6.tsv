@@ -11,11 +11,11 @@ AVI	BP4_Supporting	993	6038	0.2638	0.2464	0.281	Supporting	0.4156	LR <= 1/requir
 AVI	Indeterminate	3246	4505	1.156	1.108	1.205	Indeterminate		""			interval likelihood ratios				
 AVI	PP3_Moderate	14755	1305	18.14	17.26	19.07	Moderate	5.79	LR >= required	TRUE	TRUE	interval likelihood ratios				
 AVI	PP3_Supporting	2904	1037	4.492	4.183	4.811	Supporting	2.406	LR >= required	TRUE	TRUE	interval likelihood ratios				
-CADD							Moderate					thresholds 2024 vs 2026	28.6	19.5	28	19.59
-CADD							Strong					thresholds 2024 vs 2026		1.05		8.341
-CADD							Supporting					thresholds 2024 vs 2026	26	22.8	25.6	22.7
-CADD							VeryStrong					thresholds 2024 vs 2026				
-AVI							Moderate					thresholds 2024 vs 2026	26.59	20.6	26.44	20.52
-AVI							Strong					thresholds 2024 vs 2026		8.94		9.15
-AVI							Supporting					thresholds 2024 vs 2026	25.32	23	25.18	22.95
-AVI							VeryStrong					thresholds 2024 vs 2026				
+CADD	NA						Moderate		NA			thresholds 2024 vs 2026	28.6	19.5	28	19.59
+CADD	NA						Strong		NA			thresholds 2024 vs 2026		1.05		8.341
+CADD	NA						Supporting		NA			thresholds 2024 vs 2026	26	22.8	25.6	22.7
+CADD	NA						VeryStrong		NA			thresholds 2024 vs 2026				
+AVI	NA						Moderate		NA			thresholds 2024 vs 2026	26.59	20.6	26.44	20.52
+AVI	NA						Strong		NA			thresholds 2024 vs 2026		8.94		9.15
+AVI	NA						Supporting		NA			thresholds 2024 vs 2026	25.32	23	25.18	22.95
+AVI	NA						VeryStrong		NA			thresholds 2024 vs 2026				

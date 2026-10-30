@@ -1,17 +1,21 @@
-criterion	tool	level	two_stars	AF_below_0.001	gene_bootstrap	no_exon_edge_3nt	main
-PP3	AVI	Supporting	25.04	25.2	25.32	25.13	25.18
-PP3	AVI	Moderate	25.99	26.57	26.6	26.37	26.44
-PP3	AVI	Strong	30.23				
-PP3	AVI	VeryStrong					
-PP3	CADD	Supporting	25.9	25.6	25.9	25.5	25.6
-PP3	CADD	Moderate	28.2	28	28.2	27.8	28
-PP3	CADD	Strong					
-PP3	CADD	VeryStrong					
-BP4	AVI	Supporting	22.91	22.97	22.89	22.91	22.95
-BP4	AVI	Moderate	20.81	20.45	20.16	20.36	20.52
-BP4	AVI	Strong	9.17	9.08	8.98	9.01	9.15
-BP4	AVI	VeryStrong					
-BP4	CADD	Supporting	22.6	22.6	22.4	22.5	22.7
-BP4	CADD	Moderate	20.6	19.56	19.49	19.54	19.59
-BP4	CADD	Strong	1.74	8.342	7.773	8.302	8.341
-BP4	CADD	VeryStrong					
+seed	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac
+101	VeryStrong					1	0.9491
+101	Strong			1.898	0.152	1	0.0364
+101	Moderate	26.7	28.1	20.4	17.33	0	0
+101	Supporting	25	25.2	23	22.7	0	0
+202	VeryStrong					1	0.9509
+202	Strong			1.898	0.155	1	0.0369
+202	Moderate	26.7	28.1	20.4	17.33	0	0
+202	Supporting	25	25.2	23	22.6	0	0
+20260925	VeryStrong					1	0.9486
+20260925	Strong			1.898	0.31	1	0.034
+20260925	Moderate	26.7	28.1	20.4	17.33	0	0
+20260925	Supporting	25	25.3	23	22.7	0	0
+303	VeryStrong					1	0.9514
+303	Strong			1.898	0.31	1	0.0331
+303	Moderate	26.7	28.1	20.4	17.34	0	0
+303	Supporting	25	25.3	23	22.7	0	0
+404	VeryStrong					1	0.9459
+404	Strong			1.898	0.155	1	0.0363
+404	Moderate	26.7	28.1	20.4	17.33	0	0
+404	Supporting	25	25.2	23	22.7	0	0

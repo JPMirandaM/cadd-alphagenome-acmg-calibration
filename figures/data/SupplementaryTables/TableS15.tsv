@@ -1,18 +1,17 @@
-Item	Date	Analysis	Timing	Reported_in_this_article
-Amendment 1	2026-09-25	Paired bootstrap comparison of AUROC and AUPRC between AVI and CADD v1.7	after the main results	yes
-Amendment 2	2026-09-25	Temporal hold-out validation (calibration on ClinVar 2024-01-27, test on later variants)	before running	yes
-Amendment 3	2026-09-25	Calibration of REVEL, BayesDel and AlphaMissense on the five-predictor intersection	before running	yes
-Amendment 4	2026-09-25	Population frequency and ancestry of PP3-level variants in gnomAD v4.1	before running	no (population analyses reserved for a separate study)
-Amendment 5	2026-09-25	Computational evidence for ClinVar missense variants of uncertain significance	before running	yes
-Amendment 6	2026-09-25	Threshold drift across ClinVar releases and before/after November 2022 (AVI as negative control)	before running; motivated by the comparator results	yes
-Amendment 7	2026-09-26	Exclusion of HGMD Public positions from the 2019 and 2026 reference sets	before running; motivated by the drift results	yes
-Amendment 8	2026-09-26	Calibration by gene class (constraint, inheritance, mechanism)	before running	yes
-Amendment 9	2026-09-26	Genome-wide catalogue of SNVs at PP3 levels	before running	no (companion resource article)
-Amendment 10	2026-09-26	Noncoding variants (ClinVar region classes, calibration of classes with enough variants, MPRA)	before running	yes
-Amendment 11	2026-09-26	SpliceVarDB analysis deferred to a later study (database not reachable)	scope change before running	no (deferred)
-Amendment 12	2026-09-27	Population frequencies in the Mexico City Prospective Study and TOPMed BRAVO	before any MCPS or BRAVO result	no (population analyses reserved for a separate study)
-Amendment 13	2026-09-27	Validation with MAVE functional classes from MaveDB	before any MAVE score was downloaded	yes
-Amendment 14	2026-09-27	CADD v1.6 versus v1.7 on identical reference data	before any CADD v1.6 score was read	yes
-Amendment 15	2026-10-04	Calibrated evidence for VUS of January 2024 resolved by September 2026 (requested by co-author review)	before any result; motivated by co-author review	yes
-Post hoc	2026-09-26	Drift thresholds expressed on a common scale (percentage of gnomAD variants meeting each threshold)	post hoc	yes
-Post hoc	2026-09-27	Source of MCPS genotypes (array, exome or genome) for variants with frequency conflicts	post hoc	no (population analyses reserved for a separate study)
+tool	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac	block	PP3_splice_region	BP4_splice_region	PP3_missense	BP4_missense
+CADD	VeryStrong					1	0.8644	splice-region thresholds				
+CADD	Strong	19.8	20.1	0.004		0	0.3159	splice-region thresholds				
+CADD	Moderate	16.71	17.36	8.768	6.943	0	0	splice-region thresholds				
+CADD	Supporting	15.27	15.45	12.66	11.52	0	0	splice-region thresholds				
+AVI	VeryStrong	47.35				0.3579	0.6289	splice-region thresholds				
+AVI	Strong	23.91	24.09	8.29	0.11	0	0.0103	splice-region thresholds				
+AVI	Moderate	22.2	22.44	16.61	14.01	0	0	splice-region thresholds				
+AVI	Supporting	21	21.3	18.35	17.5	0	0	splice-region thresholds				
+AVI	Moderate							comparison with missense	22.44	14.01	26.44	20.52
+AVI	Strong							comparison with missense	24.09	0.11		9.15
+AVI	Supporting							comparison with missense	21.3	17.5	25.18	22.95
+AVI	VeryStrong							comparison with missense				
+CADD	Moderate							comparison with missense	17.36	6.943	28	19.59
+CADD	Strong							comparison with missense	20.1			8.341
+CADD	Supporting							comparison with missense	15.45	11.52	25.6	22.6
+CADD	VeryStrong							comparison with missense				

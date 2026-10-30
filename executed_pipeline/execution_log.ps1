@@ -416,3 +416,11 @@ git push -u origin main; git push origin analysis-plan-v1
 & $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S20.xlsx (S19-S20 added; replaces S1-S18 workbook)
 # Manuscript v7 and supplemental material v4 built locally (manuscript/ not versioned).
 # -------------------------------------------------------------------------------------
+# Manuscript v9 [2026-10-29] (authors: tables and figures numbered in order of first citation; Tables 1-2 landscape)
+# Supplementary tables renumbered by order of first citation in the text (old -> new): S15->S1, S3->S2, S1->S3,
+# S2->S4, S4->S5, S6, S7, S13->S8, S16->S9, S17->S10, S18->S11, S10->S12, S20->S13, S19->S14, S11->S15,
+# S12->S16, S14->S17, S5->S18, S8->S19, S9->S20; cross-references inside legends and cells follow the map.
+# Main Tables 3 (recommendations) and 4 (expert-panel VUS) swapped in the manuscript; file names unchanged.
+& $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S20.xlsx (same values, new order)
+# Manuscript v9 and supplemental material v6 built locally (manuscript/ not versioned).
+# -------------------------------------------------------------------------------------

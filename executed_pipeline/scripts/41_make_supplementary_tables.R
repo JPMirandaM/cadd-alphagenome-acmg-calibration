@@ -1,4 +1,4 @@
-# Supplementary Tables S1-S20 of the manuscript (v7, 2026-10-29; S19-S20 added for amendment A16; v6 removed the MCPS/BRAVO table), assembled from the analysis outputs.
+# Supplementary Tables S1-S20 of the manuscript (v9, 2026-10-29: renumbered in order of first citation; v7 added S19-S20 for amendment A16; v6 removed the MCPS/BRAVO table), assembled from the analysis outputs.
 # Each table is written as TSV to figures/data/SupplementaryTables/ and all of them, with a
 # "Contents" sheet giving titles and legends, to figures/Supplementary_Tables_S1-S20.xlsx.
 # No new computation: values are copied (and rounded for display) from calibration/results/.
@@ -159,6 +159,21 @@ add("S20", "Concordant calibrated evidence and transferred thresholds for all Cl
     rbind(rd("vus_candidates", "thresholds_used.tsv")[, block := "thresholds used"], rd("vus_candidates", "summary.tsv")[, block := "counts"],
           rd("vus_candidates", "crosstab_cadd16_vs_cadd17.tsv")[, block := "CADD v1.6 transferred versus CADD v1.7 calibrated"],
           rd("vus_candidates", "crosstab_cadd16_vs_avi.tsv")[, block := "CADD v1.6 transferred versus AVI calibrated"], fill = TRUE))
+
+## Numbering in order of first citation (manuscript v9, 2026-10-29) -------------------------------
+# The sections above keep the ids under which each table was added. The manuscript numbers supplementary
+# tables in the order in which they are first cited in the text, so the published ids follow this map
+# (old id = new id). Table 3 and Table 4 of the main text were swapped for the same reason.
+renum <- c(S15 = "S1", S3 = "S2", S1 = "S3", S2 = "S4", S4 = "S5", S6 = "S6", S7 = "S7", S13 = "S8", S16 = "S9",
+           S17 = "S10", S18 = "S11", S10 = "S12", S20 = "S13", S19 = "S14", S11 = "S15", S12 = "S16", S14 = "S17",
+           S5 = "S18", S8 = "S19", S9 = "S20")
+stopifnot(setequal(names(renum), names(tabs)), !anyDuplicated(renum))
+tabs <- setNames(tabs[names(renum)], renum); meta <- setNames(meta[names(renum)], renum)
+for (id in names(meta)) meta[[id]]$Table <- id
+# cross-references to supplementary tables inside legends and cells follow the new numbers
+relabel <- function(x) { m <- gregexpr("Table S[0-9]+", x); regmatches(x, m) <- lapply(regmatches(x, m), function(v) paste0("Table ", renum[sub("^Table ", "", v)])); x }
+for (id in names(meta)) meta[[id]]$Legend <- relabel(meta[[id]]$Legend)
+for (id in names(tabs)) for (j in names(tabs[[id]])[vapply(tabs[[id]], is.character, TRUE)]) set(tabs[[id]], j = j, value = relabel(tabs[[id]][[j]]))
 
 ## Write -------------------------------------------------------------------------------------------
 wb <- createWorkbook(); hs <- createStyle(textDecoration = "bold")
