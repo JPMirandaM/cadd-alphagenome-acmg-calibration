@@ -1,7 +1,9 @@
-Predictor	Source	Score_used	Precision	Window_increment	Multiple_values
-CADD v1.7	Official GRCh38 whole_genome_SNVs.tsv.gz (MD5 verified)	PHRED	1 decimal (as distributed)	0.1	one value per SNV
-AVI (AlphaGenome Variant Impact)	AlphaGenome Atlas SNV file (GRCh38)	Phred	2 decimals (rounded)	0.1	one value per SNV
-REVEL	REVEL v1.3 official file, GRCh38 positions	REVEL score	3 decimals (as distributed)	0.001	maximum over transcripts
-BayesDel (no allele frequency)	UCSC hg19 bigWig tracks, lifted to GRCh38 with reference-base check	BayesDel score	2 decimals (rounded)	0.01	one value per SNV and allele
-AlphaMissense	Zenodo 10813168 hg38 predictions	am_pathogenicity	4 decimals (as distributed)	0.001	maximum over transcripts
-CADD v1.6 (Aim 2b)	Official GRCh38 file, byte ranges covering the reference positions	PHRED	1 decimal (as distributed)	0.1	one value per SNV
+criterion	level	published (Pejaver et al. 2022)	reproduced (this R port, 10,000 replicates)	match
+PP3	Supporting	25.3	25.3	yes
+PP3	Moderate	28.1	28.1	yes
+PP3	Strong	not reached	not reached (NA)	yes
+PP3	VeryStrong	not reached	not reached (NA)	yes
+BP4	Supporting	22.7	22.70	yes
+BP4	Moderate	17.3	17.33	yes (published value rounded to 1 decimal)
+BP4	Strong	0.15	0.31 (seed 20260925); 0.152-0.310 across 5 seeds (0.152, 0.155, 0.155 in 3 of 5)	yes, within Monte Carlo variability (Table S4, Figure S2)
+BP4	VeryStrong	not reached	not reached (NA)	yes

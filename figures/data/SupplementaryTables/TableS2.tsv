@@ -1,21 +1,7 @@
-seed	level	PP3_point	PP3_discounted	BP4_point	BP4_discounted	PP3_boot_NA_frac	BP4_boot_NA_frac
-101	VeryStrong					1	0.9491
-101	Strong			1.898	0.152	1	0.0364
-101	Moderate	26.7	28.1	20.4	17.33	0	0
-101	Supporting	25	25.2	23	22.7	0	0
-202	VeryStrong					1	0.9509
-202	Strong			1.898	0.155	1	0.0369
-202	Moderate	26.7	28.1	20.4	17.33	0	0
-202	Supporting	25	25.2	23	22.6	0	0
-20260925	VeryStrong					1	0.9486
-20260925	Strong			1.898	0.31	1	0.034
-20260925	Moderate	26.7	28.1	20.4	17.33	0	0
-20260925	Supporting	25	25.3	23	22.7	0	0
-303	VeryStrong					1	0.9514
-303	Strong			1.898	0.31	1	0.0331
-303	Moderate	26.7	28.1	20.4	17.34	0	0
-303	Supporting	25	25.3	23	22.7	0	0
-404	VeryStrong					1	0.9459
-404	Strong			1.898	0.155	1	0.0363
-404	Moderate	26.7	28.1	20.4	17.33	0	0
-404	Supporting	25	25.2	23	22.7	0	0
+Predictor	Source	Score_used	Precision	Window_increment	Multiple_values
+CADD v1.7	Official GRCh38 whole_genome_SNVs.tsv.gz (MD5 verified)	PHRED	1 decimal (as distributed)	0.1	one value per SNV
+AVI (AlphaGenome Variant Impact)	AlphaGenome Atlas SNV file (GRCh38)	Phred	2 decimals (rounded)	0.1	one value per SNV
+REVEL	REVEL v1.3 official file, GRCh38 positions	REVEL score	3 decimals (as distributed)	0.001	maximum over transcripts
+BayesDel (no allele frequency)	UCSC hg19 bigWig tracks, lifted to GRCh38 with reference-base check	BayesDel score	2 decimals (rounded)	0.01	one value per SNV and allele
+AlphaMissense	Zenodo 10813168 hg38 predictions	am_pathogenicity	4 decimals (as distributed)	0.001	maximum over transcripts
+CADD v1.6 (Aim 2b)	Official GRCh38 file, byte ranges covering the reference positions	PHRED	1 decimal (as distributed)	0.1	one value per SNV

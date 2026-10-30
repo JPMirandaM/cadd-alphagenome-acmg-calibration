@@ -1,9 +1,18 @@
-criterion	level	published (Pejaver et al. 2022)	reproduced (this R port, 10,000 replicates)	match
-PP3	Supporting	25.3	25.3	yes
-PP3	Moderate	28.1	28.1	yes
-PP3	Strong	not reached	not reached (NA)	yes
-PP3	VeryStrong	not reached	not reached (NA)	yes
-BP4	Supporting	22.7	22.70	yes
-BP4	Moderate	17.3	17.33	yes (published value rounded to 1 decimal)
-BP4	Strong	0.15	0.31 (seed 20260925); 0.152-0.310 across 5 seeds (0.152, 0.155, 0.155 in 3 of 5)	yes, within Monte Carlo variability (Table S2, Figure S2)
-BP4	VeryStrong	not reached	not reached (NA)	yes
+Item	Date	Analysis	Timing	Reported_in_this_article
+Amendment 1	2026-09-25	Paired bootstrap comparison of AUROC and AUPRC between AVI and CADD v1.7	after the main results	yes
+Amendment 2	2026-09-25	Temporal hold-out validation (calibration on ClinVar 2024-01-27, test on later variants)	before running	yes
+Amendment 3	2026-09-25	Calibration of REVEL, BayesDel and AlphaMissense on the five-predictor intersection	before running	yes
+Amendment 4	2026-09-25	Population frequency and ancestry of PP3-level variants in gnomAD v4.1	before running	no (population analyses reserved for a separate study)
+Amendment 5	2026-09-25	Computational evidence for ClinVar missense variants of uncertain significance	before running	yes
+Amendment 6	2026-09-25	Threshold drift across ClinVar releases and before/after November 2022 (AVI as negative control)	before running; motivated by the comparator results	yes
+Amendment 7	2026-09-26	Exclusion of HGMD Public positions from the 2019 and 2026 reference sets	before running; motivated by the drift results	yes
+Amendment 8	2026-09-26	Calibration by gene class (constraint, inheritance, mechanism)	before running	yes
+Amendment 9	2026-09-26	Genome-wide catalogue of SNVs at PP3 levels	before running	no (companion resource article)
+Amendment 10	2026-09-26	Noncoding variants (ClinVar region classes, calibration of classes with enough variants, MPRA)	before running	yes
+Amendment 11	2026-09-26	SpliceVarDB analysis deferred to a later study (database not reachable)	scope change before running	no (deferred)
+Amendment 12	2026-09-27	Population frequencies in the Mexico City Prospective Study and TOPMed BRAVO	before any MCPS or BRAVO result	no (population analyses reserved for a separate study)
+Amendment 13	2026-09-27	Validation with MAVE functional classes from MaveDB	before any MAVE score was downloaded	yes
+Amendment 14	2026-09-27	CADD v1.6 versus v1.7 on identical reference data	before any CADD v1.6 score was read	yes
+Amendment 15	2026-10-04	Calibrated evidence for VUS of January 2024 resolved by September 2026 (requested by co-author review)	before any result; motivated by co-author review	yes
+Post hoc	2026-09-26	Drift thresholds expressed on a common scale (percentage of gnomAD variants meeting each threshold)	post hoc	yes
+Post hoc	2026-09-27	Source of MCPS genotypes (array, exome or genome) for variants with frequency conflicts	post hoc	no (population analyses reserved for a separate study)
