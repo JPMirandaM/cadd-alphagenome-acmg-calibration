@@ -13,9 +13,6 @@ Authors: José Patricio Miranda, Lorena Carvajal, Ignacio Aldana, Pablo Alarcón
 - Archived release: Zenodo [DOI to be added] (see `CITATION.cff`).
 - Supplementary Tables S1–S20 of the article: `figures/Supplementary_Tables_S1-S20.xlsx` (TSV copies in
   `figures/data/SupplementaryTables/`); main-text figures: `figures/Fig1`–`Fig5`.
-- Population-frequency analyses (gnomAD ancestry, Mexico City Prospective Study, TOPMed BRAVO) and the
-  genome-wide catalogue of SNVs at PP3 levels remain in this repository but are reserved for separate
-  articles and are not reported in this one.
 
 Runs natively on Windows (R 4.4.2 + Rsamtools); no WSL/Linux required.
 
