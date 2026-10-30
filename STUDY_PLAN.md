@@ -510,7 +510,7 @@ genome-wide catalogue (A9) stays in the companion resource article.
 - VEP plugin for calibrated PP3/BP4 evidence as a stand-alone application note: kept as the dissemination tool
   of the study below rather than as a separate article.
 
-## Paper 2: mechanism-stratified calibration of AlphaGenome for ACMG/AMP computational evidence beyond missense variants (DRAFT plan v1, not frozen)
+## Paper 2: mechanism-stratified calibration of AlphaGenome for ACMG/AMP computational evidence beyond missense variants (plan v1, frozen 2026-10-30 as analysis-plan-paper2-v1)
 
 > Drafted 2026-10-30. The main article showed that missense-calibrated thresholds give false benign evidence
 > outside missense variation and that only the intronic splice region had enough reference variants for its own
@@ -535,24 +535,32 @@ API (`AVI_SCORE_FEATURE_IMPORTANCE`; non-commercial terms, research use only, no
 ClinVar GRCh38 releases of 2026-09-23 (calibration) and 2024-01-27 (temporal hold-out and resolved VUS), gnomAD
 v4.1, GENCODE v50 MANE Select, as in the main article. CADD v1.7 is the genome-wide comparator. SpliceAI with the
 ClinGen splicing thresholds (Walker et al. 2023 [VERIFY]) is the comparator for the splicing stratum if the
-precomputed scores can be obtained under their licence [author action]; otherwise this comparison is omitted and
+precomputed scores can be obtained under their licence (the author will request them, 2026-10-30); otherwise this comparison is omitted and
 reported as such.
 
-**Mechanism strata (prespecified rule).** The attributions are grouped as splicing (`MERGED_SPLICING`), protein
-(`ALPHAMISSENSE`, `PROTEIN_TERMINATION`, `START_LOST`, `STOP_LOST`), regulatory (the nine `MAX_ABS_*` features),
-and conservation (`CACTUS_241_WAY`, `PHASTCONS_470_WAY`). Each SNV is assigned to the group with the largest sum
-of positive attributions when that sum is at least half of the total positive attribution; otherwise it is
-"mixed", and SNVs whose positive attributions sum to less than [0.1, to be fixed after the throughput test from
-the distribution in unlabeled gnomAD variants only] are "no predicted effect". Strata are assigned from the model
-before labels are joined. Because the strata are a function of the predictor, every result is reported both by
+**Mechanism strata (prespecified rule; revised before freezing after the technical test).** The attributions are
+grouped as splicing (`MERGED_SPLICING`), protein (`ALPHAMISSENSE`, `PROTEIN_TERMINATION`, `START_LOST`,
+`STOP_LOST`), and regulatory (the nine `MAX_ABS_*` features); conservation (`CACTUS_241_WAY`, `PHASTCONS_470_WAY`)
+is not a mechanism and is not a candidate group. For each SNV, the mechanistic total is the sum of the positive
+attributions of the three groups. When it is at least 0.05, the SNV is assigned to the group with the largest
+positive sum if that group holds at least half of the mechanistic total, and to "mixed" otherwise. When the
+mechanistic total is below 0.05, the SNV is "conservation only" if the positive conservation attributions sum to
+at least 0.05, and "no predicted effect" otherwise. Reason for the revision: in the technical test on 2,000
+unlabeled gnomAD SNVs, the first rule (conservation as a candidate group) assigned 60% of missense and 36% of
+intronic splice-region SNVs to conservation, leaving 17% of missense SNVs in the protein stratum; the revised rule
+assigned 79% of missense SNVs to protein and 50% of splice-region SNVs to splicing (`calibration/results/paper2/
+throughput_test/`). The cut-off 0.05 was chosen over 0.1 because 0.1 left a third of splice-region SNVs without a
+predicted effect. Every stratum, including "conservation only" and "no predicted effect", is calibrated separately
+when it meets the size criterion. Strata are assigned from the model before labels are joined. Because the strata
+are a function of the predictor, every result is reported both by
 mechanism stratum and by the region classes of the main article (R13), and the agreement between the two
 groupings is reported.
 
 **Reference sets.** ClinVar SNVs with at least one star in disease genes (plan v1 rules: exact P/LP and B/LB labels,
 rarity by gnomAD group maximum AF < 0.01), all variant classes within MANE Select gene bodies and 5 kb flanks.
 The unlabeled set for window sizing is a random sample of rare gnomAD v4.1 SNVs from the same regions, drawn per
-region class with a fixed seed, of [size fixed by the throughput test, at least 100,000 per region class or all
-available]. Missense variants form part of the protein stratum and serve as a benchmark against the main
+region class with a fixed seed, of 100,000 SNVs per region class, or all available when fewer (throughput measured at 56 variants
+per second with 16 workers). Missense variants form part of the protein stratum and serve as a benchmark against the main
 article's thresholds.
 
 **Calibration.** The R port of the ClinGen local posterior method (main article), run separately in each stratum
