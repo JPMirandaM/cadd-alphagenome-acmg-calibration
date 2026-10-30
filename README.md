@@ -1,12 +1,23 @@
-# Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across reference sets, genes and populations
+# Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across variant classes, model versions, and reference data
 
-Pre-registered ClinGen (Pejaver et al. 2022) calibration of CADD v1.7 and the AlphaGenome Variant
-Impact (AVI) score for PP3/BP4 evidence, with comparison against REVEL, BayesDel and AlphaMissense,
-temporal hold-out, reference-set dependence (ClinVar release series, HGMD exclusion), MAVE
-validation (MaveDB), gene-class calibration, VUS evidence yield, population frequencies (gnomAD
-v4.1, Mexico City Prospective Study, TOPMed BRAVO) and a genome-wide catalogue of SNVs at PP3 levels
-(GRCh38). Target journal for the main article: *The American Journal of Human Genetics*. Runs
-natively on Windows (R 4.4.2 + Rsamtools); no WSL/Linux required.
+Code, prespecified analysis plan, execution logs and results of the ClinGen (Pejaver et al. 2022)
+calibration of CADD v1.7 and the AlphaGenome Variant Impact (AVI) score for PP3/BP4 evidence, with
+comparison against REVEL, BayesDel and AlphaMissense, temporal hold-out, ClinVar VUS resolved after
+calibration, current ClinVar VUS, noncoding variant classes, MAVE validation (MaveDB), gene classes,
+model versions (CADD v1.6 versus v1.7) and reference data (ClinVar release series, HGMD exclusion).
+
+Authors: José Patricio Miranda, Lorena Carvajal, Ignacio Aldana, Pablo Alarcón, and Cristian Saavedra
+(Bupa Chile; 1000 Genomas Para Chile). Correspondence: jose.miranda@bupa.cl.
+
+- Preprint: medRxiv [DOI to be added]. Journal submission: *The American Journal of Human Genetics*.
+- Archived release: Zenodo [DOI to be added] (see `CITATION.cff`).
+- Supplementary Tables S1–S20 of the article: `figures/Supplementary_Tables_S1-S20.xlsx` (TSV copies in
+  `figures/data/SupplementaryTables/`); main-text figures: `figures/Fig1`–`Fig5`.
+- Population-frequency analyses (gnomAD ancestry, Mexico City Prospective Study, TOPMed BRAVO) and the
+  genome-wide catalogue of SNVs at PP3 levels remain in this repository but are reserved for separate
+  articles and are not reported in this one.
+
+Runs natively on Windows (R 4.4.2 + Rsamtools); no WSL/Linux required.
 
 ## Directory map
 
