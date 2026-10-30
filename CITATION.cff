@@ -1,16 +1,28 @@
 cff-version: 1.2.0
-message: "If you use this code or these results, please cite them as below. The DOI will be added at the first archived release."
-title: "Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across reference sets, genes and populations (code and results)"
+message: "If you use this code or these results, please cite the article and this archived release."
+title: "Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across variant classes, model versions, and reference data (code, analysis plan, and results)"
 type: software
 authors:
   - family-names: "Miranda"
-    given-names: "Jose Patricio"
-    affiliation: "Dirección de Desarrollo Médico y Académico, Bupa Chile, Providencia, Chile"
+    given-names: "José Patricio"
+    affiliation: "Bupa Chile, Providencia, Chile"
     email: "jose.miranda@bupa.cl"
+  - family-names: "Carvajal"
+    given-names: "Lorena"
+    affiliation: "Bupa Chile, Providencia, Chile"
+  - family-names: "Aldana"
+    given-names: "Ignacio"
+    affiliation: "Bupa Chile, Providencia, Chile"
+  - family-names: "Alarcón"
+    given-names: "Pablo"
+    affiliation: "Bupa Chile, Providencia, Chile"
+  - family-names: "Saavedra"
+    given-names: "Cristian"
+    affiliation: "Bupa Chile, Providencia, Chile"
 license: MIT
 repository-code: "https://github.com/JPMirandaM/cadd-alphagenome-acmg-calibration"
-date-released: "2026-09-27"
-version: "1.0.0-submission"
+date-released: "2026-10-30"
+version: "1.0.0"
 keywords:
   - CADD
   - AlphaGenome
@@ -19,9 +31,8 @@ keywords:
   - PP3/BP4 calibration
   - ClinGen
   - ClinVar
-  - gnomAD
+  - variants of uncertain significance
   - MAVE
-  - Mexico City Prospective Study
 references:
   - type: article
     title: "Calibration of computational tools for missense variant pathogenicity classification and ClinGen recommendations for PP3/BP4 criteria"
