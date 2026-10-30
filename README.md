@@ -10,7 +10,7 @@ Authors: José Patricio Miranda, Lorena Carvajal, Ignacio Aldana, Pablo Alarcón
 (Bupa Chile; 1000 Genomas Para Chile). Correspondence: jose.miranda@bupa.cl.
 
 - Preprint: medRxiv [DOI to be added]. Journal submission: *The American Journal of Human Genetics*.
-- Archived release: Zenodo [DOI to be added] (see `CITATION.cff`).
+- Archived release: Zenodo, https://doi.org/10.5281/zenodo.23790409 (all versions; v1.0.0 is https://doi.org/10.5281/zenodo.23790410). See `CITATION.cff`.
 - Supplementary Tables S1–S20 of the article: `figures/Supplementary_Tables_S1-S20.xlsx` (TSV copies in
   `figures/data/SupplementaryTables/`); main-text figures: `figures/Fig1`–`Fig5`.
 

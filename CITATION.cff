@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this code or these results, please cite the article and this archived release."
+message: "If you use this code or these results, please cite the article and this archived release (Zenodo)."
 title: "Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across variant classes, model versions, and reference data (code, analysis plan, and results)"
 type: software
 authors:
@@ -23,6 +23,14 @@ license: MIT
 repository-code: "https://github.com/JPMirandaM/cadd-alphagenome-acmg-calibration"
 date-released: "2026-10-30"
 version: "1.0.0"
+doi: "10.5281/zenodo.23790409"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23790409"
+    description: "All versions (concept DOI)"
+  - type: doi
+    value: "10.5281/zenodo.23790410"
+    description: "Version 1.0.0 (medRxiv preprint)"
 keywords:
   - CADD
   - AlphaGenome
