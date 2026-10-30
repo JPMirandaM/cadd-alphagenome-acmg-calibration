@@ -424,3 +424,5 @@ git push -u origin main; git push origin analysis-plan-v1
 & $R .\scripts\41_make_supplementary_tables.R            # -> Supplementary_Tables_S1-S20.xlsx (same values, new order)
 # Manuscript v9 and supplemental material v6 built locally (manuscript/ not versioned).
 # -------------------------------------------------------------------------------------
+# [2026-10-29] Figure 3 panels swapped so that they follow the order of citation (A: resolved 2024 VUS; B: 2026 VUS).
+& $R .\scripts\44_plot_fig3_vus.R C:/cadd/figures/data/Fig3_vus C:/cadd/figures/Fig3_vus   # -> figures\Fig3_vus.{png,pdf}
