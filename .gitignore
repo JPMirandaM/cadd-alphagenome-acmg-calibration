@@ -42,3 +42,7 @@ desktop.ini
 
 # Manuscript drafts are kept outside the public code repository (author, 2026-09-27); final edits are made manually in Word
 /manuscript/
+
+# Paper 2: per-variant AlphaGenome Atlas API outputs (non-commercial terms, no bulk redistribution)
+/calibration/results/paper2/**/*.tsv.gz
+/calibration/results/paper2/**/variants_*.tsv

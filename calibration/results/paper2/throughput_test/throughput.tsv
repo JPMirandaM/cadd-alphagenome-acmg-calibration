@@ -1,0 +1,4 @@
+label	workers	variants	errors	seconds	variants_per_second
+sequential	1	200	0	55.3	3.62
+threads8	8	900	0	33.3	27
+threads16	16	900	0	16.1	55.78

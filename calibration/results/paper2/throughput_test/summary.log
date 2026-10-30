@@ -1,0 +1,42 @@
+Attributions sum to AVI raw: max abs difference 0.0706 
+
+Positive attribution total, quantiles by region
+                   region    5%   10%   25%   50%   75%   90%
+                   <char> <num> <num> <num> <num> <num> <num>
+1: splice_region_intronic 0.037 0.052 0.089 0.235 0.460 0.903
+2:               missense 0.128 0.182 0.392 0.695 1.028 1.424
+
+Dominant group (share >= 0.5) at candidate cut-offs, % by region
+cut-off 0.05 
+Key: <region>
+                   region conservation mixed no_effect protein regulatory
+                   <char>        <num> <num>     <num>   <num>      <num>
+1:               missense         59.9  19.0       0.0    18.1        2.2
+2: splice_region_intronic         37.1  15.3       9.9     0.3       13.8
+   splicing
+      <num>
+1:      0.8
+2:     23.6
+cut-off 0.1 
+Key: <region>
+                   region conservation mixed no_effect protein regulatory
+                   <char>        <num> <num>     <num>   <num>      <num>
+1:               missense         59.9  18.8       1.5    16.8        2.2
+2: splice_region_intronic         35.9  11.5      27.5     0.3        6.7
+   splicing
+      <num>
+1:      0.8
+2:     18.1
+cut-off 0.2 
+Key: <region>
+                   region conservation mixed no_effect protein regulatory
+                   <char>        <num> <num>     <num>   <num>      <num>
+1:               missense         59.6  13.9      11.4    13.0        1.6
+2: splice_region_intronic         31.3   7.2      45.9     0.1        2.4
+   splicing
+      <num>
+1:      0.5
+2:     13.1
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/avi/alphagenome_variant_impact_score_snvs.tsv.gz.tbi
+
+API vs local AVI raw: 200 variants matched; max abs difference 0.00049 

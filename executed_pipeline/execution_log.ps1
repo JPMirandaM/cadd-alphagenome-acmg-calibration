@@ -426,3 +426,14 @@ git push -u origin main; git push origin analysis-plan-v1
 # -------------------------------------------------------------------------------------
 # [2026-10-29] Figure 3 panels swapped so that they follow the order of citation (A: resolved 2024 VUS; B: 2026 VUS).
 & $R .\scripts\44_plot_fig3_vus.R C:/cadd/figures/data/Fig3_vus C:/cadd/figures/Fig3_vus   # -> figures\Fig3_vus.{png,pdf}
+
+# -------------------------------------------------------------------------------------
+# Paper 2 [2026-10-30] Mechanism-stratified calibration of AlphaGenome (STUDY_PLAN.md, draft plan v1 approved by
+# the author; frozen as analysis-plan-paper2-v1 after this technical test). AlphaGenome Atlas API key in the user
+# environment variable ALPHAGENOME_API_KEY (never stored in files). Python via uv (alphagenome client).
+# Technical throughput test, allowed before freezing; reads no ClinVar label.
+& $R .\scripts\50_paper2_throughput_sample.R               # -> results\paper2\throughput_test\variants_sample.tsv (2,000 unlabeled gnomAD SNVs)
+# uv run --python 3.12 --with alphagenome python -I .\scripts\51_atlas_attributions.py <in> <out> --workers 1|8|16
+#   sequential 200 variants 3.62/s; 8 workers 900 variants 27.0/s; 16 workers 900 variants 55.8/s; 0 errors
+& $R .\scripts\52_paper2_throughput_summary.R              # -> results\paper2\throughput_test\summary.log (API AVI = local AVI, max diff 0.00049)
+& $R .\scripts\52b_paper2_alternative_stratum_rule.R       # -> results\paper2\throughput_test\alternative_rule.log

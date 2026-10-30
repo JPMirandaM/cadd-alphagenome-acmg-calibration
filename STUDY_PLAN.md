@@ -502,3 +502,87 @@ for a separate study on Latin American population data (with 1000 Genomas Para C
 main article keeps a single clinical message. The analyses, scripts and results remain in this
 repository (RESULTS R7, R14, R15); Table S15 of the article lists them as not reported. The
 genome-wide catalogue (A9) stays in the companion resource article.
+
+## Paper 2 options considered (2026-10-30)
+
+- Latin American population frequencies and ACMG/AMP reclassification (drafts v1 and v2): set aside by the author
+  on 2026-10-30 because of its expected impact; 1000 Genomas Para Chile data remain future work (Aim 5).
+- VEP plugin for calibrated PP3/BP4 evidence as a stand-alone application note: kept as the dissemination tool
+  of the study below rather than as a separate article.
+
+## Paper 2: mechanism-stratified calibration of AlphaGenome for ACMG/AMP computational evidence beyond missense variants (DRAFT plan v1, not frozen)
+
+> Drafted 2026-10-30. The main article showed that missense-calibrated thresholds give false benign evidence
+> outside missense variation and that only the intronic splice region had enough reference variants for its own
+> calibration (R13). Grouping variants by genomic region leaves most noncoding classes without enough pathogenic
+> variants. This study groups variants instead by the mechanism that AlphaGenome attributes to each prediction,
+> using the 18 SHAP feature attributions of the AlphaGenome Variant Impact (AVI) score. The plan is frozen with the
+> tag `analysis-plan-paper2-v1` before any attribution is downloaded for analysis; only the technical throughput
+> test described below may run before freezing, and it reads no labels.
+
+**Hypotheses (prespecified).**
+- H1. In the splicing stratum, which pools splice-mediated variants from every region class, AVI reaches at least
+  PP3 moderate, and the calibrated intervals meet their required likelihood ratios in the temporal hold-out.
+- H2. With stratum-specific thresholds, BP4 intervals meet the required likelihood ratio (at most 1/2.406 for
+  supporting) in every region class with enough variants to evaluate, whereas missense thresholds failed in most
+  (R13).
+- H3. Among ClinVar VUS of January 2024 resolved by September 2026 in any variant class, stratum-specific
+  thresholds give evidence in the final direction more often, and in the opposite direction less often, than a
+  single genome-wide AVI threshold set and than the missense thresholds applied to every class.
+
+**Data.** AVI scores (local Atlas download) and the 18 attributions per SNV, retrieved through the AlphaGenome Atlas
+API (`AVI_SCORE_FEATURE_IMPORTANCE`; non-commercial terms, research use only, no model training with the outputs).
+ClinVar GRCh38 releases of 2026-09-23 (calibration) and 2024-01-27 (temporal hold-out and resolved VUS), gnomAD
+v4.1, GENCODE v50 MANE Select, as in the main article. CADD v1.7 is the genome-wide comparator. SpliceAI with the
+ClinGen splicing thresholds (Walker et al. 2023 [VERIFY]) is the comparator for the splicing stratum if the
+precomputed scores can be obtained under their licence [author action]; otherwise this comparison is omitted and
+reported as such.
+
+**Mechanism strata (prespecified rule).** The attributions are grouped as splicing (`MERGED_SPLICING`), protein
+(`ALPHAMISSENSE`, `PROTEIN_TERMINATION`, `START_LOST`, `STOP_LOST`), regulatory (the nine `MAX_ABS_*` features),
+and conservation (`CACTUS_241_WAY`, `PHASTCONS_470_WAY`). Each SNV is assigned to the group with the largest sum
+of positive attributions when that sum is at least half of the total positive attribution; otherwise it is
+"mixed", and SNVs whose positive attributions sum to less than [0.1, to be fixed after the throughput test from
+the distribution in unlabeled gnomAD variants only] are "no predicted effect". Strata are assigned from the model
+before labels are joined. Because the strata are a function of the predictor, every result is reported both by
+mechanism stratum and by the region classes of the main article (R13), and the agreement between the two
+groupings is reported.
+
+**Reference sets.** ClinVar SNVs with at least one star in disease genes (plan v1 rules: exact P/LP and B/LB labels,
+rarity by gnomAD group maximum AF < 0.01), all variant classes within MANE Select gene bodies and 5 kb flanks.
+The unlabeled set for window sizing is a random sample of rare gnomAD v4.1 SNVs from the same regions, drawn per
+region class with a fixed seed, of [size fixed by the throughput test, at least 100,000 per region class or all
+available]. Missense variants form part of the protein stratum and serve as a benchmark against the main
+article's thresholds.
+
+**Calibration.** The R port of the ClinGen local posterior method (main article), run separately in each stratum
+with at least 1,000 P/LP and 1,000 B/LB variants (criterion of A10); five seeds; 10,000 bootstrap replicates.
+Prior: the missense prior (0.0441) in the primary analysis, with sensitivity analyses at 0.01 and 0.10 because
+the prior in noncoding strata is unknown; a stratum-specific prior estimate is reported as exploratory.
+
+**Validation.**
+1. Temporal hold-out: thresholds calibrated on the 2024-01-27 release, likelihood ratios of each interval on
+   variants first classified after it (as in A2).
+2. Resolved VUS: VUS of 2024-01-27 in any variant class resolved by 2026-09-23 (as in A15), for H3.
+3. Functional data independent of ClinVar: saturation genome editing score sets in MaveDB that include intronic
+   or splice-region variants (list fixed before scores are read), and the MPRA of Kircher et al. 2019 for the
+   regulatory stratum.
+
+**Clinical outcomes.**
+1. Number of current ClinVar VUS (all variant classes, at least one star) that receive PP3 or BP4 at each strength
+   with stratum-specific thresholds, and the subset reviewed by expert panels.
+2. VUS in the splicing stratum with at least PP3 moderate: candidates for RNA studies, by gene, with the predicted
+   splice-site or junction change from the Atlas track scores for the expert-panel subset.
+
+**Technical throughput test (allowed before freezing).** 2,000 unlabeled gnomAD SNVs queried sequentially and in
+parallel to measure speed, error rate, and quota; attribution sums inspected only to fix the "no predicted
+effect" cut-off. No ClinVar label is read.
+
+**Limitations to state.** Strata depend on the model being calibrated; attributions explain the AVI model, not
+biology; noncoding pathogenic variants in ClinVar are biased toward splice-proximal and well-studied genes; the
+prior outside missense variants is unknown; API outputs are non-commercial and cannot be redistributed in bulk.
+
+**Dissemination.** Thresholds per stratum as a table and in a VEP plugin that reads the user's own AVI and
+attribution files (Ensembl VEP_plugins pull request; Apache 2.0).
+
+**Target journal (to confirm).** AJHG or Genome Medicine.
