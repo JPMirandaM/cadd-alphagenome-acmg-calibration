@@ -638,3 +638,22 @@ stratum and per region class, without reading any score. If only the splicing st
 the study is reduced to H-P on the calibratable strata and classes plus secondary questions 1 (descriptive) and 2.
 Whatever the result of H-P, it is reported; if mechanism stratification is not better, the recommendation is the
 simpler region stratification.
+
+### Amendment A-P2-2 (registered 2026-10-31, before any score or attribution is summarised by label; tag `analysis-plan-paper2-A2`)
+
+**Reason.** Cavus and Kuskucu (bioRxiv 2026, doi:10.64898/2026.10.11.758362) report that the AVI training used
+variants on chromosomes 1, 4, 7, 8, 10, 13 and 15, validation used chromosomes 2, 5, 11, 14, 17, 20, 22 and X,
+and chromosomes 3, 6, 9, 12, 16, 18, 19 and 21 were not used, citing the developers' data split (Cheng et al. 2026
+[VERIFY against the Atlas report before use]). AVI was trained on population frequency, not on ClinVar, but
+alleles in our reference sets may have contributed to that training. They also show that ClinVar P/LP labels of
+deep intronic variants are partly found through splicing predictors.
+
+**(a) Chromosome split (required sensitivity analysis).** The primary question H-P (both criteria) and the
+per-stratum and per-class likelihood ratios in the temporal hold-out are repeated on SNVs outside the training
+chromosomes (validation and unused chromosomes pooled), with thresholds calibrated as in the main analysis. If the
+developers' split cannot be confirmed in the Atlas report, the analysis is run with the list above and reported
+with its source.
+
+**(b) Predictor-mentioning submissions (optional; run only if decided later and registered before it is run).**
+In the splicing stratum, results split by whether any ClinVar submission of the variant mentions a splicing
+predictor, which requires the ClinVar submission summary file.
