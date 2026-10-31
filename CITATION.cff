@@ -30,7 +30,7 @@ identifiers:
     description: "All versions (concept DOI)"
   - type: doi
     value: "10.5281/zenodo.23790410"
-    description: "Version 1.0.0 (medRxiv preprint)"
+    description: "Version 1.0.0"
 keywords:
   - CADD
   - AlphaGenome
