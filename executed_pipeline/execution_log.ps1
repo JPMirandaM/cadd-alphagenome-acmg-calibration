@@ -437,3 +437,17 @@ git push -u origin main; git push origin analysis-plan-v1
 #   sequential 200 variants 3.62/s; 8 workers 900 variants 27.0/s; 16 workers 900 variants 55.8/s; 0 errors
 & $R .\scripts\52_paper2_throughput_summary.R              # -> results\paper2\throughput_test\summary.log (API AVI = local AVI, max diff 0.00049)
 & $R .\scripts\52b_paper2_alternative_stratum_rule.R       # -> results\paper2\throughput_test\alternative_rule.log
+# -------------------------------------------------------------------------------------
+# Paper 2 [2026-10-30/31] Retrieval of AVI scores and the 18 SHAP attributions from the AlphaGenome Atlas API, after
+# the plan was frozen (tag analysis-plan-paper2-v1). Only variant keys are queried; no ClinVar label is joined.
+# paper2_regions.R holds the region-class rules (script 30 extended to coding SNVs) and is sourced by 54.
+& $R .\scripts\53_paper2_clinvar_universe.R   # -> results\paper2\universe\variants_clinvar{,_batch1,_batch2}.tsv (2,787,151 SNVs; 53_clinvar_universe.log)
+& $R .\scripts\54_paper2_gnomad_sample.R      # -> results\paper2\universe\variants_gnomad.tsv (721,820 rare unlabeled SNVs; 54_gnomad_sample.log)
+# uv run --python 3.12 --with alphagenome python -I .\scripts\55_atlas_batch.py <universe>\variants_clinvar_batch1.tsv results\paper2\atlas_clinvar --workers 32 --chunk 10000
+#   started 2026-10-30 with the batch-1 list (then named variants_clinvar.tsv); 274 chunks; stalled 14:27-09:47 while the PC slept
+powershell -File .\scripts\58_keep_awake.ps1    # keeps Windows awake while the queue runs (released 2026-10-31 18:56)
+powershell -File .\scripts\57_atlas_queue.ps1 -WaitPid <batch-1 PID>   # -> results\paper2\atlas_queue.log
+#   runs 55 on batch 1 (resume), variants_gnomad.tsv (73 chunks), variants_clinvar_batch2.tsv (6 chunks), then
+#   56_atlas_repair.py over the three output directories (repair.tsv): ClinVar failed 6,673, recovered 3,742;
+#   gnomAD failed 534, recovered 534; batch 2 failed 0. The 2,931 rows still failing are all chrM SNVs
+#   ("Chromosome chrM not found"; the Atlas does not hold the mitochondrial genome). Queue finished 2026-10-31 18:56.

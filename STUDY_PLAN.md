@@ -594,3 +594,9 @@ prior outside missense variants is unknown; API outputs are non-commercial and c
 attribution files (Ensembl VEP_plugins pull request; Apache 2.0).
 
 **Target journal (to confirm).** AJHG or Genome Medicine.
+
+**Deviations from plan v1 (recorded 2026-10-31, before any label was joined).** Implementation corrections during
+the Atlas retrieval, with no change to the frozen analysis: the ClinVar query list was split into two batches
+because the disease-gene definition was corrected after the first query had started; the starred review-status
+rule of the gnomAD sampling script was fixed before sampling; 2,931 mitochondrial SNVs have no Atlas scores and are
+excluded. Details in METHODS.md (process log, 2026-10-30/31) and `executed_pipeline/execution_log.ps1`.

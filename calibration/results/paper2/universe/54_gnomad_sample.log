@@ -1,0 +1,43 @@
+Disease genes: 6955 
+Candidate noncoding positions by class
+                    class      N
+                   <char>  <int>
+1:           upstream_5kb 239905
+2:       canonical_splice 277840
+3: splice_region_intronic 833517
+4:                   5UTR  25130
+5:          near_intronic 562594
+6:                   3UTR 277743
+7:         downstream_5kb 186864
+8:          deep_intronic 636290
+
+Rare gnomAD SNVs absent from ClinVar, by class (before sampling)
+                     class       N
+                    <char>   <int>
+ 1:           upstream_5kb   51038
+ 2: splice_region_intronic  214862
+ 3:                   5UTR    9583
+ 4:          near_intronic  205730
+ 5:       canonical_splice   36362
+ 6:                   3UTR   58586
+ 7:         downstream_5kb   37349
+ 8:          deep_intronic  128734
+ 9:               missense 1955995
+10:       synonymous_other  941748
+11:   synonymous_exon_edge   28902
+
+Sampled set by class
+                     class      N
+                    <char>  <int>
+ 1:       canonical_splice  36362
+ 2: splice_region_intronic 100000
+ 3:                   5UTR   9583
+ 4:                   3UTR  58586
+ 5:          near_intronic 100000
+ 6:          deep_intronic 100000
+ 7:           upstream_5kb  51038
+ 8:         downstream_5kb  37349
+ 9:               missense 100000
+10:   synonymous_exon_edge  28902
+11:       synonymous_other 100000
+Unique SNVs to query: 721820 

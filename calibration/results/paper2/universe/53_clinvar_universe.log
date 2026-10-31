@@ -1,0 +1,11 @@
+Disease genes: 7061 
+   release  group       N
+    <char> <char>   <int>
+1:    2026   B/LB 1173033
+2:    2026    VUS 1367890
+3:    2026   P/LP  177064
+4:    2024    VUS  818015
+5:    2024   B/LB  726484
+6:    2024   P/LP  113889
+Unique SNVs to query: 2787151 
+Already queried (batch 1): 2731353 | added (batch 2): 55798 
