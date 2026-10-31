@@ -600,3 +600,41 @@ the Atlas retrieval, with no change to the frozen analysis: the ClinVar query li
 because the disease-gene definition was corrected after the first query had started; the starred review-status
 rule of the gnomAD sampling script was fixed before sampling; 2,931 mitochondrial SNVs have no Atlas scores and are
 excluded. Details in METHODS.md (process log, 2026-10-30/31) and `executed_pipeline/execution_log.ps1`.
+
+### Amendment A-P2-1 (registered 2026-10-31, before any ClinVar label is joined to the Atlas outputs; tag `analysis-plan-paper2-A1`)
+
+**Reason.** Babazade et al. (bioRxiv 2026, doi:10.64898/2026.10.21.760715, posted 2026-10-24) calibrated AVI and
+SpliceAI2 as PP3/BP4 evidence for missense variants and six region classes (three exon-adjacent classes, proximal
+introns, other synonymous sites, deep introns), with temporal validation on later ClinVar classifications,
+population variants as controls and a splicing assay. This covers most of H1 and H2 as region-based questions.
+Cavus and Kuskucu (bioRxiv 2026, doi:10.64898/2026.10.11.758362) benchmarked AVI against SpliceAI without ACMG
+calibration. Neither uses the AVI feature attributions nor calibrates 5'UTR, 3'UTR, upstream or downstream
+variants. The study is refocused on what remains open; no Atlas output has been joined to labels.
+
+**Primary question (replaces H3 as the primary hypothesis).** H-P. Mechanism stratification (strata as in plan v1)
+gives better PP3/BP4 evidence than region stratification (the region classes of `paper2_regions.R`, each
+calibrated separately with the same method, data, prior and size criterion). "Better" is judged only on data not
+used for calibration: (a) in the temporal hold-out, the proportion of evaluable intervals that meet their required
+likelihood ratio; (b) among resolved VUS of 2024-01-27 (all classes), evidence in the final direction minus
+evidence in the opposite direction, with bootstrap 95% intervals of the difference between strategies. The single
+genome-wide AVI threshold set and the missense thresholds remain comparators, as in H3.
+
+**Secondary questions.**
+1. Regulatory variants: calibration of the regulatory stratum and of the 5'UTR, 3'UTR, upstream 5 kb and
+   downstream 5 kb classes. When a stratum or class has fewer than 1,000 P/LP or 1,000 B/LB variants it is reported
+   descriptively (score distributions and likelihood ratios in fixed score bins with 95% intervals), not calibrated.
+2. Conservation-only stratum: whether evidence from SNVs whose AVI attribution is carried by conservation alone
+   meets the required likelihood ratios in the temporal hold-out, reported as a check for double counting of
+   conservation with other evidence.
+3. Benign comparison set: every calibration is repeated with the rare unlabeled gnomAD sample
+   (`variants_gnomad.tsv`) in place of ClinVar B/LB variants, because Babazade et al. found that thresholds depend
+   on this choice.
+
+**Demoted.** H1 and H2 are kept as an independent replication of Babazade et al. and are no longer primary.
+SpliceAI becomes optional and is omitted if the scores are not obtained.
+
+**First step and stopping rule.** Counts of P/LP and B/LB variants (calibration release and hold-out) per mechanism
+stratum and per region class, without reading any score. If only the splicing stratum reaches the size criterion,
+the study is reduced to H-P on the calibratable strata and classes plus secondary questions 1 (descriptive) and 2.
+Whatever the result of H-P, it is reported; if mechanism stratification is not better, the recommendation is the
+simpler region stratification.
