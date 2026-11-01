@@ -1,0 +1,29 @@
+set	level	PP3_min	PP3_max	BP4_min	BP4_max	n_seeds
+all	VeryStrong	56.45	56.57			5
+all	Strong	26.37	26.37	13.95	13.96	5
+all	Moderate	24.26	24.26	19.02	19.02	5
+all	Supporting	23.4	23.4	20.65	20.65	5
+missense	VeryStrong					5
+missense	Strong			9.1	9.18	5
+missense	Moderate	26.44	26.44	20.52	20.53	5
+missense	Supporting	25.18	25.19	22.94	22.96	5
+mixed	VeryStrong					5
+mixed	Strong	32.83	32.88			5
+mixed	Moderate	24.29	24.3	4.22	4.54	5
+mixed	Supporting	23.22	23.22	9	9.07	5
+protein	VeryStrong					5
+protein	Strong	33.76	33.77	16.26	16.29	5
+protein	Moderate	27.54	27.54	22.88	22.88	5
+protein	Supporting	26.14	26.15	23.9	23.9	5
+regulatory	VeryStrong					5
+regulatory	Strong					5
+regulatory	Moderate	20.39	20.39	0.11	0.11	5
+regulatory	Supporting	18.75	18.75	2.11	2.12	5
+splice_region_intronic	VeryStrong					5
+splice_region_intronic	Strong	24.06	24.08	0.11	0.11	5
+splice_region_intronic	Moderate	22.44	22.45	14.08	14.09	5
+splice_region_intronic	Supporting	21.3	21.31	17.49	17.49	5
+splicing	VeryStrong					5
+splicing	Strong	25.64	25.64	13.38	13.41	5
+splicing	Moderate	24.26	24.26	19.8	19.81	5
+splicing	Supporting	23.6	23.6	21.22	21.23	5

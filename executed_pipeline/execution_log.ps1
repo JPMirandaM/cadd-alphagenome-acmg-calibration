@@ -454,3 +454,16 @@ powershell -File .\scripts\57_atlas_queue.ps1 -WaitPid <batch-1 PID>   # -> resu
 # Paper 2 [2026-10-31] amendments A-P2-1 and A-P2-2 registered (tags analysis-plan-paper2-A1, -A2) before this step.
 & $R .\scripts\59_paper2_reference_sets.R     # -> results\paper2\refsets\ (refsets.rds, sizes_*.tsv; 59_reference_sets.log; RESULTS R-P2-1)
 #   run twice: the second run (logged) adds the count of reference SNVs without attributions after the filters; sizes identical
+& $R .\scripts\60_paper2_calibrate.R 20 10000  # -> results\paper2\calibration\<analysis>\<set>\seed<seed>\ (60_calibrate.log; set_sizes.tsv)
+#   smoke test first with B = 20 (output deleted); full run started 2026-10-31 22:16, 62 calibrations
+#   2026-10-31 23:42 the run was stopped by the host (low system memory, caused by a concurrent test of script 61);
+#   32 of 62 calibrations were complete. Resumed 2026-11-01 with 12 workers (skips completed runs):
+& $R .\scripts\60_paper2_calibrate.R 12 10000
+#   Runs completed after the resume used 12 workers (recorded in params.rds); with clusterSetRNGStream the bootstrap
+#   streams depend on the number of workers, so these runs are reproduced with 12 workers, the earlier ones with 20.
+#   Resumed run finished 2026-11-01 01:42 ("All runs finished"); 62 thresholds.tsv files.
+# Paper 2 [2026-11-01] amendment A-P2-3 registered (tag analysis-plan-paper2-A3) before this step.
+& $R .\scripts\61_paper2_evaluate.R 1000      # -> results\paper2\evaluation\ (61_evaluate.log; criterion a and b tables,
+#   H1/H2, secondary outputs, thresholds_all_calibrations.tsv, seed_range_2026.tsv)
+#   smoke test first with RB = 5 (output deleted); a first attempt on 2026-10-31 failed (data.table key clash, fixed)
+#   and a second was stopped with the calibration run by low system memory.

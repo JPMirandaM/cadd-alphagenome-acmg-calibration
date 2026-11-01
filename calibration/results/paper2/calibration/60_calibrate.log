@@ -1,0 +1,134 @@
+gnomAD sample with attributions: 721820 of 721820
+Key: <.>
+        . conservation_only mixed no_predicted_effect protein regulatory
+   <char>             <int> <int>               <int>   <int>      <int>
+1:      .             76861 13278              185739   81933     215357
+   splicing
+      <int>
+1:   148652
+
+== Sets calibrated ==
+    analysis                    set  n_plp n_benign n_gnomad calibrate
+      <char>                 <char>  <int>    <int>    <int>    <lgcl>
+ 1:     main               splicing  46924   199458   148652      TRUE
+ 2:     main                protein 126762    64657    81933      TRUE
+ 3:     main             regulatory   1385   386233   215357      TRUE
+ 4:     main                  mixed   1046    18428    13278      TRUE
+ 5:     main splice_region_intronic   2392    68917   100000      TRUE
+ 6:     main               missense  59979    77123   100000      TRUE
+ 7:     main                    all 176731  1050997   721820      TRUE
+ 8:  holdout               splicing  28634   110659   148652      TRUE
+ 9:  holdout                protein  83011    42542    81933      TRUE
+10:  holdout splice_region_intronic   1520    39017   100000      TRUE
+11:  holdout               missense  40870    50278   100000      TRUE
+12:  holdout                    all 113558   598931   721820      TRUE
+13:  popctrl               splicing  46924   148652   148652      TRUE
+14:  popctrl                protein 126762    81933    81933      TRUE
+15:  popctrl             regulatory   1385   215357   215357      TRUE
+16:  popctrl                  mixed   1046    13278    13278      TRUE
+17:  popctrl       canonical_splice  40194    36362    36362      TRUE
+18:  popctrl splice_region_intronic   2392   100000   100000      TRUE
+19:  popctrl               missense  59979   100000   100000      TRUE
+20:  popctrl                    all 176731   721820   721820      TRUE
+    analysis                    set  n_plp n_benign n_gnomad calibrate
+[10-31 22:36] main / splicing / seed 20260925: 46924 P/LP, 199458 benign, 148652 gnomAD; 1.3 min
+[10-31 22:38] main / protein / seed 20260925: 126762 P/LP, 64657 benign, 81933 gnomAD; 1.9 min
+[10-31 22:40] main / regulatory / seed 20260925: 1385 P/LP, 386233 benign, 215357 gnomAD; 2.1 min
+[10-31 22:41] main / mixed / seed 20260925: 1046 P/LP, 18428 benign, 13278 gnomAD; 1.0 min
+[10-31 22:42] main / splice_region_intronic / seed 20260925: 2392 P/LP, 68917 benign, 100000 gnomAD; 1.1 min
+[10-31 22:44] main / missense / seed 20260925: 59979 P/LP, 77123 benign, 100000 gnomAD; 1.6 min
+[10-31 22:50] main / all / seed 20260925: 176731 P/LP, 1050997 benign, 721820 gnomAD; 6.1 min
+[10-31 22:51] holdout / splicing / seed 20260925: 28634 P/LP, 110659 benign, 148652 gnomAD; 1.5 min
+[10-31 22:53] holdout / protein / seed 20260925: 83011 P/LP, 42542 benign, 81933 gnomAD; 1.8 min
+[10-31 22:54] holdout / splice_region_intronic / seed 20260925: 1520 P/LP, 39017 benign, 100000 gnomAD; 0.9 min
+[10-31 22:55] holdout / missense / seed 20260925: 40870 P/LP, 50278 benign, 100000 gnomAD; 1.2 min
+[10-31 23:00] holdout / all / seed 20260925: 113558 P/LP, 598931 benign, 721820 gnomAD; 4.2 min
+[10-31 23:01] main / splicing / seed 101: 46924 P/LP, 199458 benign, 148652 gnomAD; 1.7 min
+[10-31 23:03] main / protein / seed 101: 126762 P/LP, 64657 benign, 81933 gnomAD; 2.0 min
+[10-31 23:05] main / regulatory / seed 101: 1385 P/LP, 386233 benign, 215357 gnomAD; 2.1 min
+[10-31 23:06] main / mixed / seed 101: 1046 P/LP, 18428 benign, 13278 gnomAD; 1.0 min
+[10-31 23:08] main / splice_region_intronic / seed 101: 2392 P/LP, 68917 benign, 100000 gnomAD; 1.0 min
+[10-31 23:09] main / missense / seed 101: 59979 P/LP, 77123 benign, 100000 gnomAD; 1.5 min
+[10-31 23:15] main / all / seed 101: 176731 P/LP, 1050997 benign, 721820 gnomAD; 6.3 min
+[10-31 23:17] main / splicing / seed 202: 46924 P/LP, 199458 benign, 148652 gnomAD; 1.6 min
+[10-31 23:19] main / protein / seed 202: 126762 P/LP, 64657 benign, 81933 gnomAD; 2.0 min
+[10-31 23:21] main / regulatory / seed 202: 1385 P/LP, 386233 benign, 215357 gnomAD; 2.1 min
+[10-31 23:22] main / mixed / seed 202: 1046 P/LP, 18428 benign, 13278 gnomAD; 1.0 min
+[10-31 23:23] main / splice_region_intronic / seed 202: 2392 P/LP, 68917 benign, 100000 gnomAD; 1.0 min
+[10-31 23:25] main / missense / seed 202: 59979 P/LP, 77123 benign, 100000 gnomAD; 1.5 min
+[10-31 23:31] main / all / seed 202: 176731 P/LP, 1050997 benign, 721820 gnomAD; 6.2 min
+[10-31 23:33] main / splicing / seed 303: 46924 P/LP, 199458 benign, 148652 gnomAD; 1.7 min
+[10-31 23:35] main / protein / seed 303: 126762 P/LP, 64657 benign, 81933 gnomAD; 2.1 min
+[10-31 23:37] main / regulatory / seed 303: 1385 P/LP, 386233 benign, 215357 gnomAD; 2.2 min
+[10-31 23:38] main / mixed / seed 303: 1046 P/LP, 18428 benign, 13278 gnomAD; 1.2 min
+[10-31 23:39] main / splice_region_intronic / seed 303: 2392 P/LP, 68917 benign, 100000 gnomAD; 1.2 min
+[10-31 23:41] main / missense / seed 303: 59979 P/LP, 77123 benign, 100000 gnomAD; 1.7 min
+Error en unserialize(node$con): error al leer desde conexión
+Calls: calibrate_fast ... FUN -> recvData -> recvData.SOCKnode -> unserialize
+Error en serialize(data, node$con): error al escribir en una conexión
+Calls: calibrate_fast ... postNode -> sendData -> sendData.SOCKnode -> serialize
+Ejecución interrumpida
+gnomAD sample with attributions: 721820 of 721820
+Key: <.>
+        . conservation_only mixed no_predicted_effect protein regulatory
+   <char>             <int> <int>               <int>   <int>      <int>
+1:      .             76861 13278              185739   81933     215357
+   splicing
+      <int>
+1:   148652
+
+== Sets calibrated ==
+    analysis                    set  n_plp n_benign n_gnomad calibrate
+      <char>                 <char>  <int>    <int>    <int>    <lgcl>
+ 1:     main               splicing  46924   199458   148652      TRUE
+ 2:     main                protein 126762    64657    81933      TRUE
+ 3:     main             regulatory   1385   386233   215357      TRUE
+ 4:     main                  mixed   1046    18428    13278      TRUE
+ 5:     main splice_region_intronic   2392    68917   100000      TRUE
+ 6:     main               missense  59979    77123   100000      TRUE
+ 7:     main                    all 176731  1050997   721820      TRUE
+ 8:  holdout               splicing  28634   110659   148652      TRUE
+ 9:  holdout                protein  83011    42542    81933      TRUE
+10:  holdout splice_region_intronic   1520    39017   100000      TRUE
+11:  holdout               missense  40870    50278   100000      TRUE
+12:  holdout                    all 113558   598931   721820      TRUE
+13:  popctrl               splicing  46924   148652   148652      TRUE
+14:  popctrl                protein 126762    81933    81933      TRUE
+15:  popctrl             regulatory   1385   215357   215357      TRUE
+16:  popctrl                  mixed   1046    13278    13278      TRUE
+17:  popctrl       canonical_splice  40194    36362    36362      TRUE
+18:  popctrl splice_region_intronic   2392   100000   100000      TRUE
+19:  popctrl               missense  59979   100000   100000      TRUE
+20:  popctrl                    all 176731   721820   721820      TRUE
+    analysis                    set  n_plp n_benign n_gnomad calibrate
+[11-01 00:30] main / all / seed 303: 176731 P/LP, 1050997 benign, 721820 gnomAD; 7.0 min
+[11-01 00:32] main / splicing / seed 404: 46924 P/LP, 199458 benign, 148652 gnomAD; 1.8 min
+[11-01 00:34] main / protein / seed 404: 126762 P/LP, 64657 benign, 81933 gnomAD; 2.3 min
+[11-01 00:37] main / regulatory / seed 404: 1385 P/LP, 386233 benign, 215357 gnomAD; 2.4 min
+[11-01 00:38] main / mixed / seed 404: 1046 P/LP, 18428 benign, 13278 gnomAD; 1.1 min
+[11-01 00:39] main / splice_region_intronic / seed 404: 2392 P/LP, 68917 benign, 100000 gnomAD; 1.2 min
+[11-01 00:41] main / missense / seed 404: 59979 P/LP, 77123 benign, 100000 gnomAD; 1.8 min
+[11-01 00:48] main / all / seed 404: 176731 P/LP, 1050997 benign, 721820 gnomAD; 7.5 min
+[11-01 00:50] popctrl / splicing / seed 20260925: 46924 P/LP, 148652 benign, 148652 gnomAD; 1.8 min
+[11-01 00:52] popctrl / protein / seed 20260925: 126762 P/LP, 81933 benign, 81933 gnomAD; 2.4 min
+[11-01 00:54] popctrl / regulatory / seed 20260925: 1385 P/LP, 215357 benign, 215357 gnomAD; 1.9 min
+[11-01 00:55] popctrl / mixed / seed 20260925: 1046 P/LP, 13278 benign, 13278 gnomAD; 1.0 min
+[11-01 00:56] popctrl / canonical_splice / seed 20260925: 40194 P/LP, 36362 benign, 36362 gnomAD; 1.1 min
+[11-01 00:58] popctrl / splice_region_intronic / seed 20260925: 2392 P/LP, 100000 benign, 100000 gnomAD; 1.2 min
+[11-01 00:59] popctrl / missense / seed 20260925: 59979 P/LP, 100000 benign, 100000 gnomAD; 1.8 min
+[11-01 01:05] popctrl / all / seed 20260925: 176731 P/LP, 721820 benign, 721820 gnomAD; 5.7 min
+[11-01 01:07] prior001 / splicing / seed 20260925: 46924 P/LP, 199458 benign, 148652 gnomAD; 1.9 min
+[11-01 01:09] prior001 / protein / seed 20260925: 126762 P/LP, 64657 benign, 81933 gnomAD; 2.3 min
+[11-01 01:12] prior001 / regulatory / seed 20260925: 1385 P/LP, 386233 benign, 215357 gnomAD; 2.5 min
+[11-01 01:13] prior001 / mixed / seed 20260925: 1046 P/LP, 18428 benign, 13278 gnomAD; 1.2 min
+[11-01 01:14] prior001 / splice_region_intronic / seed 20260925: 2392 P/LP, 68917 benign, 100000 gnomAD; 1.2 min
+[11-01 01:16] prior001 / missense / seed 20260925: 59979 P/LP, 77123 benign, 100000 gnomAD; 1.8 min
+[11-01 01:24] prior001 / all / seed 20260925: 176731 P/LP, 1050997 benign, 721820 gnomAD; 7.6 min
+[11-01 01:26] prior010 / splicing / seed 20260925: 46924 P/LP, 199458 benign, 148652 gnomAD; 2.0 min
+[11-01 01:28] prior010 / protein / seed 20260925: 126762 P/LP, 64657 benign, 81933 gnomAD; 2.4 min
+[11-01 01:31] prior010 / regulatory / seed 20260925: 1385 P/LP, 386233 benign, 215357 gnomAD; 2.5 min
+[11-01 01:32] prior010 / mixed / seed 20260925: 1046 P/LP, 18428 benign, 13278 gnomAD; 1.2 min
+[11-01 01:33] prior010 / splice_region_intronic / seed 20260925: 2392 P/LP, 68917 benign, 100000 gnomAD; 1.2 min
+[11-01 01:35] prior010 / missense / seed 20260925: 59979 P/LP, 77123 benign, 100000 gnomAD; 1.7 min
+[11-01 01:42] prior010 / all / seed 20260925: 176731 P/LP, 1050997 benign, 721820 gnomAD; 7.6 min
+All runs finished

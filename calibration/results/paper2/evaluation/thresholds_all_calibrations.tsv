@@ -1,0 +1,249 @@
+level	PP3_discounted	BP4_discounted	analysis	set	seed
+VeryStrong	56.45		main	all	20260925
+Strong	26.37	13.96	main	all	20260925
+Moderate	24.26	19.02	main	all	20260925
+Supporting	23.4	20.65	main	all	20260925
+VeryStrong	56.45		main	all	101
+Strong	26.37	13.95	main	all	101
+Moderate	24.26	19.02	main	all	101
+Supporting	23.4	20.65	main	all	101
+VeryStrong	56.57		main	all	202
+Strong	26.37	13.95	main	all	202
+Moderate	24.26	19.02	main	all	202
+Supporting	23.4	20.65	main	all	202
+VeryStrong	56.45		main	all	303
+Strong	26.37	13.96	main	all	303
+Moderate	24.26	19.02	main	all	303
+Supporting	23.4	20.65	main	all	303
+VeryStrong	56.45		main	all	404
+Strong	26.37	13.96	main	all	404
+Moderate	24.26	19.02	main	all	404
+Supporting	23.4	20.65	main	all	404
+VeryStrong			main	missense	20260925
+Strong		9.11	main	missense	20260925
+Moderate	26.44	20.52	main	missense	20260925
+Supporting	25.19	22.95	main	missense	20260925
+VeryStrong			main	missense	101
+Strong		9.1	main	missense	101
+Moderate	26.44	20.53	main	missense	101
+Supporting	25.19	22.96	main	missense	101
+VeryStrong			main	missense	202
+Strong		9.11	main	missense	202
+Moderate	26.44	20.52	main	missense	202
+Supporting	25.19	22.94	main	missense	202
+VeryStrong			main	missense	303
+Strong		9.1	main	missense	303
+Moderate	26.44	20.52	main	missense	303
+Supporting	25.19	22.96	main	missense	303
+VeryStrong			main	missense	404
+Strong		9.18	main	missense	404
+Moderate	26.44	20.52	main	missense	404
+Supporting	25.18	22.95	main	missense	404
+VeryStrong			main	mixed	20260925
+Strong	32.88		main	mixed	20260925
+Moderate	24.29	4.44	main	mixed	20260925
+Supporting	23.22	9	main	mixed	20260925
+VeryStrong			main	mixed	101
+Strong	32.86		main	mixed	101
+Moderate	24.3	4.22	main	mixed	101
+Supporting	23.22	9.07	main	mixed	101
+VeryStrong			main	mixed	202
+Strong	32.83		main	mixed	202
+Moderate	24.3	4.54	main	mixed	202
+Supporting	23.22	9.07	main	mixed	202
+VeryStrong			main	mixed	303
+Strong	32.86		main	mixed	303
+Moderate	24.29	4.54	main	mixed	303
+Supporting	23.22	9.07	main	mixed	303
+VeryStrong			main	mixed	404
+Strong	32.83		main	mixed	404
+Moderate	24.29	4.44	main	mixed	404
+Supporting	23.22	9.07	main	mixed	404
+VeryStrong			main	protein	20260925
+Strong	33.76	16.26	main	protein	20260925
+Moderate	27.54	22.88	main	protein	20260925
+Supporting	26.14	23.9	main	protein	20260925
+VeryStrong			main	protein	101
+Strong	33.77	16.26	main	protein	101
+Moderate	27.54	22.88	main	protein	101
+Supporting	26.15	23.9	main	protein	101
+VeryStrong			main	protein	202
+Strong	33.76	16.26	main	protein	202
+Moderate	27.54	22.88	main	protein	202
+Supporting	26.15	23.9	main	protein	202
+VeryStrong			main	protein	303
+Strong	33.76	16.27	main	protein	303
+Moderate	27.54	22.88	main	protein	303
+Supporting	26.15	23.9	main	protein	303
+VeryStrong			main	protein	404
+Strong	33.76	16.29	main	protein	404
+Moderate	27.54	22.88	main	protein	404
+Supporting	26.15	23.9	main	protein	404
+VeryStrong			main	regulatory	20260925
+Strong			main	regulatory	20260925
+Moderate	20.39	0.11	main	regulatory	20260925
+Supporting	18.75	2.11	main	regulatory	20260925
+VeryStrong			main	regulatory	101
+Strong			main	regulatory	101
+Moderate	20.39	0.11	main	regulatory	101
+Supporting	18.75	2.11	main	regulatory	101
+VeryStrong			main	regulatory	202
+Strong			main	regulatory	202
+Moderate	20.39	0.11	main	regulatory	202
+Supporting	18.75	2.12	main	regulatory	202
+VeryStrong			main	regulatory	303
+Strong			main	regulatory	303
+Moderate	20.39	0.11	main	regulatory	303
+Supporting	18.75	2.12	main	regulatory	303
+VeryStrong			main	regulatory	404
+Strong			main	regulatory	404
+Moderate	20.39	0.11	main	regulatory	404
+Supporting	18.75	2.12	main	regulatory	404
+VeryStrong			main	splice_region_intronic	20260925
+Strong	24.06	0.11	main	splice_region_intronic	20260925
+Moderate	22.45	14.09	main	splice_region_intronic	20260925
+Supporting	21.3	17.49	main	splice_region_intronic	20260925
+VeryStrong			main	splice_region_intronic	101
+Strong	24.08	0.11	main	splice_region_intronic	101
+Moderate	22.45	14.09	main	splice_region_intronic	101
+Supporting	21.31	17.49	main	splice_region_intronic	101
+VeryStrong			main	splice_region_intronic	202
+Strong	24.08	0.11	main	splice_region_intronic	202
+Moderate	22.45	14.08	main	splice_region_intronic	202
+Supporting	21.3	17.49	main	splice_region_intronic	202
+VeryStrong			main	splice_region_intronic	303
+Strong	24.08	0.11	main	splice_region_intronic	303
+Moderate	22.44	14.09	main	splice_region_intronic	303
+Supporting	21.3	17.49	main	splice_region_intronic	303
+VeryStrong			main	splice_region_intronic	404
+Strong	24.08	0.11	main	splice_region_intronic	404
+Moderate	22.44	14.09	main	splice_region_intronic	404
+Supporting	21.3	17.49	main	splice_region_intronic	404
+VeryStrong			main	splicing	20260925
+Strong	25.64	13.38	main	splicing	20260925
+Moderate	24.26	19.81	main	splicing	20260925
+Supporting	23.6	21.23	main	splicing	20260925
+VeryStrong			main	splicing	101
+Strong	25.64	13.41	main	splicing	101
+Moderate	24.26	19.8	main	splicing	101
+Supporting	23.6	21.22	main	splicing	101
+VeryStrong			main	splicing	202
+Strong	25.64	13.41	main	splicing	202
+Moderate	24.26	19.8	main	splicing	202
+Supporting	23.6	21.23	main	splicing	202
+VeryStrong			main	splicing	303
+Strong	25.64	13.39	main	splicing	303
+Moderate	24.26	19.8	main	splicing	303
+Supporting	23.6	21.23	main	splicing	303
+VeryStrong			main	splicing	404
+Strong	25.64	13.39	main	splicing	404
+Moderate	24.26	19.8	main	splicing	404
+Supporting	23.6	21.23	main	splicing	404
+VeryStrong	56.45		prior001	all	20260925
+Strong	26.37	13.95	prior001	all	20260925
+Moderate	24.26	19.02	prior001	all	20260925
+Supporting	23.4	20.65	prior001	all	20260925
+VeryStrong			prior001	missense	20260925
+Strong		9.11	prior001	missense	20260925
+Moderate	26.44	20.52	prior001	missense	20260925
+Supporting	25.19	22.96	prior001	missense	20260925
+VeryStrong			prior001	mixed	20260925
+Strong	32.86		prior001	mixed	20260925
+Moderate	24.29	4.44	prior001	mixed	20260925
+Supporting	23.22	9.07	prior001	mixed	20260925
+VeryStrong			prior001	protein	20260925
+Strong	33.76	16.28	prior001	protein	20260925
+Moderate	27.54	22.88	prior001	protein	20260925
+Supporting	26.15	23.9	prior001	protein	20260925
+VeryStrong			prior001	regulatory	20260925
+Strong			prior001	regulatory	20260925
+Moderate	20.39	0.11	prior001	regulatory	20260925
+Supporting	18.75	2.11	prior001	regulatory	20260925
+VeryStrong			prior001	splice_region_intronic	20260925
+Strong	24.06	0.11	prior001	splice_region_intronic	20260925
+Moderate	22.44	14.08	prior001	splice_region_intronic	20260925
+Supporting	21.3	17.49	prior001	splice_region_intronic	20260925
+VeryStrong			prior001	splicing	20260925
+Strong	25.64	13.38	prior001	splicing	20260925
+Moderate	24.26	19.8	prior001	splicing	20260925
+Supporting	23.6	21.23	prior001	splicing	20260925
+VeryStrong	56.45		prior010	all	20260925
+Strong	26.37	13.95	prior010	all	20260925
+Moderate	24.26	19.02	prior010	all	20260925
+Supporting	23.4	20.65	prior010	all	20260925
+VeryStrong			prior010	missense	20260925
+Strong		9.11	prior010	missense	20260925
+Moderate	26.44	20.52	prior010	missense	20260925
+Supporting	25.19	22.96	prior010	missense	20260925
+VeryStrong			prior010	mixed	20260925
+Strong	32.86		prior010	mixed	20260925
+Moderate	24.29	4.44	prior010	mixed	20260925
+Supporting	23.22	9.07	prior010	mixed	20260925
+VeryStrong			prior010	protein	20260925
+Strong	33.76	16.28	prior010	protein	20260925
+Moderate	27.54	22.88	prior010	protein	20260925
+Supporting	26.15	23.9	prior010	protein	20260925
+VeryStrong			prior010	regulatory	20260925
+Strong			prior010	regulatory	20260925
+Moderate	20.39	0.11	prior010	regulatory	20260925
+Supporting	18.75	2.11	prior010	regulatory	20260925
+VeryStrong			prior010	splice_region_intronic	20260925
+Strong	24.06	0.11	prior010	splice_region_intronic	20260925
+Moderate	22.44	14.08	prior010	splice_region_intronic	20260925
+Supporting	21.3	17.49	prior010	splice_region_intronic	20260925
+VeryStrong			prior010	splicing	20260925
+Strong	25.64	13.38	prior010	splicing	20260925
+Moderate	24.26	19.8	prior010	splicing	20260925
+Supporting	23.6	21.23	prior010	splicing	20260925
+VeryStrong			popctrl	all	20260925
+Strong		11.72	popctrl	all	20260925
+Moderate	26.94	18.79	popctrl	all	20260925
+Supporting	24.91	21.09	popctrl	all	20260925
+VeryStrong			popctrl	canonical_splice	20260925
+Strong			popctrl	canonical_splice	20260925
+Moderate			popctrl	canonical_splice	20260925
+Supporting		15.44	popctrl	canonical_splice	20260925
+VeryStrong			popctrl	missense	20260925
+Strong			popctrl	missense	20260925
+Moderate	29.84	20.13	popctrl	missense	20260925
+Supporting	26.6	23.2	popctrl	missense	20260925
+VeryStrong			popctrl	mixed	20260925
+Strong			popctrl	mixed	20260925
+Moderate	30.27		popctrl	mixed	20260925
+Supporting	24.66	0	popctrl	mixed	20260925
+VeryStrong			popctrl	protein	20260925
+Strong		11.79	popctrl	protein	20260925
+Moderate	32.5	23.02	popctrl	protein	20260925
+Supporting	29.66	24.43	popctrl	protein	20260925
+VeryStrong			popctrl	regulatory	20260925
+Strong			popctrl	regulatory	20260925
+Moderate	20.46		popctrl	regulatory	20260925
+Supporting	18.64	0.23	popctrl	regulatory	20260925
+VeryStrong			popctrl	splice_region_intronic	20260925
+Strong			popctrl	splice_region_intronic	20260925
+Moderate	24.99	14.38	popctrl	splice_region_intronic	20260925
+Supporting	23.33	19.49	popctrl	splice_region_intronic	20260925
+VeryStrong			popctrl	splicing	20260925
+Strong			popctrl	splicing	20260925
+Moderate		19.74	popctrl	splicing	20260925
+Supporting	27.53	22.2	popctrl	splicing	20260925
+VeryStrong	67.48		holdout	all	20260925
+Strong	26.71	14.01	holdout	all	20260925
+Moderate	24.46	18.99	holdout	all	20260925
+Supporting	23.56	20.69	holdout	all	20260925
+VeryStrong			holdout	missense	20260925
+Strong		8.92	holdout	missense	20260925
+Moderate	26.58	20.67	holdout	missense	20260925
+Supporting	25.32	23	holdout	missense	20260925
+VeryStrong			holdout	protein	20260925
+Strong	34.14	15.25	holdout	protein	20260925
+Moderate	27.58	22.84	holdout	protein	20260925
+Supporting	26.21	23.9	holdout	protein	20260925
+VeryStrong			holdout	splice_region_intronic	20260925
+Strong	24.51		holdout	splice_region_intronic	20260925
+Moderate	22.76	12.91	holdout	splice_region_intronic	20260925
+Supporting	21.34	16.91	holdout	splice_region_intronic	20260925
+VeryStrong			holdout	splicing	20260925
+Strong	26.09	11.25	holdout	splicing	20260925
+Moderate	24.51	19.85	holdout	splicing	20260925
+Supporting	23.84	21.25	holdout	splicing	20260925

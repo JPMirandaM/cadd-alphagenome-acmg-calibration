@@ -1,0 +1,4 @@
+group	iv	p	b	nP	nB	LR	level	dir	LR_req	evaluable	meets
+conservation_only	BP4_Strong	48	55182	221	76792	0.302250832334172	Strong	BP4	0.0298274993135947	TRUE	FALSE
+conservation_only	BP4_Moderate	70	19514	221	76792	1.24645167154617	Moderate	BP4	0.172706396272966	TRUE	FALSE
+conservation_only	BP4_Supporting	31	1499	221	76792	7.18594296650256	Supporting	BP4	0.415579590780112	TRUE	FALSE

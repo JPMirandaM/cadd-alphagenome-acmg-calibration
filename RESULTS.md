@@ -669,3 +669,97 @@ Consequences under the plan: the stopping rule of A-P2-1 is not triggered (four 
 strata and, for region stratification, intronic splice region and missense. Noncoding regulatory variants (395
 P/LP) are reported descriptively (secondary question 1), as are the conservation-only (531) and no-predicted-effect
 (83) strata.
+
+## R-P2-2. Paper 2: calibrated AVI Phred thresholds by stratum and class (script 60)
+
+Script `60_paper2_calibrate.R`; outputs in `calibration/results/paper2/calibration/` (thresholds, curves and bootstrap
+thresholds per analysis, set and seed; `set_sizes.tsv`; `60_calibrate.log`); summary tables
+`thresholds_all_calibrations.tsv` and `seed_range_2026.tsv` in `calibration/results/paper2/evaluation/`. 62
+calibrations; sets that meet the size criterion: in 2026 the splicing, protein, regulatory and mixed strata, the
+intronic splice region and missense classes and all classes pooled; in 2024 the same except the regulatory and mixed
+strata. Discounted thresholds (AVI Phred, seed 20260925), PP3 / BP4; a dash means the level is not reached.
+
+| Set | 2026 Supporting | 2026 Moderate | 2026 Strong | 2024 Supporting | 2024 Moderate | 2024 Strong |
+|---|---|---|---|---|---|---|
+| Splicing stratum | 23.60 / 21.23 | 24.26 / 19.81 | 25.64 / 13.38 | 23.84 / 21.25 | 24.51 / 19.85 | 26.09 / 11.25 |
+| Protein stratum | 26.14 / 23.90 | 27.54 / 22.88 | 33.76 / 16.26 | 26.21 / 23.90 | 27.58 / 22.84 | 34.14 / 15.25 |
+| Regulatory stratum | 18.75 / 2.11 | 20.39 / 0.11 | – / – | not calibrated | | |
+| Mixed stratum | 23.22 / 9.00 | 24.29 / 4.44 | 32.88 / – | not calibrated | | |
+| Intronic splice region | 21.30 / 17.49 | 22.45 / 14.09 | 24.06 / 0.11 | 21.34 / 16.91 | 22.76 / 12.91 | 24.51 / – |
+| Missense | 25.19 / 22.95 | 26.44 / 20.52 | – / 9.11 | 25.32 / 23.00 | 26.58 / 20.67 | – / 8.92 |
+| All classes pooled | 23.40 / 20.65 | 24.26 / 19.02 | 26.37 / 13.96 | 23.56 / 20.69 | 24.46 / 18.99 | 26.71 / 14.01 |
+
+PP3 Very Strong is reached only by the pooled set (2026 56.45; 2024 67.48). Five seeds: the largest range of any
+threshold across seeds is 0.32 Phred (mixed stratum, BP4 Moderate, 4.22–4.54); all others are within 0.12. H1 replication: in 2026 the
+splicing stratum reaches PP3 up to Strong (25.64) and BP4 up to Strong (13.38).
+Prior sensitivity (0.01 and 0.10 instead of 0.0441): thresholds agree with the main ones within 0.07 Phred. This
+follows from the method: with c fixed, every evidence level corresponds to a fixed likelihood ratio and the prior
+cancels between the local posterior and its threshold, so the analysis as planned cannot show prior dependence.
+Population control (2026 P/LP against the rare gnomAD sample): PP3 thresholds are higher and fewer levels are
+reached (protein stratum PP3 Supporting 29.66, Moderate 32.50; splicing stratum PP3 Supporting 27.53, Moderate not
+reached; pooled set PP3 Supporting 24.91, Moderate 26.94), in line with the dependence on the benign set reported by
+Babazade et al.
+
+## R-P2-3. Paper 2: evaluation of H-P on held-out data (script 61; amendment A-P2-3)
+
+Script `61_paper2_evaluate.R`; outputs and log (`61_evaluate.log`) in `calibration/results/paper2/evaluation/`.
+Thresholds of the 2024 calibration (seed 20260925, discounted); 1,000 bootstrap resamples (seed 20261101).
+
+**Criterion (a), temporal hold-out** (68,937 P/LP and 469,479 B/LB test SNVs). Evaluable intervals that meet their
+required LR (point estimate):
+
+| Strategy | Evaluable | Meet | Proportion | Test SNVs with evidence | Share in intervals that meet |
+|---|---|---|---|---|---|
+| M, mechanism (with fallback) | 18 | 15 | 0.83 | 522,087 | 0.34 |
+| R, region (with fallback) | 16 | 16 | 1.00 | 521,323 | 1.00 |
+| G, genome-wide | 6 | 6 | 1.00 | 521,575 | 1.00 |
+| X, missense thresholds | 5 | 4 | 0.80 | 527,644 | 0.97 |
+| M without fallback | 12 | 12 | 1.00 | 177,536 | 1.00 |
+| R without fallback | 10 | 10 | 1.00 | 81,415 | 1.00 |
+
+Differences (95% bootstrap interval): M − R −0.17 (−0.17 to −0.11); M − G −0.17 (−0.17 to −0.02); M − X 0.03
+(0.03 to 0.03). With the 95% bound instead of the point LR the counts are the same. All intervals of the splicing
+and protein strata meet. The three failures of M are the BP4 intervals of its fallback group (strata without a 2024
+calibration: regulatory, mixed, conservation only, no predicted effect; 1,305 test P/LP and 348,429 B/LB), which
+receive the pooled thresholds: LR 6.28 (Supporting; required at most 0.42), 1.14 (Moderate; 0.17) and 0.26 (Strong;
+0.03). 646 of the 1,305 P/LP of that group (50%) fall in BP4 intervals. The failure of X is BP4 Supporting (LR 0.86).
+Under strategies R and G the same variants are pooled with stop-gained, canonical splice and coding variants, and
+their BP4 intervals meet. Chromosome split (test variants outside the AVI training chromosomes): same evaluable and
+meeting intervals for every strategy, same differences.
+
+**Criterion (b), resolved VUS** (14,513 VUS of 2024 with an exact P/LP or B/LB label in 2026). (Final direction −
+opposite direction) / resolved:
+
+| Strategy | Final direction | Opposite direction | Net (95% CI) |
+|---|---|---|---|
+| M | 12,487 | 653 | 0.815 (0.808–0.824) |
+| R | 12,362 | 705 | 0.803 (0.795–0.812) |
+| G | 11,813 | 1,107 | 0.738 (0.728–0.747) |
+| X | 12,651 | 668 | 0.826 (0.818–0.834) |
+| M without fallback | 7,658 | 588 | 0.487 (0.477–0.496) |
+| R without fallback | 5,529 | 622 | 0.338 (0.328–0.347) |
+
+Differences: M − R 0.012 (0.008 to 0.017); M − G 0.078 (0.071 to 0.084); M − X −0.010 (−0.015 to −0.005).
+Chromosome split (10,304 resolved VUS): M − R 0.013 (0.008 to 0.018); M − G 0.080 (0.072 to 0.088); M − X −0.008
+(−0.013 to −0.002). Counts by strength and direction in `b_levels_*.tsv`.
+
+**H-P.** The two criteria disagree. On criterion (a), mechanism stratification is worse than region stratification
+and than the genome-wide set, entirely because of BP4 evidence given by pooled thresholds to strata that could not be
+calibrated in 2024; the calibrated strata meet every requirement. On criterion (b), mechanism stratification gives a
+higher net score than region stratification (+0.012) and the genome-wide set (+0.078), and a lower one than the
+missense thresholds applied to every variant (−0.010). Neither result depends on the AVI training chromosomes.
+
+**H2 replication** (strategy M, hold-out LRs by region class; `h2_strategyM_intervals_by_class.tsv`). Classes with
+evaluable intervals: deep intronic, missense, near intronic, intronic splice region, stop gained, synonymous exon edge,
+synonymous other. BP4 intervals meet in 5 of 21 (missense 2 of 3, intronic splice region 2 of 3, synonymous exon edge
+1 of 3; none in deep intronic, near intronic, stop gained or synonymous other). PP3 intervals meet in 17 of 21 (all
+except missense PP3 Strong, LR 25.8, and the three of stop gained, where LR is close to 1 with 125 test B/LB). H2 is
+not supported.
+
+**Secondary question 2, conservation only** (pooled thresholds; 221 test P/LP, 76,792 B/LB): BP4 Supporting LR 7.19,
+Moderate 1.25, Strong 0.30; none meets. No PP3 interval of this stratum is reported in the output.
+
+**Secondary question 1, descriptive bins** (2026 set; `secondary1_descriptive_bins.tsv`). In the regulatory stratum
+(1,385 P/LP, 386,233 B/LB) LR rises from 0.25 in [0,10) to 12.5 in [20,25) and 2,634 at 30 or more; LR crosses 1
+in the [15,20) bin (1.69). In the 5'UTR, 3'UTR, upstream 5 kb and downstream 5 kb classes LR is 4.8 to 11.9 in [20,25), 5.6 to 306 in
+[25,30) and 78 to 3,445 at 30 or more, with wide intervals (54 to 165 P/LP per class).
