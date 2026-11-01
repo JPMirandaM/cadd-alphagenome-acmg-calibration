@@ -351,6 +351,30 @@ Phred scales, one-sided 95% bootstrap bound. Main analysis: 5 seeds (20260925, 1
   concordant evidence (supplementary table), and those reviewed by an expert panel (3 stars) or
   practice guideline (4 stars), ordered by |points| then genomic position (main text).
 
+- A17 (2026-11-01, registered before any CADD score is joined to the SGE data and before the main-article
+  thresholds are applied to the SGE or MPRA data; possible extension of the main article, decided by the
+  authors after the Paper 2 results). Aim 9 extension: functional check, independent of ClinVar, of the R13
+  finding that the missense-calibrated BP4 thresholds give false benign evidence outside missense variants.
+  Data: (1) SGE, the 60,382 SNVs of the 12 saturation genome editing sets built for Paper 2 (A-P2-4 and its
+  deviation; script 62; functional class abnormal vs normal, no frequency filter), by region class
+  (`paper2_regions.R`); a class is evaluated if it has at least 30 abnormal and 30 normal SNVs; the missense
+  class is reported as a control (it overlaps R16). (2) MPRA, the record-level set of R13 (`mpra_scored.rds`,
+  39,170 SNV-element records, rule of A10), pooled over elements and per element (descriptive).
+  Scores: CADD v1.7 PHRED and AVI Phred from the local files used in the main article.
+  Thresholds: the main thresholds (Table 1; median of the five seeds, discounted) in every class; in the
+  intronic splice region class also the splice-region thresholds of A10 (script 30b).
+  Metrics: interval LR = P(interval | abnormal) / P(interval | normal), 0.5 added to zero counts, 95% CI from
+  1,000 bootstrap resamples of SNVs (seed 20261101), intervals with at least 10 SNVs; direction check (PP3
+  LR > 1, BP4 LR < 1); proportion of abnormal SNVs that receive BP4; AUROC of CADD and AVI per class with the
+  paired bootstrap difference. Functional abnormality is not pathogenicity, so the LRs are compared with the
+  ClinGen requirements only descriptively. Expectation from R13: BP4 intervals of the missense thresholds do
+  not have LR < 1 in noncoding classes.
+  Sensitivity: excluding SNVs of the ClinVar reference sets of the main article (missense set of R1 and
+  noncoding set of R13).
+  Disclosure: AVI scores of these SNVs were already examined under the Paper 2 thresholds (R-P2-4), and MPRA
+  AUROCs are in R13; CADD scores of the SGE noncoding SNVs and the main-article thresholds have not been
+  applied to these data.
+
 **Fair comparison across predictors** (when REVEL, BayesDel and AlphaMissense are added): the main
 comparison uses the intersection of variants scored by all predictors; per-predictor full-set
 results are reported as secondary.
@@ -771,3 +795,9 @@ would leave out the intronic splice variants that motivate the SGE component. In
 are therefore placed on GRCh38 from the MaveDB genomic position of the exonic anchor base c.N in the same score set,
 shifted by k along the transcript strand (strand from the exonic mapping; alleles complemented on the minus
 strand), and kept only when their reference allele matches GRCh38. The rest of A-P2-4 is unchanged.
+
+**Decision on Paper 2 (2026-11-01, authors).** After R-P2-3 and R-P2-4, mechanism stratification is not pursued as a
+separate publication: it does not outperform region or genome-wide thresholds consistently, and the splicing
+comparison with other tools is addressed by other groups. The functional findings on noncoding BP4 evidence are
+followed up as amendment A17 of the main article, as a possible extension if the article is submitted to another
+journal.
