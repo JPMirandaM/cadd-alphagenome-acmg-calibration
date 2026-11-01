@@ -710,3 +710,57 @@ toward B/LB. Differences between strategies with 95% bootstrap intervals (1,000 
    5 kb classes, with 0.5 added to zero counts and 95% intervals from 1,000 bootstrap resamples (seed 20261101).
 4. Agreement of the five-seed 2026 thresholds per stratum and class (range across seeds), and the prior sensitivity
    (0.01, 0.10) and population-control calibrations, reported as tables without a test.
+
+### Amendment A-P2-4 (registered 2026-11-01, after the H-P evaluation of A-P2-3 and before any AVI score or attribution is joined to functional data or to current VUS; tag `analysis-plan-paper2-A4`)
+
+**Reason.** Plan v1 lists functional validation independent of ClinVar (saturation genome editing and the MPRA of
+Kircher et al. 2019) and clinical outcomes, without fixing the rules. The H-P result (R-P2-3) is mixed: mechanism
+stratification fails criterion (a) only through the pooled-threshold fallback, and wins criterion (b) against region
+and genome-wide thresholds. These rules are fixed before the functional labels or the current VUS are joined to AVI.
+The SGE score sets were read in the main article (A13), where only their MANE Select missense SNVs were analysed with
+CADD and AVI; no attribution, stratum or Paper 2 threshold has been applied to them. The MPRA was analysed in the main
+article (AUROC of CADD and AVI), also without attributions or Paper 2 thresholds.
+
+**Thresholds.** The 2026 calibration (seed 20260925, discounted thresholds), because the functional data are
+independent of both ClinVar releases. Strategies as in A-P2-3 with the 2026 sets (strata splicing, protein,
+regulatory and mixed; classes intronic splice region and missense; pooled set as fallback): M, R, G, X, M and R
+without fallback.
+
+**1. Saturation genome editing (SGE).** Score sets: the 12 MaveDB sets of the main article with a genomic (hgvs.g)
+mapping and status ok in `scoreset_qc.tsv`, all from saturation genome editing (BAP1 00000662-0-1, BRCA1
+00000097-0-2, BRCA2 00001242-a-1, CARD11 00001226-a-1, CTCF 00001262-a-3, DDX3X 00000658-0-1, PALB2 00001259-a-2,
+RAD51C 00000673-0-1, RAD51D 00001260-a-2, SFPQ 00001265-a-2, VHL 00000675-a-1, XRCC2 00001264-a-2). Functional class
+(normal or abnormal) from the calibration selected in A13; intermediate, unspecified and conflicting classes are
+excluded; SNVs classified discordantly by two sets are excluded. All region classes are kept except exonic_other and
+intergenic (region rules of `paper2_regions.R`); no frequency filter.
+**2. MPRA.** Kircher et al. 2019, GRCh38 file of the main article (`annot/mpra/elements.tsv.gz`): functional =
+pValue < 1e-5 and |Coefficient| >= 0.1, otherwise non-functional (rule of A10). All SNVs are kept, including
+intergenic enhancer SNVs, which receive the fallback thresholds under R.
+**Attributions.** AVI and the 18 attributions are retrieved from the Atlas API (script 55) for SNVs not already
+retrieved; strata by the rule of script 59.
+**Metrics, for SGE and MPRA separately.** (i) Net agreement: (number with evidence in the functional direction minus
+number with evidence in the opposite direction) / number of SNVs, where PP3 agrees with abnormal/functional and BP4
+with normal/non-functional; differences M − R, M − G and M − X with 95% intervals from 1,000 bootstrap resamples of
+SNVs (seed 20261101). (ii) For each threshold group and interval, LR = P(interval | abnormal) / P(interval | normal),
+0.5 added to zero counts, with the expectation LR > 1 for PP3 and LR < 1 for BP4 (direction check). Groups need at
+least 30 abnormal and 30 normal SNVs; intervals at least 10 SNVs. Because functional abnormality is not
+pathogenicity, the LRs are compared with the ClinGen requirements only descriptively. (iii) SGE results also per
+stratum and per gene.
+**Sensitivity.** (a) Excluding SNVs in the 2026 ClinVar reference set. (b) Excluding SNVs on the AVI training
+chromosomes and on its validation chromosomes (2, 5, 11, 14, 17, 20, 22, X), because the Atlas report validated AVI
+on SGE variants of the latter.
+
+**3. Clinical outcomes (plan v1).** Current VUS: SNVs with an exact Uncertain_significance label and at least one
+star in the 2026-09-23 release, in a 2026 disease gene (rules of script 59), rare (AF < 0.01), with a region class
+other than exonic_other or intergenic and with Atlas attributions. Counts of VUS receiving PP3 and BP4 at each
+strength under M with and without fallback (2026 thresholds), by stratum and class, overall and for VUS reviewed by an
+expert panel. Splicing-stratum VUS with at least PP3 Moderate are listed by gene as candidates for RNA studies; for
+the expert-panel subset, the Atlas splicing track scores (SPLICE_SITE_USAGE and SPLICE_JUNCTIONS, maximum absolute
+raw score and its track) are retrieved and reported.
+
+**4. Exploratory (labelled as such; defined after the H-P results).** A hybrid strategy H: stratum thresholds where
+the stratum is calibrated, otherwise class thresholds where the class is calibrated, otherwise no evidence (H) or the
+pooled thresholds (H_fb). Evaluated on criteria (a) and (b) with the 2024 thresholds and on the functional data with
+the 2026 thresholds, as a comparison with M, R and G, without a test.
+
+**Not done in this step.** The predictor-mention split (A-P2-2b) remains optional.
