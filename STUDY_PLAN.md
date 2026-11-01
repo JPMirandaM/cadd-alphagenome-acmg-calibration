@@ -764,3 +764,10 @@ pooled thresholds (H_fb). Evaluated on criteria (a) and (b) with the 2024 thresh
 the 2026 thresholds, as a comparison with M, R and G, without a test.
 
 **Not done in this step.** The predictor-mention split (A-P2-2b) remains optional.
+
+**Deviation from A-P2-4 (recorded 2026-11-01, before any AVI score or attribution is joined to the functional
+data).** The MaveDB genomic mappings of the 12 SGE sets cover only exonic SNVs (47,772 SNVs; no intronic SNV), which
+would leave out the intronic splice variants that motivate the SGE component. Intronic SNVs (HGVS c.N+k or c.N−k)
+are therefore placed on GRCh38 from the MaveDB genomic position of the exonic anchor base c.N in the same score set,
+shifted by k along the transcript strand (strand from the exonic mapping; alleles complemented on the minus
+strand), and kept only when their reference allele matches GRCh38. The rest of A-P2-4 is unchanged.
