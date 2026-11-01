@@ -46,3 +46,6 @@ desktop.ini
 # Paper 2: per-variant AlphaGenome Atlas API outputs (non-commercial terms, no bulk redistribution)
 /calibration/results/paper2/**/*.tsv.gz
 /calibration/results/paper2/**/variants_*.tsv
+
+# Claude Code personal settings
+/.claude/settings.local.json
