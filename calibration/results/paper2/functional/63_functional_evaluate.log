@@ -1,0 +1,244 @@
+2026 threshold sets: all, missense, mixed, protein, regulatory, splice_region_intronic, splicing; 2024 hold-out sets: all, missense, protein, splice_region_intronic, splicing 
+SGE: 60229 of 60382 SNVs with Atlas attributions 
+SGE analysis set: 60229 (y = 1: 9963, y = 0: 50266) 
+Key: <stratum>
+               stratum     0     1
+                <char> <int> <int>
+1:   conservation_only  3574   101
+2:               mixed  3205   193
+3: no_predicted_effect  3517    64
+4:             protein 23340  7035
+5:          regulatory  8629   195
+6:            splicing  8001  2375
+
+== sge ==
+Índice: <strategy>
+   strategy     n agree opposite   net    lo    hi
+     <char> <int> <int>    <int> <num> <num> <num>
+1:        M 60229 35969     8814 0.451 0.445 0.457
+2:        R 60229 43892     9528 0.571 0.565 0.576
+3:        G 60229 40773    13291 0.456 0.450 0.463
+4:        X 60229 44452     9302 0.584 0.578 0.589
+5:   M_nofb 60229 28928     8649 0.337 0.331 0.342
+6:   R_nofb 60229 21905     8565 0.221 0.217 0.227
+7:        H 60229 29457     8664 0.345 0.339 0.350
+8:     H_fb 60229 35968     8814 0.451 0.445 0.457
+   contrast     diff      lo        hi
+     <char>    <num>   <num>     <num>
+1:    M - R -0.11969 -0.1240 -0.115476
+2:    M - G -0.00543 -0.0107 -0.000381
+3:    M - X -0.13274 -0.1371 -0.128856
+
+-- sge intervals --
+   strategy n_eval n_direction_ok n_meets_clingen
+     <char>  <int>          <int>           <int>
+1:        M     24             22               3
+2:        R     17             17               5
+3:        G      6              5               1
+4:        X      5              5               1
+5:   M_nofb     21             21               3
+6:   R_nofb     11             11               2
+7:        H     21             21               3
+8:     H_fb     24             22               3
+
+== sge_sens_no_clinvar_ref ==
+Índice: <strategy>
+   strategy     n agree opposite   net    lo    hi
+     <char> <int> <int>    <int> <num> <num> <num>
+1:        M 52222 30312     8466 0.418 0.412 0.425
+2:        R 52222 36454     9228 0.521 0.514 0.528
+3:        G 52222 33372    12935 0.391 0.383 0.399
+4:        X 52222 36930     8988 0.535 0.528 0.541
+5:   M_nofb 52222 24821     8323 0.316 0.310 0.322
+6:   R_nofb 52222 20578     8448 0.232 0.226 0.238
+7:        H 52222 25268     8337 0.324 0.318 0.330
+8:     H_fb 52222 30311     8466 0.418 0.412 0.424
+   contrast   diff      lo      hi
+     <char>  <num>   <num>   <num>
+1:    M - R -0.103 -0.1075 -0.0986
+2:    M - G  0.027  0.0216  0.0325
+3:    M - X -0.117 -0.1211 -0.1122
+
+-- sge_sens_no_clinvar_ref intervals --
+   strategy n_eval n_direction_ok n_meets_clingen
+     <char>  <int>          <int>           <int>
+1:        M     24             22               1
+2:        R     17             17               6
+3:        G      6              5               1
+4:        X      5              5               0
+5:   M_nofb     21             21               1
+6:   R_nofb     11             11               3
+7:        H     21             21               1
+8:     H_fb     24             22               1
+SGE without AVI training and validation chromosomes: 26075 SNVs (y = 1: 4057) 
+
+== sge_sens_no_train_valid_chr ==
+Índice: <strategy>
+   strategy     n agree opposite   net    lo    hi
+     <char> <int> <int>    <int> <num> <num> <num>
+1:        M 26075 15690     4027 0.447 0.438 0.456
+2:        R 26075 19260     4223 0.577 0.568 0.586
+3:        G 26075 18013     5607 0.476 0.466 0.486
+4:        X 26075 19535     4165 0.589 0.580 0.598
+5:   M_nofb 26075 12305     3917 0.322 0.313 0.330
+6:   R_nofb 26075  9525     3805 0.219 0.211 0.228
+7:        H 26075 12500     3927 0.329 0.320 0.338
+8:     H_fb 26075 15689     4027 0.447 0.438 0.456
+   contrast    diff      lo      hi
+     <char>   <num>   <num>   <num>
+1:    M - R -0.1294 -0.1357 -0.1232
+2:    M - G -0.0285 -0.0358 -0.0213
+3:    M - X -0.1422 -0.1483 -0.1359
+
+-- sge_sens_no_train_valid_chr intervals --
+   strategy n_eval n_direction_ok n_meets_clingen
+     <char>  <int>          <int>           <int>
+1:        M     24             22               4
+2:        R     17             17               5
+3:        G      6              5               1
+4:        X      5              5               1
+5:   M_nofb     21             21               4
+6:   R_nofb     11             11               2
+7:        H     21             21               4
+8:     H_fb     24             22               4
+MPRA: 29432 of 29444 SNVs with Atlas attributions 
+MPRA analysis set: 29432 (y = 1: 4571, y = 0: 24861) 
+Key: <stratum>
+               stratum     0     1
+                <char> <int> <int>
+1:   conservation_only  2589   143
+2:               mixed    10     1
+3: no_predicted_effect  4942   223
+4:             protein    17     1
+5:          regulatory 16979  4160
+6:            splicing   324    43
+
+== mpra ==
+Índice: <strategy>
+   strategy     n agree opposite       net        lo       hi
+     <char> <int> <int>    <int>     <num>     <num>    <num>
+1:        M 29432 10434     3618  0.231585  0.224175 0.239060
+2:        R 29432 23148     4007  0.650347  0.642462 0.658401
+3:        G 29432 23146     4006  0.650313  0.642430 0.658365
+4:        X 29432 24534     4333  0.686362  0.678071 0.694455
+5:   M_nofb 29432  3122     3255 -0.004519 -0.009955 0.001325
+6:   R_nofb 29432    13       15 -0.000068 -0.000442 0.000306
+7:        H 29432  3122     3255 -0.004519 -0.009955 0.001325
+8:     H_fb 29432 10434     3618  0.231585  0.224175 0.239060
+   contrast   diff     lo     hi
+     <char>  <num>  <num>  <num>
+1:    M - R -0.419 -0.428 -0.410
+2:    M - G -0.419 -0.428 -0.410
+3:    M - X -0.455 -0.465 -0.445
+
+-- mpra intervals --
+   strategy n_eval n_direction_ok n_meets_clingen
+     <char>  <int>          <int>           <int>
+1:        M     11              6               0
+2:        R      7              5               1
+3:        G      7              5               1
+4:        X      5              3               1
+5:   M_nofb      8              5               0
+6:        H      8              5               0
+7:     H_fb     11              6               0
+
+== mpra_sens_no_clinvar_ref ==
+Índice: <strategy>
+   strategy     n agree opposite       net        lo       hi
+     <char> <int> <int>    <int>     <num>     <num>    <num>
+1:        M 29346 10405     3589  2.32e-01  0.224629 0.239454
+2:        R 29346 23097     3985  6.51e-01  0.643154 0.658455
+3:        G 29346 23095     3984  6.51e-01  0.643120 0.658423
+4:        X 29346 24481     4311  6.87e-01  0.679309 0.694678
+5:   M_nofb 29346  3098     3228 -4.43e-03 -0.009678 0.000751
+6:   R_nofb 29346    13       15 -6.82e-05 -0.000409 0.000273
+7:        H 29346  3098     3228 -4.43e-03 -0.009678 0.000751
+8:     H_fb 29346 10405     3589  2.32e-01  0.224629 0.239454
+   contrast   diff     lo     hi
+     <char>  <num>  <num>  <num>
+1:    M - R -0.419 -0.428 -0.410
+2:    M - G -0.419 -0.428 -0.411
+3:    M - X -0.455 -0.465 -0.446
+
+-- mpra_sens_no_clinvar_ref intervals --
+   strategy n_eval n_direction_ok n_meets_clingen
+     <char>  <int>          <int>           <int>
+1:        M     11              6               0
+2:        R      7              5               2
+3:        G      7              5               1
+4:        X      5              3               1
+5:   M_nofb      8              5               0
+6:        H      8              5               0
+7:     H_fb     11              6               0
+MPRA without AVI training and validation chromosomes: 5840 SNVs (y = 1: 1343) 
+
+== mpra_sens_no_train_valid_chr ==
+Índice: <strategy>
+   strategy     n agree opposite    net     lo     hi
+     <char> <int> <int>    <int>  <num>  <num>  <num>
+1:        M  5840  2684      413 0.3889 0.3731 0.4055
+2:        R  5840  4487     1215 0.5603 0.5389 0.5813
+3:        G  5840  4487     1215 0.5603 0.5389 0.5813
+4:        X  5840  4504     1306 0.5476 0.5255 0.5685
+5:   M_nofb  5840   640      188 0.0774 0.0673 0.0868
+6:   R_nofb  5840     0        0 0.0000 0.0000 0.0000
+7:        H  5840   640      188 0.0774 0.0673 0.0868
+8:     H_fb  5840  2684      413 0.3889 0.3731 0.4055
+   contrast   diff     lo     hi
+     <char>  <num>  <num>  <num>
+1:    M - R -0.171 -0.192 -0.151
+2:    M - G -0.171 -0.192 -0.151
+3:    M - X -0.159 -0.180 -0.138
+
+-- mpra_sens_no_train_valid_chr intervals --
+   strategy n_eval n_direction_ok n_meets_clingen
+     <char>  <int>          <int>           <int>
+1:        M      6              5               2
+2:        R      5              3               2
+3:        G      5              3               2
+4:        X      4              2               1
+5:   M_nofb      4              4               2
+6:        H      4              4               2
+7:     H_fb      6              5               2
+Current rare VUS: 1336827 of 1336827 SNVs with Atlas attributions 
+
+== Current VUS: evidence per strategy ==
+Key: <strategy>
+   strategy    BP4    PP3   none
+     <char>  <int>  <int>  <int>
+1:        G 548035 499525 289267
+2:        H 674593 292693 369541
+3:        M 695854 292685 348288
+4:   M_nofb 670166 292685 373976
+5:        R 767043 318837 250947
+Splicing-stratum current VUS with >= PP3 Moderate (RNA-study candidates): 25847 in 3571 genes; expert panel: 142 
+
+== Exploratory hybrid, criterion (a) ==
+   strategy n_eval n_meet      prop n_var_evid n_var_meet
+     <char>  <int>  <int>     <num>      <int>      <int>
+1:        M     18     15 0.8333333     522087     178408
+2:        R     16     16 1.0000000     521323     521323
+3:        G      6      6 1.0000000     521575     521575
+4:        H     17     14 0.8235294     188168     177756
+5:     H_fb     23     17 0.7391304     503051     178094
+Resolved VUS for the exploratory criterion (b) are rebuilt from the 2024 and 2026 releases (rules of script 61) 
+Resolved VUS rebuilt: 14515; AF looked up in the VEP cache: 4311 
+Resolved rare VUS (exploratory): 14513 of 14513 SNVs with Atlas attributions 
+Check against script 61 (14,513 resolved VUS): 14513 
+
+== exploratory_hybrid_criterion_b ==
+Índice: <strategy>
+   strategy     n agree opposite   net    lo    hi
+     <char> <int> <int>    <int> <num> <num> <num>
+1:        M 14513 12487      653 0.815 0.808 0.824
+2:        R 14513 12362      705 0.803 0.795 0.812
+3:        G 14513 11813     1107 0.738 0.728 0.747
+4:        X 14513 12651      668 0.826 0.818 0.834
+5:        H 14513  8998      619 0.577 0.568 0.587
+6:     H_fb 14513 12635      638 0.827 0.818 0.835
+   contrast    diff       lo       hi
+     <char>   <num>    <num>    <num>
+1:    M - R  0.0122  0.00751  0.01723
+2:    M - G  0.0777  0.07103  0.08448
+3:    M - X -0.0103 -0.01495 -0.00544
+Evaluation finished 

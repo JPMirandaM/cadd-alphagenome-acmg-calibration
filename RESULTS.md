@@ -763,3 +763,102 @@ Moderate 1.25, Strong 0.30; none meets. No PP3 interval of this stratum is repor
 (1,385 P/LP, 386,233 B/LB) LR rises from 0.25 in [0,10) to 12.5 in [20,25) and 2,634 at 30 or more; LR crosses 1
 in the [15,20) bin (1.69). In the 5'UTR, 3'UTR, upstream 5 kb and downstream 5 kb classes LR is 4.8 to 11.9 in [20,25), 5.6 to 306 in
 [25,30) and 78 to 3,445 at 30 or more, with wide intervals (54 to 165 P/LP per class).
+
+## R-P2-4. Paper 2: functional validation, clinical outcomes and exploratory hybrid strategy (scripts 62–64; amendment A-P2-4)
+
+Scripts `62_paper2_functional_sets.R`, `63_paper2_functional_evaluate.R` and `64_atlas_splice_tracks.py`; outputs and
+logs in `calibration/results/paper2/functional/`. Thresholds of the 2026 calibration (seed 20260925, discounted);
+1,000 bootstrap resamples (seed 20261101). Agreement means PP3 for an abnormal (SGE) or functional (MPRA) SNV and BP4
+for a normal or non-functional one; net = (agreeing − opposite) / all SNVs.
+
+**Sets.** SGE: 12 MaveDB score sets; 12,620 intronic SNVs placed from exonic anchors (deviation from A-P2-4), all with
+a reference allele matching GRCh38 (none in CARD11). Analysis set 60,382 SNVs, of which 60,229 have Atlas attributions
+(9,963 abnormal, 50,266 normal). MPRA: 29,444 SNVs (29,432 with attributions; 4,571 functional, 24,861 non-functional);
+897 SNVs tested in more than one element with discordant labels were counted as functional (implementation rule, not
+stated in A-P2-4). The Atlas query of the 72,828 new SNVs had one transient error, recovered on repair. Strata of the
+SGE set: protein 30,375, splicing 10,376, regulatory 8,824, conservation only 3,675, no predicted effect 3,581, mixed
+3,398. Strata of the MPRA set: regulatory 21,139, no predicted effect 5,165, conservation only 2,732, splicing 367,
+protein 18, mixed 11.
+
+**SGE, net agreement (95% CI)**
+
+| Strategy | Agree | Opposite | Net |
+|---|---|---|---|
+| M | 35,969 | 8,814 | 0.451 (0.445–0.457) |
+| R | 43,892 | 9,528 | 0.571 (0.565–0.576) |
+| G | 40,773 | 13,291 | 0.456 (0.450–0.463) |
+| X | 44,452 | 9,302 | 0.584 (0.578–0.589) |
+| M without fallback | 28,928 | 8,649 | 0.337 (0.331–0.342) |
+| R without fallback | 21,905 | 8,565 | 0.221 (0.217–0.227) |
+
+Differences: M − R −0.120 (−0.124 to −0.115); M − G −0.005 (−0.011 to −0.0004); M − X −0.133 (−0.137 to −0.129).
+Without SNVs of the 2026 ClinVar reference set (52,222 SNVs): M − R −0.103 (−0.108 to −0.099); M − G 0.027 (0.022 to
+0.032); M − X −0.117 (−0.121 to −0.112). Without the AVI training and validation chromosomes (26,075 SNVs): M − R
+−0.129 (−0.136 to −0.123); M − G −0.028 (−0.036 to −0.021); M − X −0.142 (−0.148 to −0.136).
+By stratum (`sge_by_stratum.tsv`), M is higher than R in the protein stratum (0.402 vs 0.308), similar in the splicing
+stratum (0.718 vs 0.712), and much lower in the regulatory (0.030 vs 0.911) and mixed (0.105 vs 0.798) strata. The
+regulatory and mixed stratum thresholds give PP3 from AVI Phred 18.75 and 23.22 and BP4 only below 2.11 and 9.00,
+whereas the pooled thresholds that R applies to these SNVs give BP4 Strong below 13.96. Most regulatory and mixed SNVs
+of the SGE genes are functionally normal, so the stratum thresholds turn pooled BP4 calls into indeterminate or PP3
+calls. By gene (`sge_by_gene.tsv`), M is below R in 11 of 12 genes (the exception is SFPQ, 0.138 vs 0.136).
+Interval LRs (`sge_intervals.tsv`): M has 24 evaluable intervals, 22 in the expected direction; the two exceptions are
+BP4 Supporting (LR 3.64) and BP4 Moderate (1.70) of the fallback group. All 21 intervals of the calibrated strata have
+the expected direction (PP3 LR 1.46–37.2; BP4 LR 0.07–0.88). R 17 of 17, G 5 of 6, X 5 of 5. Intervals reaching the
+ClinGen LR (descriptive): M 3, R 5, G 1, X 1.
+
+**MPRA, net agreement (95% CI)**
+
+| Strategy | Agree | Opposite | Net |
+|---|---|---|---|
+| M | 10,434 | 3,618 | 0.232 (0.224–0.239) |
+| R | 23,148 | 4,007 | 0.650 (0.642–0.658) |
+| G | 23,146 | 4,006 | 0.650 (0.642–0.658) |
+| X | 24,534 | 4,333 | 0.686 (0.678–0.694) |
+| M without fallback | 3,122 | 3,255 | −0.005 (−0.010 to 0.001) |
+| R without fallback | 13 | 15 | −0.0001 (−0.0004 to 0.0003) |
+
+Differences: M − R −0.419 (−0.428 to −0.410); M − G −0.419 (−0.428 to −0.410); M − X −0.455 (−0.465 to −0.445).
+Without the 2026 ClinVar reference SNVs the differences are the same to the third decimal; without the AVI training
+and validation chromosomes (5,840 SNVs): M − R and M − G −0.171 (−0.192 to −0.151), M − X −0.159 (−0.180 to −0.138).
+Under R almost every MPRA SNV falls in the fallback group, so R and G are nearly identical.
+Interval LRs (`mpra_intervals.tsv`): the four intervals of the M regulatory stratum all have the expected direction
+(PP3 Supporting 1.41, PP3 Moderate 2.08; BP4 Supporting 0.48, BP4 Moderate 0.59). The pooled thresholds, as used by R
+and G, have BP4 Supporting and Moderate in the wrong direction (LR 1.75 and 1.57), BP4 Strong 0.65, and PP3 LR 3.8 to
+76 on 15 to 251 SNVs. Direction counts: M 6 of 11, R 5 of 7, G 5 of 7, X 3 of 5 (the M failures are in the fallback
+group and in the small splicing stratum, 43 functional SNVs). No interval of M reaches the ClinGen LR; R, G and X one
+each. The higher net score of R and G comes from BP4 Strong assigned by the pooled thresholds to 17,444 non-functional
+SNVs (and 2,080 functional ones); the regulatory-stratum thresholds give BP4 to fewer SNVs and PP3 to 4,347, with LR
+1.4 to 2.1. Net agreement therefore rewards BP4 volume in a set where 84% of SNVs are non-functional, while the
+direction check favours the regulatory-stratum thresholds. By element (`mpra_by_element.tsv`), M is below R in 21 of
+24 element groups.
+
+**Clinical outcomes, current VUS** (1,336,827 rare VUS with at least one star in 2026 disease genes; 3,495 reviewed by
+an expert panel or practice guideline). Under M: PP3 292,685 (Supporting 92,349, Moderate 172,342, Strong 27,994),
+BP4 695,854 (Supporting 135,516, Moderate 360,407, Strong 199,931), indeterminate 348,288; no PP3 Very Strong. M
+without fallback: the same PP3 counts, BP4 670,166, no thresholds for 26,022 VUS. For comparison, R gives PP3 318,837
+and BP4 767,043; G gives PP3 499,525 and BP4 548,035 (`vus_current_levels.tsv`; by stratum and class in
+`vus_current_levels_by_stratum_class.tsv`). Expert-panel subset under M: PP3 1,337 (Supporting 325, Moderate 847,
+Strong 165), BP4 1,306, indeterminate 852.
+RNA-study candidates (splicing-stratum VUS with at least PP3 Moderate): 25,847 VUS in 3,571 genes
+(`rna_candidates_by_gene.tsv`; most in TTN 226, ATM 209, NF1 169, RYR2 168); 142 in the expert-panel subset (106 PP3
+Strong, 36 Moderate; canonical splice 41, intronic splice region 49, missense 37, synonymous exon edge 11, other 4).
+Atlas splicing tracks for these 142 (script 64, 0 errors): the maximum absolute SPLICE_SITE_USAGE score has median
+0.87 (range 0.02–0.99) and is at least 0.2 for 133 (descriptive cut-off, not prespecified), including 31 of the 37
+missense VUS; the maximum SPLICE_JUNCTIONS score has median 6.19 (1.18–10.38). The track with the maximum
+SPLICE_SITE_USAGE is most often from hepatocyte (20), testis (10), foreskin keratinocyte and heart left ventricle (6
+each). Per-variant track scores are not versioned (AlphaGenome terms).
+
+**Exploratory hybrid strategy (defined after the H-P results; no test).** Criterion (a), 2024 thresholds: H 14 of 17
+evaluable intervals meet (test SNVs with evidence 188,168); H_fb 17 of 23 (503,051); M 15 of 18, R 16 of 16, G 6 of 6.
+Criterion (b) (resolved VUS rebuilt in script 63; 14,513, identical to script 61): H 0.577 (0.568–0.587), H_fb 0.827
+(0.818–0.835), against M 0.815, R 0.803, G 0.738, X 0.826. SGE: H 0.345, H_fb 0.451. MPRA: H −0.005, H_fb 0.232.
+With the 2026 thresholds the strata regulatory and mixed are calibrated, so H and H_fb differ from M without fallback
+and M only in the conservation-only and no-predicted-effect strata, which are small in the functional sets.
+
+**Summary of A-P2-4.** On both functional data sets mechanism stratification gives a lower net agreement than region
+stratification and the missense thresholds, and on SGE a net agreement similar to the genome-wide set; the deficit
+comes from the regulatory and mixed strata (SGE) and from fewer BP4 calls in the regulatory stratum (MPRA). In the
+protein and splicing strata M is equal to or better than R. The interval LRs of the calibrated strata have the
+expected direction in all 21 SGE intervals and in all four MPRA regulatory intervals, which is not true of the pooled
+BP4 intervals on the MPRA. The differences between strategies do not depend on the 2026 ClinVar reference SNVs or on
+the AVI training and validation chromosomes.

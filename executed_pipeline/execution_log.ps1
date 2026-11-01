@@ -467,3 +467,16 @@ powershell -File .\scripts\57_atlas_queue.ps1 -WaitPid <batch-1 PID>   # -> resu
 #   H1/H2, secondary outputs, thresholds_all_calibrations.tsv, seed_range_2026.tsv)
 #   smoke test first with RB = 5 (output deleted); a first attempt on 2026-10-31 failed (data.table key clash, fixed)
 #   and a second was stopped with the calibration run by low system memory.
+# Paper 2 [2026-11-01] amendment A-P2-4 registered (tag analysis-plan-paper2-A4) before this step; deviation (intronic
+#   SGE SNVs placed on GRCh38 from exonic anchors) recorded in STUDY_PLAN.md before any score was joined.
+& $R .\scripts\62_paper2_functional_sets.R    # -> results\paper2\functional\ (sge_labels.rds, mpra_labels.rds, vus_current.rds,
+#   counts; 62_functional_sets.log) and results\paper2\universe\variants_functional.tsv (Atlas query list, 72,828 SNVs).
+#   A first run (before the deviation) placed only the MaveDB-mapped exonic SGE SNVs; rerun after it.
+# uv run --python 3.12 --with alphagenome python -I .\scripts\55_atlas_batch.py <universe>\variants_functional.tsv results\paper2\atlas_functional --workers 32 --chunk 10000
+#   8 chunks, 72,828 SNVs, about 100 variants/s (atlas_functional_run.log); 1 INTERNAL error, recovered by:
+# uv run --python 3.12 --with alphagenome python -I .\scripts\56_atlas_repair.py results\paper2\atlas_functional   # repair.tsv: failed 1, recovered 1
+& $R .\scripts\63_paper2_functional_evaluate.R 1000   # -> results\paper2\functional\ (63_functional_evaluate.log; sge_*, mpra_*,
+#   sensitivity tags _sens_no_clinvar_ref and _sens_no_train_valid_chr, per stratum/gene/element tables, vus_current_levels*,
+#   rna_candidates_*, exploratory_hybrid_criterion_{a,b}*). Smoke test first with RB = 5 (output deleted).
+# uv run --python 3.12 --with alphagenome python -I .\scripts\64_atlas_splice_tracks.py <functional>\rna_candidates_expert_panel.tsv <functional>\variants_rna_candidates_splice_tracks.tsv --workers 8
+#   142 variants, 0 errors (64_splice_tracks.log). Per-variant track scores are not versioned (AlphaGenome non-commercial terms).

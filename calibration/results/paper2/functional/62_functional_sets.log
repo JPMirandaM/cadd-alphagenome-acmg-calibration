@@ -1,0 +1,51 @@
+urn:mavedb:00000097-0-2 BRCA1: 2674 MaveDB-mapped SNVs, 907 intronic SNVs anchored (strand -1) 
+urn:mavedb:00000658-0-1 DDX3X: 6087 MaveDB-mapped SNVs, 1857 intronic SNVs anchored (strand 1) 
+urn:mavedb:00000662-0-1 BAP1: 6669 MaveDB-mapped SNVs, 2307 intronic SNVs anchored (strand -1) 
+urn:mavedb:00000673-0-1 RAD51C: 3406 MaveDB-mapped SNVs, 1240 intronic SNVs anchored (strand 1) 
+urn:mavedb:00000675-a-1 VHL: 1506 MaveDB-mapped SNVs, 521 intronic SNVs anchored (strand 1) 
+urn:mavedb:00001226-a-1 CARD11: 420 MaveDB-mapped SNVs, 0 intronic SNVs anchored (strand -1) 
+urn:mavedb:00001242-a-1 BRCA2: 5592 MaveDB-mapped SNVs, 299 intronic SNVs anchored (strand 1) 
+urn:mavedb:00001259-a-2 PALB2: 8341 MaveDB-mapped SNVs, 1063 intronic SNVs anchored (strand -1) 
+urn:mavedb:00001260-a-2 RAD51D: 2805 MaveDB-mapped SNVs, 1449 intronic SNVs anchored (strand -1) 
+urn:mavedb:00001262-a-3 CTCF: 4269 MaveDB-mapped SNVs, 1488 intronic SNVs anchored (strand 1) 
+urn:mavedb:00001264-a-2 XRCC2: 2521 MaveDB-mapped SNVs, 468 intronic SNVs anchored (strand -1) 
+urn:mavedb:00001265-a-2 SFPQ: 3482 MaveDB-mapped SNVs, 1021 intronic SNVs anchored (strand -1) 
+SGE classified genomic SNV records: 60392 (conflicting within a set: 0) 
+[W::hts_idx_load3] The index file is older than the data file: C:/cadd/data/whole_genome_SNVs.tsv.gz.tbi
+    set_gene anchored ref_match
+      <char>    <int>     <int>
+ 1:     SFPQ     1021      1021
+ 2:    BRCA2      299       299
+ 3:    PALB2     1063      1063
+ 4:     CTCF     1488      1488
+ 5:   RAD51D     1449      1449
+ 6:    BRCA1      907       907
+ 7:   RAD51C     1240      1240
+ 8:      VHL      521       521
+ 9:     BAP1     2307      2307
+10:    XRCC2      468       468
+11:    DDX3X     1857      1857
+SGE unique SNVs: 60392; discordant between sets (excluded): 0 
+SGE SNVs by region class (before exclusion): 
+                     class     N
+                    <char> <int>
+ 1:               missense 33558
+ 2:       synonymous_other  9915
+ 3:          near_intronic  7663
+ 4: splice_region_intronic  3229
+ 5:            stop_gained  2156
+ 6:       canonical_splice  1188
+ 7:                   5UTR   988
+ 8:                   3UTR   635
+ 9:          deep_intronic   540
+10:   synonymous_exon_edge   393
+11:             start_lost    61
+12:              stop_lost    56
+SGE analysis set: 60382 SNVs (9985 abnormal, 50397 normal) 
+MPRA SNV records: 39170 
+MPRA unique SNVs: 29444 (discordant across elements: 897, kept as functional if any) 
+MPRA: 29444 SNVs (4573 functional, 24871 non-functional) 
+2026 SNV VUS (>= 1 star): 2260055 (expert panel or guideline: 3672) 
+Current VUS in a 2026 disease gene with a region class: 1337261; AF looked up in the VEP cache: 565821; absent from gnomAD (AF = 0): 498516 
+Current rare VUS: 1336827 (expert panel or guideline: 3495) 
+SNVs needed: 1419503; already retrieved: 1346675; to query: 72828 (of which current VUS: 127) 
