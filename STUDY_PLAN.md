@@ -657,3 +657,56 @@ with its source.
 **(b) Predictor-mentioning submissions (optional; run only if decided later and registered before it is run).**
 In the splicing stratum, results split by whether any ClinVar submission of the variant mentions a splicing
 predictor, which requires the ClinVar submission summary file.
+
+### Amendment A-P2-3 (registered 2026-11-01, after the 2024 and 2026 calibrations and before any threshold is applied to the hold-out, resolved VUS or descriptive bins; tag `analysis-plan-paper2-A3`)
+
+**Reason.** A-P2-1 named the two criteria of H-P but not how thresholds are assigned to variants of strata or classes
+that cannot be calibrated, which intervals are evaluable, or how the VUS set is built. These rules are fixed here,
+before any calibrated threshold is applied to variants outside its calibration set. Only the 2024 hold-out
+calibration (splicing and protein strata; splice_region_intronic and missense classes; all classes pooled) and the
+2026 calibrations exist; their thresholds have not been compared with any test variant.
+
+**Chromosome split confirmed (A-P2-2a).** The Atlas report (Cheng et al., medRxiv 2026,
+doi:10.64898/2026.09.16.26363192, Methods, "Data Split") states that AVI was trained on proxy neutral and proxy
+impactful gnomAD variants of chromosomes 1, 4, 7, 8, 10, 13 and 15, and validated on saturation genome editing and
+TraitGym variants of chromosomes 2, 5, 11, 14, 17, 20, 22 and X. The list of A-P2-2 is therefore used without the
+verification flag. In the sensitivity analysis, test variants and resolved VUS on the training chromosomes are
+removed; thresholds are unchanged.
+
+**Strategies (thresholds of the 2024 calibration, seed 20260925, discounted thresholds).**
+- M, mechanism: a variant whose stratum was calibrated in 2024 receives that stratum's thresholds; any other variant
+  receives the pooled genome-wide thresholds.
+- R, region: the same with region classes.
+- G, genome-wide: the pooled thresholds for every variant.
+- X, missense: the missense-class thresholds for every variant.
+The fallback makes the four strategies assign evidence to the same variants, so they differ only where specific
+thresholds exist. Secondary: M and R without fallback (variants without specific thresholds receive no evidence).
+
+**Criterion (a), temporal hold-out.** Test set: 2026 reference variants absent from the 2024 set (script 59, all
+classes). Unit: threshold group (stratum, class, or fallback group) by evidence interval (PP3 or BP4 at supporting,
+moderate, strong, very strong; intervals as in script 18). LR = fraction of the group's test P/LP in the interval
+divided by the fraction of its test B/LB in the interval, with 0.5 added to zero counts. An interval is evaluable
+when its group has at least 100 test P/LP and 100 test B/LB and the interval holds at least 10 test variants. It meets
+its requirement when the point LR is at least the required LR (PP3) or at most its inverse (BP4). The statistic is the
+proportion of evaluable intervals that meet; differences between strategies (M minus R, G and X) get 95% intervals from
+1,000 bootstrap resamples of test variants (seed 20261101), with intervals and groups recomputed in each resample.
+Secondary: the same with the 95% bound (lower bound for PP3, upper bound for BP4) instead of the point LR, and the
+share of test variants receiving evidence that fall in intervals meeting their requirement.
+
+**Criterion (b), resolved VUS.** SNVs with an exact Uncertain_significance label and at least one star in the
+2024-01-27 release, in a disease gene of that release (MANE Select class gene, rules of script 59), rare (AF < 0.01),
+with a region class other than exonic_other or intergenic and with Atlas attributions. Resolved: exact P/LP or B/LB
+label in the 2026-09-23 release. For each strategy, (number with evidence in the final direction minus number with
+evidence in the opposite direction) divided by the number resolved; PP3 at any strength counts toward P/LP and BP4
+toward B/LB. Differences between strategies with 95% bootstrap intervals (1,000 resamples of resolved VUS, seed
+20261101). Counts per strength and direction are reported.
+
+**Other prespecified outputs of the same script.**
+1. Replication of H1 and H2: the PP3 and BP4 strengths reached by the splicing stratum in the 2026 calibration, and the
+   hold-out LRs of every interval of strategy M by region class (H2: BP4 intervals within each evaluable class).
+2. Secondary question 2: hold-out LRs of the conservation-only stratum under the genome-wide thresholds.
+3. Secondary question 1 (descriptive): in the 2026 set, LR of P/LP versus B/LB in AVI Phred bins [0,10), [10,15),
+   [15,20), [20,25), [25,30), [30, max] for the regulatory stratum and the 5'UTR, 3'UTR, upstream 5 kb and downstream
+   5 kb classes, with 0.5 added to zero counts and 95% intervals from 1,000 bootstrap resamples (seed 20261101).
+4. Agreement of the five-seed 2026 thresholds per stratum and class (range across seeds), and the prior sensitivity
+   (0.01, 0.10) and population-control calibrations, reported as tables without a test.
