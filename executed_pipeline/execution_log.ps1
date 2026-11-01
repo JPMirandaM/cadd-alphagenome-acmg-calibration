@@ -451,3 +451,6 @@ powershell -File .\scripts\57_atlas_queue.ps1 -WaitPid <batch-1 PID>   # -> resu
 #   56_atlas_repair.py over the three output directories (repair.tsv): ClinVar failed 6,673, recovered 3,742;
 #   gnomAD failed 534, recovered 534; batch 2 failed 0. The 2,931 rows still failing are all chrM SNVs
 #   ("Chromosome chrM not found"; the Atlas does not hold the mitochondrial genome). Queue finished 2026-10-31 18:56.
+# Paper 2 [2026-10-31] amendments A-P2-1 and A-P2-2 registered (tags analysis-plan-paper2-A1, -A2) before this step.
+& $R .\scripts\59_paper2_reference_sets.R     # -> results\paper2\refsets\ (refsets.rds, sizes_*.tsv; 59_reference_sets.log; RESULTS R-P2-1)
+#   run twice: the second run (logged) adds the count of reference SNVs without attributions after the filters; sizes identical

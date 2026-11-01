@@ -1,0 +1,65 @@
+r2026: 6955 disease genes, 1480185 P/LP or B/LB SNVs (>= 1 star)
+r2024: 5907 disease genes, 917304 P/LP or B/LB SNVs (>= 1 star)
+SNVs with a region class: 1496496 of 1502046 
+SNVs with a region class but no Atlas attributions (before the gene and rarity filters): 129702 | of which chrM: 0 
+r2026 reference SNVs without Atlas attributions (excluded): 76 (P/LP 4, B/LB 72; chrM 0)
+              class     N
+             <char> <int>
+1:     upstream_5kb    46
+2:   downstream_5kb    19
+3:         missense     5
+4: synonymous_other     4
+5:             3UTR     1
+6:             5UTR     1
+r2024 reference SNVs without Atlas attributions (excluded): 23 (P/LP 0, B/LB 23; chrM 0)
+            class     N
+           <char> <int>
+1: downstream_5kb    13
+2:   upstream_5kb    10
+Reference SNVs: 2026 1227728, 2024 712489; test (in 2026, absent from 2024) 538416; label changes between releases (excluded from test) 28
+
+== Sizes by mechanism stratum ==
+               stratum cal_2024_B_LB cal_2024_P_LP cal_2026_B_LB cal_2026_P_LP test_2026_new_B_LB test_2026_new_P_LP calibratable_2026 calibratable_2024
+                <char>         <int>         <int>         <int>         <int>              <int>              <int>            <lgcl>            <lgcl>
+1:            splicing        110659         28634        199458         46924              91711              19712              TRUE              TRUE
+2:             protein         42542         83011         64657        126762              29339              47920              TRUE              TRUE
+3:          regulatory        220328           838        386233          1385             169272                617              TRUE             FALSE
+4:               mixed         11116           708         18428          1046               8879                421              TRUE             FALSE
+5:   conservation_only         93811           325        169556           531              76792                221             FALSE             FALSE
+6: no_predicted_effect        120475            42        212665            83              93486                 46             FALSE             FALSE
+
+== Sizes by region class ==
+                     class cal_2024_B_LB cal_2024_P_LP cal_2026_B_LB cal_2026_P_LP test_2026_new_B_LB test_2026_new_P_LP calibratable_2026 calibratable_2024
+                    <char>         <int>         <int>         <int>         <int>              <int>              <int>            <lgcl>            <lgcl>
+ 1:       canonical_splice            93         24377           135         40194                 65              16893             FALSE             FALSE
+ 2: splice_region_intronic         39017          1520         68917          2392              31092               1000              TRUE              TRUE
+ 3:                   5UTR          3018            84          3914           126                990                 52             FALSE             FALSE
+ 4:                   3UTR          8441            38         10336            54               2235                 22             FALSE             FALSE
+ 5:          near_intronic        113105           386        241278           635             129595                290             FALSE             FALSE
+ 6:          deep_intronic         20087           447         25431           810               5669                409             FALSE             FALSE
+ 7:           upstream_5kb          1622            85          2196           165                657                 88             FALSE             FALSE
+ 8:         downstream_5kb           550            54           638           104                198                 50             FALSE             FALSE
+ 9:               missense         50278         40870         77123         59979              36289              22626              TRUE              TRUE
+10:   synonymous_exon_edge          6171           300         10981           435               5093                165             FALSE             FALSE
+11:       synonymous_other        356369           180        609775           295             257453                137             FALSE             FALSE
+12:            stop_gained           147         44031           227         69722                125              26459             FALSE             FALSE
+13:             start_lost            25          1066            36          1635                 15                666             FALSE             FALSE
+14:              stop_lost             8           120            10           185                  3                 80             FALSE             FALSE
+
+== 2026 calibration set: region class x mechanism stratum (P = P/LP, B = B/LB) ==
+                     class conservation_only_B conservation_only_P mixed_B mixed_P no_predicted_effect_B no_predicted_effect_P protein_B protein_P regulatory_B regulatory_P splicing_B splicing_P
+                    <char>               <int>               <int>   <int>   <int>                 <int>                 <int>     <int>     <int>        <int>        <int>      <int>      <int>
+ 1:       canonical_splice                   0                   1       1      11                     0                     1         0         5            1          102        133      40074
+ 2: splice_region_intronic                8462                   0     187       3                 15059                     3       438         2        21340           28      23431       2356
+ 3:                   5UTR                 479                   9      42       1                   414                     4        76         3         2351           73        552         36
+ 4:                   3UTR                1462                   3      48       0                  2806                     1       130         1         5213           35        677         14
+ 5:          near_intronic               24367                   3     602       1                 79491                    11      1562         0        80948           16      54308        604
+ 6:          deep_intronic                2184                  40     423      11                 10110                    14       767        39         8715          107       3232        599
+ 7:           upstream_5kb                 173                  32      37       0                   458                     3        82         1         1353          119         93         10
+ 8:         downstream_5kb                  87                  14      15       4                   141                     1        25        23          266           17        104         45
+ 9:               missense                  70                  14   14591     975                    35                     0     53040     57274         6811          192       2576       1524
+10:   synonymous_exon_edge                1533                   0     109       1                   775                     0       259         0         3645           10       4660        424
+11:       synonymous_other              130731                  27    2373       1                103374                    13      8034         3       255579           38     109684        213
+12:            stop_gained                   7                 372       0      20                     2                    32       202     67753            9          558          7        987
+13:             start_lost                   1                  13       0      18                     0                     0        33      1491            2           79          0         34
+14:              stop_lost                   0                   3       0       0                     0                     0         9       167            0           11          1          4

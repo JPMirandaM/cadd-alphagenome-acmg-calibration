@@ -638,3 +638,34 @@ Interpretation: calibrated predictors agree on evidence for 40% of current misse
 completes a likely pathogenic classification with two further points. Expert panels may already apply their
 own computational criteria, so the list identifies candidates for reassessment, not reclassifications.
 Transferring v1.6 thresholds to v1.7 mainly weakens benign evidence.
+
+## R-P2-1. Paper 2: reference-set sizes by mechanism stratum and region class (amendment A-P2-1, first step)
+
+Script `59_paper2_reference_sets.R`; log and tables in `calibration/results/paper2/refsets/`. Counts only; no score
+was summarised. Rules of plan v1 (>= 1 star, exact labels, MANE Select class gene among the disease genes of the
+release, gnomAD group-maximum AF < 0.01, intergenic excluded). Reference SNVs: 1,227,728 (2026-09-23) and 712,489
+(2024-01-27); test set (2026 variants absent from the 2024 set) 538,416; 28 label changes excluded. Without Atlas
+attributions and excluded: 76 SNVs in the 2026 set (4 P/LP) and 23 in the 2024 set (0 P/LP), all with a MANE class
+gene that is a disease gene while their ClinVar GENEINFO gene is not (the query list used GENEINFO, script 53).
+
+| Stratum | 2026 P/LP | 2026 B/LB | 2024 P/LP | 2024 B/LB | Test P/LP | Test B/LB |
+|---|---|---|---|---|---|---|
+| Splicing | 46,924 | 199,458 | 28,634 | 110,659 | 19,712 | 91,711 |
+| Protein | 126,762 | 64,657 | 83,011 | 42,542 | 47,920 | 29,339 |
+| Regulatory | 1,385 | 386,233 | 838 | 220,328 | 617 | 169,272 |
+| Mixed | 1,046 | 18,428 | 708 | 11,116 | 421 | 8,879 |
+| Conservation only | 531 | 169,556 | 325 | 93,811 | 221 | 76,792 |
+| No predicted effect | 83 | 212,665 | 42 | 120,475 | 46 | 93,486 |
+
+Size criterion (>= 1,000 P/LP and >= 1,000 B/LB): met in 2026 by the splicing, protein, regulatory and mixed
+strata, and in 2024 by the splicing and protein strata only. Among region classes it is met in both releases only
+by intronic splice region and missense (sizes by class in `sizes_by_class.tsv`).
+Composition of the regulatory stratum in 2026: of 1,385 P/LP, 840 are coding (558 stop gained, 192 missense,
+79 start lost, 11 stop lost), 102 canonical splice, 48 synonymous and 395 noncoding (119 upstream, 107 deep
+intronic, 73 5'UTR, 35 3'UTR, 28 intronic splice region, 17 downstream, 16 near intronic)
+(`class_by_stratum_2026.tsv`).
+Consequences under the plan: the stopping rule of A-P2-1 is not triggered (four strata meet the criterion in
+2026). The temporal hold-out, which uses thresholds calibrated on 2024, can evaluate only the splicing and protein
+strata and, for region stratification, intronic splice region and missense. Noncoding regulatory variants (395
+P/LP) are reported descriptively (secondary question 1), as are the conservation-only (531) and no-predicted-effect
+(83) strata.

@@ -1,0 +1,15 @@
+class	conservation_only_B	conservation_only_P	mixed_B	mixed_P	no_predicted_effect_B	no_predicted_effect_P	protein_B	protein_P	regulatory_B	regulatory_P	splicing_B	splicing_P
+canonical_splice	0	1	1	11	0	1	0	5	1	102	133	40074
+splice_region_intronic	8462	0	187	3	15059	3	438	2	21340	28	23431	2356
+5UTR	479	9	42	1	414	4	76	3	2351	73	552	36
+3UTR	1462	3	48	0	2806	1	130	1	5213	35	677	14
+near_intronic	24367	3	602	1	79491	11	1562	0	80948	16	54308	604
+deep_intronic	2184	40	423	11	10110	14	767	39	8715	107	3232	599
+upstream_5kb	173	32	37	0	458	3	82	1	1353	119	93	10
+downstream_5kb	87	14	15	4	141	1	25	23	266	17	104	45
+missense	70	14	14591	975	35	0	53040	57274	6811	192	2576	1524
+synonymous_exon_edge	1533	0	109	1	775	0	259	0	3645	10	4660	424
+synonymous_other	130731	27	2373	1	103374	13	8034	3	255579	38	109684	213
+stop_gained	7	372	0	20	2	32	202	67753	9	558	7	987
+start_lost	1	13	0	18	0	0	33	1491	2	79	0	34
+stop_lost	0	3	0	0	0	0	9	167	0	11	1	4
