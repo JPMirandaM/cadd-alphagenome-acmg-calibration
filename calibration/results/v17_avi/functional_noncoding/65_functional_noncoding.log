@@ -1,0 +1,523 @@
+SGE: 60382 SNVs; with CADD 60382; with AVI 60382; with both 60382
+MPRA: 39170 SNV-element records (6684 functional)
+
+Main thresholds:
+     tool      level   PP3    BP4
+   <char>     <char> <num>  <num>
+1:    AVI VeryStrong    NA     NA
+2:    AVI     Strong    NA  9.150
+3:    AVI   Moderate 26.44 20.520
+4:    AVI Supporting 25.18 22.950
+5:   CADD VeryStrong    NA     NA
+6:   CADD     Strong    NA  8.341
+7:   CADD   Moderate 28.00 19.590
+8:   CADD Supporting 25.60 22.600
+Splice-region thresholds:
+     tool      level   PP3    BP4
+   <char>     <char> <num>  <num>
+1:   CADD VeryStrong    NA     NA
+2:   CADD     Strong 20.10     NA
+3:   CADD   Moderate 17.36  6.943
+4:   CADD Supporting 15.45 11.520
+5:    AVI VeryStrong    NA     NA
+6:    AVI     Strong 24.09  0.110
+7:    AVI   Moderate 22.44 14.010
+8:    AVI Supporting 21.30 17.500
+
+== : SGE 60382 SNVs; evaluable classes: missense, synonymous_other, stop_gained, synonymous_exon_edge, canonical_splice, splice_region_intronic, near_intronic ==
+                     group    thresholds   tool             iv     a     n
+                    <char>        <char> <char>         <char> <int> <int>
+ 1:               missense          main   CADD   PP3_Moderate  2065  3244
+ 2:               missense          main   CADD PP3_Supporting  1456  3694
+ 3:               missense          main   CADD BP4_Supporting   327  4463
+ 4:               missense          main   CADD   BP4_Moderate   224  6538
+ 5:               missense          main   CADD     BP4_Strong    67  2812
+ 6:               missense          main    AVI   PP3_Moderate  3382  5222
+ 7:               missense          main    AVI PP3_Supporting   691  2323
+ 8:               missense          main    AVI BP4_Supporting   265  4214
+ 9:               missense          main    AVI   BP4_Moderate   276  8239
+10:               missense          main    AVI     BP4_Strong    50  3022
+11:       synonymous_other          main   CADD BP4_Supporting    14    21
+12:       synonymous_other          main   CADD   BP4_Moderate   138  3692
+13:       synonymous_other          main   CADD     BP4_Strong   134  5911
+14:       synonymous_other          main    AVI   PP3_Moderate     6     4
+15:       synonymous_other          main    AVI BP4_Supporting    36   224
+16:       synonymous_other          main    AVI   BP4_Moderate   158  5817
+17:       synonymous_other          main    AVI     BP4_Strong    68  3517
+18:            stop_gained          main   CADD   PP3_Moderate  1924   103
+19:            stop_gained          main   CADD PP3_Supporting    57     4
+20:            stop_gained          main   CADD BP4_Supporting    15     0
+21:            stop_gained          main    AVI   PP3_Moderate  1909    99
+22:            stop_gained          main    AVI PP3_Supporting    42     2
+23:            stop_gained          main    AVI BP4_Supporting    23     1
+24:            stop_gained          main    AVI   BP4_Moderate    40     3
+25:   synonymous_exon_edge          main   CADD BP4_Supporting    25    14
+26:   synonymous_exon_edge          main   CADD   BP4_Moderate    18   227
+27:   synonymous_exon_edge          main   CADD     BP4_Strong     3    84
+28:   synonymous_exon_edge          main    AVI   PP3_Moderate    24     9
+29:   synonymous_exon_edge          main    AVI PP3_Supporting     7     8
+30:   synonymous_exon_edge          main    AVI BP4_Supporting     4    37
+31:   synonymous_exon_edge          main    AVI   BP4_Moderate     8   230
+32:   synonymous_exon_edge          main    AVI     BP4_Strong     2    37
+33:       canonical_splice          main   CADD   PP3_Moderate   892    83
+34:       canonical_splice          main   CADD PP3_Supporting   140    25
+35:       canonical_splice          main    AVI   PP3_Moderate  1045    94
+36:       canonical_splice          main    AVI PP3_Supporting    20    11
+37: splice_region_intronic          main   CADD   PP3_Moderate    22    29
+38: splice_region_intronic          main   CADD PP3_Supporting     6    13
+39: splice_region_intronic          main   CADD BP4_Supporting   133   178
+40: splice_region_intronic          main   CADD   BP4_Moderate   332  1253
+41: splice_region_intronic          main   CADD     BP4_Strong    43  1066
+42: splice_region_intronic          main    AVI   PP3_Moderate   203    44
+43: splice_region_intronic          main    AVI PP3_Supporting    88    28
+44: splice_region_intronic          main    AVI BP4_Supporting    49   186
+45: splice_region_intronic          main    AVI   BP4_Moderate   112  1306
+46: splice_region_intronic          main    AVI     BP4_Strong    24   878
+47:          near_intronic          main   CADD   PP3_Moderate    10     8
+48:          near_intronic          main   CADD PP3_Supporting     7     3
+49:          near_intronic          main   CADD BP4_Supporting    23   133
+50:          near_intronic          main   CADD   BP4_Moderate   204  3007
+51:          near_intronic          main   CADD     BP4_Strong   134  4085
+52:          near_intronic          main    AVI   PP3_Moderate    20     4
+53:          near_intronic          main    AVI PP3_Supporting    31     9
+54:          near_intronic          main    AVI BP4_Supporting    35   120
+55:          near_intronic          main    AVI   BP4_Moderate   153  2526
+56:          near_intronic          main    AVI     BP4_Strong   102  4578
+57: splice_region_intronic splice_region   CADD     PP3_Strong   230   266
+58: splice_region_intronic splice_region   CADD   PP3_Moderate   119   192
+59: splice_region_intronic splice_region   CADD PP3_Supporting    94   182
+60: splice_region_intronic splice_region   CADD BP4_Supporting    64   588
+61: splice_region_intronic splice_region   CADD   BP4_Moderate    26   873
+62: splice_region_intronic splice_region    AVI     PP3_Strong   372   143
+63: splice_region_intronic splice_region    AVI   PP3_Moderate    77   141
+64: splice_region_intronic splice_region    AVI PP3_Supporting    26    88
+65: splice_region_intronic splice_region    AVI BP4_Supporting    38   379
+66: splice_region_intronic splice_region    AVI   BP4_Moderate    50  1497
+67: splice_region_intronic splice_region    AVI     BP4_Strong     1    65
+                     group    thresholds   tool             iv     a     n
+         LR      lo      hi direction_ok meets_clingen
+      <num>   <num>   <num>       <lgcl>        <lgcl>
+ 1:  3.2900  3.1300   3.440         TRUE         FALSE
+ 2:  2.0400  1.9400   2.150         TRUE         FALSE
+ 3:  0.3790  0.3360   0.422         TRUE          TRUE
+ 4:  0.1770  0.1550   0.202         TRUE         FALSE
+ 5:  0.1230  0.0930   0.154         TRUE         FALSE
+ 6:  3.3500  3.2500   3.460         TRUE         FALSE
+ 7:  1.5400  1.4200   1.660         TRUE         FALSE
+ 8:  0.3250  0.2870   0.365         TRUE          TRUE
+ 9:  0.1730  0.1540   0.194         TRUE         FALSE
+10:  0.0856  0.0623   0.110         TRUE         FALSE
+11: 22.4000 10.8000  41.300        FALSE         FALSE
+12:  1.2500  1.1000   1.410        FALSE         FALSE
+13:  0.7600  0.6610   0.868         TRUE         FALSE
+14: 50.3000 11.2000 268.000         TRUE          TRUE
+15:  5.3900  3.6300   7.510        FALSE         FALSE
+16:  0.9110  0.8080   1.010         TRUE         FALSE
+17:  0.6490  0.5240   0.789         TRUE         FALSE
+18:  0.9850  0.9480   1.040        FALSE         FALSE
+19:  0.7510  0.3390   3.530        FALSE         FALSE
+20:  1.5800  0.8440   2.430        FALSE         FALSE
+21:  1.0200  0.9670   1.080         TRUE         FALSE
+22:  1.1100  0.4010   5.170         TRUE         FALSE
+23:  1.2100  0.3160   3.270        FALSE         FALSE
+24:  0.7030  0.2940   4.120         TRUE         FALSE
+25: 10.7000  6.3700  20.700        FALSE         FALSE
+26:  0.4770  0.3130   0.657         TRUE         FALSE
+27:  0.2150  0.0363   0.479         TRUE         FALSE
+28: 16.0000  8.3300  36.100         TRUE          TRUE
+29:  5.2700  1.6400  14.500         TRUE          TRUE
+30:  0.6510  0.1400   1.440         TRUE         FALSE
+31:  0.2090  0.0792   0.357         TRUE         FALSE
+32:  0.3250  0.0716   0.860         TRUE         FALSE
+33:  1.1700  1.0500   1.330         TRUE         FALSE
+34:  0.6120  0.4440   0.918        FALSE         FALSE
+35:  1.2100  1.1200   1.340         TRUE         FALSE
+36:  0.1990  0.1020   0.437        FALSE         FALSE
+37:  3.2000  1.7800   5.730         TRUE         FALSE
+38:  1.9500  0.5490   4.820         TRUE         FALSE
+39:  3.1500  2.5500   3.850        FALSE         FALSE
+40:  1.1200  1.0200   1.220        FALSE         FALSE
+41:  0.1700  0.1250   0.225         TRUE         FALSE
+42: 19.5000 14.5000  27.500         TRUE          TRUE
+43: 13.3000  9.1500  21.500         TRUE          TRUE
+44:  1.1100  0.8220   1.460        FALSE         FALSE
+45:  0.3620  0.3000   0.427         TRUE         FALSE
+46:  0.1150  0.0711   0.164         TRUE         FALSE
+47: 23.6000  8.7000  75.500         TRUE          TRUE
+48: 44.0000 11.3000 264.000         TRUE          TRUE
+49:  3.2600  1.9400   4.870        FALSE         FALSE
+50:  1.2800  1.1500   1.410        FALSE         FALSE
+51:  0.6180  0.5300   0.702         TRUE         FALSE
+52: 94.3000 37.7000 472.000         TRUE          TRUE
+53: 64.9000 33.7000 189.000         TRUE          TRUE
+54:  5.5000  3.8600   7.800        FALSE         FALSE
+55:  1.1400  0.9920   1.300        FALSE         FALSE
+56:  0.4200  0.3470   0.486         TRUE         FALSE
+57:  3.6500  3.1100   4.250         TRUE         FALSE
+58:  2.6100  2.1300   3.220         TRUE         FALSE
+59:  2.1800  1.7200   2.760         TRUE         FALSE
+60:  0.4590  0.3480   0.580         TRUE         FALSE
+61:  0.1260  0.0800   0.176         TRUE          TRUE
+62: 11.0000  9.2700  13.100         TRUE         FALSE
+63:  2.3000  1.7300   2.990         TRUE         FALSE
+64:  1.2500  0.7540   1.910         TRUE         FALSE
+65:  0.4230  0.3040   0.561         TRUE         FALSE
+66:  0.1410  0.1040   0.180         TRUE          TRUE
+67:  0.0649  0.0277   0.231         TRUE         FALSE
+         LR      lo      hi direction_ok meets_clingen
+                     group    thresholds   tool    nA    nN abnormal_BP4
+                    <char>        <char> <char> <int> <int>        <num>
+ 1:               missense          main   CADD  5436 28122  0.113686534
+ 2:               missense          main    AVI  5436 28122  0.108719647
+ 3:       synonymous_other          main   CADD   287  9628  0.996515679
+ 4:       synonymous_other          main    AVI   287  9628  0.912891986
+ 5:            stop_gained          main   CADD  2048   108  0.007324219
+ 6:            stop_gained          main    AVI  2048   108  0.033203125
+ 7:   synonymous_exon_edge          main   CADD    56   337  0.821428571
+ 8:   synonymous_exon_edge          main    AVI    56   337  0.250000000
+ 9:       canonical_splice          main   CADD  1071   117  0.005602241
+10:       canonical_splice          main    AVI  1071   117  0.000000000
+11: splice_region_intronic          main   CADD   619  2610  0.820678514
+12: splice_region_intronic          main    AVI   619  2610  0.298869144
+13:          near_intronic          main   CADD   386  7277  0.935233161
+14:          near_intronic          main    AVI   386  7277  0.751295337
+15: splice_region_intronic splice_region   CADD   619  2610  0.145395800
+16: splice_region_intronic splice_region    AVI   619  2610  0.143780291
+    normal_BP4 abnormal_PP3  normal_PP3
+         <num>        <num>       <num>
+ 1: 0.49118128   0.64771891 0.246710760
+ 2: 0.55028092   0.74926416 0.268295285
+ 3: 0.99958455   0.00000000 0.000000000
+ 4: 0.99272954   0.03135889 0.001038637
+ 5: 0.00000000   0.96728516 0.990740741
+ 6: 0.04629630   0.95263672 0.935185185
+ 7: 0.96439169   0.01785714 0.002967359
+ 8: 0.90207715   0.55357143 0.050445104
+ 9: 0.01709402   0.96358543 0.923076923
+10: 0.02564103   0.99439776 0.897435897
+11: 0.95670498   0.04523425 0.016091954
+12: 0.90804598   0.47011309 0.027586207
+13: 0.99285420   0.04404145 0.001511612
+14: 0.99271678   0.13212435 0.001786450
+15: 0.55977011   0.71567044 0.245210728
+16: 0.74367816   0.76736672 0.142528736
+                    group     n    nA CADD_AUROC AVI_AUROC diff_AVI_CADD
+                   <char> <int> <int>      <num>     <num>         <num>
+1:               missense 33558  5436  0.7705664 0.8020976    0.03153126
+2:       synonymous_other  9915   287  0.6000298 0.6565192    0.05648938
+3:            stop_gained  2156  2048  0.5812220 0.5010670   -0.08015498
+4:   synonymous_exon_edge   393    56  0.8361859 0.8552088    0.01902289
+5:       canonical_splice  1188  1071  0.5291325 0.6365686    0.10743614
+6: splice_region_intronic  3229   619  0.7883495 0.8835051    0.09515564
+7:          near_intronic  7663   386  0.6648980 0.7633165    0.09841854
+            lo          hi
+         <num>       <num>
+1:  0.02793826  0.03526597
+2:  0.03230498  0.08013393
+3: -0.12614514 -0.03503840
+4: -0.01566637  0.05585581
+5:  0.04135622  0.17190902
+6:  0.08148303  0.11061378
+7:  0.07644598  0.12487870
+
+-- MPRA : 39170 records (6684 functional) --
+      tool             iv     a     n    LR    lo    hi evaluable direction_ok
+    <char>         <char> <int> <int> <num> <num> <num>    <lgcl>       <lgcl>
+ 1:   CADD     PP3_Strong     0     0 4.860 4.860 4.860     FALSE         TRUE
+ 2:   CADD   PP3_Moderate     1     6 0.810 0.270 4.860     FALSE        FALSE
+ 3:   CADD PP3_Supporting     0     1 2.430 0.810 4.860     FALSE         TRUE
+ 4:   CADD  Indeterminate    98   910 0.523 0.421 0.648     FALSE           NA
+ 5:   CADD BP4_Supporting   409  1173 1.690 1.530 1.880      TRUE        FALSE
+ 6:   CADD   BP4_Moderate  3570 13573 1.280 1.240 1.310      TRUE        FALSE
+ 7:   CADD     BP4_Strong  2606 16823 0.753 0.728 0.778      TRUE         TRUE
+ 8:    AVI     PP3_Strong     0     0 4.860 4.860 4.860     FALSE         TRUE
+ 9:    AVI   PP3_Moderate   107    81 6.420 4.710 8.520      TRUE         TRUE
+10:    AVI PP3_Supporting    61    51 5.810 4.070 8.640      TRUE         TRUE
+11:    AVI  Indeterminate   352   443 3.860 3.340 4.400     FALSE           NA
+12:    AVI BP4_Supporting   897  2376 1.830 1.710 1.970      TRUE        FALSE
+13:    AVI   BP4_Moderate  3785 13493 1.360 1.330 1.400      TRUE        FALSE
+14:    AVI     BP4_Strong  1482 16042 0.449 0.428 0.469      TRUE         TRUE
+    meets_clingen
+           <lgcl>
+ 1:         FALSE
+ 2:         FALSE
+ 3:          TRUE
+ 4:            NA
+ 5:         FALSE
+ 6:         FALSE
+ 7:         FALSE
+ 8:         FALSE
+ 9:          TRUE
+10:          TRUE
+11:            NA
+12:         FALSE
+13:         FALSE
+14:         FALSE
+      group thresholds   tool    nA    nN abnormal_BP4 normal_BP4 abnormal_PP3
+     <char>     <char> <char> <int> <int>        <num>      <num>        <num>
+1: MPRA_all       main   CADD  6684 32486    0.9851885  0.9717725  0.000149611
+2: MPRA_all       main    AVI  6684 32486    0.9222023  0.9823001  0.025134650
+     normal_PP3
+          <num>
+1: 0.0002154774
+2: 0.0040632888
+      group     n    nA CADD_AUROC AVI_AUROC diff_AVI_CADD        lo        hi
+     <char> <int> <int>      <num>     <num>         <num>     <num>     <num>
+1: MPRA_all 39170  6684  0.5645042 0.6786653     0.1141611 0.1089223 0.1195671
+Per element (intervals with >= 10 records; elements with >= 10 functional and non-functional): BP4 intervals with LR < 1
+     tool             iv n_intervals LR_below_1
+   <char>         <char>       <int>      <int>
+1:   CADD   BP4_Moderate          27          8
+2:   CADD     BP4_Strong          28         21
+3:    AVI BP4_Supporting          26          0
+4:    AVI   BP4_Moderate          28          8
+5:    AVI     BP4_Strong          28         28
+6:   CADD BP4_Supporting          15          2
+
+== _sens_no_clinvar_ref: SGE 53209 SNVs; evaluable classes: missense, synonymous_other, stop_gained, synonymous_exon_edge, canonical_splice, splice_region_intronic, near_intronic ==
+                     group    thresholds   tool             iv     a     n
+                    <char>        <char> <char>         <char> <int> <int>
+ 1:               missense          main   CADD   PP3_Moderate  1894  3214
+ 2:               missense          main   CADD PP3_Supporting  1247  3638
+ 3:               missense          main   CADD BP4_Supporting   311  4351
+ 4:               missense          main   CADD   BP4_Moderate   214  6352
+ 5:               missense          main   CADD     BP4_Strong    67  2725
+ 6:               missense          main    AVI   PP3_Moderate  2957  5172
+ 7:               missense          main    AVI PP3_Supporting   605  2292
+ 8:               missense          main    AVI BP4_Supporting   259  4126
+ 9:               missense          main    AVI   BP4_Moderate   272  7978
+10:               missense          main    AVI     BP4_Strong    50  2937
+11:       synonymous_other          main   CADD BP4_Supporting    11    20
+12:       synonymous_other          main   CADD   BP4_Moderate    86  2701
+13:       synonymous_other          main   CADD     BP4_Strong    84  3044
+14:       synonymous_other          main    AVI BP4_Supporting    11   158
+15:       synonymous_other          main    AVI   BP4_Moderate   112  3765
+16:       synonymous_other          main    AVI     BP4_Strong    39  1794
+17:            stop_gained          main   CADD   PP3_Moderate  1924   103
+18:            stop_gained          main   CADD PP3_Supporting    57     4
+19:            stop_gained          main   CADD BP4_Supporting    15     0
+20:            stop_gained          main    AVI   PP3_Moderate  1909    99
+21:            stop_gained          main    AVI PP3_Supporting    42     2
+22:            stop_gained          main    AVI BP4_Supporting    23     1
+23:            stop_gained          main    AVI   BP4_Moderate    40     3
+24:   synonymous_exon_edge          main   CADD BP4_Supporting    20    11
+25:   synonymous_exon_edge          main   CADD   BP4_Moderate    15   177
+26:   synonymous_exon_edge          main   CADD     BP4_Strong     3    46
+27:   synonymous_exon_edge          main    AVI   PP3_Moderate    17     9
+28:   synonymous_exon_edge          main    AVI PP3_Supporting     6     8
+29:   synonymous_exon_edge          main    AVI BP4_Supporting     4    28
+30:   synonymous_exon_edge          main    AVI   BP4_Moderate     6   166
+31:   synonymous_exon_edge          main    AVI     BP4_Strong     2    22
+32:       canonical_splice          main   CADD   PP3_Moderate   520    61
+33:       canonical_splice          main   CADD PP3_Supporting    78    23
+34:       canonical_splice          main    AVI   PP3_Moderate   612    72
+35:       canonical_splice          main    AVI PP3_Supporting    10    10
+36: splice_region_intronic          main   CADD   PP3_Moderate    21    29
+37: splice_region_intronic          main   CADD PP3_Supporting     5    13
+38: splice_region_intronic          main   CADD BP4_Supporting   115   172
+39: splice_region_intronic          main   CADD   BP4_Moderate   283  1119
+40: splice_region_intronic          main   CADD     BP4_Strong    32   858
+41: splice_region_intronic          main    AVI   PP3_Moderate   157    42
+42: splice_region_intronic          main    AVI PP3_Supporting    79    27
+43: splice_region_intronic          main    AVI BP4_Supporting    46   174
+44: splice_region_intronic          main    AVI   BP4_Moderate   100  1131
+45: splice_region_intronic          main    AVI     BP4_Strong    19   720
+46:          near_intronic          main   CADD   PP3_Moderate    10     8
+47:          near_intronic          main   CADD BP4_Supporting    21   116
+48:          near_intronic          main   CADD   BP4_Moderate   189  2610
+49:          near_intronic          main   CADD     BP4_Strong   114  3590
+50:          near_intronic          main    AVI   PP3_Moderate    18     4
+51:          near_intronic          main    AVI PP3_Supporting    30     9
+52:          near_intronic          main    AVI BP4_Supporting    35   109
+53:          near_intronic          main    AVI   BP4_Moderate   133  2214
+54:          near_intronic          main    AVI     BP4_Strong    89  3988
+55: splice_region_intronic splice_region   CADD     PP3_Strong   207   261
+56: splice_region_intronic splice_region   CADD   PP3_Moderate   102   184
+57: splice_region_intronic splice_region   CADD PP3_Supporting    81   173
+58: splice_region_intronic splice_region   CADD BP4_Supporting    54   505
+59: splice_region_intronic splice_region   CADD   BP4_Moderate    19   694
+60: splice_region_intronic splice_region    AVI     PP3_Strong   309   140
+61: splice_region_intronic splice_region    AVI   PP3_Moderate    72   137
+62: splice_region_intronic splice_region    AVI PP3_Supporting    25    84
+63: splice_region_intronic splice_region    AVI BP4_Supporting    31   328
+64: splice_region_intronic splice_region    AVI   BP4_Moderate    41  1245
+65: splice_region_intronic splice_region    AVI     BP4_Strong     1    54
+                     group    thresholds   tool             iv     a     n
+         LR      lo      hi direction_ok meets_clingen
+      <num>   <num>   <num>       <lgcl>        <lgcl>
+ 1:  3.3200  3.1600   3.480         TRUE         FALSE
+ 2:  1.9300  1.8200   2.040         TRUE         FALSE
+ 3:  0.4030  0.3580   0.449         TRUE          TRUE
+ 4:  0.1900  0.1660   0.216         TRUE         FALSE
+ 5:  0.1390  0.1050   0.171         TRUE         FALSE
+ 6:  3.2200  3.1200   3.330         TRUE         FALSE
+ 7:  1.4900  1.3700   1.600         TRUE         FALSE
+ 8:  0.3540  0.3110   0.396         TRUE          TRUE
+ 9:  0.1920  0.1710   0.216         TRUE         FALSE
+10:  0.0959  0.0722   0.122         TRUE         FALSE
+11: 17.5000  7.9700  35.900        FALSE         FALSE
+12:  1.0100  0.8600   1.180        FALSE         FALSE
+13:  0.8800  0.7410   1.020         TRUE         FALSE
+14:  2.2200  1.0000   3.820        FALSE         FALSE
+15:  0.9480  0.8440   1.050         TRUE         FALSE
+16:  0.6930  0.5110   0.882         TRUE         FALSE
+17:  0.9850  0.9480   1.040        FALSE         FALSE
+18:  0.7510  0.3390   3.530        FALSE         FALSE
+19:  1.5800  0.8440   2.430        FALSE         FALSE
+20:  1.0200  0.9670   1.080         TRUE         FALSE
+21:  1.1100  0.4010   5.170         TRUE         FALSE
+22:  1.2100  0.3160   3.270        FALSE         FALSE
+23:  0.7030  0.2940   4.120         TRUE         FALSE
+24:  9.9400  5.4700  23.700        FALSE         FALSE
+25:  0.4630  0.2790   0.664         TRUE         FALSE
+26:  0.3570  0.0569   0.841         TRUE         FALSE
+27: 10.3000  5.4600  29.200         TRUE          TRUE
+28:  4.1000  1.3700  12.800         TRUE          TRUE
+29:  0.7810  0.1610   1.680         TRUE         FALSE
+30:  0.1980  0.0651   0.362         TRUE         FALSE
+31:  0.4970  0.1050   1.440         TRUE         FALSE
+32:  1.2500  1.0700   1.480         TRUE         FALSE
+33:  0.4980  0.3450   0.818        FALSE         FALSE
+34:  1.2500  1.1200   1.410         TRUE         FALSE
+35:  0.1470  0.0565   0.392        FALSE         FALSE
+36:  3.0700  1.6300   5.570         TRUE         FALSE
+37:  1.6300  0.3540   4.240         TRUE         FALSE
+38:  2.8400  2.3100   3.500        FALSE         FALSE
+39:  1.0700  0.9760   1.170        FALSE         FALSE
+40:  0.1580  0.1080   0.216         TRUE         FALSE
+41: 15.9000 11.8000  22.500         TRUE          TRUE
+42: 12.4000  8.4800  19.900         TRUE          TRUE
+43:  1.1200  0.7880   1.510        FALSE         FALSE
+44:  0.3750  0.3070   0.443         TRUE         FALSE
+45:  0.1120  0.0667   0.162         TRUE         FALSE
+46: 22.9000  8.3100  68.600         TRUE          TRUE
+47:  3.3100  2.0000   4.970        FALSE         FALSE
+48:  1.3200  1.1900   1.460        FALSE         FALSE
+49:  0.5810  0.4900   0.676         TRUE         FALSE
+50: 82.3000 33.5000 402.000         TRUE          TRUE
+51: 60.9000 32.3000 160.000         TRUE          TRUE
+52:  5.8700  3.8700   8.250        FALSE         FALSE
+53:  1.1000  0.9550   1.250        FALSE         FALSE
+54:  0.4080  0.3320   0.480         TRUE         FALSE
+55:  3.3600  2.8300   3.920         TRUE         FALSE
+56:  2.3500  1.8700   2.970         TRUE         FALSE
+57:  1.9900  1.5300   2.570         TRUE         FALSE
+58:  0.4540  0.3380   0.574         TRUE         FALSE
+59:  0.1160  0.0677   0.172         TRUE          TRUE
+60:  9.3600  7.8200  11.300         TRUE         FALSE
+61:  2.2300  1.7000   2.880         TRUE         FALSE
+62:  1.2600  0.7710   1.830         TRUE         FALSE
+63:  0.4010  0.2680   0.544         TRUE          TRUE
+64:  0.1400  0.0997   0.180         TRUE          TRUE
+65:  0.0786  0.0321   0.271         TRUE         FALSE
+         LR      lo      hi direction_ok meets_clingen
+                     group    thresholds   tool    nA    nN abnormal_BP4
+                    <char>        <char> <char> <int> <int>        <num>
+ 1:               missense          main   CADD  4884 27526  0.121212121
+ 2:               missense          main    AVI  4884 27526  0.118959869
+ 3:       synonymous_other          main   CADD   181  5769  1.000000000
+ 4:       synonymous_other          main    AVI   181  5769  0.895027624
+ 5:            stop_gained          main   CADD  2048   108  0.007324219
+ 6:            stop_gained          main    AVI  2048   108  0.033203125
+ 7:   synonymous_exon_edge          main   CADD    45   246  0.844444444
+ 8:   synonymous_exon_edge          main    AVI    45   246  0.266666667
+ 9:       canonical_splice          main   CADD   626    92  0.006389776
+10:       canonical_splice          main    AVI   626    92  0.000000000
+11: splice_region_intronic          main   CADD   533  2261  0.806754221
+12: splice_region_intronic          main    AVI   533  2261  0.309568480
+13:          near_intronic          main   CADD   348  6363  0.931034483
+14:          near_intronic          main    AVI   348  6363  0.738505747
+15: splice_region_intronic splice_region   CADD   533  2261  0.136960600
+16: splice_region_intronic splice_region    AVI   533  2261  0.136960600
+    normal_BP4 abnormal_PP3  normal_PP3
+         <num>        <num>       <num>
+ 1: 0.48782969   0.64312039 0.248928286
+ 2: 0.54642883   0.72932023 0.271161811
+ 3: 0.99930664   0.00000000 0.000000000
+ 4: 0.99098631   0.03314917 0.001733403
+ 5: 0.00000000   0.96728516 0.990740741
+ 6: 0.04629630   0.95263672 0.935185185
+ 7: 0.95121951   0.00000000 0.004065041
+ 8: 0.87804878   0.51111111 0.069105691
+ 9: 0.02173913   0.95527157 0.913043478
+10: 0.03260870   0.99361022 0.891304348
+11: 0.95046440   0.04878049 0.018575851
+12: 0.89562141   0.44277674 0.030517470
+13: 0.99261355   0.04597701 0.001571586
+14: 0.99182775   0.13793103 0.002043061
+15: 0.53029633   0.73170732 0.273330385
+16: 0.71959310   0.76172608 0.159663866
+                    group     n    nA CADD_AUROC AVI_AUROC diff_AVI_CADD
+                   <char> <int> <int>      <num>     <num>         <num>
+1:               missense 32410  4884  0.7664439 0.7921256    0.02568169
+2:       synonymous_other  5950   181  0.5509879 0.6247959    0.07380800
+3:            stop_gained  2156  2048  0.5812220 0.5010670   -0.08015498
+4:   synonymous_exon_edge   291    45  0.7990515 0.8275068    0.02845528
+5:       canonical_splice   718   626  0.5731352 0.6446902    0.07155508
+6: splice_region_intronic  2794   533  0.7793987 0.8756316    0.09623288
+7:          near_intronic  6711   348  0.6771836 0.7718597    0.09467607
+             lo          hi
+          <num>       <num>
+1:  0.021501024  0.02949154
+2:  0.048420229  0.10368436
+3: -0.126145144 -0.03503840
+4: -0.013705939  0.07340440
+5:  0.002932119  0.13757138
+6:  0.080038052  0.11214649
+7:  0.070472149  0.12405838
+
+-- MPRA _sens_no_clinvar_ref: 39039 records (6641 functional) --
+      tool             iv     a     n    LR    lo    hi evaluable direction_ok
+    <char>         <char> <int> <int> <num> <num> <num>    <lgcl>       <lgcl>
+ 1:   CADD     PP3_Strong     0     0 4.880 4.880 4.880     FALSE         TRUE
+ 2:   CADD   PP3_Moderate     1     6 0.813 0.270 4.880     FALSE        FALSE
+ 3:   CADD PP3_Supporting     0     1 2.440 0.813 4.880     FALSE         TRUE
+ 4:   CADD  Indeterminate    98   909 0.526 0.427 0.636     FALSE           NA
+ 5:   CADD BP4_Supporting   401  1165 1.680 1.510 1.860      TRUE        FALSE
+ 6:   CADD   BP4_Moderate  3541 13523 1.280 1.240 1.310      TRUE        FALSE
+ 7:   CADD     BP4_Strong  2600 16794 0.755 0.732 0.780      TRUE         TRUE
+ 8:    AVI     PP3_Strong     0     0 4.880 4.880 4.880     FALSE         TRUE
+ 9:    AVI   PP3_Moderate    98    79 6.050 4.540 8.000      TRUE         TRUE
+10:    AVI PP3_Supporting    58    50 5.660 3.860 8.290      TRUE         TRUE
+11:    AVI  Indeterminate   346   437 3.860 3.360 4.400     FALSE           NA
+12:    AVI BP4_Supporting   890  2363 1.840 1.700 1.980      TRUE        FALSE
+13:    AVI   BP4_Moderate  3772 13456 1.370 1.330 1.400      TRUE        FALSE
+14:    AVI     BP4_Strong  1477 16013 0.450 0.429 0.473      TRUE         TRUE
+    meets_clingen
+           <lgcl>
+ 1:         FALSE
+ 2:         FALSE
+ 3:          TRUE
+ 4:            NA
+ 5:         FALSE
+ 6:         FALSE
+ 7:         FALSE
+ 8:         FALSE
+ 9:          TRUE
+10:          TRUE
+11:            NA
+12:         FALSE
+13:         FALSE
+14:         FALSE
+      group thresholds   tool    nA    nN abnormal_BP4 normal_BP4 abnormal_PP3
+     <char>     <char> <char> <int> <int>        <num>      <num>        <num>
+1: MPRA_all       main   CADD  6641 32398    0.9850926  0.9717266 0.0001505797
+2: MPRA_all       main    AVI  6641 32398    0.9244090  0.9825298 0.0234904382
+     normal_PP3
+          <num>
+1: 0.0002160627
+2: 0.0039817273
+      group     n    nA CADD_AUROC AVI_AUROC diff_AVI_CADD       lo        hi
+     <char> <int> <int>      <num>     <num>         <num>    <num>     <num>
+1: MPRA_all 39039  6641  0.5637206 0.6782735     0.1145529 0.108981 0.1203537
+Per element (intervals with >= 10 records; elements with >= 10 functional and non-functional): BP4 intervals with LR < 1
+     tool             iv n_intervals LR_below_1
+   <char>         <char>       <int>      <int>
+1:   CADD   BP4_Moderate          27          8
+2:   CADD     BP4_Strong          28         21
+3:    AVI BP4_Supporting          26          0
+4:    AVI   BP4_Moderate          28          8
+5:    AVI     BP4_Strong          28         28
+6:   CADD BP4_Supporting          15          2
+
+Finished 2026-11-01 17:25:08 

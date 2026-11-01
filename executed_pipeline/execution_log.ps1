@@ -480,3 +480,6 @@ powershell -File .\scripts\57_atlas_queue.ps1 -WaitPid <batch-1 PID>   # -> resu
 #   rna_candidates_*, exploratory_hybrid_criterion_{a,b}*). Smoke test first with RB = 5 (output deleted).
 # uv run --python 3.12 --with alphagenome python -I .\scripts\64_atlas_splice_tracks.py <functional>\rna_candidates_expert_panel.tsv <functional>\variants_rna_candidates_splice_tracks.tsv --workers 8
 #   142 variants, 0 errors (64_splice_tracks.log). Per-variant track scores are not versioned (AlphaGenome non-commercial terms).
+# Main article [2026-11-01] amendment A17 registered (tag analysis-plan-A17) before this step.
+& $R .\scripts\65_functional_noncoding_main_thresholds.R 1000   # -> results\v17_avi\functional_noncoding\ (65_functional_noncoding.log;
+#   sge_*, mpra_* with _sens_no_clinvar_ref; RESULTS R20). Smoke test first with RB = 5 (output deleted).

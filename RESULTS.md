@@ -639,6 +639,71 @@ completes a likely pathogenic classification with two further points. Expert pan
 own computational criteria, so the list identifies candidates for reassessment, not reclassifications.
 Transferring v1.6 thresholds to v1.7 mainly weakens benign evidence.
 
+## R20. Main thresholds outside missense variants on functional data (Aim 9 extension; amendment A17)
+
+Script `65_functional_noncoding_main_thresholds.R` (log `65_functional_noncoding.log`), 2026-11-01; outputs in
+`calibration/results/v17_avi/functional_noncoding/`. Main thresholds (Table 1) and, in the intronic splice region,
+the splice-region thresholds of R13. LR = P(interval | abnormal or functional) / P(interval | normal or
+non-functional); 95% CI from 1,000 bootstrap resamples (seed 20261101). Functional abnormality is not pathogenicity,
+so comparisons with the ClinGen LRs are descriptive.
+
+**Data.** SGE: 60,382 SNVs of the 12 saturation genome editing sets (all scored by CADD v1.7 and AVI); evaluable
+classes (>= 30 abnormal and >= 30 normal): missense 5,436 / 28,122, other synonymous 287 / 9,628, stop gained 2,048 /
+108, synonymous exon edge 56 / 337, canonical splice 1,071 / 117, intronic splice region 619 / 2,610, near intronic
+386 / 7,277. MPRA: 39,170 SNV-element records (6,684 functional), the set of R13.
+
+**Missense (control).** All five evaluable intervals of each predictor have the expected direction (CADD PP3 LR
+2.04–3.29, BP4 0.12–0.38; AVI PP3 1.54–3.35, BP4 0.09–0.33), as in R16.
+
+**Missense thresholds outside missense variants.** The BP4 Supporting interval has LR > 1, with the 95% CI above 1,
+in every noncoding or synonymous class where it is evaluable, except AVI in the synonymous exon edge (0.65) and
+intronic splice region (1.11, CI including 1) classes:
+
+| Class | CADD BP4 Sup | CADD BP4 Mod | CADD BP4 Strong | AVI BP4 Sup | AVI BP4 Mod | AVI BP4 Strong |
+|---|---|---|---|---|---|---|
+| Other synonymous | 22.4 (10.8–41.3) | 1.25 (1.10–1.41) | 0.76 (0.66–0.87) | 5.39 (3.63–7.51) | 0.91 (0.81–1.01) | 0.65 (0.52–0.79) |
+| Synonymous exon edge | 10.7 (6.4–20.7) | 0.48 (0.31–0.66) | 0.22 (0.04–0.48) | 0.65 (0.14–1.44) | 0.21 (0.08–0.36) | 0.33 (0.07–0.86) |
+| Intronic splice region | 3.15 (2.55–3.85) | 1.12 (1.02–1.22) | 0.17 (0.13–0.23) | 1.11 (0.82–1.46) | 0.36 (0.30–0.43) | 0.12 (0.07–0.16) |
+| Near intronic | 3.26 (1.94–4.87) | 1.28 (1.15–1.41) | 0.62 (0.53–0.70) | 5.50 (3.86–7.80) | 1.14 (0.99–1.30) | 0.42 (0.35–0.49) |
+| MPRA (all elements) | 1.69 (1.53–1.88) | 1.28 (1.24–1.31) | 0.75 (0.73–0.78) | 1.83 (1.71–1.97) | 1.36 (1.33–1.40) | 0.45 (0.43–0.47) |
+
+BP4 Strong has LR < 1 in every class,
+but no BP4 interval reaches the ClinGen LR outside missense variants. Because noncoding SNVs score low, most
+functionally abnormal SNVs receive BP4 under the missense thresholds: near intronic CADD 93.5%, AVI 75.1%; intronic
+splice region CADD 82.1%, AVI 29.9%; other synonymous CADD 99.7%, AVI 91.3%; synonymous exon edge CADD 82.1%, AVI
+25.0%; MPRA CADD 98.5%, AVI 92.2% (normal SNVs 90–100%). Per MPRA element (intervals with >= 10 records): the AVI BP4
+Supporting interval has LR < 1 in 0 of 26 element conditions and BP4 Moderate in 8 of 28; BP4 Strong in 28 of 28;
+CADD BP4 Supporting 2 of 15, Moderate 8 of 27, Strong 21 of 28.
+The PP3 intervals of the missense thresholds have LR > 1 wherever evaluable outside the canonical splice and stop
+gained classes (AVI: intronic splice region 13.3 and 19.5, near intronic 64.9 and 94.3, synonymous exon edge 5.3 and
+16.0, MPRA 5.8 and 6.4), but capture few abnormal SNVs (AVI PP3 3–55% of abnormal SNVs in these classes, 2.5% in
+the MPRA; CADD at most 4.6%).
+Canonical splice and stop gained SNVs are almost all abnormal; their intervals have LR close to 1 (AVI PP3 Moderate
+1.21 and 1.02) and are not informative.
+
+**Splice-region thresholds in the intronic splice region.** All intervals of both predictors have the expected
+direction: CADD PP3 2.18–3.65, BP4 Supporting 0.46, Moderate 0.13; AVI PP3 1.25–11.0, BP4 Supporting 0.42, Moderate
+0.14, Strong 0.06. The share of abnormal SNVs receiving BP4 falls from 82.1% to 14.5% (CADD) and from 29.9% to 14.4%
+(AVI); PP3 is given to 71.6% (CADD) and 76.7% (AVI) of abnormal SNVs, and to 24.5% and 14.3% of normal SNVs.
+
+**Discrimination (AUROC, AVI − CADD with 95% CI).** Missense 0.802 vs 0.771 (+0.032, 0.028 to 0.035); other
+synonymous 0.657 vs 0.600 (+0.056, 0.032 to 0.080); synonymous exon edge 0.855 vs 0.836 (+0.019, −0.016 to 0.056);
+canonical splice 0.637 vs 0.529 (+0.107, 0.041 to 0.172); intronic splice region 0.884 vs 0.788 (+0.095, 0.081 to
+0.111); near intronic 0.763 vs 0.665 (+0.098, 0.076 to 0.125); stop gained 0.501 vs 0.581 (−0.080, −0.126 to −0.035);
+MPRA 0.679 vs 0.565 (+0.114, 0.109 to 0.120, as in R13).
+
+**Sensitivity, without SNVs of the ClinVar reference sets** (SGE 53,209 SNVs; MPRA 39,039 records): the same pattern.
+BP4 Supporting LR > 1 for CADD in all four noncoding or synonymous classes and the MPRA (1.68–17.5) and for AVI in
+other synonymous (2.22), near intronic (5.87) and the MPRA (1.84); intronic splice region AVI 1.12 (0.79–1.51).
+Splice-region thresholds: all intervals in the expected direction.
+
+**Interpretation.** On data independent of ClinVar, the missense-calibrated BP4 Supporting and Moderate intervals of
+CADD v1.7 and AVI do not indicate normal function outside missense variants: they contain more functionally abnormal
+than normal SNVs in proportion, while BP4 Strong keeps LR < 1 but well above the ClinGen requirement. This confirms
+R13 with functional data, and the class-specific calibration of the intronic splice region gives intervals that
+behave as expected for both predictors. AVI has a higher AUROC than CADD in every class except stop
+gained SNVs (the interval includes 0 for the synonymous exon edge class).
+
 ## R-P2-1. Paper 2: reference-set sizes by mechanism stratum and region class (amendment A-P2-1, first step)
 
 Script `59_paper2_reference_sets.R`; log and tables in `calibration/results/paper2/refsets/`. Counts only; no score
