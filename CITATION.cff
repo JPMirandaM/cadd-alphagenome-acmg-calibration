@@ -31,6 +31,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.23790410"
     description: "Version 1.0.0"
+  - type: doi
+    value: "10.64898/2026.10.31.763309"
+    description: "bioRxiv preprint of the article"
 keywords:
   - CADD
   - AlphaGenome
@@ -41,6 +44,26 @@ keywords:
   - ClinVar
   - variants of uncertain significance
   - MAVE
+preferred-citation:
+  type: article
+  title: "Beyond a single threshold: calibration of CADD v1.7 and AlphaGenome for ACMG/AMP computational evidence across variant classes, model versions, and reference data"
+  authors:
+    - family-names: "Miranda"
+      given-names: "José Patricio"
+    - family-names: "Carvajal"
+      given-names: "Lorena"
+    - family-names: "Aldana"
+      given-names: "Ignacio"
+    - family-names: "Alarcón"
+      given-names: "Pablo"
+    - family-names: "Saavedra"
+      given-names: "Cristian"
+  journal: "bioRxiv"
+  year: 2026
+  month: 11
+  doi: "10.64898/2026.10.31.763309"
+  url: "https://www.biorxiv.org/content/10.64898/2026.10.31.763309v1"
+  notes: "Preprint, version 1, posted 2 November 2026. Submitted to The American Journal of Human Genetics."
 references:
   - type: article
     title: "Calibration of computational tools for missense variant pathogenicity classification and ClinGen recommendations for PP3/BP4 criteria"
