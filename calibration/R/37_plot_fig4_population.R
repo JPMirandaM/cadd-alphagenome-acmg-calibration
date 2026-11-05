@@ -8,7 +8,7 @@
 # Usage: Rscript 37_plot_fig4_population.R <data_dir> <output_without_extension>
 suppressPackageStartupMessages({ library(data.table); library(ggplot2); library(patchwork) })
 a <- commandArgs(trailingOnly = TRUE)
-pal <- c("CADD v1.7" = "#404040", "AVI" = "#C8C8C8")   # grayscale (author, 2026-09-27: colour figures incur a journal charge)
+pal <- c("CADD v1.7" = "#0072B2", "AVI" = "#D55E00")   # colour (2026-11-05): GIM is fully open access, so the charge that forced grayscale no longer applies. Okabe-Ito blue and vermillion; no red-green pair, which GIM forbids
 g <- fread(file.path(a[1], "table_grpmax.tsv"))[PP3 == "Supporting+"]
 g[, tool := factor(tool, levels = c("CADD", "AVI"), labels = c("CADD v1.7", "AVI"))]
 ord <- g[, .(m = mean(pct)), by = grpmax][order(m), grpmax]; g[, grpmax := factor(grpmax, levels = ord)]

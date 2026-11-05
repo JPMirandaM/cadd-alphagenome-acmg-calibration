@@ -14,7 +14,7 @@ lab <- c(canonical_splice = "Canonical splice site", splice_region_intronic = "I
          intergenic = "Intergenic", synonymous_exon_edge = "Synonymous, exon edge", synonymous_other = "Synonymous, other")
 d[, cls := factor(lab[class], levels = rev(lab))]
 d[, tool := factor(tool, levels = c("CADD", "AVI"), labels = c("CADD v1.7", "AVI"))]
-pal <- c("CADD v1.7" = "#404040", "AVI" = "#A0A0A0")
+pal <- c("CADD v1.7" = "#0072B2", "AVI" = "#D55E00")   # colour (2026-11-05), same assignment as every other figure
 b <- d[grepl("^BP4", interval) & n_PLP + n_BLB >= 10 & is.finite(LR) & LR > 0]
 b[, interval := factor(sub("BP4_", "BP4 ", interval), levels = c("BP4 Supporting", "BP4 Moderate", "BP4 Strong"))]
 b[, `:=`(lo = pmax(lo, 1e-3), hi = pmin(hi, 1e3))]

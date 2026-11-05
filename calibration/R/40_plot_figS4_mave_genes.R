@@ -11,7 +11,7 @@ l[, tool := factor(tool, levels = c("AUROC_REVEL", "AUROC_BayesDel", "AUROC_AM",
                    labels = c("REVEL", "BayesDel", "AlphaMissense", "AVI", "CADD v1.7"))]
 ordg <- g[order(AUROC_AVI), gene]; l[, gene := factor(gene, levels = ordg)]
 lab <- g[, .(gene = factor(gene, levels = ordg), txt = sprintf("%s (%d/%d)", gene, n_abnormal, n - n_abnormal))]
-pal <- c("REVEL" = "#E69F00", "BayesDel" = "#56B4E9", "AlphaMissense" = "#CC79A7", "AVI" = "#1B9E77", "CADD v1.7" = "#4D4D4D")
+pal <- c("REVEL" = "#E69F00", "BayesDel" = "#56B4E9", "AlphaMissense" = "#CC79A7", "AVI" = "#D55E00", "CADD v1.7" = "#0072B2")   # colour (2026-11-05): AVI and CADD now match the other figures
 p <- ggplot(l, aes(AUROC, gene, colour = tool, shape = tool)) +
   geom_vline(xintercept = 0.5, linetype = 2, colour = "grey60") + geom_point(size = 1.8, alpha = 0.9) +
   scale_colour_manual(values = pal, name = NULL) + scale_shape_manual(values = c(16, 17, 15, 18, 4), name = NULL) +

@@ -14,7 +14,7 @@ p <- ggplot(d, aes(interval, LR, colour = tool)) +
   geom_errorbar(aes(ymin = LR_required, ymax = LR_required), colour = "grey30", width = 0.6, linewidth = 0.8,
                 position = position_identity()) +
   geom_pointrange(aes(ymin = lower95, ymax = upper95), position = position_dodge(width = 0.5), size = 0.35) +
-  scale_y_log10() + scale_colour_manual(values = c("CADD v1.7" = "#1F77B4", "AVI" = "#D62728"), name = NULL) +
+  scale_y_log10() + scale_colour_manual(values = c("CADD v1.7" = "#0072B2", "AVI" = "#D55E00"), name = NULL) +
   facet_wrap(~side, scales = "free") +
   labs(x = NULL, y = "Positive likelihood ratio in interval (log scale)",
        title = "Temporal validation: thresholds from ClinVar 2024-01-27 evaluated on later-classified variants",

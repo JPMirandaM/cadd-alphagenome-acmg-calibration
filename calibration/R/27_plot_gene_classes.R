@@ -10,14 +10,16 @@ d[, class := factor(class, levels = c("LOEUF_0-2", "LOEUF_3-6", "LOEUF_7-9", "AD
 d[, axis := factor(axis, levels = c("constraint", "inheritance", "mechanism"), labels = c("Constraint", "Inheritance", "Mechanism"))]
 d[, tool := factor(tool, levels = c("REVEL", "BayesDel", "AlphaMissense", "AVI", "CADD"), labels = c("REVEL", "BayesDel", "AlphaMissense", "AVI", "CADD v1.7"))]
 d[, criterion := factor(paste(crit, level), levels = c("PP3 Moderate", "PP3 Supporting", "BP4 Supporting", "BP4 Moderate"))]
-# Grayscale (author, 2026-09-27; colour figures incur a journal charge): criteria distinguished by shape
-# (filled = PP3, open = BP4; circle = moderate, triangle = supporting) and tone (black = moderate, grey = supporting)
+# Colour (2026-11-05; GIM is fully open access, so the charge that forced grayscale no longer applies).
+# Criteria are distinguished twice over, by shape (filled = PP3, open = BP4; circle = moderate, triangle = supporting)
+# and by colour (red = PP3, blue = BP4; dark = moderate, light = supporting), so the figure survives being printed
+# in grayscale and is readable without colour vision.
 p <- ggplot(d, aes(class, threshold, colour = criterion, shape = criterion)) +
   geom_pointrange(aes(ymin = lo, ymax = hi), position = position_dodge(width = 0.6), size = 0.45, stroke = 0.8) +
   scale_shape_manual(values = c("PP3 Moderate" = 16, "PP3 Supporting" = 17, "BP4 Supporting" = 2, "BP4 Moderate" = 1), name = NULL) +
   facet_grid(tool ~ axis, scales = "free", space = "free_x") +
-  scale_colour_manual(values = c("PP3 Moderate" = "#000000", "PP3 Supporting" = "#6E6E6E",
-                                 "BP4 Supporting" = "#6E6E6E", "BP4 Moderate" = "#000000"), name = NULL) +
+  scale_colour_manual(values = c("PP3 Moderate" = "#B2182B", "PP3 Supporting" = "#EF8A62",
+                                 "BP4 Supporting" = "#67A9CF", "BP4 Moderate" = "#2166AC"), name = NULL) +
   labs(x = NULL, y = "Calibrated threshold (score)") +   # title and notes moved to the figure legend (2026-09-27)
   theme_bw(base_size = 9) + theme(legend.position = "bottom", panel.grid.minor = element_blank(),
                                   strip.text.x = element_text(size = 12, face = "bold"), strip.text.y = element_text(angle = 0, size = 11),

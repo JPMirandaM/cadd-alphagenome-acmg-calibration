@@ -801,3 +801,16 @@ separate publication: it does not outperform region or genome-wide thresholds co
 comparison with other tools is addressed by other groups. The functional findings on noncoding BP4 evidence are
 followed up as amendment A17 of the main article, as a possible extension if the article is submitted to another
 journal.
+
+**Journal change and reformatting for Genetics in Medicine (2026-11-05, authors).** The article was rejected
+without review by the American Journal of Human Genetics. Genetics in Medicine was selected as the second
+venue. No analysis was added, removed or rerun: the manuscript was reformatted to the journal's Article limits
+and policies (structured 200-word abstract with Purpose, Methods, Results and Conclusion; 4,000 words; five
+display items; 40 references; AMA superscript citations; HGNC identifiers at first gene mention; CRediT author
+contributions; required Ethics Declaration; preprints not permitted in the reference list). Four display items
+move to the Supplemental Information, and the main figures become colour because the journal is fully open
+access, so the charge that forced grayscale no longer applies. Two decisions touch content rather than form and
+are recorded here for that reason. First, the claim that AVI "has not yet been calibrated" was removed; the
+journal also discourages claims of primacy. Second, PIK3CD p.Asn334Lys was ambiguous, because ClinVar holds
+two SNVs that produce it; the manuscript now names NM_005026.5:c.1002C>G, the allele this study scored,
+verified against `calibration/results/v17_avi/vus_resolved/table_examples.tsv` and with VariantValidator.
